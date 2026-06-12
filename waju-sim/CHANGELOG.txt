@@ -1,0 +1,81 @@
+# v1.5.4
+- DD: Added support for Mami (EU) and Vertical Spread (JP) strats. Needs testing.
+- DD: Bots will now always move towards mid while tank is baiting jump. Cleaned up tank movement.
+- P4: Increased size of Fragment of Fate hitbox. Need more research/vods showing the exact size of their hitbox.
+- CT: Adjusted post-rewind spread positions.
+- Apoc: Added option to force swap the player. It does so by giving them the same Water timer as the lowest adjust prio in their group.
+- Apoc: Fixed Darkest Dance AoE hit to snapshot on the farthest player's position at the end of the cast. Note that in game, this ability does not line up well with its animation. This change should better reflect its actual timing, but may still need some adjusting.
+- Apoc: Fixed bug where tank did not bait Darkest Dance out far enough.
+- Apoc: Increased Water AoE size.
+- UR: Added missing Return debuff, which should accurately count down until Rewind Stun is applied.
+- General: Fixed bug with players getting stuck after rewind or knockback.
+
+# v1.6.0
+- Added P5 Fulgent Blade mechanic. Rest of P5 to be added later.
+- Apoc: Moved Darkest Dance AoE hit earlier, to better line up with when it snapshots in game.
+- LR: Added Mana DC positioning (Credit to WaterBoiledPizza). Will add waymark preset for Mana later.
+- General: Added Reset keybind ('R' by default).
+- General: Debuff timers should now appear and expire more accurately.
+
+# v1.6.1
+- DD: Added support for Mana and MUR Strats (Credit to WaterBoiledPizza and Ducky).
+- DD: Added more options for Darkest Dance and Akh Morn tank assignments.
+- DD+LR: Added fail condition for stretching chains too close or too far.
+- DD+CT: Added option to force Spirit Taker jump on player.
+- CT: Reduced size of the Dragon Head's hitbox and moved it farther in front of the model. This may need further tweaking but the goal is to replicate the jankiness of soaking these in game.
+- CT: Added support for MUR lineup prio and Aeros Plant option (Credit to Ducky).
+- CT: Added 7-1 Akh Morn option.
+- CT+UR: Added option to hide bots.
+- CT: Added missing Rewind debuff.
+- CT: Fixed issue where M1 was baiting Spirit Jump too close to the Fragment.
+- General: Improved waymark visual (Credit to WorstAquaPlayer)
+- General: Fixed most debuff icon tooltips.
+
+
+## v1.7.0
+# New Additions (need testing):
+- Added Paradise Regained and Polarizing Strikes to Phase 5 (Pandora). You can select either of these or Fulgent Blade as a starting point, or practice all 3 in sequence. Currently this only supports the NAUR/LPDU/MUR strat (https://slides.com/ultiproject/frup5/scroll).
+- Added Mana DC strat support for Apoc. Credit to WaterBoiledPizza.
+
+# UI Changes:
+- Improved Party List visuals.
+- Party List can now be reordered, with the option to keep player at top of list.
+- Most UI Elements can now be moved (Alt+Click) and resized (Alt+ScrollWheel). This can be rebound in control settings. Credit to WorstAquaPlayer.
+- Window should now keep its position on reset, rather than resetting to center of screen.
+
+# Fixes:
+- UR: Fixed incorrect movements and debuffs for Med Fires on Grey-9 strat.
+- Darklit: Force Tether button should now work.
+
+# Known Issues:
+- Changing window size/resolution can sometimes push UI elements off the screen. If this happens, use the Reset UI button that appears at the top left while holding Alt.
+- The Pandora model is unavailable due to datamine protected. If that changes in 7.2, I'll update the P5 model.
+- The sim doesn't track Light/Dark debuffs on Paradise Regained or Polarizing Strikes. It only checks for the correct number of targets soaking each mechanic.
+
+
+## v1.7.2
+- TODO: Update Grey-9 DPS lineup to M1-M2-R1-R2
+- TODO: Update bot positioning on Paradise Regained
+- TODO: Add Mana? strat to PR
+- TODO: Shorten UR Cast time, Remove cast animation
+- TODO: Add check box or more options for CT, force adjust.
+
+
+## v1.8.0 (FRU) / 1.1.0 (DSR)
+General:
+- Both sims now run on DX12 by default. This should fix most of the broken texture issues that came with recent Nvidia and AMD driver updates.
+- The config files for both sims have been moved to a shared "Waju Sims" folder (still located in AppData/Roaming). General settings like keybinds and UI elements should be shared across all sims, including DMU. This will, however, reset all your current settings and shader cache, so you may get some stuttering the first time you run the sim.
+- Cleaned up the UI. Strat and encounter specific settings now have their own menu, which can be opened by clicking the cogwheel in the top right.
+- Added an "Import Waymarks" option to the waymark menu. You should be able to paste Waymark data the same way you would in the Dalamud plugin and it will import those Waymaks in one of the Custom slots.
+- Updated the Waymark presets and added more descriptive names.
+- Updated player character models.
+
+FRU:
+- P5: Added correct model for Pandora, which was previously datamine protected.
+- Light Rampant: Fixed broken puddle assignments and logic for Mana/Ele strats.
+
+DSR:
+- Most UI elements can now be moved by holding Alt and their size can be scaled with Alt+Scroll Wheel.
+- Removed main menu. Phases/Timelines can be selected via the top right dropdown, same as FRU. Controls menu can be opened by pressing Esc. Strat settings can be found in their own menu by click the cogwheel in the top right.
+- Added Spectate mode for all phases aside P7.
+- P7: Fixed missing glow on Dragonking Thordan's swords during Exawaves.

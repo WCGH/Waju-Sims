@@ -1,0 +1,14 @@
+Node3D
+AnimationPlayer
+CollisionShape3D
+Area3D
+MeshInstance3D
+AnimationTree
+CharacterBody3D
+Decal
+MeshInstance2D
+TextureButton
+Label
+TextEdit
+OptionButton
+MarginContainer

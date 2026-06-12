@@ -1,0 +1,74 @@
+# TODO:
+	
+	## Kefka
+	
+	
+	
+	
+	
+	v1.8.0/1.1.0
+	- [DONE] Add waymarks import for FRU, clean up presets.
+	- [DONE] Migrate DSR scenes.
+	- [DONE] Cleanup savedvariables, separate options for each sim.
+	- [PARTIAL] Clean up UI.
+		- Remove deadspace in EncounterMenu.
+		- Add info panel, with discord link, etc.
+	- [DONE] Add Pandora model.
+	- [DONE] Add prelim Kefka backend and models.
+	- Add option for Vulkan/DX12 renderer in SavedVariables.
+	- [DONE] Version update for both sims.
+	- [DONE] Fix missing glow on Thordan Sword (DSR)
+	- [DONE] Lower glow of wings on DD.
+	- [DONE] Update character models.
+	- [DONE] Add Spectate mode to DSR modules.
+	- Update all copyright.
+	- Add moveable element to EnemyCastBar and TargetCastBar scenes.
+	- Try to reduce DSR P3 load times. Check other load times.
+	- Flip DSR P3 map to match other phases.
+	- Add mitigation check functionality.
+	- Add targetting system.
+	
+	To investigate:
+	- Fix spectator disable in FRU P5.
+	
+	Done:
+	-  FRU Light Rampant: Fixed broken puddle assigments and prio for Mana/Ele strats.
+
+### Critical:
+	- Fix character not triggering grounded when jumping.
+
+### General:
+	- Fix starting positions to match clocks.
+	- Add UI tooltips.
+	- Add more movement abilities.
+
+### UI:
+	- Fix select buttons capturing right clicks.
+	- Add standard/legacy control options.
+	- Add mouse invert Y option.
+	- Add Nameplates.
+	- Make keybinds exclusive.
+
+### Character Models:
+	- Fix sprint animation bug.
+
+### P2 LR:
+	- Chain break range accuracy.
+	- Move tower soak position closer to edge, move to safe spot sooner.
+	- Add Locked Chains Icon/Debuff.
+	- Move non-tower soakers to their next safe spots earlier.
+	- Add correct distance checking/chain assignment for start of LR.
+
+### P3 UR:
+	- Force free player after slide (player getting stuck).
+
+### Non-critical:
+	- Scrolling damage text.
+	- Documentation.
+
+### Known issues:
+	- DSR P5W: Bots will sometimes get hit by others' liquid hell.
+	- DSR: Some enemy cast bars are not movable.
+	- DSR P5D: Player (and bots) will not always move to cleanse puddle in spectate mode.
+	- Some config tooltips may be incorrect.
+	- DSR: P3 and P5 maps are "flipped" North/South, which is confusing with shared markers. Added a flipped NAUR marker preset as a temporary fix.
