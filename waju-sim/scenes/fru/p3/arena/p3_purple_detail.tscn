@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://fi1jj3ucddcj"]
+
+[ext_resource type="Texture2D" uid="uid://biwacjciheu4o" path="res://assets/fru/p3/arena_fixed/e12s_upscale_traced.png" id="1_eoike"]
+[ext_resource type="Texture2D" uid="uid://o56b5nm6xqpl" path="res://assets/fru/p3/arena_fixed/P3Green_bg_ex3_01_nvt_n4_goe_n4gw_texture_n4gw_a1_flo04_n.png" id="2_ywjkb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlejq"]
+resource_name = "bg_ex3_01_nvt_n4_goe_n4gw_material_n4gw_a3_flo00a.tex"
+cull_mode = 2
+albedo_color = Color(0.701213, 0.542022, 0.925552, 1)
+albedo_texture = ExtResource("1_eoike")
+normal_scale = 0.0
+normal_texture = ExtResource("2_ywjkb")
+uv1_scale = Vector3(1.95, 1.95, 1.95)
+uv1_offset = Vector3(-2.987, -0.961, 0)
+point_size = 73.5
+proximity_fade_distance = 0.01
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4q4m8"]
+material = SubResource("StandardMaterial3D_mlejq")
+top_radius = 20.11
+bottom_radius = 20.0
+height = 0.5
+
+[node name="P3PurpleDetail" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("CylinderMesh_4q4m8")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://fiqgmde1atj1"]
+
+[ext_resource type="Texture2D" uid="uid://dnh0wcdwg5ort" path="res://assets/dmu/lockon/cone.png" id="1_4yls8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qsws"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_4yls8")
+uv1_offset = Vector3(0, -0.01, 0)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_r4cqd"]
+material = SubResource("StandardMaterial3D_1qsws")
+size = Vector2(3.2, 3)
+
+[node name="ConeLockon" type="Node3D" unique_id=1336674102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+metadata/id = 16
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1620037224]
+mesh = SubResource("QuadMesh_r4cqd")

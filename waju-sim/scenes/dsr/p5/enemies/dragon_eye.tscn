@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c00affclda2tc"]
+
+[ext_resource type="PackedScene" uid="uid://ccm871pvn311e" path="res://assets/dsr/p5/enemies/dragon_eye/red_eye.glb" id="1_ehi13"]
+[ext_resource type="Script" uid="uid://cevrl38wsd1qi" path="res://scenes/dsr/p5/enemies/dragon_eye.gd" id="2_0f305"]
+
+[sub_resource type="FogMaterial" id="FogMaterial_xvl1y"]
+density = 0.6522
+albedo = Color(0.878431, 0, 0.282353, 1)
+
+[node name="DragonEye" instance=ExtResource("1_ehi13")]
+transform = Transform3D(4.2, 0, 0, 0, 4.2, 0, 0, 0, 4.2, 0, 10, 0)
+script = ExtResource("2_0f305")
+
+[node name="m0105b0008" parent="." index="0"]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+
+[node name="FogVolume" type="FogVolume" parent="." index="1"]
+size = Vector3(3.69, 3.49, 2)
+shape = 0
+material = SubResource("FogMaterial_xvl1y")

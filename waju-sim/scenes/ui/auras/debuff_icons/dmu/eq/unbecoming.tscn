@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dqmxpam5xbc7i"]
+
+[ext_resource type="Texture2D" uid="uid://b5orkwcev4hcp" path="res://assets/dmu/debuff_icons/unbecoming.png" id="1_qb6r0"]
+
+[node name="UnbecomingIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Unbecoming"
+texture = ExtResource("1_qb6r0")
+expand_mode = 3
+metadata/debuff_name = "unbecoming"

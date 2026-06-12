@@ -1,0 +1,570 @@
+[gd_scene format=3 uid="uid://cbimodxf0fbhu"]
+
+[ext_resource type="Script" uid="uid://btvbqdbpr0lq5" path="res://scenes/ui/waymark_menu.gd" id="1_sqrhw"]
+[ext_resource type="Texture2D" uid="uid://glmlxtvb0wx7" path="res://assets/common/world_markers/wm_menu_trans.png" id="2_qx7ww"]
+[ext_resource type="Texture2D" uid="uid://bdlrvfp5ys0c4" path="res://assets/common/world_markers/wm_menu_collapsed.png" id="3_ri3rt"]
+[ext_resource type="Texture2D" uid="uid://d0lmgkhpr4k37" path="res://assets/common/world_markers/wm_a_button.png" id="4_bfals"]
+[ext_resource type="Texture2D" uid="uid://b0tv83kyk8p4c" path="res://assets/common/world_markers/wm_a_highlight.png" id="5_h3bkw"]
+[ext_resource type="Texture2D" uid="uid://weemca1o6r47" path="res://assets/common/world_markers/wm_b_button.png" id="6_rsnit"]
+[ext_resource type="Texture2D" uid="uid://dpqvyhwjdsf4l" path="res://assets/common/world_markers/wm_b_highlight.png" id="7_mydwa"]
+[ext_resource type="Texture2D" uid="uid://qe8f37v1hdg2" path="res://assets/common/world_markers/wm_c_button.png" id="8_rhaq8"]
+[ext_resource type="Texture2D" uid="uid://djmc8k2o4d1b2" path="res://assets/common/world_markers/wm_c_highlight.png" id="9_wdq4n"]
+[ext_resource type="Texture2D" uid="uid://cfbpwa1xxikyt" path="res://assets/common/world_markers/wm_d_button.png" id="10_vnkay"]
+[ext_resource type="Texture2D" uid="uid://fruuyvplgtaw" path="res://assets/common/world_markers/wm_d_highlight.png" id="11_5fjuf"]
+[ext_resource type="Texture2D" uid="uid://bdug87asdylnd" path="res://assets/common/world_markers/wm_1_button.png" id="12_hqhtb"]
+[ext_resource type="Texture2D" uid="uid://beguuy7jx4n1q" path="res://assets/common/world_markers/wm_1_highlight.png" id="13_p6yby"]
+[ext_resource type="Texture2D" uid="uid://y6x7pb68q6e8" path="res://assets/common/world_markers/wm_2_button.png" id="14_fch7e"]
+[ext_resource type="Texture2D" uid="uid://b1pfy5inyr1fg" path="res://assets/common/world_markers/wm_2_highlight.png" id="15_oky2m"]
+[ext_resource type="Texture2D" uid="uid://c4a75ec2chcpd" path="res://assets/common/world_markers/wm_3_button.png" id="16_7v283"]
+[ext_resource type="Texture2D" uid="uid://b47vvca2b3cg2" path="res://assets/common/world_markers/wm_3_highlight.png" id="17_1wbn6"]
+[ext_resource type="Texture2D" uid="uid://bbsbgcxopcpvy" path="res://assets/common/world_markers/wm_4_button.png" id="18_7frhi"]
+[ext_resource type="Texture2D" uid="uid://b42ldh6mtl1kp" path="res://assets/common/world_markers/wm_4_highlight.png" id="19_5rj0m"]
+[ext_resource type="Texture2D" uid="uid://6poin71gcpn2" path="res://assets/common/world_markers/wm_clear_button.png" id="20_8ya5f"]
+[ext_resource type="Texture2D" uid="uid://b7lw1r5ylyx77" path="res://assets/common/world_markers/wm_clear_highlight.png" id="21_ih8ox"]
+[ext_resource type="Texture2D" uid="uid://bwls2bpv656q2" path="res://assets/common/world_markers/wm_slot_button.png" id="22_li18a"]
+[ext_resource type="Texture2D" uid="uid://bh0hp8kolkjld" path="res://assets/common/icons/ui_icons/refresh_icon.png" id="23_epstp"]
+[ext_resource type="Texture2D" uid="uid://drxeeilmxbm4b" path="res://assets/common/world_markers/wm_slot_highlight.png" id="23_k3qeu"]
+[ext_resource type="Texture2D" uid="uid://s36a2fvt0jyd" path="res://assets/common/icons/ui_icons/refresh_icon_highlight.png" id="24_o1hbi"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="26_q5s1b"]
+[ext_resource type="Script" uid="uid://danwggrhn34ea" path="res://scenes/ui/waymark_import.gd" id="26_wuheo"]
+[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="27_wuheo"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="28_hq5st"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5esef"]
+bg_color = Color(0.132, 0.159, 0.306, 0.957)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.90663, 0.673944, 0.399688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_5pqkn"]
+font = ExtResource("26_q5s1b")
+font_size = 36
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_coxlx"]
+font = ExtResource("27_wuheo")
+font_size = 25
+
+[sub_resource type="FontFile" id="FontFile_lgrgk"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_n8mfv"]
+font = SubResource("FontFile_lgrgk")
+font_color = Color(1, 1, 0, 1)
+
+[node name="WaymarkMenu" type="CanvasLayer" unique_id=292005661]
+script = ExtResource("1_sqrhw")
+
+[node name="MenuContainer" type="MarginContainer" parent="." unique_id=1184154581]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -364.0
+offset_right = 225.0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MenuContainer" unique_id=262450489]
+layout_mode = 2
+texture = ExtResource("2_qx7ww")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuContainer" unique_id=1536079141]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/MarginContainer" unique_id=243113600]
+layout_mode = 2
+theme_override_constants/separation = 27
+
+[node name="GridContainer" type="GridContainer" parent="MenuContainer/MarginContainer/VBoxContainer" unique_id=1553131144]
+custom_minimum_size = Vector2(0, 13.215)
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 2
+columns = 5
+
+[node name="ButtonA" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=532636879]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("4_bfals")
+texture_hover = ExtResource("5_h3bkw")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ButtonB" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1088263942]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("6_rsnit")
+texture_hover = ExtResource("7_mydwa")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ButtonC" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1141001024]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("8_rhaq8")
+texture_hover = ExtResource("9_wdq4n")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ButtonD" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=672506601]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("10_vnkay")
+texture_hover = ExtResource("11_5fjuf")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Button1" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1199059982]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("12_hqhtb")
+texture_hover = ExtResource("13_p6yby")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Button2" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2080610146]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("14_fch7e")
+texture_hover = ExtResource("15_oky2m")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Button3" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=568772848]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("16_7v283")
+texture_hover = ExtResource("17_1wbn6")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Button4" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2073914992]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("18_7frhi")
+texture_hover = ExtResource("19_5rj0m")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ButtonClear" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=73335305]
+custom_minimum_size = Vector2(40.359, 42.033)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("20_8ya5f")
+texture_hover = ExtResource("21_ih8ox")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/MarginContainer/VBoxContainer" unique_id=305431956]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ButtonSlot1" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=30535954]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("22_li18a")
+texture_hover = ExtResource("23_k3qeu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Preset1Label" type="Label" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/ButtonSlot1" unique_id=2056272970]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = -11.5
+offset_right = 31.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796243, 0.796243, 0.796243, 1)
+theme_override_colors/font_outline_color = Color(0.154876, 0.154876, 0.154876, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "Preset 1"
+horizontal_alignment = 1
+
+[node name="ButtonSlot2" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1042982558]
+custom_minimum_size = Vector2(0, 23.4)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("22_li18a")
+texture_hover = ExtResource("23_k3qeu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Preset2Label" type="Label" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/ButtonSlot2" unique_id=1799237051]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = -11.5
+offset_right = 31.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.796078, 0.796078, 1)
+theme_override_colors/font_outline_color = Color(0.152941, 0.152941, 0.152941, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "Preset 2"
+horizontal_alignment = 1
+
+[node name="ButtonSlot3" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2128610676]
+custom_minimum_size = Vector2(0, 23.4)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("22_li18a")
+texture_hover = ExtResource("23_k3qeu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Preset3Label" type="Label" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/ButtonSlot3" unique_id=52394660]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = -11.5
+offset_right = 31.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.796078, 0.796078, 1)
+theme_override_colors/font_outline_color = Color(0.152941, 0.152941, 0.152941, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "Preset 3"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=109077944]
+custom_minimum_size = Vector2(0, 23.4)
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="ButtonSlot4" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1931248982]
+custom_minimum_size = Vector2(188.07, 23.445)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("22_li18a")
+texture_hover = ExtResource("23_k3qeu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Custom1Label" type="Label" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/ButtonSlot4" unique_id=331418782]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(178, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.83501
+offset_top = -11.7225
+offset_right = 99.16499
+offset_bottom = 11.2775
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.796078, 0.796078, 1)
+theme_override_colors/font_outline_color = Color(0.152941, 0.152941, 0.152941, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "Custom 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="SaveButton4" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1878914214]
+custom_minimum_size = Vector2(16.39, 0)
+layout_mode = 2
+texture_normal = ExtResource("23_epstp")
+texture_hover = ExtResource("24_o1hbi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1278670892]
+custom_minimum_size = Vector2(0, 23.4)
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="ButtonSlot5" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1643623613]
+custom_minimum_size = Vector2(188.215, 23.4)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("22_li18a")
+texture_hover = ExtResource("23_k3qeu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Custom2Label" type="Label" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/ButtonSlot5" unique_id=842098013]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(178, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.9075
+offset_top = -11.0
+offset_right = 99.0925
+offset_bottom = 12.000001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.796078, 0.796078, 1)
+theme_override_colors/font_outline_color = Color(0.152941, 0.152941, 0.152941, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "Custom 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="SaveButton5" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=181666933]
+custom_minimum_size = Vector2(16.39, 0)
+layout_mode = 2
+texture_normal = ExtResource("23_epstp")
+texture_hover = ExtResource("24_o1hbi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2094283546]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="ImportButton" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer4" unique_id=108801155]
+custom_minimum_size = Vector2(204.465, 23.4)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+texture_normal = ExtResource("22_li18a")
+texture_hover = ExtResource("23_k3qeu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer4/ImportButton" unique_id=789559956]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.8275
+offset_top = -11.0
+offset_right = 42.1725
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0.796078, 0.796078, 1)
+theme_override_colors/font_outline_color = Color(0.152941, 0.152941, 0.152941, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "Import Waymarks"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArrowContainer" type="MarginContainer" parent="." unique_id=691364641]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -37.0
+offset_right = 224.0
+grow_vertical = 0
+
+[node name="CollapseButton" type="TextureButton" parent="ArrowContainer" unique_id=564637131]
+custom_minimum_size = Vector2(223, 34.255)
+layout_mode = 2
+size_flags_vertical = 8
+focus_mode = 0
+texture_normal = ExtResource("3_ri3rt")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ImportContainer" type="MarginContainer" parent="." unique_id=1948860956]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -312.0
+offset_right = 424.0
+offset_bottom = 458.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_constants/margin_left = 115
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 115
+theme_override_constants/margin_bottom = 65
+script = ExtResource("26_wuheo")
+
+[node name="Panel" type="Panel" parent="ImportContainer" unique_id=1984546092]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5esef")
+
+[node name="MarginContainer" type="MarginContainer" parent="ImportContainer" unique_id=1852028004]
+custom_minimum_size = Vector2(540, 685)
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 24
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="ImportContainer/MarginContainer" unique_id=29313738]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="HeaderLabel" type="Label" parent="ImportContainer/MarginContainer/LeftButtonsVBox" unique_id=629864732]
+custom_minimum_size = Vector2(0, 46.865)
+layout_mode = 2
+text = "Import Waymarks"
+label_settings = SubResource("LabelSettings_5pqkn")
+horizontal_alignment = 1
+
+[node name="SlotSelectContainer" type="HBoxContainer" parent="ImportContainer/MarginContainer/LeftButtonsVBox" unique_id=1988761947]
+layout_mode = 2
+theme_override_constants/separation = -181
+
+[node name="SlotLabel" type="Label" parent="ImportContainer/MarginContainer/LeftButtonsVBox/SlotSelectContainer" unique_id=883443422]
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_filter = 1
+text = "Slot"
+label_settings = SubResource("LabelSettings_coxlx")
+horizontal_alignment = 1
+
+[node name="SlotSelectButton" type="OptionButton" parent="ImportContainer/MarginContainer/LeftButtonsVBox/SlotSelectContainer" unique_id=1148678448]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+focus_mode = 0
+theme_override_font_sizes/font_size = 18
+selected = 0
+item_count = 2
+popup/item_0/text = "Custom 1"
+popup/item_0/id = 0
+popup/item_1/text = "Custom 2"
+popup/item_1/id = 1
+
+[node name="ValidateLabel" type="Label" parent="ImportContainer/MarginContainer/LeftButtonsVBox" unique_id=2097172793]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_n8mfv")
+horizontal_alignment = 1
+
+[node name="ImportTextEdit" type="TextEdit" parent="ImportContainer/MarginContainer/LeftButtonsVBox" unique_id=505739497]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+placeholder_text = "<Paste waymark data here>"
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="ImportContainer/MarginContainer/LeftButtonsVBox" unique_id=144927259]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 95
+
+[node name="ImportButton" type="Button" parent="ImportContainer/MarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1746581358]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(188, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("28_hq5st")
+theme_override_font_sizes/font_size = 27
+disabled = true
+text = "Import
+"
+
+[node name="BackButton" type="Button" parent="ImportContainer/MarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1884818731]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("28_hq5st")
+theme_override_font_sizes/font_size = 29
+text = "Cancel"
+
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/ButtonC" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/ButtonD" to="." method="_on_button_d_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/GridContainer/ButtonClear" to="." method="_on_button_clear_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/ButtonSlot1" to="." method="_on_button_slot_1_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/ButtonSlot2" to="." method="_on_button_slot_2_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/ButtonSlot3" to="." method="_on_button_slot_3_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/ButtonSlot4" to="." method="_on_button_slot_4_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/SaveButton4" to="." method="_on_save_button_4_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/ButtonSlot5" to="." method="_on_button_slot_5_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/SaveButton5" to="." method="_on_save_button_5_pressed"]
+[connection signal="pressed" from="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer4/ImportButton" to="." method="_on_import_button_pressed"]
+[connection signal="pressed" from="ArrowContainer/CollapseButton" to="." method="_on_collapse_button_pressed"]
+[connection signal="focus_entered" from="ImportContainer/MarginContainer/LeftButtonsVBox/ImportTextEdit" to="ImportContainer" method="_on_import_text_edit_focus_entered"]
+[connection signal="focus_exited" from="ImportContainer/MarginContainer/LeftButtonsVBox/ImportTextEdit" to="ImportContainer" method="_on_import_text_edit_focus_exited"]
+[connection signal="text_changed" from="ImportContainer/MarginContainer/LeftButtonsVBox/ImportTextEdit" to="ImportContainer" method="_on_import_text_edit_text_changed"]
+[connection signal="pressed" from="ImportContainer/MarginContainer/LeftButtonsVBox/BottomHBoxContainer/ImportButton" to="ImportContainer" method="_on_import_button_pressed"]
+[connection signal="pressed" from="ImportContainer/MarginContainer/LeftButtonsVBox/BottomHBoxContainer/BackButton" to="ImportContainer" method="_on_back_button_pressed"]

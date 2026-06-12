@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dolij7blcin6e"]
+
+[ext_resource type="Script" uid="uid://b1d57bsx26ow3" path="res://scenes/common/controllers/target_marker_controller.gd" id="1_m2jgg"]
+
+[node name="TargetMarkerController" type="Node" groups=["target_marker_controller"]]
+script = ExtResource("1_m2jgg")
+marker_scenes = {}

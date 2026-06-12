@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://5g0r1wriog66"]
+
+[ext_resource type="Texture2D" uid="uid://c1s8xqnxqcln" path="res://assets/fru/debuff_icons/light_rampant/weight_of_light.png" id="1_qk7ql"]
+
+[node name="WeightOfLightIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "The Weight of Light"
+texture = ExtResource("1_qk7ql")
+metadata/debuff_name = "weight_of_light"

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d0nwt3vcbmxq5"]
+
+[ext_resource type="Texture2D" uid="uid://q3g0g651r540" path="res://assets/lockon/target_markers/mark_stop1.png" id="1_flthe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7srdo"]
+transparency = 1
+albedo_texture = ExtResource("1_flthe")
+rim_enabled = true
+rim = 0.2
+disable_receive_shadows = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_glxoe"]
+material = SubResource("StandardMaterial3D_7srdo")
+size = Vector2(2, 2)
+
+[node name="Stop1" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_glxoe")

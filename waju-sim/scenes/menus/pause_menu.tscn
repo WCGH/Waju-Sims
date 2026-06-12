@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://vftsma2c80sa"]
+
+[ext_resource type="Script" path="res://scenes/menus/pause_menu.gd" id="1_t84m1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pb4f"]
+bg_color = Color(0.132, 0.159, 0.306, 0.227)
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_t84m1")
+
+[node name="PauseMenuContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.44
+offset_top = 57.51
+offset_right = 136.56
+offset_bottom = 116.51
+grow_horizontal = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="Panel" type="Panel" parent="PauseMenuContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8pb4f")
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="PauseMenuContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="HeaderLabel" type="Label" parent="PauseMenuContainer/MarginContainer/LeftButtonsVBox"]
+custom_minimum_size = Vector2(0, 46.865)
+layout_mode = 2
+text = "Paused.
+Press 'p' to unpause."
+horizontal_alignment = 1

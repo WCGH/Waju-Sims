@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dt856c0w2x40t"]
+
+[ext_resource type="Texture2D" uid="uid://dmpv0474qdiro" path="res://assets/lockon/target_markers/mark_link2.png" id="1_yjdbt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3flq"]
+transparency = 1
+albedo_texture = ExtResource("1_yjdbt")
+rim_enabled = true
+rim = 0.2
+disable_receive_shadows = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_glxoe"]
+material = SubResource("StandardMaterial3D_x3flq")
+size = Vector2(2, 2)
+
+[node name="Link2" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_glxoe")

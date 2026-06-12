@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3pv5d4jy0ae1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0rbnw"]
+font_color = Color(1, 0.27451, 0.309804, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="FailLabel" type="Label"]
+size_flags_vertical = 2
+text = "[ph]Test Bot got hit by something bad."
+label_settings = SubResource("LabelSettings_0rbnw")

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dblwjykj2w1au"]
+
+[ext_resource type="Texture2D" uid="uid://neesij0mbaof" path="res://assets/png/debuff_icons/spreading_flames.png" id="1_xvwaa"]
+
+[node name="SpreadingFlamesIcon" type="TextureRect"]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_xvwaa")
+metadata/debuff_name = "Spreading Flames"

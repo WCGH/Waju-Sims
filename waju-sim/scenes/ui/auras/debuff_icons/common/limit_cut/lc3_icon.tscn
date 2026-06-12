@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c66bvq5c4scl0"]
+
+[ext_resource type="Texture2D" uid="uid://q34atk1urvxs" path="res://assets/common/icons/debuff_icons/limit_cut/lc3_icon.png" id="1_lv1oc"]
+
+[node name="LC3Icon" type="TextureRect" unique_id=796519627]
+size_flags_horizontal = 10
+size_flags_vertical = 8
+tooltip_text = "Third in Line"
+texture = ExtResource("1_lv1oc")
+metadata/debuff_name = "lc3"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://pjetpadrwjjn"]
+
+[ext_resource type="Texture2D" uid="uid://dw1v48hmekvjl" path="res://assets/common/icons/debuff_icons/magic_vuln.png" id="1_edwuh"]
+
+[node name="MagicVulnIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Magic Vulnerability"
+texture = ExtResource("1_edwuh")
+metadata/debuff_name = "magic_vuln"

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://douybqysqel5p"]
+
+[ext_resource type="Texture2D" uid="uid://bonuw26q576nj" path="res://assets/common/player_characters/lockon/limit_cut/lc_8.png" id="1_233rs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eeg7e"]
+transparency = 1
+albedo_color = Color(0.92156863, 0.92156863, 0.92156863, 1)
+albedo_texture = ExtResource("1_233rs")
+rim_enabled = true
+rim = 0.1
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_3o8og"]
+material = SubResource("StandardMaterial3D_eeg7e")
+size = Vector2(5, 5)
+
+[node name="LimitCut8" type="Node3D" unique_id=442757967 groups=["lc_icon"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+metadata/id = 23
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=644654209]
+mesh = SubResource("QuadMesh_3o8og")

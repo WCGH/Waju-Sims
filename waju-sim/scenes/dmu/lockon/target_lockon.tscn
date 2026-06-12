@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b317aqshya88u"]
+
+[ext_resource type="Texture2D" uid="uid://dbn7eqau5ouve" path="res://assets/dmu/lockon/tower.png" id="1_4hqpf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wba5"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_4hqpf")
+uv1_offset = Vector3(0, -0.01, 0)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_k4i2g"]
+material = SubResource("StandardMaterial3D_2wba5")
+size = Vector2(3, 3)
+
+[node name="TargetLockon" type="Node3D" unique_id=320003582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+metadata/id = 18
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1305868118]
+mesh = SubResource("QuadMesh_k4i2g")

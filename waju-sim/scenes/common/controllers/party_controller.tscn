@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bayxk6ajn7khf"]
+
+[ext_resource type="Script" uid="uid://bwk6gwmh4qqa7" path="res://scenes/common/controllers/party_controller.gd" id="1_im8hl"]
+[ext_resource type="PackedScene" uid="uid://cykot1qnoc45c" path="res://scenes/common/player_characters/player.tscn" id="1_tc3xh"]
+[ext_resource type="PackedScene" uid="uid://crwb0a8mipbol" path="res://scenes/common/player_characters/bot.tscn" id="3_3mbau"]
+[ext_resource type="PackedScene" uid="uid://bplpyhsvyjp0m" path="res://scenes/common/player_characters/models/war_miq.tscn" id="4_8iwnm"]
+[ext_resource type="PackedScene" uid="uid://4q71kl7jljef" path="res://scenes/common/player_characters/models/gnb_miq.tscn" id="5_8iwnm"]
+[ext_resource type="PackedScene" uid="uid://di8a7v2dqfua6" path="res://scenes/common/player_characters/models/whm_aur.tscn" id="6_8iwnm"]
+[ext_resource type="PackedScene" uid="uid://cly2ymb2jubij" path="res://scenes/common/player_characters/models/sch_hyr.tscn" id="7_8iwnm"]
+[ext_resource type="PackedScene" uid="uid://bjde3mojxx7fq" path="res://scenes/common/player_characters/models/sam_miq.tscn" id="8_8iwnm"]
+[ext_resource type="PackedScene" uid="uid://drhwkuc42bufp" path="res://scenes/common/player_characters/models/drg_miq.tscn" id="9_8iwnm"]
+[ext_resource type="PackedScene" uid="uid://c73on6na8yt48" path="res://scenes/common/player_characters/models/brd_vra.tscn" id="10_8iwnm"]
+[ext_resource type="PackedScene" uid="uid://ckb3agiigeq3a" path="res://scenes/common/player_characters/models/blm_miq.tscn" id="11_8iwnm"]
+
+[node name="PartyController" type="Node" unique_id=1406597781 groups=["party_controller"]]
+script = ExtResource("1_im8hl")
+player_scene = ExtResource("1_tc3xh")
+bot_scene = ExtResource("3_3mbau")
+tank_1_model = ExtResource("4_8iwnm")
+tank_2_model = ExtResource("5_8iwnm")
+healer_1_model = ExtResource("6_8iwnm")
+healer_2_model = ExtResource("7_8iwnm")
+melee_1_model = ExtResource("8_8iwnm")
+melee_2_model = ExtResource("9_8iwnm")
+ranged_model = ExtResource("10_8iwnm")
+caster_model = ExtResource("11_8iwnm")

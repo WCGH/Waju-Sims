@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://cri3gvnrtsbrf"]
+
+[ext_resource type="Script" uid="uid://j8p2e72iquxg" path="res://scenes/ui/cast_bars/enemy_cast_bar.gd" id="1_tfdro"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="2_xbowl"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="3_co3kv"]
+
+[sub_resource type="Theme" id="Theme_vadjc"]
+default_font = ExtResource("2_xbowl")
+default_font_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_lc2st"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_haxh7"]
+bg_color = Color(0.156863, 0.137255, 0.0313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.968627, 0.6, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eit2t"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxh5q"]
+bg_color = Color(0.267, 0.267, 0.267, 0.741)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.780392, 0.501961, 0.360784, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5gsfb"]
+font = ExtResource("3_co3kv")
+font_size = 15
+outline_size = 3
+outline_color = Color(0.780392, 0.501961, 0.360784, 1)
+
+[node name="EnemyCastBar" type="CanvasLayer" unique_id=1073225576 groups=["enemy_cast_bar"]]
+script = ExtResource("1_tfdro")
+
+[node name="Timer1" type="Timer" parent="." unique_id=167882473]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=47707533]
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="." unique_id=932769408]
+one_shot = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=377952098]
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.711
+anchor_right = 0.095
+anchor_bottom = 0.711
+offset_left = 85.4
+offset_top = 22.0799
+offset_right = 336.4
+offset_bottom = 120.08
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+size_flags_vertical = 8
+theme_override_constants/margin_left = 21
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="CastBarContainer" type="VBoxContainer" parent="MarginContainer" unique_id=496958587]
+layout_mode = 2
+
+[node name="CastBar1" type="VBoxContainer" parent="MarginContainer/CastBarContainer" unique_id=1587109458]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/CastBarContainer/CastBar1" unique_id=677867823]
+layout_mode = 2
+theme = SubResource("Theme_vadjc")
+text = "Enemy Cast 1"
+label_settings = SubResource("LabelSettings_lc2st")
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/CastBarContainer/CastBar1" unique_id=1259661440]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_haxh7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eit2t")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="CastBar2" type="VBoxContainer" parent="MarginContainer/CastBarContainer" unique_id=1879873873]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/CastBarContainer/CastBar2" unique_id=381161892]
+layout_mode = 2
+theme = SubResource("Theme_vadjc")
+text = "Enemy Cast 2"
+label_settings = SubResource("LabelSettings_lc2st")
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/CastBarContainer/CastBar2" unique_id=879055537]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_haxh7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eit2t")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="CastBar3" type="VBoxContainer" parent="MarginContainer/CastBarContainer" unique_id=93256471]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/CastBarContainer/CastBar3" unique_id=1365691505]
+layout_mode = 2
+theme = SubResource("Theme_vadjc")
+text = "Enemy Cast 3"
+label_settings = SubResource("LabelSettings_lc2st")
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/CastBarContainer/CastBar3" unique_id=266112741]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_haxh7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eit2t")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="MoveUIBG" type="Panel" parent="MarginContainer" unique_id=556637956]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxh5q")
+
+[node name="Label" type="Label" parent="MarginContainer/MoveUIBG" unique_id=1798758972]
+layout_mode = 0
+offset_left = 46.2471
+offset_top = 1.40244
+offset_right = 192.247
+offset_bottom = 26.4024
+text = "Enmity Cast Bar"
+label_settings = SubResource("LabelSettings_5gsfb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer1" to="." method="_on_timer_1_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
+[connection signal="gui_input" from="MarginContainer" to="." method="_on_margin_container_gui_input"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dehholfmopdty"]
+
+[ext_resource type="Texture2D" uid="uid://d12rxy6cch36q" path="res://assets/dsr/debuff_icons/burning_chains.png" id="1_ulmj0"]
+[ext_resource type="Script" uid="uid://ci2rcohcvngvw" path="res://scenes/ui/auras/debuff_icons/dsr/p5/chains.gd" id="2_pye7r"]
+
+[node name="ChainsIcon" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_pye7r")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_ulmj0")
+
+[node name="Duration" type="Label" parent="."]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

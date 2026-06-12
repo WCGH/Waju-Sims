@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=4 uid="uid://olajscm4nvgj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5de7c"]
+resource_name = "Material.001"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_color = Color(0.396078, 0.12549, 0.211765, 1)
+roughness = 0.690035
+emission_enabled = true
+emission = Color(0.792157, 0.329412, 0.505882, 1)
+emission_energy_multiplier = 0.16
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jksuj"]
+_surfaces = [{
+"aabb": AABB(-0.996195, -2.23646, -0.906308, 1.99239, 4.47293, 1.81262),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAADAAQAAAAEAAUAAAAFAAcAAAAHAAEABgAEAAMAAgAGAAMAAQAGAAIABwAGAAEABQAGAAcABAAGAAUA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/38AAP9/AABNNv9/TwwAAEy2/38AAAAA////f7BzAACxyf9/r/MAALJJ/3///wAA/3////9/AAAAAP9/TowAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p73it"]
+resource_name = "spread_marker_Plumbob"
+_surfaces = [{
+"aabb": AABB(-0.996195, -2.23646, -0.906308, 1.99239, 4.47293, 1.81262),
+"attribute_data": PackedByteArray("Knu8wPE6JfTzYoffoUo5ZRR/Pp6wbel93AqDqZyR6YAXey/BMOPmpfB+Jp6ltJSZ1Qq3qWeAbGDxbeF9W5GegMcKnKklgC5gxgqVqSicRB+uSjllQvQBVRULPqp1xJ4KChzlWCGEqD139CdVePT9VGH0NFWI9MtU5fMhVQiEmj2XYpvfV5wzH8YK2amXtJiZ"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAoABAAMAA4ABQAQABQAAwASABgAAQAWACAAAgAiAAgAHwAVABEADQAeAA8ABwAaAAsAIwAcAAkAFwAbACEAEwAdABkA"),
+"material": SubResource("StandardMaterial3D_5de7c"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/38AAP9/s6H/fwAA/3/v6P9/AAD/fxnB/38AAP9/9fb/fwAA/3+jzP9/AAD/f2vrTTb/f08Ms6FNNv9/Twy7o002/39PDBnBTTb/f08My69Mtv9/AACzoUy2/38AALujTLb/fwAAo8xMtv9/AADnxP///3+wc6PM////f7Bz58T///9/sHNr6////3+wc7XQscn/f6/z9faxyf9/r/P49LHJ/3+v82vrscn/f6/ztdCySf9////v6LJJ/3///x/nskn/f///9faySf9////49P9/////f7uj/3////9/H+f/f////3/Lr/9/////f/j0/3////9/58T/f////3+10AAA/39OjO/oAAD/f06MH+cAAP9/TowZwQAA/39OjMuv6KlDhqU9niIkP14LBcpVPZNtpqzjVjex6KlDhhAHXNgkP14LbU42KOipQ4YQB1zYk22mrPjM2/GTbaas+Mzb8eNWN7EwVfDPBcpVPcc3k1PjVjexMFXwz6U9niL2EUpMBcpVPcc3k1MQB1zY9hFKTG1ONijHN5NT+Mzb8TBV8M+lPZ4i9hFKTCQ/XgttTjYo")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jksuj")
+
+[node name="SpreadMarker" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.96678, 0)
+
+[node name="Scale" type="Node3D" parent="."]
+
+[node name="Plumbob" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(0.0843082, 5.77452e-07, 0.99644, 2.0974e-08, 1.37365, -4.23654e-07, -0.99644, 7.77717e-08, 0.0843081, 0, 0, 0)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")
+
+[node name="Plumbob2" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(0.0751436, 3.10182e-07, 0.921784, 1.86941e-08, 0.737865, -3.91913e-07, -0.888124, 4.17756e-08, 0.0779916, 0, 3.07181, 0)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")
+
+[node name="Plumbob3" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(0.0275074, 1.54711e-07, 0.230054, -0.32511, 4.74957e-09, 0.0194647, 7.57274e-09, -0.368029, 9.86748e-08, 0, 2.00943, -1.10247)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")
+
+[node name="Plumbob4" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(0.0447083, 2.04149e-07, 0.444926, 1.07893e-08, 0.485633, -1.92483e-07, -0.528408, 2.7495e-08, 0.0376449, 0, 2.00943, -1.45799)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")
+
+[node name="Plumbob5" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(-0.013995, 0.316837, -0.117045, -0.32511, 2.16195e-09, 0.0194647, 0.0236812, 0.187243, 0.198054, 0.982205, 2.00943, 0.504277)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")
+
+[node name="Plumbob6" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(0.432161, -1.27536e-07, -0.258774, 1.07893e-08, 0.485633, -1.92483e-07, 0.307328, 1.61764e-07, 0.363885, 1.28828, 2.00943, 0.685158)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")
+
+[node name="Plumbob7" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(-0.0146856, -0.311191, -0.122821, -0.32511, 7.66881e-10, 0.0194647, -0.0232591, 0.196483, -0.194525, -0.939912, 2.00943, 0.599884)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")
+
+[node name="Plumbob8" type="MeshInstance3D" parent="Scale"]
+transform = Transform3D(-0.47067, -8.57425e-08, -0.205706, 1.07893e-08, 0.485633, -1.92483e-07, 0.244303, -1.87299e-07, -0.39631, -1.24053, 2.00943, 0.789692)
+mesh = SubResource("ArrayMesh_p73it")
+skeleton = NodePath("")

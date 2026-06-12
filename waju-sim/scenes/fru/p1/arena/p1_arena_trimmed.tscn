@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cqagh6orhbjnq"]
+
+[ext_resource type="PackedScene" uid="uid://drspbw0jrlovm" path="res://assets/fru/p1/arena/P1ArenaTrimmed.glb" id="1_menvl"]
+
+[node name="P1ArenaTrimmed" instance=ExtResource("1_menvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74, -41.14, -1.286)

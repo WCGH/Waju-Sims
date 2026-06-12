@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c6lwk2vknoj7w"]
+
+[ext_resource type="Script" uid="uid://nkqca2s5x4ue" path="res://scenes/ui/move_ui_reset_button.gd" id="1_lo5yd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ugi2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m35ec"]
+bg_color = Color(0.5989341, 0.5683255, 0.26662758, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ril"]
+bg_color = Color(0.429044, 0.405372, 0.17215, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="Theme" id="Theme_ywrq0"]
+Button/styles/focus = SubResource("StyleBoxFlat_6ugi2")
+Button/styles/hover = SubResource("StyleBoxFlat_m35ec")
+Button/styles/normal = SubResource("StyleBoxFlat_64ril")
+
+[node name="MoveUIResetButton" type="Button" unique_id=1841176861]
+offset_left = 29.0
+offset_top = 75.0
+offset_right = 128.0
+offset_bottom = 113.0
+focus_mode = 0
+theme = SubResource("Theme_ywrq0")
+text = "Reset UI"
+script = ExtResource("1_lo5yd")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

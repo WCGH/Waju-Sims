@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://by718qkef1wkf"]
+
+[ext_resource type="Texture2D" uid="uid://bmmbpa2ife6ri" path="res://assets/png/misc/defam_marker.png" id="1_du6wb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krfxg"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.211765, 0.807843, 0, 1)
+albedo_texture = ExtResource("1_du6wb")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_mtssx"]
+material = SubResource("StandardMaterial3D_krfxg")
+size = Vector2(3, 3)
+
+[node name="Divebomb" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+metadata/id = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_mtssx")

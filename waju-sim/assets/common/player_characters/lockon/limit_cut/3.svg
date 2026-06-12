@@ -1,0 +1,49 @@
+<svg width="88" height="44" viewBox="0 0 88 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_201_155)">
+<g filter="url(#filter0_f_201_155)">
+<circle cx="33" cy="33" r="10" fill="white"/>
+<circle cx="33" cy="33" r="10" fill="#00A3FF" fill-opacity="0.1"/>
+<circle cx="33" cy="33" r="9.5" stroke="#00A3FF"/>
+</g>
+</g>
+<g clip-path="url(#clip1_201_155)">
+<g filter="url(#filter1_f_201_155)">
+<circle cx="44" cy="11" r="10" fill="white"/>
+<circle cx="44" cy="11" r="10" fill="#00A3FF" fill-opacity="0.1"/>
+<circle cx="44" cy="11" r="9.5" stroke="#00A3FF"/>
+</g>
+</g>
+<g clip-path="url(#clip2_201_155)">
+<g filter="url(#filter2_f_201_155)">
+<circle cx="55" cy="33" r="10" fill="white"/>
+<circle cx="55" cy="33" r="10" fill="#00A3FF" fill-opacity="0.1"/>
+<circle cx="55" cy="33" r="9.5" stroke="#00A3FF"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_201_155" x="22" y="22" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_201_155"/>
+</filter>
+<filter id="filter1_f_201_155" x="33" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_201_155"/>
+</filter>
+<filter id="filter2_f_201_155" x="44" y="22" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_201_155"/>
+</filter>
+<clipPath id="clip0_201_155">
+<rect width="22" height="22" fill="white" transform="translate(22 22)"/>
+</clipPath>
+<clipPath id="clip1_201_155">
+<rect width="22" height="22" fill="white" transform="translate(33)"/>
+</clipPath>
+<clipPath id="clip2_201_155">
+<rect width="22" height="22" fill="white" transform="translate(44 22)"/>
+</clipPath>
+</defs>
+</svg>

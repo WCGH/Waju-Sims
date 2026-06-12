@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dagecdxd40cmj"]
+
+[ext_resource type="Texture2D" uid="uid://d12rxy6cch36q" path="res://assets/png/debuff_icons/burning_chains.png" id="2_weitq"]
+
+[node name="ChainsIcon" type="TextureRect"]
+offset_left = 16.0
+offset_right = 40.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("2_weitq")
+metadata/debuff_name = "chains"

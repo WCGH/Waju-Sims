@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bpo1f7kh47duk"]
+
+[ext_resource type="Texture2D" uid="uid://t6bnretgrkpx" path="res://assets/fru/debuff_icons/ultimate_relativity/unholy_darkness.png" id="1_ltei7"]
+
+[node name="UnholyDarknessIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Unholy Darkness"
+texture = ExtResource("1_ltei7")
+metadata/debuff_name = "unholy_darkness"

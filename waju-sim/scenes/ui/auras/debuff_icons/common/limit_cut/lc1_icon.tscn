@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dryfwy8vvtst0"]
+
+[ext_resource type="Texture2D" uid="uid://dcajle4o3p85f" path="res://assets/common/icons/debuff_icons/limit_cut/lc1_icon.png" id="1_583rm"]
+
+[node name="LC1Icon" type="TextureRect" unique_id=1332955565]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 10
+size_flags_vertical = 8
+tooltip_text = "First in Line"
+texture = ExtResource("1_583rm")
+metadata/debuff_name = "lc1"

@@ -1,0 +1,1313 @@
+[gd_scene format=3 uid="uid://d1yi4mckax1sd"]
+
+[ext_resource type="Script" uid="uid://bfd8tq27o0ycg" path="res://scenes/dsr/p6/p6_main.gd" id="1_h1omc"]
+[ext_resource type="PackedScene" uid="uid://b23aj0fsxbgap" path="res://scenes/menus/control_menu.tscn" id="2_gp5b3"]
+[ext_resource type="Script" uid="uid://cm4rt0rv0ko83" path="res://scenes/dsr/p6/p6_enc_menu.gd" id="3_72cqy"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="4_yqosp"]
+[ext_resource type="Texture2D" uid="uid://blfibh4tegknc" path="res://assets/common/icons/ui_icons/info_icon_white.png" id="5_loe4s"]
+[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="6_qs2fn"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="7_eoaej"]
+[ext_resource type="PackedScene" uid="uid://vftsma2c80sa" path="res://scenes/menus/pause_menu.tscn" id="8_ysgmn"]
+[ext_resource type="PackedScene" uid="uid://cbimodxf0fbhu" path="res://scenes/ui/waymark_menu.tscn" id="9_7kys6"]
+[ext_resource type="PackedScene" uid="uid://btigj53q7q4oi" path="res://scenes/ui/cast_bars/target_cast_bar.tscn" id="10_3bao2"]
+[ext_resource type="PackedScene" uid="uid://chasoddjwqblg" path="res://scenes/ui/cast_bars/cast_bar.tscn" id="10_5gfv1"]
+[ext_resource type="PackedScene" uid="uid://cri3gvnrtsbrf" path="res://scenes/ui/cast_bars/enemy_cast_bar.tscn" id="11_ge4eb"]
+[ext_resource type="PackedScene" uid="uid://cg0h4uysscvtc" path="res://scenes/ui/action_bar.tscn" id="12_2efd2"]
+[ext_resource type="PackedScene" uid="uid://cidk1e7u3l0ya" path="res://scenes/ui/fail_list.tscn" id="13_s5p2j"]
+[ext_resource type="PackedScene" uid="uid://02ckwb1trdp4" path="res://scenes/ui/party_list/party_list.tscn" id="14_72cqy"]
+[ext_resource type="PackedScene" uid="uid://du2fr4o3nsww0" path="res://scenes/ui/auras/player_debuffs.tscn" id="15_jidvf"]
+[ext_resource type="PackedScene" uid="uid://jcbpndkhehjl" path="res://scenes/ui/coords.tscn" id="16_8m4ct"]
+[ext_resource type="Script" uid="uid://bxcv5ewhgg5pq" path="res://scenes/ui/role_select_button.gd" id="17_3bao2"]
+[ext_resource type="Script" uid="uid://djmwvee6rgsb8" path="res://scenes/ui/spectate_button.gd" id="18_1ixip"]
+[ext_resource type="Script" uid="uid://fb8178c1lbrc" path="res://scenes/fru/p4/hide_bots_check_button.gd" id="19_y8vq6"]
+[ext_resource type="PackedScene" uid="uid://drvk5c211dgk5" path="res://scenes/ui/dsr/dsr_sequence_select_button.tscn" id="20_wosi1"]
+[ext_resource type="PackedScene" uid="uid://bb6pbj1vuf7aa" path="res://scenes/ui/encounter_config_button.tscn" id="21_cobtv"]
+[ext_resource type="PackedScene" uid="uid://cmakti71sjg46" path="res://scenes/ui/info_box.tscn" id="22_y7xjt"]
+[ext_resource type="PackedScene" uid="uid://c6lwk2vknoj7w" path="res://scenes/ui/move_ui_reset_button.tscn" id="23_ldjfl"]
+[ext_resource type="PackedScene" uid="uid://bwd1v6kvgas8d" path="res://scenes/common/controllers/waymark_controller.tscn" id="24_u5fts"]
+[ext_resource type="PackedScene" uid="uid://bayxk6ajn7khf" path="res://scenes/common/controllers/party_controller.tscn" id="25_a8pka"]
+[ext_resource type="PackedScene" uid="uid://wdaa7tvsg1oy" path="res://scenes/common/controllers/lockon_controller.tscn" id="26_ee22r"]
+[ext_resource type="PackedScene" uid="uid://bauk161giibov" path="res://scenes/common/controllers/ground_aoe_controller.tscn" id="27_l4wl1"]
+[ext_resource type="PackedScene" uid="uid://dmp33gbqijftl" path="res://scenes/common/controllers/tether_controller.tscn" id="28_72cqy"]
+[ext_resource type="PackedScene" uid="uid://crewso7ys1t5t" path="res://scenes/common/controllers/encounter_controller.tscn" id="28_pwe3a"]
+[ext_resource type="Script" uid="uid://dt0v3m7p18nw0" path="res://scenes/dsr/p6/wroth_flame_controller.gd" id="29_jidvf"]
+[ext_resource type="PackedScene" uid="uid://l44kfd8rk857" path="res://scenes/dsr/p6/wroth_line.tscn" id="30_8m4ct"]
+[ext_resource type="PackedScene" uid="uid://c2b2mjc4ia8dg" path="res://scenes/dsr/p6/wroth_zig.tscn" id="31_3bao2"]
+[ext_resource type="PackedScene" uid="uid://ctvier3tpchg3" path="res://scenes/common/controllers/target_controller.tscn" id="32_8m4ct"]
+[ext_resource type="Script" uid="uid://ckjtup1g8uunv" path="res://scenes/dsr/p6/p6_sequence.gd" id="33_1ixip"]
+[ext_resource type="PackedScene" uid="uid://dktirpxqry1m1" path="res://scenes/common/controllers/target_marker_controller.tscn" id="33_3bao2"]
+[ext_resource type="Script" uid="uid://chgbstd86wwmf" path="res://scenes/dsr/p6/seq_wyrm1.gd" id="34_y8vq6"]
+[ext_resource type="Script" uid="uid://d23vdcnpmt47i" path="res://scenes/dsr/p6/seq_aa1.gd" id="35_wosi1"]
+[ext_resource type="Texture2D" uid="uid://bmcxcd6diyj1x" path="res://assets/common/world_markers/wm_ground_marker.png" id="36_1dmxx"]
+[ext_resource type="Script" uid="uid://crg680dbj0r36" path="res://scenes/dsr/p6/seq_wings1.gd" id="36_cobtv"]
+[ext_resource type="Shader" uid="uid://gpesy5bu4dso" path="res://assets/common/shaders/sky.gdshader" id="37_j5px1"]
+[ext_resource type="Script" uid="uid://ifki1qflyyrp" path="res://scenes/dsr/p6/seq_wroth.gd" id="37_y7xjt"]
+[ext_resource type="PackedScene" uid="uid://cdeb8a4rq71jt" path="res://scenes/ui/auras/debuff_icons/dsr/p6/entangled_flames.tscn" id="38_ldjfl"]
+[ext_resource type="PackedScene" uid="uid://dblwjykj2w1au" path="res://scenes/ui/auras/debuff_icons/dsr/p6/spreading_flame.tscn" id="39_u5fts"]
+[ext_resource type="Script" uid="uid://bapdafi4i0rl8" path="res://scenes/dsr/p6/seq_aa2.gd" id="40_a8pka"]
+[ext_resource type="Script" uid="uid://cy86j3jdmt24v" path="res://scenes/dsr/p6/seq_wings2.gd" id="41_ee22r"]
+[ext_resource type="Script" uid="uid://bepjwnn5uiymp" path="res://scenes/dsr/p6/seq_wyrm2.gd" id="42_l4wl1"]
+[ext_resource type="PackedScene" uid="uid://dxyb4888aqmm1" path="res://scenes/ui/auras/debuff_icons/dsr/p6/boiling.tscn" id="43_pwe3a"]
+[ext_resource type="PackedScene" uid="uid://h4jctxmsg8u7" path="res://scenes/ui/auras/debuff_icons/dsr/p6/freezing.tscn" id="44_yxdud"]
+[ext_resource type="PackedScene" uid="uid://dipgko86asjjn" path="res://scenes/ui/auras/debuff_icons/dsr/p6/pyretic.tscn" id="45_ruoxm"]
+[ext_resource type="PackedScene" uid="uid://ce4avowkwahr6" path="res://scenes/ui/auras/debuff_icons/dsr/p6/deep_freeze.tscn" id="46_w48qi"]
+[ext_resource type="PackedScene" uid="uid://bgakdpl5bd3p4" path="res://scenes/common/ground_markers/death_wall_sqr.tscn" id="48_6doeu"]
+[ext_resource type="PackedScene" uid="uid://bo2ts7ug3fb1i" path="res://scenes/dsr/p3/arena/dsr_p3_arena.tscn" id="51_3bao2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bolrt"]
+bg_color = Color(0.12837145, 0.18899962, 0.18076476, 0.95686275)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.90663, 0.673944, 0.399688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_gflx1"]
+font = ExtResource("4_yqosp")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iqfvl"]
+font = ExtResource("6_qs2fn")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_ev42l"]
+font = ExtResource("4_yqosp")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_72cqy"]
+font_size = 32
+outline_size = 4
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_tqhyy"]
+resource_name = "wyrm1"
+length = 19.1
+step = 0.05
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.25, 2.25, 3.25, 5.25, 8.25, 8.75, 12, 18.25, 19),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"move_wyrm_pre"
+}, {
+"args": [],
+"method": &"wyrm1_cast"
+}, {
+"args": [],
+"method": &"spawn_wyrm_donut"
+}, {
+"args": [],
+"method": &"move_to_wyrm_pos"
+}, {
+"args": [],
+"method": &"finish_breath_animation"
+}, {
+"args": [],
+"method": &"wyrm1_hit"
+}, {
+"args": [],
+"method": &"move_to_vow1"
+}, {
+"args": [],
+"method": &"vow1_hit"
+}, {
+"args": [],
+"method": &"end_of_sub_sequence"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h40oy"]
+_data = {
+&"wyrm1": SubResource("Animation_tqhyy")
+}
+
+[sub_resource type="Animation" id="Animation_73xos"]
+resource_name = "aa1"
+length = 11.1
+step = 0.25
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.5, 5, 8, 9.75, 10.25, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"aa1_cast"
+}, {
+"args": [],
+"method": &"move_to_lp_stacks"
+}, {
+"args": [],
+"method": &"remove_tether"
+}, {
+"args": [],
+"method": &"finish_breath_animation"
+}, {
+"args": [],
+"method": &"aa1_hit"
+}, {
+"args": [],
+"method": &"end_of_sub_sequence"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6qvwf"]
+_data = {
+&"aa1": SubResource("Animation_73xos")
+}
+
+[sub_resource type="Animation" id="Animation_n1pcu"]
+resource_name = "wings1"
+length = 23.1
+step = 0.25
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.75, 5.25, 8.5, 13.25, 13.5, 17, 22.25, 23),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"nid_jump"
+}, {
+"args": [],
+"method": &"wings1_cast"
+}, {
+"args": [],
+"method": &"move_to_wings_pos"
+}, {
+"args": [],
+"method": &"play_divebomb"
+}, {
+"args": [],
+"method": &"wings1_hit"
+}, {
+"args": [],
+"method": &"move_to_vow2"
+}, {
+"args": [],
+"method": &"vow_hit_2"
+}, {
+"args": [],
+"method": &"end_of_sub_sequence"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1dmxx"]
+_data = {
+&"wings1": SubResource("Animation_n1pcu")
+}
+
+[sub_resource type="Animation" id="Animation_h3smn"]
+resource_name = "wroth"
+length = 34.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.5, 5.5, 6.5, 6.8, 7.4, 7.7, 9, 10.7, 12.2, 16, 16.1, 16.5, 16.8, 17.1, 17.8, 18.2, 18.5, 19.1, 19.3, 19.7, 20.5, 20.9, 21.3, 22.1, 23.6, 25, 27.7, 29.4, 30.3, 33.3, 34),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"cast_wroth"
+}, {
+"args": [],
+"method": &"hrae_jump"
+}, {
+"args": [],
+"method": &"add_debuffs"
+}, {
+"args": [],
+"method": &"warp_in_hra"
+}, {
+"args": [],
+"method": &"orbs_1_spawn"
+}, {
+"args": [],
+"method": &"cast_akh_morn"
+}, {
+"args": [],
+"method": &"orbs_2_spawn"
+}, {
+"args": [],
+"method": &"cast_cauterize"
+}, {
+"args": [],
+"method": &"orbs_3_spawn"
+}, {
+"args": [],
+"method": &"db_anim"
+}, {
+"args": [],
+"method": &"snapshot_am_pos"
+}, {
+"args": [],
+"method": &"am_1_hit"
+}, {
+"args": [],
+"method": &"move_party_am_1"
+}, {
+"args": [],
+"method": &"orb_1_tele"
+}, {
+"args": [],
+"method": &"snapshot_am_pos"
+}, {
+"args": [],
+"method": &"am_2_hit"
+}, {
+"args": [],
+"method": &"orb_1_hit"
+}, {
+"args": [],
+"method": &"orb_2_tele"
+}, {
+"args": [],
+"method": &"snapshot_am_pos"
+}, {
+"args": [],
+"method": &"am_3_hit"
+}, {
+"args": [],
+"method": &"orb_2_hit"
+}, {
+"args": [],
+"method": &"snapshot_am_pos"
+}, {
+"args": [],
+"method": &"am_4_hit"
+}, {
+"args": [],
+"method": &"orb_3_tele"
+}, {
+"args": [],
+"method": &"orb_3_hit"
+}, {
+"args": [],
+"method": &"move_to_spread"
+}, {
+"args": [],
+"method": &"tail_wing_tele"
+}, {
+"args": [],
+"method": &"debuff_aoe_hits"
+}, {
+"args": [],
+"method": &"move_tanks_to_middle"
+}, {
+"args": [],
+"method": &"vow_hit_3"
+}, {
+"args": [],
+"method": &"end_of_sub_sequence"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5px1"]
+_data = {
+&"wroth": SubResource("Animation_h3smn")
+}
+
+[sub_resource type="Animation" id="Animation_efd1p"]
+resource_name = "aa2"
+length = 12.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.7, 5, 8, 11, 11.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"aa2_cast"
+}, {
+"args": [],
+"method": &"move_to_lp_stacks"
+}, {
+"args": [],
+"method": &"remove_tether"
+}, {
+"args": [],
+"method": &"finish_breath_animation"
+}, {
+"args": [],
+"method": &"aa2_hit"
+}, {
+"args": [],
+"method": &"end_of_sub_sequence"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ky5xr"]
+_data = {
+&"aa2": SubResource("Animation_efd1p")
+}
+
+[sub_resource type="Animation" id="Animation_5sfcn"]
+resource_name = "wings2"
+length = 22.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.4, 6.5, 9, 12.1, 12.6, 17, 21.5, 22),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"wings2_cast"
+}, {
+"args": [],
+"method": &"cast_wing_tail"
+}, {
+"args": [],
+"method": &"move_to_wings_pos"
+}, {
+"args": [],
+"method": &"hot_wing_tail_tele"
+}, {
+"args": [],
+"method": &"wings2_hit"
+}, {
+"args": [],
+"method": &"move_to_vow4"
+}, {
+"args": [],
+"method": &"vow_hit_4"
+}, {
+"args": [],
+"method": &"end_of_sub_sequence"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t3ysu"]
+_data = {
+&"wings2": SubResource("Animation_5sfcn")
+}
+
+[sub_resource type="Animation" id="Animation_u24m7"]
+resource_name = "wyrm2"
+length = 35.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 3.4, 4.5, 6, 9.5, 10, 14, 15.7, 16.9, 18, 21.5, 22.7, 23.8, 27, 29.9, 31, 33.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"move_wyrm_pre"
+}, {
+"args": [],
+"method": &"wyrm2_cast"
+}, {
+"args": [],
+"method": &"spawn_wyrm_donut"
+}, {
+"args": [],
+"method": &"move_to_wyrm_pos"
+}, {
+"args": [],
+"method": &"finish_breath_animation"
+}, {
+"args": [],
+"method": &"wyrm2_hit"
+}, {
+"args": [],
+"method": &"move_to_pre_db"
+}, {
+"args": [],
+"method": &"warp_out_bosses"
+}, {
+"args": [],
+"method": &"warp_in_bosses"
+}, {
+"args": [],
+"method": &"move_to_db_positions"
+}, {
+"args": [],
+"method": &"apply_debuffs"
+}, {
+"args": [],
+"method": &"start_db_anim"
+}, {
+"args": [],
+"method": &"db_hit"
+}, {
+"args": [],
+"method": &"move_north"
+}, {
+"args": [],
+"method": &"touchdown"
+}, {
+"args": [],
+"method": &"move_to_vow_5"
+}, {
+"args": [],
+"method": &"vow_hit_5"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsn8n"]
+_data = {
+&"wyrm2": SubResource("Animation_u24m7")
+}
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_23fhv"]
+data = PackedVector3Array(150, 0, 150, -150, 0, 150, 150, 0, -150, -150, 0, 150, -150, 0, -150, 150, 0, -150)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5pku"]
+transparency = 1
+albedo_texture = ExtResource("36_1dmxx")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5pk2k"]
+material = SubResource("StandardMaterial3D_s5pku")
+size = Vector2(8.795, 6.96)
+center_offset = Vector3(-0.115, 0, 0.022)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vk80t"]
+shader = ExtResource("37_j5px1")
+shader_parameter/time_scale = 0.400000019
+shader_parameter/base_color = Color(0.05, 0.05, 0.08, 1)
+shader_parameter/slime_color = Color(0.15, 0.15, 0.2, 1)
+shader_parameter/highlight_color = Color(0.3, 0.35, 0.4, 1)
+shader_parameter/tendril_density = 4.0
+shader_parameter/tendril_thickness = 0.3
+shader_parameter/animation_speed = 1.0
+shader_parameter/slime_wetness = 0.7
+
+[sub_resource type="Sky" id="Sky_3kvju"]
+sky_material = SubResource("ShaderMaterial_vk80t")
+
+[sub_resource type="Environment" id="Environment_onckn"]
+background_mode = 2
+background_energy_multiplier = 1.6
+sky = SubResource("Sky_3kvju")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="P6Main" type="Node3D" unique_id=1362588836]
+script = ExtResource("1_h1omc")
+
+[node name="Menus" type="Node" parent="." unique_id=1493409284]
+
+[node name="ControlMenu" parent="Menus" unique_id=26349514 instance=ExtResource("2_gp5b3")]
+unique_name_in_owner = true
+layer = 99
+visible = false
+
+[node name="EncounterMenu" type="CanvasLayer" parent="Menus" unique_id=781242616]
+unique_name_in_owner = true
+layer = 99
+visible = false
+script = ExtResource("3_72cqy")
+
+[node name="EncounterMenuContainer" type="MarginContainer" parent="Menus/EncounterMenu" unique_id=1146959927]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.99976
+offset_top = -269.0
+offset_right = 456.00024
+offset_bottom = 381.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_constants/margin_left = 115
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 115
+theme_override_constants/margin_bottom = 65
+
+[node name="Panel" type="Panel" parent="Menus/EncounterMenu/EncounterMenuContainer" unique_id=1086358909]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bolrt")
+
+[node name="StratMarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer" unique_id=1807953843]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_left = 33
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_right = 33
+theme_override_constants/margin_bottom = 38
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer" unique_id=248854469]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 34
+
+[node name="HeaderLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=520255568]
+custom_minimum_size = Vector2(0, 46.865)
+layout_mode = 2
+text = "P6 Config"
+label_settings = SubResource("LabelSettings_gflx1")
+horizontal_alignment = 1
+
+[node name="Opt1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=845178818]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Opt1InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1893654353]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Group 1 adjust is standard for most PFs. Note some DCs may have Ranged and Healers swapped."
+texture = ExtResource("5_loe4s")
+expand_mode = 2
+
+[node name="Opt1Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1290989839]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Wyrmbreath 1"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="WB1Button" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1894237171]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 2
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "Healers Anchor"
+popup/item_0/id = 0
+popup/item_1/text = "Ranged Anchor"
+popup/item_1/id = 1
+popup/item_2/text = "G1 Anchor (NA/EU)"
+popup/item_2/id = 2
+
+[node name="Opt2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1869966854]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Opt2InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=1791976381]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Force target of first vow."
+texture = ExtResource("5_loe4s")
+expand_mode = 2
+
+[node name="Opt2Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=700885849]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "First Vow Target"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="VowButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=844242553]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "Random"
+popup/item_0/id = 0
+popup/item_1/text = "Melee 1"
+popup/item_1/id = 1
+popup/item_2/text = "Melee 2"
+popup/item_2/id = 2
+popup/item_3/text = "Phys Ranged"
+popup/item_3/id = 3
+popup/item_4/text = "Caster"
+popup/item_4/id = 4
+
+[node name="Opt3Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1794659531]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Opt3InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=100697751]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Concern. Manual uses fewer markers."
+texture = ExtResource("5_loe4s")
+expand_mode = 2
+
+[node name="Opt3Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=1731724355]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Wroth Markers"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="WrothMarkersButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=549343653]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "Auto Markers"
+popup/item_0/id = 0
+popup/item_1/text = "Manual"
+popup/item_1/id = 1
+popup/item_2/text = "None"
+popup/item_2/id = 2
+
+[node name="Opt4Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=905674709]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Opt4InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=1072239582]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Spread positions after Wroth Flames. Most PFs use static."
+texture = ExtResource("5_loe4s")
+expand_mode = 2
+
+[node name="Opt4Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=504049935]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Wroth Spread"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="WrothSpreadButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=686668599]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 2
+popup/item_0/text = "Static (NA/EU)"
+popup/item_0/id = 0
+popup/item_1/text = "Facing Middle"
+popup/item_1/id = 1
+
+[node name="Opt5Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=2021535493]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Opt5InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=1962795254]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Most PFs use 5 North 1 South, with Shield Healer North."
+texture = ExtResource("5_loe4s")
+expand_mode = 2
+
+[node name="Opt5Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=1035868127]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Wyrmbreath 2"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="WB2Button" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=474441649]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 2
+popup/item_0/text = "5N-1S (NA/EU)"
+popup/item_0/id = 0
+popup/item_1/text = "Static"
+popup/item_1/id = 1
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1750321516]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 75
+
+[node name="MitCheckButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1840706461]
+visible = false
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_eoaej")
+theme_override_font_sizes/font_size = 27
+disabled = true
+text = "Mitigation Check"
+
+[node name="CloseButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1319694794]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_eoaej")
+theme_override_font_sizes/font_size = 29
+text = "Close"
+
+[node name="MitCheckMarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer" unique_id=2065679461]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_bottom = 58
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" unique_id=1754811991]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 20
+
+[node name="HeaderLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=671714706]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Mitigation Check"
+label_settings = SubResource("LabelSettings_ev42l")
+horizontal_alignment = 1
+
+[node name="AbilitySelectButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=1128394477]
+custom_minimum_size = Vector2(263.725, 41.48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 6
+popup/item_0/text = "Select Ability to Mit"
+popup/item_0/id = 0
+popup/item_1/text = "Ultimate Relativity"
+popup/item_1/id = 1
+popup/item_2/text = "Sextuple Apocalypse"
+popup/item_2/id = 2
+popup/item_3/text = "Darklit Dragonsong"
+popup/item_3/id = 3
+popup/item_4/text = "Crystallize Time"
+popup/item_4/id = 4
+popup/item_5/text = "Pandora"
+popup/item_5/id = 5
+
+[node name="AbilityListMarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=1534689244]
+custom_minimum_size = Vector2(326.075, 310)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer" unique_id=2078282358]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer" unique_id=854023739]
+custom_minimum_size = Vector2(326.075, 310)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer" unique_id=1114323289]
+layout_mode = 2
+
+[node name="Ab1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=1732769370]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab1DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab1Container" unique_id=527940267]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab1Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab1Container" unique_id=96797847]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  1"
+
+[node name="Ab2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=1938735432]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab2DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab2Container" unique_id=548953202]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab2Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab2Container" unique_id=276174486]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  2"
+
+[node name="Ab3Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=993170467]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab3DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab3Container" unique_id=1729256160]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab3Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab3Container" unique_id=1640980597]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  3"
+
+[node name="Ab4Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=614904429]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab4DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab4Container" unique_id=1517136983]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab4Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab4Container" unique_id=357322544]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  4"
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=403985117]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 85
+
+[node name="DefaultButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=135757263]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_eoaej")
+theme_override_font_sizes/font_size = 26
+text = "Clear All"
+
+[node name="BackButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1279036074]
+custom_minimum_size = Vector2(145, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_eoaej")
+theme_override_font_sizes/font_size = 28
+text = "Back"
+
+[node name="PauseMenu" parent="Menus" unique_id=1792151310 instance=ExtResource("8_ysgmn")]
+unique_name_in_owner = true
+
+[node name="WaymarkMenu" parent="Menus" unique_id=1576186712 instance=ExtResource("9_7kys6")]
+
+[node name="UI" type="Node" parent="." unique_id=1515433404]
+
+[node name="TargetCastBar" parent="UI" unique_id=2043068220 instance=ExtResource("10_3bao2")]
+unique_name_in_owner = true
+
+[node name="CastBar" parent="UI" unique_id=1196505504 instance=ExtResource("10_5gfv1")]
+unique_name_in_owner = true
+
+[node name="EnemyCastBar" parent="UI" unique_id=1073225576 instance=ExtResource("11_ge4eb")]
+unique_name_in_owner = true
+
+[node name="ActionBar" parent="UI" unique_id=193947566 instance=ExtResource("12_2efd2")]
+
+[node name="FailList" parent="UI" unique_id=1759890455 instance=ExtResource("13_s5p2j")]
+unique_name_in_owner = true
+
+[node name="PartyList" parent="UI" unique_id=36112859 instance=ExtResource("14_72cqy")]
+unique_name_in_owner = true
+
+[node name="PlayerDebuffs" parent="UI" unique_id=1127472278 instance=ExtResource("15_jidvf")]
+unique_name_in_owner = true
+
+[node name="Buttons" type="Node" parent="UI" unique_id=141854339]
+
+[node name="Coords" parent="UI/Buttons" unique_id=1872278545 instance=ExtResource("16_8m4ct")]
+visible = false
+
+[node name="ResetButton" type="Button" parent="UI/Buttons" unique_id=2112240594]
+offset_left = 28.0
+offset_top = 18.0
+offset_right = 128.0
+offset_bottom = 58.0
+text = "Reset"
+
+[node name="RoleSelectButton" type="OptionButton" parent="UI/Buttons" unique_id=1425783947]
+offset_left = 150.0
+offset_top = 21.0
+offset_right = 327.0
+offset_bottom = 52.0
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 6
+fit_to_longest_item = false
+item_count = 8
+popup/item_0/text = "Tank 1"
+popup/item_0/id = 0
+popup/item_1/text = "Tank 2"
+popup/item_1/id = 1
+popup/item_2/text = "Healer 1"
+popup/item_2/id = 2
+popup/item_3/text = "Healer 2"
+popup/item_3/id = 3
+popup/item_4/text = "Melee 1"
+popup/item_4/id = 4
+popup/item_5/text = "Melee 2"
+popup/item_5/id = 5
+popup/item_6/text = "Ranged 1"
+popup/item_6/id = 6
+popup/item_7/text = "Ranged 2"
+popup/item_7/id = 7
+script = ExtResource("17_3bao2")
+
+[node name="SpectateButton" type="CheckButton" parent="UI/Buttons/RoleSelectButton" unique_id=1775615186]
+layout_mode = 0
+offset_top = 32.16
+offset_right = 178.0
+offset_bottom = 63.16
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Spectate Mode"
+script = ExtResource("18_1ixip")
+
+[node name="HideBotsCheckButton" type="CheckButton" parent="UI/Buttons/RoleSelectButton" unique_id=1704637274]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(178, 0)
+layout_mode = 1
+offset_top = 59.53
+offset_right = 141.0
+offset_bottom = 90.53005
+focus_mode = 0
+theme_override_constants/outline_size = 2
+text = "Hide Bots"
+script = ExtResource("19_y8vq6")
+
+[node name="DSRSequenceSelectButton" parent="UI/Buttons" unique_id=1936732226 instance=ExtResource("20_wosi1")]
+offset_left = -235.91998
+offset_right = -44.91992
+selected = 3
+
+[node name="EncounterConfigButton" parent="UI/Buttons/DSRSequenceSelectButton" unique_id=2141749853 instance=ExtResource("21_cobtv")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 7.999939
+offset_right = 30.999939
+
+[node name="SubSequenceSelectButton" type="OptionButton" parent="UI/Buttons" unique_id=381504000]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(151, 0)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -404.0
+offset_top = 21.0
+offset_right = -253.0
+offset_bottom = 52.0
+grow_horizontal = 0
+focus_mode = 0
+action_mode = 1
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "Wyrmsbreath 1"
+popup/item_0/id = 0
+popup/item_1/text = "Wings 1"
+popup/item_1/id = 1
+popup/item_2/text = "Wroth Flames"
+popup/item_2/id = 2
+popup/item_3/text = "Wings 2"
+popup/item_3/id = 3
+popup/item_4/text = "Wyrmsbreath 2"
+popup/item_4/id = 4
+
+[node name="Label" type="Label" parent="UI/Buttons/SubSequenceSelectButton" unique_id=944672014]
+layout_mode = 0
+offset_left = 3.835
+offset_top = -19.0
+offset_right = 100.835
+offset_bottom = 4.0
+theme_override_font_sizes/font_size = 14
+text = "Starting Point
+"
+
+[node name="VersionLabel" parent="UI/Buttons" unique_id=1280789811 instance=ExtResource("22_y7xjt")]
+
+[node name="MoveUIResetButton" parent="UI/Buttons" unique_id=645066000 instance=ExtResource("23_ldjfl")]
+unique_name_in_owner = true
+visible = false
+
+[node name="BossHPWarn" type="Label" parent="UI" unique_id=186972658]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.0
+offset_top = 56.0
+offset_right = 138.0
+offset_bottom = 101.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Watch Boss HP"
+label_settings = SubResource("LabelSettings_72cqy")
+
+[node name="Controllers" type="Node" parent="." unique_id=142699960]
+
+[node name="WaymarkController" parent="Controllers" unique_id=1397802931 node_paths=PackedStringArray("arena_waymark_node") groups=["waymark_controller"] instance=ExtResource("24_u5fts")]
+unique_name_in_owner = true
+arena_waymark_node = NodePath("../../Waymarks")
+
+[node name="PartyController" parent="Controllers" unique_id=451844197 instance=ExtResource("25_a8pka")]
+unique_name_in_owner = true
+
+[node name="LockonController" parent="Controllers" unique_id=1375077050 instance=ExtResource("26_ee22r")]
+unique_name_in_owner = true
+
+[node name="GroundAoEController" parent="Controllers" unique_id=955828879 groups=["ground_aoe_controller"] instance=ExtResource("27_l4wl1")]
+unique_name_in_owner = true
+
+[node name="TetherController" parent="Controllers" unique_id=1798774675 instance=ExtResource("28_72cqy")]
+unique_name_in_owner = true
+
+[node name="WrothFlameController" type="Node" parent="Controllers" unique_id=1673161900]
+unique_name_in_owner = true
+script = ExtResource("29_jidvf")
+wroth_line_scene = ExtResource("30_8m4ct")
+wroth_zig_scene = ExtResource("31_3bao2")
+
+[node name="TargetController" parent="Controllers" unique_id=786300096 instance=ExtResource("32_8m4ct")]
+unique_name_in_owner = true
+
+[node name="TargetMarkerController" parent="Controllers" unique_id=1728002865 instance=ExtResource("33_3bao2")]
+unique_name_in_owner = true
+
+[node name="EncounterController" parent="." unique_id=787222493 instance=ExtResource("28_pwe3a")]
+unique_name_in_owner = true
+
+[node name="P6Sequence" type="Node" parent="EncounterController" unique_id=1578084382]
+script = ExtResource("33_1ixip")
+
+[node name="testTimer" type="Timer" parent="EncounterController/P6Sequence" unique_id=1791849045]
+unique_name_in_owner = true
+wait_time = 1000.0
+one_shot = true
+
+[node name="Wyrm1" type="Node" parent="EncounterController/P6Sequence" unique_id=412122613]
+unique_name_in_owner = true
+script = ExtResource("34_y8vq6")
+
+[node name="Wyrm1Anim" type="AnimationPlayer" parent="EncounterController/P6Sequence/Wyrm1" unique_id=1946793900]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_h40oy")
+
+[node name="AA1" type="Node" parent="EncounterController/P6Sequence" unique_id=683504698]
+unique_name_in_owner = true
+script = ExtResource("35_wosi1")
+
+[node name="AA1Anim" type="AnimationPlayer" parent="EncounterController/P6Sequence/AA1" unique_id=764213880]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_6qvwf")
+
+[node name="Wings1" type="Node" parent="EncounterController/P6Sequence" unique_id=517587739]
+unique_name_in_owner = true
+script = ExtResource("36_cobtv")
+
+[node name="Wings1Anim" type="AnimationPlayer" parent="EncounterController/P6Sequence/Wings1" unique_id=1243658828]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_1dmxx")
+
+[node name="Wroth" type="Node" parent="EncounterController/P6Sequence" unique_id=1655414013]
+unique_name_in_owner = true
+script = ExtResource("37_y7xjt")
+entangled_flames_icon_scene = ExtResource("38_ldjfl")
+spreading_flames_icon_scene = ExtResource("39_u5fts")
+
+[node name="WrothAnim" type="AnimationPlayer" parent="EncounterController/P6Sequence/Wroth" unique_id=516955777]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_j5px1")
+
+[node name="AA2" type="Node" parent="EncounterController/P6Sequence" unique_id=1107469718]
+unique_name_in_owner = true
+script = ExtResource("40_a8pka")
+
+[node name="AA2Anim" type="AnimationPlayer" parent="EncounterController/P6Sequence/AA2" unique_id=1760269864]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_ky5xr")
+
+[node name="Wings2" type="Node" parent="EncounterController/P6Sequence" unique_id=551862283]
+unique_name_in_owner = true
+script = ExtResource("41_ee22r")
+
+[node name="Wings2Anim" type="AnimationPlayer" parent="EncounterController/P6Sequence/Wings2" unique_id=1938281799]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_t3ysu")
+
+[node name="Wyrm2" type="Node" parent="EncounterController/P6Sequence" unique_id=682583709]
+unique_name_in_owner = true
+script = ExtResource("42_l4wl1")
+boiling_icon_scene = ExtResource("43_pwe3a")
+freezing_icon_scene = ExtResource("44_yxdud")
+pyretic_icon_scene = ExtResource("45_ruoxm")
+deep_freeze_icon_scene = ExtResource("46_w48qi")
+
+[node name="Wyrm2Anim" type="AnimationPlayer" parent="EncounterController/P6Sequence/Wyrm2" unique_id=1127220180]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_gsn8n")
+
+[node name="Arena" type="Node3D" parent="." unique_id=263444805]
+
+[node name="Visual" type="Node3D" parent="Arena" unique_id=86967889]
+
+[node name="DeathWallSquare" parent="Arena/Visual" unique_id=381149363 instance=ExtResource("48_6doeu")]
+
+[node name="Steppes Platform" parent="Arena/Visual" unique_id=1416770256 instance=ExtResource("51_3bao2")]
+transform = Transform3D(2.381, 0, 0, 0, 2.381, 0, 0, 0, 2.381, 0, -0.32, 0)
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Arena" unique_id=952568109]
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arena/FloorMesh" unique_id=1669193353]
+collision_layer = 129
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/FloorMesh/StaticBody3D" unique_id=867988209]
+shape = SubResource("ConcavePolygonShape3D_23fhv")
+
+[node name="Waymarks" type="Node3D" parent="." unique_id=396813830]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Characters" type="Node3D" parent="." unique_id=1733352908 groups=["characters_layer"]]
+
+[node name="Enemies" type="Node3D" parent="." unique_id=411804875 groups=["enemies_layer"]]
+
+[node name="GroundMarkers" type="Node3D" parent="." unique_id=1052692113 groups=["ground_marker_layer"]]
+unique_name_in_owner = true
+
+[node name="WMGroundMarker" type="MeshInstance3D" parent="GroundMarkers" unique_id=1677342559]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60837, 0.14, 0.0603294)
+visible = false
+mesh = SubResource("PlaneMesh_5pk2k")
+
+[node name="SpecialMarkers" type="Node3D" parent="GroundMarkers" unique_id=858824402]
+unique_name_in_owner = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=401408988]
+environment = SubResource("Environment_onckn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=752946868]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_energy = 0.891
+directional_shadow_mode = 0
+
+[connection signal="item_selected" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container/WB1Button" to="Menus/EncounterMenu" method="_on_wb_1_button_item_selected"]
+[connection signal="item_selected" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container/VowButton" to="Menus/EncounterMenu" method="_on_vow_button_item_selected"]
+[connection signal="item_selected" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container/WrothMarkersButton" to="Menus/EncounterMenu" method="_on_wroth_markers_button_item_selected"]
+[connection signal="item_selected" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container/WrothSpreadButton" to="Menus/EncounterMenu" method="_on_wroth_spread_button_item_selected"]
+[connection signal="item_selected" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container/WB2Button" to="Menus/EncounterMenu" method="_on_wb_2_button_item_selected"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer/CloseButton" to="Menus/EncounterMenu" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer/DefaultButton" to="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" method="_on_default_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer/BackButton" to="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" method="_on_back_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="item_selected" from="UI/Buttons/RoleSelectButton" to="UI/Buttons/RoleSelectButton" method="_on_item_selected"]
+[connection signal="pressed" from="UI/Buttons/RoleSelectButton/SpectateButton" to="UI/Buttons/RoleSelectButton/SpectateButton" method="_on_pressed"]
+[connection signal="pressed" from="UI/Buttons/RoleSelectButton/HideBotsCheckButton" to="UI/Buttons/RoleSelectButton/HideBotsCheckButton" method="_on_pressed"]
+[connection signal="pressed" from="UI/Buttons/DSRSequenceSelectButton/EncounterConfigButton" to="Menus/EncounterMenu" method="_on_encounter_config_button_pressed"]
+[connection signal="item_selected" from="UI/Buttons/SubSequenceSelectButton" to="Menus/EncounterMenu" method="_on_sub_sequence_select_button_item_selected"]

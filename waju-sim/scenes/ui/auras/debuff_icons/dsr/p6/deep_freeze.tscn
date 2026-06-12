@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ce4avowkwahr6"]
+
+[ext_resource type="Texture2D" uid="uid://beowvo6lwo7s2" path="res://assets/png/debuff_icons/deep_freeze.png" id="1_kbfbm"]
+
+[node name="DeepFreezeIcon" type="TextureRect"]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_kbfbm")
+metadata/debuff_name = "Deep Freeze"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b0wxaorlbce3d"]
+
+[ext_resource type="PackedScene" uid="uid://cwddcyqkehd4y" path="res://scenes/dsr/p3/enemies/nidhogg_clone_anim.tscn" id="1_1og2a"]
+[ext_resource type="Script" uid="uid://cgd8q3dokics5" path="res://scenes/dsr/p3/enemies/clone.gd" id="1_ir0bq"]
+
+[node name="Clone" type="Node3D" unique_id=2017538313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.989, 25, 0.243)
+script = ExtResource("1_ir0bq")
+
+[node name="NidhoggAnim" parent="." unique_id=1565220201 instance=ExtResource("1_1og2a")]
+transform = Transform3D(-4.5, 0, -3.93403e-07, 0, 4.5, 0, 3.93403e-07, 0, -4.5, 0, 0, 0)

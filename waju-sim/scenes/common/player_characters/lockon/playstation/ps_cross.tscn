@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dctfiflorcw48"]
+
+[ext_resource type="Texture2D" uid="uid://6y25i8q53rwe" path="res://assets/png/playstation/X_Marker.png" id="1_ia8b3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_to05v"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_ia8b3")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_sl33r"]
+material = SubResource("StandardMaterial3D_to05v")
+size = Vector2(2, 2)
+
+[node name="PSCross" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
+metadata/id = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+sorting_offset = 50.0
+mesh = SubResource("QuadMesh_sl33r")

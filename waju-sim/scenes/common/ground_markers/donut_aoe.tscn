@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwby56c1msf8y"]
+
+[ext_resource type="Script" path="res://scenes/common/ground_markers/donut_aoe.gd" id="1_gx7cl"]
+[ext_resource type="Shader" path="res://assets/common/shaders/donut.gdshader" id="1_no2ja"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s8pe6"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_no2ja")
+shader_parameter/size = 0.05
+shader_parameter/alpha = 0.5
+shader_parameter/color = Vector3(0.5, 0, 0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_syaek"]
+resource_local_to_scene = true
+material = SubResource("ShaderMaterial_s8pe6")
+top_radius = 60.0
+bottom_radius = 60.0
+height = 0.01
+cap_bottom = false
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vmbw6"]
+resource_local_to_scene = true
+height = 0.01
+radius = 60.0
+
+[node name="DonutAoE" type="Area3D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_gx7cl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_syaek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_vmbw6")

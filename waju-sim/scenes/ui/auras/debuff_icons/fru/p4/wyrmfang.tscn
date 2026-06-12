@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cbivx02wiiumy"]
+
+[ext_resource type="Texture2D" uid="uid://clse3w2thgsus" path="res://assets/fru/debuff_icons/crystal_time/wyrmfang.png" id="1_wl7pl"]
+
+[node name="WyrmfangIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = " Wyrmfang"
+texture = ExtResource("1_wl7pl")
+metadata/debuff_name = "wyrmfang"

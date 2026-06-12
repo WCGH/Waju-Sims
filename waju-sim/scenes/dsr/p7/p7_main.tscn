@@ -1,0 +1,259 @@
+[gd_scene format=3 uid="uid://du4axe5tk7sgp"]
+
+[ext_resource type="Script" uid="uid://bswhku8tljou" path="res://scenes/dsr/p7/p7_main.gd" id="1_yhavw"]
+[ext_resource type="PackedScene" uid="uid://btigj53q7q4oi" path="res://scenes/ui/cast_bars/target_cast_bar.tscn" id="2_04uuc"]
+[ext_resource type="PackedScene" uid="uid://b23aj0fsxbgap" path="res://scenes/menus/control_menu.tscn" id="2_ko7yx"]
+[ext_resource type="PackedScene" uid="uid://vftsma2c80sa" path="res://scenes/menus/pause_menu.tscn" id="8_ij76l"]
+[ext_resource type="PackedScene" uid="uid://cbimodxf0fbhu" path="res://scenes/ui/waymark_menu.tscn" id="9_dsqdd"]
+[ext_resource type="PackedScene" uid="uid://chasoddjwqblg" path="res://scenes/ui/cast_bars/cast_bar.tscn" id="10_ndpeb"]
+[ext_resource type="PackedScene" uid="uid://dpbgiih2ubevo" path="res://scenes/dsr/controllers/exaflare_controller.tscn" id="10_w72k4"]
+[ext_resource type="PackedScene" uid="uid://ctvier3tpchg3" path="res://scenes/common/controllers/target_controller.tscn" id="11_5jidn"]
+[ext_resource type="PackedScene" uid="uid://cri3gvnrtsbrf" path="res://scenes/ui/cast_bars/enemy_cast_bar.tscn" id="11_mf8i6"]
+[ext_resource type="PackedScene" uid="uid://cg0h4uysscvtc" path="res://scenes/ui/action_bar.tscn" id="12_o2ui2"]
+[ext_resource type="PackedScene" uid="uid://cidk1e7u3l0ya" path="res://scenes/ui/fail_list.tscn" id="13_wqwts"]
+[ext_resource type="PackedScene" uid="uid://02ckwb1trdp4" path="res://scenes/ui/party_list/party_list.tscn" id="14_vess7"]
+[ext_resource type="PackedScene" uid="uid://du2fr4o3nsww0" path="res://scenes/ui/auras/player_debuffs.tscn" id="15_7bibp"]
+[ext_resource type="Script" uid="uid://d0qekaf6u0i7o" path="res://scenes/dsr/p7/sequences/exaflares.gd" id="15_h0brc"]
+[ext_resource type="PackedScene" uid="uid://jcbpndkhehjl" path="res://scenes/ui/coords.tscn" id="16_oncoh"]
+[ext_resource type="Script" uid="uid://bxcv5ewhgg5pq" path="res://scenes/ui/role_select_button.gd" id="17_mi3aw"]
+[ext_resource type="PackedScene" uid="uid://bhmrwvmxlx6r0" path="res://scenes/dsr/p7/arena/dsr_p7_arena_trimmed.tscn" id="19_tvvul"]
+[ext_resource type="PackedScene" uid="uid://drvk5c211dgk5" path="res://scenes/ui/dsr/dsr_sequence_select_button.tscn" id="20_hmt1x"]
+[ext_resource type="PackedScene" uid="uid://bb6pbj1vuf7aa" path="res://scenes/ui/encounter_config_button.tscn" id="21_y6c25"]
+[ext_resource type="PackedScene" uid="uid://cmakti71sjg46" path="res://scenes/ui/info_box.tscn" id="22_o4q2s"]
+[ext_resource type="PackedScene" uid="uid://c6lwk2vknoj7w" path="res://scenes/ui/move_ui_reset_button.tscn" id="23_cauty"]
+[ext_resource type="PackedScene" uid="uid://bwd1v6kvgas8d" path="res://scenes/common/controllers/waymark_controller.tscn" id="24_0uqdo"]
+[ext_resource type="PackedScene" uid="uid://bayxk6ajn7khf" path="res://scenes/common/controllers/party_controller.tscn" id="25_3rx20"]
+[ext_resource type="PackedScene" uid="uid://wdaa7tvsg1oy" path="res://scenes/common/controllers/lockon_controller.tscn" id="26_nrla8"]
+[ext_resource type="PackedScene" uid="uid://bauk161giibov" path="res://scenes/common/controllers/ground_aoe_controller.tscn" id="27_w3qfv"]
+[ext_resource type="PackedScene" uid="uid://crewso7ys1t5t" path="res://scenes/common/controllers/encounter_controller.tscn" id="28_t1uqf"]
+[ext_resource type="PackedScene" uid="uid://b5a8l81gltuhy" path="res://scenes/common/ground_markers/death_wall.tscn" id="34_e3dpi"]
+[ext_resource type="Texture2D" uid="uid://bmcxcd6diyj1x" path="res://assets/common/world_markers/wm_ground_marker.png" id="36_elwqx"]
+[ext_resource type="Shader" uid="uid://gpesy5bu4dso" path="res://assets/common/shaders/sky.gdshader" id="37_1o7gj"]
+
+[sub_resource type="Animation" id="Animation_enyvq"]
+resource_name = "exaflare"
+length = 50.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_exaflare"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hwrjx"]
+_data = {
+&"exaflare": SubResource("Animation_enyvq")
+}
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_23fhv"]
+data = PackedVector3Array(150, 0, 150, -150, 0, 150, 150, 0, -150, -150, 0, 150, -150, 0, -150, 150, 0, -150)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5pku"]
+transparency = 1
+albedo_texture = ExtResource("36_elwqx")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5pk2k"]
+material = SubResource("StandardMaterial3D_s5pku")
+size = Vector2(8.795, 6.96)
+center_offset = Vector3(-0.115, 0, 0.022)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vk80t"]
+shader = ExtResource("37_1o7gj")
+shader_parameter/time_scale = 0.400000019
+shader_parameter/base_color = Color(0.05, 0.05, 0.08, 1)
+shader_parameter/slime_color = Color(0.15, 0.15, 0.2, 1)
+shader_parameter/highlight_color = Color(0.3, 0.35, 0.4, 1)
+shader_parameter/tendril_density = 4.0
+shader_parameter/tendril_thickness = 0.3
+shader_parameter/animation_speed = 1.0
+shader_parameter/slime_wetness = 0.7
+
+[sub_resource type="Sky" id="Sky_3kvju"]
+sky_material = SubResource("ShaderMaterial_vk80t")
+
+[sub_resource type="Environment" id="Environment_onckn"]
+background_mode = 2
+background_energy_multiplier = 1.6
+sky = SubResource("Sky_3kvju")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="P7Main" type="Node3D" unique_id=1362588836]
+script = ExtResource("1_yhavw")
+
+[node name="Menus" type="Node" parent="." unique_id=1493409284]
+
+[node name="ControlMenu" parent="Menus" unique_id=26349514 instance=ExtResource("2_ko7yx")]
+unique_name_in_owner = true
+layer = 99
+visible = false
+
+[node name="PauseMenu" parent="Menus" unique_id=1792151310 instance=ExtResource("8_ij76l")]
+unique_name_in_owner = true
+
+[node name="WaymarkMenu" parent="Menus" unique_id=1576186712 instance=ExtResource("9_dsqdd")]
+
+[node name="UI" type="Node" parent="." unique_id=1515433404]
+
+[node name="TargetCastBar" parent="UI" unique_id=1726501773 instance=ExtResource("2_04uuc")]
+
+[node name="CastBar" parent="UI" unique_id=1196505504 instance=ExtResource("10_ndpeb")]
+unique_name_in_owner = true
+
+[node name="EnemyCastBar" parent="UI" unique_id=1073225576 instance=ExtResource("11_mf8i6")]
+
+[node name="ActionBar" parent="UI" unique_id=193947566 instance=ExtResource("12_o2ui2")]
+
+[node name="FailList" parent="UI" unique_id=1759890455 instance=ExtResource("13_wqwts")]
+unique_name_in_owner = true
+
+[node name="PartyList" parent="UI" unique_id=36112859 instance=ExtResource("14_vess7")]
+unique_name_in_owner = true
+
+[node name="PlayerDebuffs" parent="UI" unique_id=1127472278 instance=ExtResource("15_7bibp")]
+unique_name_in_owner = true
+
+[node name="Buttons" type="Node" parent="UI" unique_id=141854339]
+
+[node name="Coords" parent="UI/Buttons" unique_id=1872278545 instance=ExtResource("16_oncoh")]
+visible = false
+
+[node name="ResetButton" type="Button" parent="UI/Buttons" unique_id=2112240594]
+offset_left = 28.0
+offset_top = 18.0
+offset_right = 128.0
+offset_bottom = 58.0
+text = "Reset"
+
+[node name="RoleSelectButton" type="OptionButton" parent="UI/Buttons" unique_id=1425783947]
+offset_left = 150.0
+offset_top = 21.0
+offset_right = 327.0
+offset_bottom = 52.0
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 6
+fit_to_longest_item = false
+item_count = 8
+popup/item_0/text = "Tank 1"
+popup/item_0/id = 0
+popup/item_1/text = "Tank 2"
+popup/item_1/id = 1
+popup/item_2/text = "Healer 1"
+popup/item_2/id = 2
+popup/item_3/text = "Healer 2"
+popup/item_3/id = 3
+popup/item_4/text = "Melee 1"
+popup/item_4/id = 4
+popup/item_5/text = "Melee 2"
+popup/item_5/id = 5
+popup/item_6/text = "Ranged 1"
+popup/item_6/id = 6
+popup/item_7/text = "Ranged 2"
+popup/item_7/id = 7
+script = ExtResource("17_mi3aw")
+
+[node name="DSRSequenceSelectButton" parent="UI/Buttons" unique_id=1936732226 instance=ExtResource("20_hmt1x")]
+offset_left = -235.91998
+offset_right = -44.91992
+selected = 4
+
+[node name="EncounterConfigButton" parent="UI/Buttons/DSRSequenceSelectButton" unique_id=2141749853 instance=ExtResource("21_y6c25")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 7.999939
+offset_right = 30.999939
+
+[node name="VersionLabel" parent="UI/Buttons" unique_id=1280789811 instance=ExtResource("22_o4q2s")]
+
+[node name="MoveUIResetButton" parent="UI/Buttons" unique_id=645066000 instance=ExtResource("23_cauty")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Controllers" type="Node" parent="." unique_id=142699960]
+
+[node name="WaymarkController" parent="Controllers" unique_id=1397802931 node_paths=PackedStringArray("arena_waymark_node") groups=["waymark_controller"] instance=ExtResource("24_0uqdo")]
+unique_name_in_owner = true
+arena_waymark_node = NodePath("../../Waymarks")
+
+[node name="PartyController" parent="Controllers" unique_id=451844197 instance=ExtResource("25_3rx20")]
+unique_name_in_owner = true
+
+[node name="LockonController" parent="Controllers" unique_id=1375077050 instance=ExtResource("26_nrla8")]
+unique_name_in_owner = true
+
+[node name="GroundAoEController" parent="Controllers" unique_id=955828879 groups=["ground_aoe_controller"] instance=ExtResource("27_w3qfv")]
+unique_name_in_owner = true
+
+[node name="TargetController" parent="Controllers" unique_id=1427530567 instance=ExtResource("11_5jidn")]
+
+[node name="ExaflareController" parent="Controllers" unique_id=1478657157 instance=ExtResource("10_w72k4")]
+unique_name_in_owner = true
+
+[node name="EncounterController" parent="." unique_id=787222493 instance=ExtResource("28_t1uqf")]
+unique_name_in_owner = true
+
+[node name="ExaflareSeq" type="Node" parent="EncounterController" unique_id=1640230211]
+unique_name_in_owner = true
+script = ExtResource("15_h0brc")
+
+[node name="ExaflareAnim" type="AnimationPlayer" parent="EncounterController/ExaflareSeq" unique_id=94060970]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_hwrjx")
+
+[node name="Arena" type="Node3D" parent="." unique_id=263444805]
+
+[node name="Visual" type="Node3D" parent="Arena" unique_id=86967889]
+
+[node name="DSR_P7_Arena_Trimmed" parent="Arena/Visual" unique_id=328288291 instance=ExtResource("19_tvvul")]
+
+[node name="DeathWall" parent="Arena/Visual" unique_id=1213082155 instance=ExtResource("34_e3dpi")]
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Arena" unique_id=952568109]
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arena/FloorMesh" unique_id=1669193353]
+collision_layer = 129
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/FloorMesh/StaticBody3D" unique_id=867988209]
+shape = SubResource("ConcavePolygonShape3D_23fhv")
+
+[node name="Waymarks" type="Node3D" parent="." unique_id=396813830]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Characters" type="Node3D" parent="." unique_id=1733352908 groups=["characters_layer"]]
+
+[node name="Enemies" type="Node3D" parent="." unique_id=411804875 groups=["enemies_layer"]]
+
+[node name="GroundMarkers" type="Node3D" parent="." unique_id=1052692113 groups=["ground_marker_layer"]]
+unique_name_in_owner = true
+
+[node name="WMGroundMarker" type="MeshInstance3D" parent="GroundMarkers" unique_id=1677342559]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60837, 0.14, 0.0603294)
+visible = false
+mesh = SubResource("PlaneMesh_5pk2k")
+
+[node name="SpecialMarkers" type="Node3D" parent="GroundMarkers" unique_id=858824402]
+unique_name_in_owner = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=401408988]
+environment = SubResource("Environment_onckn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=752946868]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_energy = 0.891
+directional_shadow_mode = 0
+
+[connection signal="pressed" from="UI/Buttons/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="item_selected" from="UI/Buttons/RoleSelectButton" to="UI/Buttons/RoleSelectButton" method="_on_item_selected"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://o3ixmcdsl53"]
+
+[ext_resource type="Texture2D" uid="uid://d2f2j7u6v7t0c" path="res://assets/fru/debuff_icons/ultimate_relativity/dark_fire.png" id="1_eqmvd"]
+
+[node name="DarkFireIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Dark Fire III"
+texture = ExtResource("1_eqmvd")
+metadata/debuff_name = "dark_fire"

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://1luahiciumoa"]
+
+[ext_resource type="Script" path="res://scenes/common/ground_markers/line_scanner.gd" id="1_bqx1l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mlw1u"]
+size = Vector3(200, 10, 2.5)
+
+[node name="LineScanner" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00866044, 0, -0.00294471)
+script = ExtResource("1_bqx1l")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.102371, 0, 0.817329)
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_mlw1u")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dn4guqftdbd8i"]
+
+[ext_resource type="Texture2D" uid="uid://wghjjir7q380" path="res://assets/dmu/debuff_icons/entropy.png" id="1_7wyon"]
+
+[node name="EntropyIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Entropy"
+texture = ExtResource("1_7wyon")
+expand_mode = 3
+metadata/debuff_name = "entropy"

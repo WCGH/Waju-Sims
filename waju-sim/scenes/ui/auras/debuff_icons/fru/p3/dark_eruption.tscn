@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://coaqx2moxiana"]
+
+[ext_resource type="Texture2D" uid="uid://b7arihrp6vgic" path="res://assets/fru/debuff_icons/ultimate_relativity/dark_eruption.png" id="1_j2gcn"]
+
+[node name="DarkEruptionIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Dark Eruption"
+texture = ExtResource("1_j2gcn")
+metadata/debuff_name = "dark_eruption"

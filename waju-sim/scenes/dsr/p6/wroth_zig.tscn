@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c2b2mjc4ia8dg"]
+
+[ext_resource type="Script" uid="uid://dk4eotjofit50" path="res://scenes/dsr/p6/wroth_line.gd" id="1_hpt8v"]
+[ext_resource type="PackedScene" uid="uid://dmfk02tx0bp2s" path="res://scenes/dsr/p6/flame_orb.tscn" id="1_ujl3g"]
+
+[node name="WrothZig" type="Node3D"]
+script = ExtResource("1_hpt8v")
+
+[node name="FlameOrb" parent="." instance=ExtResource("1_ujl3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.227, -9)
+visible = true
+
+[node name="FlameOrb2" parent="." instance=ExtResource("1_ujl3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.227, 9)
+visible = true
+
+[node name="FlameOrb3" parent="." instance=ExtResource("1_ujl3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.227, 0)
+visible = true

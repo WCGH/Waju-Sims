@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce1rukdbuak61"]
+
+[ext_resource type="Texture2D" uid="uid://i7o7jjyb3byt" path="res://assets/common/player_characters/lockon/gaze.png" id="1_rgg1i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0owkx"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_rgg1i")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_m37g1"]
+material = SubResource("StandardMaterial3D_0owkx")
+size = Vector2(2, 1)
+
+[node name="Gaze" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+metadata/id = 12
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_m37g1")

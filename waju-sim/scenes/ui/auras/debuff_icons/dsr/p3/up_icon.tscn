@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://du22vkqa83osn"]
+
+[ext_resource type="Texture2D" uid="uid://dkydj3opyma6c" path="res://assets/png/debuff_icons/up_icon.png" id="1_l7yl4"]
+
+[node name="Arrow0Icon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spineshatter Dive Target"
+texture = ExtResource("1_l7yl4")
+metadata/debuff_name = "arrow_up"

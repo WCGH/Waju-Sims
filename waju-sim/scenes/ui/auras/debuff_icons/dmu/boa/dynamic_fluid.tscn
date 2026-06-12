@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bver43oqosdyo"]
+
+[ext_resource type="Texture2D" uid="uid://ppcny7ol28hy" path="res://assets/dmu/debuff_icons/dynamic_fluid.png" id="1_k3idg"]
+
+[node name="DynamicFluidIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Dynamic Fluid"
+texture = ExtResource("1_k3idg")
+expand_mode = 3
+metadata/debuff_name = "dynamic_fluid"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ccsxqffct15aq"]
+
+[ext_resource type="Texture2D" uid="uid://dr2gomo7rio0i" path="res://assets/fru/debuff_icons/crystal_time/wyrmclaw.png" id="1_qukmp"]
+
+[node name="WyrmclawIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = " Wyrmclaw"
+texture = ExtResource("1_qukmp")
+metadata/debuff_name = "wyrmclaw"

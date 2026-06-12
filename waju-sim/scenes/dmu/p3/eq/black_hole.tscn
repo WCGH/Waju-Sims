@@ -1,0 +1,268 @@
+[gd_scene format=3 uid="uid://deigfnsiu68vw"]
+
+[ext_resource type="Shader" uid="uid://c0afsa7kc6cvs" path="res://assets/common/shaders/sky_stary.gdshader" id="1_3ljip"]
+[ext_resource type="Script" uid="uid://dfflxoi8p211c" path="res://scenes/dmu/p3/eq/black_hole.gd" id="1_nuw0r"]
+[ext_resource type="Shader" uid="uid://cgjqp0v2cpj8b" path="res://assets/common/shaders/black_hole_rim.gdshader" id="2_d51yg"]
+[ext_resource type="Texture2D" uid="uid://dqsyflfnoulou" path="res://assets/common/shaders/smoke_noise.jpeg" id="3_d51yg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xqw0s"]
+render_priority = 0
+shader = ExtResource("1_3ljip")
+shader_parameter/background_color = Color(0, 0, 0.025840001, 1)
+shader_parameter/aspect_ratio = 1.0
+shader_parameter/density = 0.429999989121
+shader_parameter/layer_parascale = 4
+shader_parameter/star_speed = Vector2(0, 0)
+shader_parameter/star_wave = Vector2(0, 0)
+shader_parameter/star_size = 3.0
+shader_parameter/star_rotate_speed = 0.5
+shader_parameter/twinkle_effect = 0.6
+shader_parameter/twinkle_speed = 0.3
+shader_parameter/pixelate_enabled = false
+shader_parameter/pixelate_count = 1000.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_epwig"]
+material = SubResource("ShaderMaterial_xqw0s")
+radius = 3.0
+height = 6.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hsd6q"]
+render_priority = 0
+shader = ExtResource("2_d51yg")
+shader_parameter/smoke_texture = ExtResource("3_d51yg")
+shader_parameter/color = Color(0.03876, 0.012920001, 0.16007765, 1)
+shader_parameter/fade_size = 0.071
+shader_parameter/fade_blend = 0.364
+shader_parameter/smoke_sharpness = 0.869
+shader_parameter/time_scale = 0.2
+shader_parameter/height_fade = 3.4
+shader_parameter/scissor = 0.457
+
+[sub_resource type="SphereMesh" id="SphereMesh_nuw0r"]
+material = SubResource("ShaderMaterial_hsd6q")
+radius = 3.1
+height = 6.2
+
+[sub_resource type="Animation" id="Animation_d51yg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InnerSphere:mesh:material:shader_parameter/background_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0.025840001, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OutterSphere:mesh:radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OutterSphere:mesh:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InnerSphere:mesh:radius")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("InnerSphere:mesh:height")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.0]
+}
+
+[sub_resource type="Animation" id="Animation_nuw0r"]
+resource_name = "fade_in"
+length = 0.39999999999999997
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InnerSphere:mesh:material:shader_parameter/background_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0.025840001, 0), Color(0, 0, 0.025840001, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OutterSphere:mesh:radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333333, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.001, 3.1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OutterSphere:mesh:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.23333333, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.001, 6.2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InnerSphere:mesh:radius")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.001, 3.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("InnerSphere:mesh:height")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.001, 6.0]
+}
+
+[sub_resource type="Animation" id="Animation_20rqr"]
+resource_name = "fade_out"
+length = 0.39999999999999997
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InnerSphere:mesh:material:shader_parameter/background_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.39999998),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0.025840001, 1), Color(0, 0, 0.025840001, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OutterSphere:mesh:radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.1, 0.001]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OutterSphere:mesh:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.2, 0.001]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_20rqr"]
+_data = {
+&"RESET": SubResource("Animation_d51yg"),
+&"fade_in": SubResource("Animation_nuw0r"),
+&"fade_out": SubResource("Animation_20rqr")
+}
+
+[node name="BackHole" type="Node3D" unique_id=1568952237]
+script = ExtResource("1_nuw0r")
+
+[node name="InnerSphere" type="MeshInstance3D" parent="." unique_id=381529150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = SubResource("SphereMesh_epwig")
+
+[node name="OutterSphere" type="MeshInstance3D" parent="." unique_id=557757308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = SubResource("SphereMesh_nuw0r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2069931089]
+libraries/ = SubResource("AnimationLibrary_20rqr")

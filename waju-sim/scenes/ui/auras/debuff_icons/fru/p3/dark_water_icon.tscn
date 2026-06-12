@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://n6aus2x35irp"]
+
+[ext_resource type="Texture2D" uid="uid://bfu8lxef1k5x" path="res://assets/fru/debuff_icons/ultimate_relativity/dark_water.png" id="1_uh7by"]
+
+[node name="DarkWaterIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Dark Water III"
+texture = ExtResource("1_uh7by")
+metadata/debuff_name = "dark_water"

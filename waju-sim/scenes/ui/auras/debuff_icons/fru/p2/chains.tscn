@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://j32rkij33yfn"]
+
+[ext_resource type="Texture2D" uid="uid://dlg0pgsr8h5ii" path="res://assets/fru/debuff_icons/light_rampant/chains.png" id="1_hlbbx"]
+
+[node name="ChainsIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Chains of Everlasting Light"
+texture = ExtResource("1_hlbbx")
+metadata/debuff_name = "chains"

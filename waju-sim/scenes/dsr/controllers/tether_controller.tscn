@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cfwg8mm5oopbt"]
+
+[ext_resource type="Script" uid="uid://b1otimptse2hj" path="res://scenes/common/controllers/tether_controller.gd" id="1_lhrbc"]
+
+[node name="TetherController" type="Node"]
+script = ExtResource("1_lhrbc")

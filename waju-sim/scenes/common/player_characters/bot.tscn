@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://crwb0a8mipbol"]
+
+[ext_resource type="Script" uid="uid://bhne478riobc2" path="res://scenes/common/player_characters/bot.gd" id="1_yigcx"]
+[ext_resource type="PackedScene" uid="uid://d02uuq8ofq5mq" path="res://scenes/common/player_characters/lockon/focus_icon.tscn" id="2_xqsyb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ku3gs"]
+
+[node name="Bot" type="CharacterBody3D" unique_id=1281758787]
+collision_layer = 6
+script = ExtResource("1_yigcx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1500353599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.988, 0)
+shape = SubResource("CapsuleShape3D_ku3gs")
+
+[node name="Lockon" type="Node3D" parent="." unique_id=1908877594]
+unique_name_in_owner = true
+
+[node name="TargetMarker" type="Node3D" parent="Lockon" unique_id=996343873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+metadata/id = -1
+
+[node name="RoleIcon" type="Node3D" parent="Lockon" unique_id=557740901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.59, 0)
+metadata/id = -1
+
+[node name="FocusIcon" parent="Lockon" unique_id=1383696583 instance=ExtResource("2_xqsyb")]
+visible = false
+metadata/id = -1

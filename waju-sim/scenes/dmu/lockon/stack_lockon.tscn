@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://brg8ik1vo4thu"]
+
+[ext_resource type="Texture2D" uid="uid://7m48cuteogp3" path="res://assets/dmu/lockon/stack.png" id="1_b8er0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4cqd"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_b8er0")
+uv1_offset = Vector3(0, -0.01, 0)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_2wba5"]
+material = SubResource("StandardMaterial3D_r4cqd")
+size = Vector2(3, 3)
+
+[node name="StackLockon" type="Node3D" unique_id=1386847651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+metadata/id = 17
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1006014156]
+mesh = SubResource("QuadMesh_2wba5")

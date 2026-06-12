@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cvevcef0hbojl"]
+
+[ext_resource type="Script" uid="uid://cy4lha7ik8dxj" path="res://scenes/common/ground_markers/circle_aoe.gd" id="1_78a5h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vea1"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(0.988235, 0.537255, 0.286275, 0.752941)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qe1ek"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_8vea1")
+top_radius = 10.0
+bottom_radius = 10.0
+height = 0.01
+cap_bottom = false
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_42fqt"]
+resource_local_to_scene = true
+height = 15.0
+radius = 10.0
+
+[sub_resource type="Animation" id="Animation_tmq7b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:top_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [10.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:mesh:bottom_radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [10.0]
+}
+
+[sub_resource type="Animation" id="Animation_r5d64"]
+resource_name = "grow_in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:top_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:mesh:bottom_radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bk3tn"]
+_data = {
+&"RESET": SubResource("Animation_tmq7b"),
+&"grow_in": SubResource("Animation_r5d64")
+}
+
+[node name="CircleAoE" type="Area3D" unique_id=1307123758]
+collision_layer = 512
+collision_mask = 4
+script = ExtResource("1_78a5h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1040360186]
+mesh = SubResource("CylinderMesh_qe1ek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1445198338]
+shape = SubResource("CylinderShape3D_42fqt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1129111444]
+libraries/ = SubResource("AnimationLibrary_bk3tn")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

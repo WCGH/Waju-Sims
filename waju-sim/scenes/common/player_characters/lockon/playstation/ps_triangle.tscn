@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c3dyjnqrnqerx"]
+
+[ext_resource type="Texture2D" uid="uid://tyyxqp8ou83i" path="res://assets/png/playstation/Triangle_Marker.png" id="1_iqotq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e7al"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_iqotq")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_qp5gm"]
+material = SubResource("StandardMaterial3D_8e7al")
+size = Vector2(2, 2)
+
+[node name="PSTriangle" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
+metadata/id = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+sorting_offset = 50.0
+mesh = SubResource("QuadMesh_qp5gm")

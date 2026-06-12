@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dl07yocdwoqpy"
+path.s3tc="res://.godot/imported/dmu_arena_z3oa_a1_flo04a.png-25760a696ab8369ec1c49192a6190a5d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "487be9d3228c6981daa66607b2ad1852"
+}
+
+[deps]
+
+source_file="res://assets/dmu/arenas/dmu_arena_z3oa_a1_flo04a.png"
+dest_files=["res://.godot/imported/dmu_arena_z3oa_a1_flo04a.png-25760a696ab8369ec1c49192a6190a5d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

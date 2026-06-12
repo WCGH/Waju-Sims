@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://0tihnu6cmjpe"]
+
+[ext_resource type="Script" path="res://scenes/controllers/target_controller.gd" id="1_0fwdm"]
+
+[node name="TargetController" type="Node" groups=["target_controller"]]
+script = ExtResource("1_0fwdm")

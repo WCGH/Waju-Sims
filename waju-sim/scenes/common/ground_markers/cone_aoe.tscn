@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bt5bwtvs8ogrv"]
+
+[ext_resource type="Script" uid="uid://dxnarj3w4xbk" path="res://scenes/common/ground_markers/cone_aoe.gd" id="1_ugcv0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhqjv"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 0.317647, 0.168627, 0.545098)
+
+[sub_resource type="PrismMesh" id="PrismMesh_pji8d"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_qhqjv")
+size = Vector3(1, 1, 0.01)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6rsfs"]
+resource_local_to_scene = true
+points = PackedVector3Array(0, 0.5, 0, 0.5, -0.5, 0, 0, 0.5, 0.01, -0.5, -0.5, 0.01, 0.5, -0.5, 0.01, -0.5, -0.5, 0)
+
+[node name="ConeAoE" type="Area3D" unique_id=1129452142]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_ugcv0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1302602824]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PrismMesh_pji8d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1138194025]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1000, 0, -1, -4.37114e-05, 0, 0, 0.5)
+shape = SubResource("ConvexPolygonShape3D_6rsfs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

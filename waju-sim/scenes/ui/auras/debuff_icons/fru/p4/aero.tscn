@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyog4h7k3ofek"]
+
+[ext_resource type="Texture2D" uid="uid://clgseesylx80c" path="res://assets/fru/debuff_icons/crystal_time/aero.png" id="1_4arao"]
+
+[node name="AeroIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Dark Aero III"
+texture = ExtResource("1_4arao")
+metadata/debuff_name = "aero"

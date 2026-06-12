@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bupwk74kk36gt"]
+
+[ext_resource type="Texture2D" uid="uid://pdr8y0w61wj1" path="res://assets/png/job_icons/sam_icon.png" id="1_0e644"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(21, 0)
+size_flags_vertical = 4
+texture = ExtResource("1_0e644")
+expand_mode = 4
+stretch_mode = 5

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dyjkd41xrwami"]
+
+[ext_resource type="PackedScene" uid="uid://dctfiflorcw48" path="res://scenes/markers/lockon/playstation/ps_cross.tscn" id="1_hwxtu"]
+[ext_resource type="PackedScene" uid="uid://bw07f2cpvri54" path="res://scenes/markers/lockon/playstation/ps_circle.tscn" id="2_y5xp3"]
+[ext_resource type="PackedScene" uid="uid://cw8bjk355jwpi" path="res://scenes/markers/lockon/playstation/ps_square.tscn" id="3_bvhrw"]
+[ext_resource type="PackedScene" uid="uid://c3dyjnqrnqerx" path="res://scenes/markers/lockon/playstation/ps_triangle.tscn" id="4_oo1aj"]
+
+[node name="PS2" type="Node3D"]
+
+[node name="Cross" parent="." instance=ExtResource("1_hwxtu")]
+
+[node name="Circle" parent="." instance=ExtResource("2_y5xp3")]
+
+[node name="Square" parent="." instance=ExtResource("3_bvhrw")]
+
+[node name="Triangle" parent="." instance=ExtResource("4_oo1aj")]

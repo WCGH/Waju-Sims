@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbdpwhsgd18ju"]
+
+[ext_resource type="Script" path="res://scenes/common/controllers/puddle.gd" id="1_ft0ii"]
+[ext_resource type="PackedScene" uid="uid://cvevcef0hbojl" path="res://scenes/common/ground_markers/circle_aoe.tscn" id="2_tqwf3"]
+
+[node name="Puddle" type="Node"]
+script = ExtResource("1_ft0ii")
+circle_aoe_scene = ExtResource("2_tqwf3")
+
+[node name="DropTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="DropTimer" to="." method="_on_drop_timer_timeout"]

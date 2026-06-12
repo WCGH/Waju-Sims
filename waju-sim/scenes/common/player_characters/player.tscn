@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cykot1qnoc45c"]
+
+[ext_resource type="Script" uid="uid://dxwu3sn11q1rd" path="res://scenes/common/player_characters/player.gd" id="1_7rhvh"]
+[ext_resource type="Script" uid="uid://7src2otv8vmj" path="res://scenes/common/player_characters/player_movement_controller.gd" id="2_bekby"]
+[ext_resource type="PackedScene" uid="uid://d02uuq8ofq5mq" path="res://scenes/common/player_characters/lockon/focus_icon.tscn" id="4_t18ag"]
+[ext_resource type="Script" uid="uid://donphlsdf147" path="res://scenes/common/player_characters/player_camera.gd" id="4_x7cba"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sg5fr"]
+radius = 0.01
+
+[node name="Player" type="CharacterBody3D" unique_id=2058528884 groups=["player"]]
+collision_layer = 6
+script = ExtResource("1_7rhvh")
+
+[node name="PlayerMovementController" type="Node" parent="." unique_id=414907886]
+unique_name_in_owner = true
+script = ExtResource("2_bekby")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=176681998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.988206, 0)
+shape = SubResource("CapsuleShape3D_sg5fr")
+
+[node name="TwistPivot" type="Node3D" parent="." unique_id=979349962]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+
+[node name="PitchPivot" type="Node3D" parent="TwistPivot" unique_id=1291182940]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.866026, 0.5, 0, -0.5, 0.866026, 0, 0, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="TwistPivot/PitchPivot" unique_id=2083636294]
+unique_name_in_owner = true
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot/SpringArm3D" unique_id=407441022]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 0)
+script = ExtResource("4_x7cba")
+
+[node name="Lockon" type="Node3D" parent="." unique_id=834689178]
+unique_name_in_owner = true
+
+[node name="TargetMarker" type="Node3D" parent="Lockon" unique_id=1668026589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+metadata/id = -1
+
+[node name="RoleIcon" type="Node3D" parent="Lockon" unique_id=1916444771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.59, 0)
+metadata/id = -1
+
+[node name="FocusIcon" parent="Lockon" unique_id=1383696583 instance=ExtResource("4_t18ag")]
+visible = false
+metadata/id = -1

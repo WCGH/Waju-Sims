@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ce72svh5khi1u"]
+
+[ext_resource type="Script" uid="uid://c2ivwt5k0tl02" path="res://scenes/ui/sequence_select_button.gd" id="1_hfr61"]
+
+[node name="SequenceSelectButton" type="OptionButton" unique_id=774208977]
+custom_minimum_size = Vector2(191, 0)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -236.0
+offset_top = 21.0
+offset_right = -45.0
+offset_bottom = 52.0
+grow_horizontal = 0
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 6
+popup/item_0/text = "Light Rampant"
+popup/item_0/id = 0
+popup/item_1/text = "Ultimate Relativity"
+popup/item_1/id = 1
+popup/item_2/text = "Sextuple Apocalypse"
+popup/item_2/id = 2
+popup/item_3/text = "Darklit Dragonsong"
+popup/item_3/id = 3
+popup/item_4/text = "Crystallize Time"
+popup/item_4/id = 4
+popup/item_5/text = "Pandora"
+popup/item_5/id = 5
+script = ExtResource("1_hfr61")
+
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]

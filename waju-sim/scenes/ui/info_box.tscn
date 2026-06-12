@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cmakti71sjg46"]
+
+[ext_resource type="Script" uid="uid://bgckhx2xqxuvr" path="res://scenes/ui/info_box.gd" id="1_jdn8w"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2_hfmnb"]
+[ext_resource type="Texture2D" uid="uid://i4i3xnrggu0f" path="res://assets/common/icons/ui_icons/info.png" id="3_gqibj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4brj"]
+font = ExtResource("2_hfmnb")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_wy18i"]
+font = ExtResource("2_hfmnb")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_7q6ll"]
+font = ExtResource("2_hfmnb")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_t0686"]
+font = ExtResource("2_hfmnb")
+font_size = 12
+
+[node name="InfoBox" type="CanvasLayer" unique_id=1758728692]
+script = ExtResource("1_jdn8w")
+
+[node name="BottomRightContainer" type="VBoxContainer" parent="." unique_id=460315515]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -81.0
+offset_right = -12.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 9
+
+[node name="VersionLabel" type="Label" parent="BottomRightContainer" unique_id=1196066852]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "v1.8.0
+DX12"
+label_settings = SubResource("LabelSettings_o4brj")
+horizontal_alignment = 2
+
+[node name="CoordsLabel" type="Label" parent="BottomRightContainer" unique_id=1874534439]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "0.00, 0.00
+Angle: 180"
+label_settings = SubResource("LabelSettings_wy18i")
+horizontal_alignment = 2
+
+[node name="FPSLabel" type="Label" parent="BottomRightContainer" unique_id=870186552]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "FPS: 165"
+label_settings = SubResource("LabelSettings_7q6ll")
+horizontal_alignment = 2
+
+[node name="ControlsLabel" type="Label" parent="BottomRightContainer" unique_id=249644482]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "'p': Pause
+'Esc': Control Options
+'Alt+Drag': Move UI
+Alt+Scroll: Scale UI"
+label_settings = SubResource("LabelSettings_t0686")
+horizontal_alignment = 2
+
+[node name="InfoButton" type="TextureButton" parent="BottomRightContainer" unique_id=1656044091]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("3_gqibj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="BottomRightContainer/InfoButton" to="." method="_on_info_button_pressed"]

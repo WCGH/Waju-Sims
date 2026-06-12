@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dpbgiih2ubevo"]
+
+[ext_resource type="Script" uid="uid://cs4ar64ksmvud" path="res://scenes/dsr/controllers/exaflare_controller.gd" id="1_u763o"]
+
+[sub_resource type="Animation" id="Animation_7exol"]
+resource_name = "exaflare"
+length = 15.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.2, 6, 6.4, 6.9, 8.6, 10.5, 12.4, 14.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"sword_glow"
+}, {
+"args": [],
+"method": &"exa_hit_animation"
+}, {
+"args": [],
+"method": &"exa_fade_out"
+}, {
+"args": [1],
+"method": &"exa_hit"
+}, {
+"args": [2],
+"method": &"exa_hit"
+}, {
+"args": [3],
+"method": &"exa_hit"
+}, {
+"args": [4],
+"method": &"exa_hit"
+}, {
+"args": [5],
+"method": &"exa_hit"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0lgi3"]
+_data = {
+"exaflare": SubResource("Animation_7exol")
+}
+
+[node name="ExaflareController" type="Node"]
+script = ExtResource("1_u763o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0lgi3")
+}

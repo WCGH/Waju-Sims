@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjvy8idu10klc"]
+
+[ext_resource type="Script" path="res://scenes/ui/cast_bars/enmity_cb_singleton.gd" id="1_280lx"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="1_knb3t"]
+
+[sub_resource type="Theme" id="Theme_vadjc"]
+default_font = ExtResource("1_knb3t")
+default_font_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_lc2st"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_haxh7"]
+bg_color = Color(0.156863, 0.137255, 0.0313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.968627, 0.6, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eit2t"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="CastBar" type="VBoxContainer"]
+visible = false
+size_flags_vertical = 4
+script = ExtResource("1_280lx")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_vadjc")
+text = "Test cast"
+label_settings = SubResource("LabelSettings_lc2st")
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_haxh7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eit2t")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

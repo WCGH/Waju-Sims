@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://dfd4a0c4x2y8u"]
+
+[ext_resource type="Script" uid="uid://u5k6t2hr3a4a" path="res://scenes/dsr/p5/ascalon_cone.gd" id="1_gcock"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhqjv"]
+transparency = 1
+albedo_color = Color(1, 0.317647, 0.168627, 0.741176)
+
+[sub_resource type="PrismMesh" id="PrismMesh_pji8d"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_qhqjv")
+size = Vector3(23.04, 43, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3o346"]
+points = PackedVector3Array(-11.52, -21.5, 0, 11.52, -21.5, 0, 0, 21.5, 0)
+
+[sub_resource type="Animation" id="Animation_chy1v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(23.04, 43, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 21.5)]
+}
+
+[sub_resource type="Animation" id="Animation_utwdd"]
+resource_name = "grow_in"
+length = 0.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(23.04, 43, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -21.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.01),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mnbyi"]
+_data = {
+&"RESET": SubResource("Animation_chy1v"),
+&"grow_in": SubResource("Animation_utwdd")
+}
+
+[node name="AscalonCone" type="Area3D" unique_id=1081254473]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_gcock")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=893377254]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 21.5)
+mesh = SubResource("PrismMesh_pji8d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1075342052]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -21.5)
+shape = SubResource("ConvexPolygonShape3D_3o346")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1263458075]
+libraries/ = SubResource("AnimationLibrary_mnbyi")

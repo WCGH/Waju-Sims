@@ -1,0 +1,23 @@
+# Copyright 2025
+# All rights reserved.
+# This file is released under "GNU General Public License 3.0".
+# Please see the LICENSE file that should have been included as part of this package.
+
+extends CheckButton
+
+signal toggle_bots_visible
+
+
+func _ready() -> void:
+	if Global.encounter == Global.Encounter.FRU:
+		button_pressed = FruGlobal.p4_ct_hide_bots
+	else:
+		button_pressed = Global.hide_bots
+
+
+func _on_pressed() -> void:
+	if Global.encounter == Global.Encounter.FRU:
+		FruGlobal.p4_ct_hide_bots = button_pressed
+	else:
+		Global.hide_bots = button_pressed
+	toggle_bots_visible.emit()

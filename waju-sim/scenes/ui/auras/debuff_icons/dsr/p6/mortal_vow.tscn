@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bd3so8mgkmg2i"]
+
+[ext_resource type="Texture2D" uid="uid://b2kmpf2o4atif" path="res://assets/png/debuff_icons/vow.png" id="1_6nf45"]
+
+[node name="MortalVowIcon" type="TextureRect"]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_6nf45")
+metadata/debuff_name = "Mortal Vow"

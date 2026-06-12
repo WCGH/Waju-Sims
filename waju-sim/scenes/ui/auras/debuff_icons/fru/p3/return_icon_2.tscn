@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bd2p04c05wc6x"]
+
+[ext_resource type="Texture2D" uid="uid://b6rxweqc4jtjl" path="res://assets/fru/debuff_icons/ultimate_relativity/return2.png" id="1_w7iaa"]
+
+[node name="ReturnIcon2" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Return"
+texture = ExtResource("1_w7iaa")
+metadata/debuff_name = "return2"

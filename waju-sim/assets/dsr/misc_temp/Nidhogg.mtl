@@ -1,0 +1,13 @@
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
+
+newmtl mt_m0285b0003_a
+Ns 4.999998
+Ka 1.000000 1.000000 1.000000
+Ni 1.450000
+illum 3
+map_Kd C:/mt_m0285b0003_a_d.png
+map_Ks C:/mt_m0285b0003_a_s.png
+map_Ke C:/mt_m0285b0003_a_e.png
+map_d C:/mt_m0285b0003_a_d.png
+map_Bump -bm 1.000000 C:/mt_m0285b0003_a_n.png

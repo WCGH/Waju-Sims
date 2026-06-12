@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://fqlyot7lxk76"]
+
+[ext_resource type="Texture2D" uid="uid://ft30cm7ylgfh" path="res://assets/fru/debuff_icons/light_rampant/chains_locked.png" id="1_5xhwb"]
+
+[node name="ChainsLockedIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Curse of Everlasting Light"
+texture = ExtResource("1_5xhwb")
+metadata/debuff_name = "chains_locked"

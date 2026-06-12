@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://n6vfccg85s0e"]
+
+[ext_resource type="Texture2D" uid="uid://bspu68eor4ckj" path="res://assets/objects/p5_arena/DSR_p5_fixeder_r1fz_t1_crst5_d.png" id="1_gy7c5"]
+[ext_resource type="Texture2D" uid="uid://dsyeglj1dr6x4" path="res://assets/objects/p5_arena/DSR_p5_fixeder_r1fz_t1_crst5_n.png" id="2_0uy4y"]
+
+[resource]
+resource_name = "r1fz_r3_crst2a.mtrl"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_gy7c5")
+metallic = 1.0
+roughness = 0.552786
+normal_enabled = true
+normal_texture = ExtResource("2_0uy4y")

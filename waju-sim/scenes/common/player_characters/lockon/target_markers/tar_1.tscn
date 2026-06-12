@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://7icuqbpvkwko"]
+
+[ext_resource type="Texture2D" uid="uid://cqrgiq86dxe36" path="res://assets/lockon/target_markers/mark_tar1.png" id="1_pbiu7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6k3o1"]
+transparency = 1
+albedo_texture = ExtResource("1_pbiu7")
+rim_enabled = true
+rim = 0.2
+disable_receive_shadows = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_igbbd"]
+material = SubResource("StandardMaterial3D_6k3o1")
+size = Vector2(2, 2)
+
+[node name="Tar1" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_igbbd")

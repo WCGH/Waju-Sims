@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2ounrwibbfkf"]
+
+[ext_resource type="Texture2D" uid="uid://dwgkfqfp0vnub" path="res://assets/fru/debuff_icons/crystal_time/quietus.png" id="1_0t803"]
+
+[node name="QuietusIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Quietus"
+texture = ExtResource("1_0t803")
+metadata/debuff_name = "quietus"

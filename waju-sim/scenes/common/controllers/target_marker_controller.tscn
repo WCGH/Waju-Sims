@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dktirpxqry1m1"]
+
+[ext_resource type="Script" path="res://scenes/common/controllers/target_marker_controller.gd" id="1_m2jgg"]
+
+[node name="TargetMarkerController" type="Node" groups=["target_marker_controller"]]
+script = ExtResource("1_m2jgg")

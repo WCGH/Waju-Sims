@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d0mc6m7kwfvvt"]
+
+[ext_resource type="Script" uid="uid://clmfnjv8b0xdt" path="res://scenes/fru/p3/arena/apoc_light.gd" id="1_q1r6l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kym1"]
+transparency = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 8.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4isvr"]
+material = SubResource("StandardMaterial3D_4kym1")
+radius = 0.75
+height = 3.0
+
+[node name="ApocLight" type="MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_4isvr")
+script = ExtResource("1_q1r6l")

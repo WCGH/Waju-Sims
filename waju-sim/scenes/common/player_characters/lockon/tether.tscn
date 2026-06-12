@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://jl8oj6r0qdvu"]
+
+[ext_resource type="Script" uid="uid://clf2yo3qoj0wv" path="res://scenes/common/player_characters/lockon/tether.gd" id="1_2gmbi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hb3ik"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_color = Color(1, 0.433333, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_0avsi"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_hb3ik")
+size = Vector3(0.1, 0.1, 1)
+
+[node name="Tether" type="MeshInstance3D" unique_id=595308398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+mesh = SubResource("PrismMesh_0avsi")
+skeleton = NodePath("../../../GroundMarkers")
+script = ExtResource("1_2gmbi")

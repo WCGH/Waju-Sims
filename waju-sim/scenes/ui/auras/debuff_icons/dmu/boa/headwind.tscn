@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://685iu22c2pjq"]
+
+[ext_resource type="Texture2D" uid="uid://dewdp8a4xw1xg" path="res://assets/dmu/debuff_icons/headwind.png" id="1_6r2nb"]
+
+[node name="HeadwindIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Headwind"
+texture = ExtResource("1_6r2nb")
+expand_mode = 3
+metadata/debuff_name = "headwind"

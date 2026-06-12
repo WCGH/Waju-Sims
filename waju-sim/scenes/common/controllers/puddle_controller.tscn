@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bquxvmem65yi8"]
+
+[ext_resource type="Script" path="res://scenes/common/controllers/puddle_controller.gd" id="1_p2c2f"]
+[ext_resource type="PackedScene" uid="uid://cbdpwhsgd18ju" path="res://scenes/common/controllers/puddle.tscn" id="2_6o5lu"]
+
+[node name="PuddleController" type="Node"]
+script = ExtResource("1_p2c2f")
+puddle_scene = ExtResource("2_6o5lu")

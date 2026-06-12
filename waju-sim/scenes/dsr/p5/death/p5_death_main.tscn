@@ -1,0 +1,1241 @@
+[gd_scene format=3 uid="uid://6o4rt65mendi"]
+
+[ext_resource type="Script" uid="uid://udk4ho0itq2v" path="res://scenes/dsr/p5/death/p5_death_main.gd" id="1_s4ho1"]
+[ext_resource type="PackedScene" uid="uid://b23aj0fsxbgap" path="res://scenes/menus/control_menu.tscn" id="2_gb123"]
+[ext_resource type="Script" uid="uid://dpsxvck7rgyxa" path="res://scenes/dsr/p5/death/p5_death_enc_menu.gd" id="3_s4ho1"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="4_2i20o"]
+[ext_resource type="Texture2D" uid="uid://blfibh4tegknc" path="res://assets/common/icons/ui_icons/info_icon_white.png" id="5_xc27s"]
+[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="6_7seeg"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="7_a1f1j"]
+[ext_resource type="Script" uid="uid://beddga1448hxt" path="res://scenes/dsr/p5/death/doth_order_menu.gd" id="8_hcxon"]
+[ext_resource type="PackedScene" uid="uid://vftsma2c80sa" path="res://scenes/menus/pause_menu.tscn" id="8_hgs17"]
+[ext_resource type="Script" uid="uid://cehkubl5ldydi" path="res://scenes/dsr/p5/death/doth_role_container.gd" id="9_2pka3"]
+[ext_resource type="PackedScene" uid="uid://cbimodxf0fbhu" path="res://scenes/ui/waymark_menu.tscn" id="9_3ra0y"]
+[ext_resource type="Texture2D" uid="uid://n8f2owyvj3cy" path="res://assets/common/icons/ui_icons/white_arrow.png" id="10_2pka3"]
+[ext_resource type="PackedScene" uid="uid://chasoddjwqblg" path="res://scenes/ui/cast_bars/cast_bar.tscn" id="10_w3bjs"]
+[ext_resource type="PackedScene" uid="uid://cri3gvnrtsbrf" path="res://scenes/ui/cast_bars/enemy_cast_bar.tscn" id="11_s4ho1"]
+[ext_resource type="PackedScene" uid="uid://cg0h4uysscvtc" path="res://scenes/ui/action_bar.tscn" id="12_2s1qx"]
+[ext_resource type="PackedScene" uid="uid://cidk1e7u3l0ya" path="res://scenes/ui/fail_list.tscn" id="13_283wr"]
+[ext_resource type="PackedScene" uid="uid://02ckwb1trdp4" path="res://scenes/ui/party_list/party_list.tscn" id="14_fs7mt"]
+[ext_resource type="PackedScene" uid="uid://du2fr4o3nsww0" path="res://scenes/ui/auras/player_debuffs.tscn" id="15_oggjb"]
+[ext_resource type="PackedScene" uid="uid://jcbpndkhehjl" path="res://scenes/ui/coords.tscn" id="16_jsju7"]
+[ext_resource type="Script" uid="uid://bxcv5ewhgg5pq" path="res://scenes/ui/role_select_button.gd" id="17_8hdgd"]
+[ext_resource type="Script" uid="uid://djmwvee6rgsb8" path="res://scenes/ui/spectate_button.gd" id="18_dd8e2"]
+[ext_resource type="Script" uid="uid://fb8178c1lbrc" path="res://scenes/fru/p4/hide_bots_check_button.gd" id="19_1o2t6"]
+[ext_resource type="PackedScene" uid="uid://drvk5c211dgk5" path="res://scenes/ui/dsr/dsr_sequence_select_button.tscn" id="20_vpbgn"]
+[ext_resource type="PackedScene" uid="uid://bb6pbj1vuf7aa" path="res://scenes/ui/encounter_config_button.tscn" id="21_m240f"]
+[ext_resource type="PackedScene" uid="uid://cmakti71sjg46" path="res://scenes/ui/info_box.tscn" id="22_lk028"]
+[ext_resource type="PackedScene" uid="uid://c6lwk2vknoj7w" path="res://scenes/ui/move_ui_reset_button.tscn" id="23_wvf08"]
+[ext_resource type="PackedScene" uid="uid://bwd1v6kvgas8d" path="res://scenes/common/controllers/waymark_controller.tscn" id="24_pmp17"]
+[ext_resource type="PackedScene" uid="uid://bayxk6ajn7khf" path="res://scenes/common/controllers/party_controller.tscn" id="25_a8f2n"]
+[ext_resource type="PackedScene" uid="uid://wdaa7tvsg1oy" path="res://scenes/common/controllers/lockon_controller.tscn" id="26_e6gp8"]
+[ext_resource type="PackedScene" uid="uid://bauk161giibov" path="res://scenes/common/controllers/ground_aoe_controller.tscn" id="27_u7bg4"]
+[ext_resource type="Script" uid="uid://b4siwob40qcim" path="res://scenes/dsr/p5/death/seq_death.gd" id="29_s4ho1"]
+[ext_resource type="PackedScene" uid="uid://crewso7ys1t5t" path="res://scenes/common/controllers/encounter_controller.tscn" id="30_3unok"]
+[ext_resource type="PackedScene" uid="uid://cd1lcq832fme3" path="res://scenes/dsr/p5/enemies/thordan.tscn" id="30_4wqwp"]
+[ext_resource type="PackedScene" uid="uid://c22b0c5i0c147" path="res://scenes/ui/auras/debuff_icons/dsr/p5/doom_icon.tscn" id="31_sby6c"]
+[ext_resource type="PackedScene" uid="uid://dagecdxd40cmj" path="res://scenes/ui/auras/debuff_icons/dsr/p5/chains_icon.tscn" id="32_hcxon"]
+[ext_resource type="PackedScene" uid="uid://br4ou771tkotc" path="res://scenes/dsr/p5/arena/DSR_P5_Arena_Full.tscn" id="33_oh627"]
+[ext_resource type="PackedScene" uid="uid://jl8oj6r0qdvu" path="res://scenes/common/player_characters/lockon/tether.tscn" id="33_wtv4d"]
+[ext_resource type="PackedScene" uid="uid://b5a8l81gltuhy" path="res://scenes/common/ground_markers/death_wall.tscn" id="34_flbda"]
+[ext_resource type="Texture2D" uid="uid://bmcxcd6diyj1x" path="res://assets/common/world_markers/wm_ground_marker.png" id="36_54s36"]
+[ext_resource type="Shader" uid="uid://gpesy5bu4dso" path="res://assets/common/shaders/sky.gdshader" id="37_8foey"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bolrt"]
+bg_color = Color(0.12837145, 0.18899962, 0.18076476, 0.95686275)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.90663, 0.673944, 0.399688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_gflx1"]
+font = ExtResource("4_2i20o")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iqfvl"]
+font = ExtResource("6_7seeg")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_ev42l"]
+font = ExtResource("4_2i20o")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5urns"]
+font = ExtResource("4_2i20o")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0oqbl"]
+font = ExtResource("6_7seeg")
+font_size = 27
+outline_size = 2
+outline_color = Color(0, 0.421185, 0.859113, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_boinh"]
+font = ExtResource("6_7seeg")
+font_size = 27
+outline_size = 2
+outline_color = Color(4.81308e-08, 0.53287, 0.162913, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e2eoa"]
+font = ExtResource("6_7seeg")
+font_size = 27
+outline_size = 2
+outline_color = Color(4.81308e-08, 0.53287, 0.162913, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nqt4o"]
+font = ExtResource("6_7seeg")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.752112, 0.240315, 1.92523e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pow0a"]
+font = ExtResource("6_7seeg")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.752112, 0.240315, 1.92523e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t4884"]
+font = ExtResource("6_7seeg")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.53117, 0.427829, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mpeuv"]
+font = ExtResource("6_7seeg")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.53117, 0.427829, 0, 1)
+
+[sub_resource type="Animation" id="Animation_xh7s6"]
+resource_name = "death_sequence"
+length = 50.0
+step = 0.25
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 4.5, 9, 10, 13, 14, 14.5, 16.5, 20, 21.5, 22, 22.5, 24, 24.5, 26, 28, 30, 32.5, 34, 35, 35.75, 36, 36.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"cast_death"
+}, {
+"args": [],
+"method": &"jump_thordan"
+}, {
+"args": [],
+"method": &"spawn_npcs"
+}, {
+"args": [],
+"method": &"move_to_lineup"
+}, {
+"args": [],
+"method": &"spawn_dooms"
+}, {
+"args": [],
+"method": &"move_to_doom_lineup"
+}, {
+"args": [],
+"method": &"impact_telegraph"
+}, {
+"args": [],
+"method": &"move_to_impact_1"
+}, {
+"args": [],
+"method": &"impact_1"
+}, {
+"args": [],
+"method": &"start_dive_anim"
+}, {
+"args": [],
+"method": &"impact_2"
+}, {
+"args": [],
+"method": &"twister_snapshot"
+}, {
+"args": [],
+"method": &"impact_3"
+}, {
+"args": [],
+"method": &"move_to_impact_3"
+}, {
+"args": [],
+"method": &"impact_4"
+}, {
+"args": [],
+"method": &"impact_5"
+}, {
+"args": [],
+"method": &"show_ps_markers"
+}, {
+"args": [],
+"method": &"move_to_ps2"
+}, {
+"args": [],
+"method": &"add_chains"
+}, {
+"args": [],
+"method": &"knockback"
+}, {
+"args": [],
+"method": &"check_tethers"
+}, {
+"args": [],
+"method": &"move_to_cleanse"
+}, {
+"args": [],
+"method": &"spawn_hellflame"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pka3"]
+_data = {
+&"death_sequence": SubResource("Animation_xh7s6")
+}
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_23fhv"]
+data = PackedVector3Array(150, 0, 150, -150, 0, 150, 150, 0, -150, -150, 0, 150, -150, 0, -150, 150, 0, -150)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5pku"]
+transparency = 1
+albedo_texture = ExtResource("36_54s36")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5pk2k"]
+material = SubResource("StandardMaterial3D_s5pku")
+size = Vector2(8.795, 6.96)
+center_offset = Vector3(-0.115, 0, 0.022)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vk80t"]
+shader = ExtResource("37_8foey")
+shader_parameter/time_scale = 0.400000019
+shader_parameter/base_color = Color(0.05, 0.05, 0.08, 1)
+shader_parameter/slime_color = Color(0.15, 0.15, 0.2, 1)
+shader_parameter/highlight_color = Color(0.3, 0.35, 0.4, 1)
+shader_parameter/tendril_density = 4.0
+shader_parameter/tendril_thickness = 0.3
+shader_parameter/animation_speed = 1.0
+shader_parameter/slime_wetness = 0.7
+
+[sub_resource type="Sky" id="Sky_3kvju"]
+sky_material = SubResource("ShaderMaterial_vk80t")
+
+[sub_resource type="Environment" id="Environment_onckn"]
+background_mode = 2
+background_energy_multiplier = 1.6
+sky = SubResource("Sky_3kvju")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="P5DeathMain" type="Node3D" unique_id=1362588836]
+script = ExtResource("1_s4ho1")
+
+[node name="Menus" type="Node" parent="." unique_id=1493409284]
+
+[node name="ControlMenu" parent="Menus" unique_id=26349514 instance=ExtResource("2_gb123")]
+unique_name_in_owner = true
+layer = 99
+visible = false
+
+[node name="EncounterMenu" type="CanvasLayer" parent="Menus" unique_id=781242616]
+unique_name_in_owner = true
+layer = 99
+visible = false
+script = ExtResource("3_s4ho1")
+
+[node name="EncounterMenuContainer" type="MarginContainer" parent="Menus/EncounterMenu" unique_id=1146959927]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.5
+offset_top = -224.0
+offset_right = 463.5
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_constants/margin_left = 115
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 115
+theme_override_constants/margin_bottom = 65
+
+[node name="Panel" type="Panel" parent="Menus/EncounterMenu/EncounterMenuContainer" unique_id=1086358909]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bolrt")
+
+[node name="StratMarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer" unique_id=1807953843]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_left = 33
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_right = 33
+theme_override_constants/margin_bottom = 38
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer" unique_id=248854469]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 34
+
+[node name="HeaderLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=520255568]
+custom_minimum_size = Vector2(0, 46.865)
+layout_mode = 2
+text = "P5 DotH Config"
+label_settings = SubResource("LabelSettings_gflx1")
+horizontal_alignment = 1
+
+[node name="Opt1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=845178818]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Opt1InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1893654353]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Dooms Anchor is standard for NAUR/LPDU. 
+Static Positions is used in Twintails video."
+texture = ExtResource("5_xc27s")
+expand_mode = 2
+
+[node name="Opt1Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1290989839]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Playstation Positions"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="StratButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1894237171]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(211, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 2
+popup/item_0/text = "Dooms Anchor (NA/EU)"
+popup/item_0/id = 0
+popup/item_1/text = "Static Positions"
+popup/item_1/id = 1
+
+[node name="Opt2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1869966854]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Opt2InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=1791976381]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Forces a specific In-Line debuff onto the player."
+texture = ExtResource("5_xc27s")
+expand_mode = 2
+
+[node name="Opt2Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=700885849]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "In-Line RNG"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="InLineButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=844242553]
+custom_minimum_size = Vector2(169, 0)
+layout_mode = 2
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "Random"
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+
+[node name="Opt3Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1794659531]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Opt3InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=100697751]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Forces a specific Arrow debuff onto the player."
+texture = ExtResource("5_xc27s")
+expand_mode = 2
+
+[node name="Opt3Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=1731724355]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Arrow RNG"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="ArrowButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=549343653]
+custom_minimum_size = Vector2(169, 0)
+layout_mode = 2
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "Random"
+popup/item_0/id = 0
+popup/item_1/text = "Up"
+popup/item_1/id = 1
+popup/item_2/text = "Circle"
+popup/item_2/id = 2
+popup/item_3/text = "Down"
+popup/item_3/id = 3
+
+[node name="Opt4Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=905674709]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Opt4InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=1072239582]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Forces 4-4 split for starting lineup. 
+You should normally get one of these patterns every ~35 pulls."
+texture = ExtResource("5_xc27s")
+expand_mode = 2
+
+[node name="Opt4Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=504049935]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Force Rare Pattern (4/4)"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="ForceRareButton" type="CheckButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=22583886]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(211, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(-118.64, 0)
+offset_transform_scale = Vector2(1.5, 1.5)
+focus_mode = 0
+theme_override_constants/outline_size = 2
+
+[node name="Opt5Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=2021535493]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Opt5InfoIcon" type="TextureRect" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=1962795254]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("5_xc27s")
+expand_mode = 2
+
+[node name="Opt5Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=1035868127]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Aeros Plant"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="Opt5Button" type="CheckButton" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=1571271995]
+custom_minimum_size = Vector2(169, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(-85, 0)
+offset_transform_scale = Vector2(1.5, 1.5)
+focus_mode = 0
+theme_override_constants/outline_size = 2
+
+[node name="DothLineupButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=71173800]
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_a1f1j")
+theme_override_font_sizes/font_size = 27
+text = "DotH Lineup"
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1750321516]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 75
+
+[node name="MitCheckButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1840706461]
+visible = false
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_a1f1j")
+theme_override_font_sizes/font_size = 27
+disabled = true
+text = "Mitigation Check"
+
+[node name="CloseButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1319694794]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_a1f1j")
+theme_override_font_sizes/font_size = 29
+text = "Close"
+
+[node name="MitCheckMarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer" unique_id=2065679461]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_bottom = 58
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" unique_id=1754811991]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 20
+
+[node name="HeaderLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=671714706]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Mitigation Check"
+label_settings = SubResource("LabelSettings_ev42l")
+horizontal_alignment = 1
+
+[node name="AbilitySelectButton" type="OptionButton" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=1128394477]
+custom_minimum_size = Vector2(263.725, 41.48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 6
+popup/item_0/text = "Select Ability to Mit"
+popup/item_0/id = 0
+popup/item_1/text = "Ultimate Relativity"
+popup/item_1/id = 1
+popup/item_2/text = "Sextuple Apocalypse"
+popup/item_2/id = 2
+popup/item_3/text = "Darklit Dragonsong"
+popup/item_3/id = 3
+popup/item_4/text = "Crystallize Time"
+popup/item_4/id = 4
+popup/item_5/text = "Pandora"
+popup/item_5/id = 5
+
+[node name="AbilityListMarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=1534689244]
+custom_minimum_size = Vector2(326.075, 310)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer" unique_id=2078282358]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer" unique_id=854023739]
+custom_minimum_size = Vector2(326.075, 310)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer" unique_id=1114323289]
+layout_mode = 2
+
+[node name="Ab1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=1732769370]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab1DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab1Container" unique_id=527940267]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab1Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab1Container" unique_id=96797847]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  1"
+
+[node name="Ab2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=1938735432]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab2DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab2Container" unique_id=548953202]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab2Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab2Container" unique_id=276174486]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  2"
+
+[node name="Ab3Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=993170467]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab3DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab3Container" unique_id=1729256160]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab3Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab3Container" unique_id=1640980597]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  3"
+
+[node name="Ab4Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=614904429]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab4DelButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab4Container" unique_id=1517136983]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab4Label" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab4Container" unique_id=357322544]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  4"
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=403985117]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 85
+
+[node name="DefaultButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=135757263]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_a1f1j")
+theme_override_font_sizes/font_size = 26
+text = "Clear All"
+
+[node name="BackButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1279036074]
+custom_minimum_size = Vector2(145, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_a1f1j")
+theme_override_font_sizes/font_size = 28
+text = "Back"
+
+[node name="DothOrderMarginContainer" type="MarginContainer" parent="Menus/EncounterMenu/EncounterMenuContainer" unique_id=1246005787]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_bottom = 58
+script = ExtResource("8_hcxon")
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer" unique_id=286421016]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HeaderLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=1429240846]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "DotH Lineup (L -> R)"
+label_settings = SubResource("LabelSettings_5urns")
+horizontal_alignment = 1
+
+[node name="T1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=1389803289]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T1Container" unique_id=1959679487]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Tank  1"
+label_settings = SubResource("LabelSettings_0oqbl")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T1Container" unique_id=1124127748]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T1Container" unique_id=1413627049]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="T2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=747068892]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T2Container" unique_id=768403574]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Tank  2"
+label_settings = SubResource("LabelSettings_0oqbl")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T2Container" unique_id=2099876353]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T2Container" unique_id=2060472198]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="H1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=95277115]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H1Container" unique_id=1056047331]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Healer 1"
+label_settings = SubResource("LabelSettings_boinh")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H1Container" unique_id=214998987]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H1Container" unique_id=1481003094]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="H2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=2102486967]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H2Container" unique_id=497291537]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Healer 2"
+label_settings = SubResource("LabelSettings_e2eoa")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H2Container" unique_id=1651719679]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H2Container" unique_id=2124120841]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="M1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=742339074]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M1Container" unique_id=604056999]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Melee 1"
+label_settings = SubResource("LabelSettings_nqt4o")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M1Container" unique_id=227851978]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M1Container" unique_id=1228432401]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="M2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=1751688706]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M2Container" unique_id=595824859]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Melee 2"
+label_settings = SubResource("LabelSettings_pow0a")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M2Container" unique_id=796439417]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M2Container" unique_id=811514975]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="R1Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=2131111135]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R1Container" unique_id=221555105]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Ranged 1"
+label_settings = SubResource("LabelSettings_t4884")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R1Container" unique_id=1867174947]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R1Container" unique_id=1105125322]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="R2Container" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=352794299]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("9_2pka3")
+
+[node name="RoleLabel" type="Label" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R2Container" unique_id=1987213357]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Ranged 2"
+label_settings = SubResource("LabelSettings_mpeuv")
+
+[node name="UpButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R2Container" unique_id=1177206722]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R2Container" unique_id=102247906]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("10_2pka3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox" unique_id=1462905880]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 85
+
+[node name="DefaultButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1872637560]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_a1f1j")
+theme_override_font_sizes/font_size = 30
+text = "Default"
+
+[node name="BackButton" type="Button" parent="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=2094361598]
+custom_minimum_size = Vector2(145, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_a1f1j")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="PauseMenu" parent="Menus" unique_id=1792151310 instance=ExtResource("8_hgs17")]
+unique_name_in_owner = true
+
+[node name="WaymarkMenu" parent="Menus" unique_id=1576186712 instance=ExtResource("9_3ra0y")]
+
+[node name="UI" type="Node" parent="." unique_id=1515433404]
+
+[node name="CastBar" parent="UI" unique_id=1196505504 instance=ExtResource("10_w3bjs")]
+unique_name_in_owner = true
+
+[node name="EnemyCastBar" parent="UI" unique_id=1073225576 instance=ExtResource("11_s4ho1")]
+
+[node name="ActionBar" parent="UI" unique_id=193947566 instance=ExtResource("12_2s1qx")]
+
+[node name="FailList" parent="UI" unique_id=1759890455 instance=ExtResource("13_283wr")]
+unique_name_in_owner = true
+
+[node name="PartyList" parent="UI" unique_id=36112859 instance=ExtResource("14_fs7mt")]
+unique_name_in_owner = true
+
+[node name="PlayerDebuffs" parent="UI" unique_id=1127472278 instance=ExtResource("15_oggjb")]
+unique_name_in_owner = true
+
+[node name="Buttons" type="Node" parent="UI" unique_id=141854339]
+
+[node name="Coords" parent="UI/Buttons" unique_id=1872278545 instance=ExtResource("16_jsju7")]
+visible = false
+
+[node name="ResetButton" type="Button" parent="UI/Buttons" unique_id=2112240594]
+offset_left = 28.0
+offset_top = 18.0
+offset_right = 128.0
+offset_bottom = 58.0
+text = "Reset"
+
+[node name="RoleSelectButton" type="OptionButton" parent="UI/Buttons" unique_id=1425783947]
+offset_left = 150.0
+offset_top = 21.0
+offset_right = 327.0
+offset_bottom = 52.0
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 6
+fit_to_longest_item = false
+item_count = 8
+popup/item_0/text = "Tank 1"
+popup/item_0/id = 0
+popup/item_1/text = "Tank 2"
+popup/item_1/id = 1
+popup/item_2/text = "Healer 1"
+popup/item_2/id = 2
+popup/item_3/text = "Healer 2"
+popup/item_3/id = 3
+popup/item_4/text = "Melee 1"
+popup/item_4/id = 4
+popup/item_5/text = "Melee 2"
+popup/item_5/id = 5
+popup/item_6/text = "Ranged 1"
+popup/item_6/id = 6
+popup/item_7/text = "Ranged 2"
+popup/item_7/id = 7
+script = ExtResource("17_8hdgd")
+
+[node name="SpectateButton" type="CheckButton" parent="UI/Buttons/RoleSelectButton" unique_id=1775615186]
+layout_mode = 0
+offset_top = 32.16
+offset_right = 178.0
+offset_bottom = 63.16
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Spectate Mode"
+script = ExtResource("18_dd8e2")
+
+[node name="HideBotsCheckButton" type="CheckButton" parent="UI/Buttons/RoleSelectButton" unique_id=1704637274]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(178, 0)
+layout_mode = 1
+offset_top = 59.53
+offset_right = 141.0
+offset_bottom = 90.53005
+focus_mode = 0
+theme_override_constants/outline_size = 2
+text = "Hide Bots"
+script = ExtResource("19_1o2t6")
+
+[node name="DSRSequenceSelectButton" parent="UI/Buttons" unique_id=1936732226 instance=ExtResource("20_vpbgn")]
+offset_left = -235.91998
+offset_right = -44.91992
+
+[node name="EncounterConfigButton" parent="UI/Buttons/DSRSequenceSelectButton" unique_id=2141749853 instance=ExtResource("21_m240f")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 7.999939
+offset_right = 30.999939
+
+[node name="VersionLabel" parent="UI/Buttons" unique_id=1280789811 instance=ExtResource("22_lk028")]
+
+[node name="MoveUIResetButton" parent="UI/Buttons" unique_id=645066000 instance=ExtResource("23_wvf08")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Controllers" type="Node" parent="." unique_id=142699960]
+
+[node name="WaymarkController" parent="Controllers" unique_id=1397802931 node_paths=PackedStringArray("arena_waymark_node") groups=["waymark_controller"] instance=ExtResource("24_pmp17")]
+unique_name_in_owner = true
+arena_waymark_node = NodePath("../../Waymarks")
+
+[node name="PartyController" parent="Controllers" unique_id=451844197 instance=ExtResource("25_a8f2n")]
+unique_name_in_owner = true
+
+[node name="LockonController" parent="Controllers" unique_id=1375077050 instance=ExtResource("26_e6gp8")]
+unique_name_in_owner = true
+
+[node name="GroundAoEController" parent="Controllers" unique_id=955828879 groups=["ground_aoe_controller"] instance=ExtResource("27_u7bg4")]
+unique_name_in_owner = true
+
+[node name="EncounterController" parent="." unique_id=787222493 instance=ExtResource("30_3unok")]
+unique_name_in_owner = true
+
+[node name="Death" type="Node" parent="EncounterController" unique_id=1349338015]
+script = ExtResource("29_s4ho1")
+thordan_scene = ExtResource("30_4wqwp")
+doom_icon_scene = ExtResource("31_sby6c")
+chains_icon_scene = ExtResource("32_hcxon")
+tether_scene = ExtResource("33_wtv4d")
+
+[node name="DeathSeq" type="AnimationPlayer" parent="EncounterController/Death" unique_id=375587656]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_2pka3")
+
+[node name="Arena" type="Node3D" parent="." unique_id=263444805]
+
+[node name="Visual" type="Node3D" parent="Arena" unique_id=86967889]
+transform = Transform3D(2.358, 0, 0, 0, 2.358, 0, 0, 0, 2.358, 0, 0, 0)
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Arena" unique_id=952568109]
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arena/FloorMesh" unique_id=1669193353]
+collision_layer = 129
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/FloorMesh/StaticBody3D" unique_id=867988209]
+shape = SubResource("ConcavePolygonShape3D_23fhv")
+
+[node name="DeathWall" parent="Arena" unique_id=1741002243 instance=ExtResource("34_flbda")]
+
+[node name="P5ArenaFull" parent="Arena" unique_id=514532505 instance=ExtResource("33_oh627")]
+transform = Transform3D(0.999877, 0, -0.0157073, 0, 1, 0, 0.0157073, 0, 0.999877, -201.66, -0.126, -208.189)
+
+[node name="Waymarks" type="Node3D" parent="." unique_id=396813830]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Characters" type="Node3D" parent="." unique_id=1733352908 groups=["characters_layer"]]
+
+[node name="Enemies" type="Node3D" parent="." unique_id=411804875 groups=["enemies_layer"]]
+
+[node name="GroundMarkers" type="Node3D" parent="." unique_id=1052692113 groups=["ground_marker_layer"]]
+unique_name_in_owner = true
+
+[node name="WMGroundMarker" type="MeshInstance3D" parent="GroundMarkers" unique_id=1677342559]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60837, 0.14, 0.0603294)
+visible = false
+mesh = SubResource("PlaneMesh_5pk2k")
+
+[node name="SpecialMarkers" type="Node3D" parent="GroundMarkers" unique_id=858824402]
+unique_name_in_owner = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=401408988]
+environment = SubResource("Environment_onckn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=752946868]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_energy = 0.891
+directional_shadow_mode = 0
+
+[connection signal="item_selected" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container/StratButton" to="Menus/EncounterMenu" method="_on_strat_button_item_selected"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container/ForceRareButton" to="Menus/EncounterMenu" method="_on_force_rare_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/DothLineupButton" to="Menus/EncounterMenu" method="_on_doth_lineup_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer/CloseButton" to="Menus/EncounterMenu" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer/DefaultButton" to="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" method="_on_default_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer/BackButton" to="Menus/EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" method="_on_back_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T1Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T1Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T2Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T2Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/T2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H1Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H1Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H2Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H2Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/H2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M1Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M1Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M2Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M2Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/M2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R1Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R1Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R2Container/UpButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R2Container/DownButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/R2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer/DefaultButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer" method="_on_default_button_pressed"]
+[connection signal="pressed" from="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer/BackButton" to="Menus/EncounterMenu/EncounterMenuContainer/DothOrderMarginContainer" method="_on_back_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="item_selected" from="UI/Buttons/RoleSelectButton" to="UI/Buttons/RoleSelectButton" method="_on_item_selected"]
+[connection signal="pressed" from="UI/Buttons/RoleSelectButton/SpectateButton" to="UI/Buttons/RoleSelectButton/SpectateButton" method="_on_pressed"]
+[connection signal="pressed" from="UI/Buttons/RoleSelectButton/HideBotsCheckButton" to="UI/Buttons/RoleSelectButton/HideBotsCheckButton" method="_on_pressed"]
+[connection signal="pressed" from="UI/Buttons/DSRSequenceSelectButton/EncounterConfigButton" to="Menus/EncounterMenu" method="_on_encounter_config_button_pressed"]

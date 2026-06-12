@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bb6pbj1vuf7aa"]
+
+[ext_resource type="Texture2D" uid="uid://1p34kfhe6sfs" path="res://assets/common/icons/ui_icons/ff_cog.png" id="1_7017o"]
+
+[node name="EncounterConfigButton" type="TextureButton" unique_id=2141749853]
+modulate = Color(0.8732984, 0.8732984, 0.8732984, 1)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -953.0
+offset_top = 4.4
+offset_right = -930.0
+offset_bottom = 27.4
+grow_horizontal = 0
+tooltip_text = "Strat Config"
+focus_mode = 0
+texture_normal = ExtResource("1_7017o")
+ignore_texture_size = true
+stretch_mode = 0

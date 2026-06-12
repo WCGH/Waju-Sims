@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dxyb4888aqmm1"]
+
+[ext_resource type="Texture2D" uid="uid://dmsbbk0fnne12" path="res://assets/png/debuff_icons/boiling.png" id="1_6s52w"]
+
+[node name="BoilingIcon" type="TextureRect"]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_6s52w")
+metadata/debuff_name = "Boiling"

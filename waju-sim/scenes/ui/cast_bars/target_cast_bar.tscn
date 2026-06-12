@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://btigj53q7q4oi"]
+
+[ext_resource type="Script" uid="uid://dykivmspvex0p" path="res://scenes/ui/cast_bars/target_cast_bar.gd" id="1_rvesp"]
+[ext_resource type="PackedScene" uid="uid://d3kar2dlclg2k" path="res://scenes/ui/cast_bars/spell_cast.tscn" id="2_jug0w"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="2_tcmnt"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="4_fkoig"]
+
+[sub_resource type="Theme" id="Theme_vadjc"]
+default_font = ExtResource("2_tcmnt")
+default_font_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_lc2st"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_haxh7"]
+bg_color = Color(0.156863, 0.137255, 0.0313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.968627, 0.6, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eit2t"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycts8"]
+bg_color = Color(0.267, 0.267, 0.267, 0.741)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.780392, 0.501961, 0.360784, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ecs0"]
+font = ExtResource("4_fkoig")
+font_size = 15
+outline_size = 3
+outline_color = Color(0.780392, 0.501961, 0.360784, 1)
+
+[node name="TargetCastBar" type="CanvasLayer" unique_id=1944798931 groups=["target_cast_bar"]]
+visible = false
+script = ExtResource("1_rvesp")
+spell_cast_scene = ExtResource("2_jug0w")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1177770958]
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.711
+anchor_right = 0.095
+anchor_bottom = 0.711
+offset_left = 47.4
+offset_top = -29.92
+offset_right = 298.4
+offset_bottom = 0.0799866
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 21
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=21582604]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2099242807]
+layout_mode = 2
+theme = SubResource("Theme_vadjc")
+text = "Test cast"
+label_settings = SubResource("LabelSettings_lc2st")
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer" unique_id=2072375189]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_haxh7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eit2t")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="MoveUIBG" type="Panel" parent="MarginContainer" unique_id=677769743]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ycts8")
+
+[node name="Label" type="Label" parent="MarginContainer/MoveUIBG" unique_id=1767471086]
+layout_mode = 0
+offset_left = 49.0
+offset_right = 176.0
+offset_bottom = 25.0
+text = "Cast Bar"
+label_settings = SubResource("LabelSettings_6ecs0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="MarginContainer" to="." method="_on_margin_container_gui_input"]

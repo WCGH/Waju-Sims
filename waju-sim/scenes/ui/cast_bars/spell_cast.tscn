@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3kar2dlclg2k"]
+
+[ext_resource type="Script" path="res://scenes/ui/cast_bars/spell_cast.gd" id="1_kf480"]
+
+[node name="SpellCast" type="Node"]
+script = ExtResource("1_kf480")
+
+[node name="CastTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true

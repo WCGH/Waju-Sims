@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bw07f2cpvri54"]
+
+[ext_resource type="Texture2D" uid="uid://dx4km4dref566" path="res://assets/png/playstation/Circle_Marker.png" id="1_l2ud6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ii4vv"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_l2ud6")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_5axbr"]
+material = SubResource("StandardMaterial3D_ii4vv")
+size = Vector2(2, 2)
+
+[node name="PSCircle" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
+metadata/id = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+sorting_offset = 50.0
+mesh = SubResource("QuadMesh_5axbr")

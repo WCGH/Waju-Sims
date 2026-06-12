@@ -1,0 +1,1057 @@
+[gd_scene format=3 uid="uid://72xsy2riqeef"]
+
+[ext_resource type="Script" uid="uid://b2q04mbvbtw8j" path="res://scenes/fru/p4/p4_dd_main.gd" id="1_8ujqk"]
+[ext_resource type="PackedScene" uid="uid://b23aj0fsxbgap" path="res://scenes/menus/control_menu.tscn" id="2_nk68u"]
+[ext_resource type="Script" uid="uid://di4e35fpahocc" path="res://scenes/fru/p4/p4_dd_enc_menu.gd" id="3_ouwey"]
+[ext_resource type="PackedScene" uid="uid://vftsma2c80sa" path="res://scenes/menus/pause_menu.tscn" id="3_wu23f"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="4_k6k0c"]
+[ext_resource type="PackedScene" uid="uid://chasoddjwqblg" path="res://scenes/ui/cast_bars/cast_bar.tscn" id="4_qcpxm"]
+[ext_resource type="Texture2D" uid="uid://blfibh4tegknc" path="res://assets/common/icons/ui_icons/info_icon_white.png" id="5_2bra8"]
+[ext_resource type="PackedScene" uid="uid://cjmyec6sin7kw" path="res://scenes/ui/cast_bars/enmity_cast_bar.tscn" id="5_yy0vl"]
+[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="6_5pwsp"]
+[ext_resource type="PackedScene" uid="uid://cg0h4uysscvtc" path="res://scenes/ui/action_bar.tscn" id="6_e8338"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="7_0wcq2"]
+[ext_resource type="PackedScene" uid="uid://cidk1e7u3l0ya" path="res://scenes/ui/fail_list.tscn" id="7_s6jfs"]
+[ext_resource type="PackedScene" uid="uid://02ckwb1trdp4" path="res://scenes/ui/party_list/party_list.tscn" id="8_62m52"]
+[ext_resource type="PackedScene" uid="uid://du2fr4o3nsww0" path="res://scenes/ui/auras/player_debuffs.tscn" id="9_k4fhx"]
+[ext_resource type="PackedScene" uid="uid://cbimodxf0fbhu" path="res://scenes/ui/waymark_menu.tscn" id="10_e4syu"]
+[ext_resource type="PackedScene" uid="uid://bwd1v6kvgas8d" path="res://scenes/common/controllers/waymark_controller.tscn" id="11_acg5y"]
+[ext_resource type="PackedScene" uid="uid://cr7iyhritaug4" path="res://scenes/common/controllers/lr_chains_controller.tscn" id="11_tj8sg"]
+[ext_resource type="PackedScene" uid="uid://bayxk6ajn7khf" path="res://scenes/common/controllers/party_controller.tscn" id="12_kx122"]
+[ext_resource type="PackedScene" uid="uid://wdaa7tvsg1oy" path="res://scenes/common/controllers/lockon_controller.tscn" id="13_dgfcm"]
+[ext_resource type="PackedScene" uid="uid://bauk161giibov" path="res://scenes/common/controllers/ground_aoe_controller.tscn" id="14_y7wxd"]
+[ext_resource type="PackedScene" uid="uid://crewso7ys1t5t" path="res://scenes/common/controllers/encounter_controller.tscn" id="15_66vo4"]
+[ext_resource type="Script" uid="uid://b1btn78pwk54x" path="res://scenes/fru/p4/sequences/darklit_seq.gd" id="16_le0ms"]
+[ext_resource type="PackedScene" uid="uid://67o50ynwedjr" path="res://scenes/fru/p3/arena/p3_green_detail.tscn" id="17_lsb0h"]
+[ext_resource type="PackedScene" uid="uid://b5a8l81gltuhy" path="res://scenes/common/ground_markers/death_wall.tscn" id="18_jvbqt"]
+[ext_resource type="PackedScene" uid="uid://dodhm04hsn2ep" path="res://scenes/fru/p3/enemies/oracle.tscn" id="19_ppn16"]
+[ext_resource type="PackedScene" uid="uid://cypkdpypuypj4" path="res://scenes/common/enemies/hitbox_ring.tscn" id="19_xvitq"]
+[ext_resource type="PackedScene" uid="uid://w0w37k2iiyoe" path="res://scenes/fru/p4/enemies/usurper.tscn" id="20_io2jn"]
+[ext_resource type="Texture2D" uid="uid://bmcxcd6diyj1x" path="res://assets/common/world_markers/wm_ground_marker.png" id="22_8f7ut"]
+[ext_resource type="PackedScene" uid="uid://dy7ugg3wtsybb" path="res://scenes/fru/p3/enemies/usurper_wings.tscn" id="23_87b76"]
+[ext_resource type="Shader" uid="uid://dckkpa5brhjxf" path="res://assets/common/shaders/donut.gdshader" id="25_dduk7"]
+[ext_resource type="PackedScene" uid="uid://b8fafac8eppne" path="res://scenes/fru/p4/enemies/wind_up_gaia.tscn" id="26_pew34"]
+[ext_resource type="PackedScene" uid="uid://genonltkscip" path="res://scenes/fru/p4/enemies/wind_up_ryne.tscn" id="27_sdq60"]
+[ext_resource type="PackedScene" uid="uid://jcbpndkhehjl" path="res://scenes/ui/coords.tscn" id="29_ofjjt"]
+[ext_resource type="Script" uid="uid://bxcv5ewhgg5pq" path="res://scenes/ui/role_select_button.gd" id="30_tsial"]
+[ext_resource type="PackedScene" uid="uid://ce72svh5khi1u" path="res://scenes/ui/sequence_select_button.tscn" id="32_3xvai"]
+[ext_resource type="Script" uid="uid://djmwvee6rgsb8" path="res://scenes/ui/spectate_button.gd" id="33_788op"]
+[ext_resource type="PackedScene" uid="uid://cmakti71sjg46" path="res://scenes/ui/info_box.tscn" id="34_j1suw"]
+[ext_resource type="PackedScene" uid="uid://bb6pbj1vuf7aa" path="res://scenes/ui/encounter_config_button.tscn" id="38_1qd7a"]
+[ext_resource type="PackedScene" uid="uid://c6lwk2vknoj7w" path="res://scenes/ui/move_ui_reset_button.tscn" id="38_v4obg"]
+[ext_resource type="Shader" uid="uid://gpesy5bu4dso" path="res://assets/common/shaders/sky.gdshader" id="45_k6k0c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rx1l"]
+bg_color = Color(0.12837145, 0.18899962, 0.18076476, 0.95686275)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.90663, 0.673944, 0.399688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_70ipw"]
+font = ExtResource("4_k6k0c")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_585x8"]
+font = ExtResource("6_5pwsp")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_telgu"]
+font = ExtResource("4_k6k0c")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="Animation" id="Animation_6yukl"]
+resource_name = "darklit"
+length = 62.0
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.2, 6.6, 9.3, 9.7, 10.1, 10.5, 10.9, 11.3, 11.7, 12.1, 12.5, 12.9, 13.3, 16.4, 21.2, 21.6, 22.3, 24.6, 29.2, 32.3, 32.6, 35.5, 35.7, 36.7, 38.8, 40.5, 43.5, 44.1, 53.2, 58.6, 59.2, 59.8, 60.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"start_ahk_anim"
+}, {
+"args": [],
+"method": &"snapshot_ahk_aoe"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"ahk_hit"
+}, {
+"args": [],
+"method": &"cast_darklit"
+}, {
+"args": [],
+"method": &"darklit_cast_finish"
+}, {
+"args": [],
+"method": &"show_cog_lockon"
+}, {
+"args": [],
+"method": &"add_debuffs"
+}, {
+"args": [],
+"method": &"spawn_lr_towers"
+}, {
+"args": [],
+"method": &"activate_chains"
+}, {
+"args": [],
+"method": &"towers_hit"
+}, {
+"args": [],
+"method": &"cast_spirit_taker"
+}, {
+"args": [],
+"method": &"snapshot_spirit"
+}, {
+"args": [],
+"method": &"cast_hallowed"
+}, {
+"args": [],
+"method": &"jump_hit"
+}, {
+"args": [],
+"method": &"cast_somber"
+}, {
+"args": [],
+"method": &"water_hallowed_hit"
+}, {
+"args": [],
+"method": &"remove_chains"
+}, {
+"args": [],
+"method": &"snapshot_farthest"
+}, {
+"args": [],
+"method": &"cast_am"
+}, {
+"args": [],
+"method": &"am_hit"
+}, {
+"args": [],
+"method": &"am_hit"
+}, {
+"args": [],
+"method": &"am_hit"
+}, {
+"args": [],
+"method": &"am_hit"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(14.2, 14.7, 36.1, 44.8, 47.6, 51.9, 52.2, 56.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"show_oracle"
+}, {
+"args": [],
+"method": &"swap_target"
+}, {
+"args": [],
+"method": &"oracle_rand_jump"
+}, {
+"args": [],
+"method": &"oracle_far_jump"
+}, {
+"args": [],
+"method": &"oracle_near_jump"
+}, {
+"args": [],
+"method": &"fade_out_bosses"
+}, {
+"args": [],
+"method": &"move_bosses_mid"
+}, {
+"args": [],
+"method": &"am_boss_anim"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 7.2, 14.5, 25.2, 28.2, 33.3, 36.9, 40.4, 41.8, 42.4, 43.9, 45.5, 50),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"move_mid"
+}, {
+"args": [],
+"method": &"move_first_spread"
+}, {
+"args": [],
+"method": &"move_lr_pre_pos"
+}, {
+"args": [],
+"method": &"move_lr_pos"
+}, {
+"args": [],
+"method": &"move_water_swap"
+}, {
+"args": [],
+"method": &"move_spirit_spread"
+}, {
+"args": [],
+"method": &"move_hallowed_stacks"
+}, {
+"args": [],
+"method": &"move_tank_1_inter_bait"
+}, {
+"args": [],
+"method": &"move_tank_bait"
+}, {
+"args": [],
+"method": &"move_party_bait"
+}, {
+"args": [],
+"method": &"move_tank_2_bait"
+}, {
+"args": [],
+"method": &"move_tank_2_oracle"
+}, {
+"args": [],
+"method": &"move_party_am"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sn5bc"]
+_data = {
+&"darklit": SubResource("Animation_6yukl")
+}
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_23fhv"]
+data = PackedVector3Array(150, 0, 150, -150, 0, 150, 150, 0, -150, -150, 0, 150, -150, 0, -150, 150, 0, -150)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5pku"]
+transparency = 1
+albedo_texture = ExtResource("22_8f7ut")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5pk2k"]
+material = SubResource("StandardMaterial3D_s5pku")
+size = Vector2(8.795, 6.96)
+center_offset = Vector3(-0.115, 0, 0.022)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yw6v"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.054)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7k374"]
+material = SubResource("StandardMaterial3D_2yw6v")
+top_radius = 3.2
+bottom_radius = 3.2
+height = 0.001
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yfw86"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("25_dduk7")
+shader_parameter/size = 0.247
+shader_parameter/alpha = 0.5
+shader_parameter/color = Vector3(1, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kvh8g"]
+material = SubResource("ShaderMaterial_yfw86")
+top_radius = 3.2
+bottom_radius = 3.2
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h85hn"]
+transparency = 1
+albedo_color = Color(0.568, 0.962, 1, 0.022)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l2byj"]
+material = SubResource("StandardMaterial3D_h85hn")
+size = Vector3(5.8, 5.8, 7)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2gees"]
+radius = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8h08h"]
+shader = ExtResource("45_k6k0c")
+shader_parameter/time_scale = 0.400000019
+shader_parameter/base_color = Color(0.05, 0.05, 0.08, 1)
+shader_parameter/slime_color = Color(0.15, 0.15, 0.2, 1)
+shader_parameter/highlight_color = Color(0.3, 0.35, 0.4, 1)
+shader_parameter/tendril_density = 4.0
+shader_parameter/tendril_thickness = 0.3
+shader_parameter/animation_speed = 1.0
+shader_parameter/slime_wetness = 0.7
+
+[sub_resource type="Sky" id="Sky_3kvju"]
+sky_material = SubResource("ShaderMaterial_8h08h")
+
+[sub_resource type="Environment" id="Environment_2bra8"]
+background_mode = 2
+background_energy_multiplier = 1.6
+sky = SubResource("Sky_3kvju")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="P4DDMain" type="Node3D" unique_id=1763855343]
+script = ExtResource("1_8ujqk")
+
+[node name="ControlMenu" parent="." unique_id=1748677869 instance=ExtResource("2_nk68u")]
+unique_name_in_owner = true
+layer = 99
+visible = false
+
+[node name="EncounterMenu" type="CanvasLayer" parent="." unique_id=591396545]
+unique_name_in_owner = true
+layer = 99
+visible = false
+script = ExtResource("3_ouwey")
+
+[node name="EncounterMenuContainer" type="MarginContainer" parent="EncounterMenu" unique_id=1393259283]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -244.0
+offset_right = 454.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_constants/margin_left = 115
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 115
+theme_override_constants/margin_bottom = 65
+
+[node name="Panel" type="Panel" parent="EncounterMenu/EncounterMenuContainer" unique_id=1898562913]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3rx1l")
+
+[node name="StratMarginContainer" type="MarginContainer" parent="EncounterMenu/EncounterMenuContainer" unique_id=67988363]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_left = 33
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_right = 33
+theme_override_constants/margin_bottom = 38
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer" unique_id=1982022003]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 22
+
+[node name="HeaderLabel" type="Label" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1513732547]
+custom_minimum_size = Vector2(0, 46.865)
+layout_mode = 2
+text = "P4 DD Config"
+label_settings = SubResource("LabelSettings_70ipw")
+horizontal_alignment = 1
+
+[node name="Opt1Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1417789518]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Opt1InfoIcon" type="TextureRect" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=8739928]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_2bra8")
+expand_mode = 4
+
+[node name="Opt1Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1417244026]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Lineup Positions"
+label_settings = SubResource("LabelSettings_585x8")
+
+[node name="LineupButton" type="OptionButton" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container" unique_id=1090742669]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 31)
+layout_mode = 2
+size_flags_horizontal = 8
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "NAUR"
+popup/item_0/id = 0
+popup/item_1/text = "Mami (EU)"
+popup/item_1/id = 1
+popup/item_2/text = "Vertical (JP)"
+popup/item_2/id = 2
+popup/item_3/text = "Mana"
+popup/item_3/id = 3
+popup/item_4/text = "MUR"
+popup/item_4/id = 4
+
+[node name="Opt2Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=320002711]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Opt2InfoIcon" type="TextureRect" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=84839677]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "No clear standard for NA/EU 
+so check with your group."
+texture = ExtResource("5_2bra8")
+expand_mode = 4
+
+[node name="Opt2Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=1293527484]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Akh Morn Split"
+label_settings = SubResource("LabelSettings_585x8")
+
+[node name="AkhMornSplitButton" type="OptionButton" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container" unique_id=711337628]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "4-4"
+popup/item_0/id = 0
+popup/item_1/text = "7-1 (T1)"
+popup/item_1/id = 1
+popup/item_2/text = "7-1 (T2)"
+popup/item_2/id = 2
+
+[node name="Opt3Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1885806176]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Opt3InfoIcon" type="TextureRect" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=1167600553]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Tankbuster = Darkest Dance."
+texture = ExtResource("5_2bra8")
+expand_mode = 4
+
+[node name="Opt3Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=50997481]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Tankbuster"
+label_settings = SubResource("LabelSettings_585x8")
+
+[node name="TankbusterButton" type="OptionButton" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container" unique_id=995821951]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "Share"
+popup/item_0/id = 0
+popup/item_1/text = "T1 Solo"
+popup/item_1/id = 1
+popup/item_2/text = "T2 Solo"
+popup/item_2/id = 2
+
+[node name="Opt4Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=562118592]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Opt4InfoIcon" type="TextureRect" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=437294489]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Force hourglass tether onto the player."
+texture = ExtResource("5_2bra8")
+expand_mode = 4
+
+[node name="Opt4Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=1066039938]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Force Tether"
+label_settings = SubResource("LabelSettings_585x8")
+
+[node name="ForceTetherButton" type="CheckButton" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container" unique_id=1992017639]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+offset_transform_enabled = true
+offset_transform_position = Vector2(-85.525, 0)
+offset_transform_scale = Vector2(1.5, 1.5)
+focus_mode = 0
+theme_override_constants/outline_size = 2
+
+[node name="Opt5Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=1810031237]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Opt5InfoIcon" type="TextureRect" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=1952935896]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Force Spirit Taker jump on the player."
+texture = ExtResource("5_2bra8")
+expand_mode = 4
+
+[node name="Opt5Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=1923743294]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Force Spirit Taker"
+label_settings = SubResource("LabelSettings_585x8")
+
+[node name="ForceSpiritButton" type="CheckButton" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container" unique_id=917358810]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+offset_transform_enabled = true
+offset_transform_position = Vector2(-85, 0)
+offset_transform_scale = Vector2(1.5, 1.5)
+focus_mode = 0
+theme_override_constants/outline_size = 2
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox" unique_id=877779051]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 75
+
+[node name="MitCheckButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=967750422]
+visible = false
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_0wcq2")
+theme_override_font_sizes/font_size = 27
+text = "Mitigation Check"
+
+[node name="CloseButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1359700058]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_0wcq2")
+theme_override_font_sizes/font_size = 29
+text = "Close"
+
+[node name="MitCheckMarginContainer" type="MarginContainer" parent="EncounterMenu/EncounterMenuContainer" unique_id=25884463]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_bottom = 58
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" unique_id=264517568]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 20
+
+[node name="HeaderLabel" type="Label" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=1897241709]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Mitigation Check"
+label_settings = SubResource("LabelSettings_telgu")
+horizontal_alignment = 1
+
+[node name="AbilitySelectButton" type="OptionButton" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=554065322]
+custom_minimum_size = Vector2(263.725, 41.48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 6
+popup/item_0/text = "Select Ability to Mit"
+popup/item_0/id = 0
+popup/item_1/text = "Ultimate Relativity"
+popup/item_1/id = 1
+popup/item_2/text = "Sextuple Apocalypse"
+popup/item_2/id = 2
+popup/item_3/text = "Darklit Dragonsong"
+popup/item_3/id = 3
+popup/item_4/text = "Crystallize Time"
+popup/item_4/id = 4
+popup/item_5/text = "Pandora"
+popup/item_5/id = 5
+
+[node name="AbilityListMarginContainer" type="MarginContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=2109855860]
+custom_minimum_size = Vector2(326.075, 310)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer" unique_id=835598323]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer" unique_id=1823748772]
+custom_minimum_size = Vector2(326.075, 310)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer" unique_id=1280783045]
+layout_mode = 2
+
+[node name="Ab1Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=2134882881]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab1DelButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab1Container" unique_id=2092198436]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab1Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab1Container" unique_id=1682428914]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  1"
+
+[node name="Ab2Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=1823212754]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab2DelButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab2Container" unique_id=496680977]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab2Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab2Container" unique_id=830446893]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  2"
+
+[node name="Ab3Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=476248717]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab3DelButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab3Container" unique_id=2037891885]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab3Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab3Container" unique_id=268147157]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  3"
+
+[node name="Ab4Container" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer" unique_id=1102729193]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Ab4DelButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab4Container" unique_id=1041153909]
+custom_minimum_size = Vector2(20, 18)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.78)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.99999887, 0.22730228, 0.19391781, 1)
+theme_override_font_sizes/font_size = 12
+text = "X"
+
+[node name="Ab4Label" type="Label" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/AbilityListMarginContainer/MarginContainer/VBoxContainer/Ab4Container" unique_id=1737716206]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 18
+text = "Ability  4"
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox" unique_id=1050810611]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 85
+
+[node name="DefaultButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1258804984]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_0wcq2")
+theme_override_font_sizes/font_size = 26
+text = "Clear All"
+
+[node name="BackButton" type="Button" parent="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1974739304]
+custom_minimum_size = Vector2(145, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_0wcq2")
+theme_override_font_sizes/font_size = 28
+text = "Back"
+
+[node name="PauseMenu" parent="." unique_id=1882190864 instance=ExtResource("3_wu23f")]
+unique_name_in_owner = true
+
+[node name="CastBar" parent="." unique_id=197246770 instance=ExtResource("4_qcpxm")]
+unique_name_in_owner = true
+
+[node name="EnmityCastBar" parent="." unique_id=121340377 instance=ExtResource("5_yy0vl")]
+unique_name_in_owner = true
+
+[node name="ActionBar" parent="." unique_id=325027591 instance=ExtResource("6_e8338")]
+
+[node name="FailList" parent="." unique_id=921229308 instance=ExtResource("7_s6jfs")]
+unique_name_in_owner = true
+
+[node name="PartyList" parent="." unique_id=144256458 instance=ExtResource("8_62m52")]
+unique_name_in_owner = true
+
+[node name="PlayerDebuffs" parent="." unique_id=180258224 instance=ExtResource("9_k4fhx")]
+unique_name_in_owner = true
+
+[node name="WaymarkMenu" parent="." unique_id=318639450 instance=ExtResource("10_e4syu")]
+
+[node name="LRChainsController" parent="." unique_id=1818580498 instance=ExtResource("11_tj8sg")]
+unique_name_in_owner = true
+
+[node name="WaymarkController" parent="." unique_id=1405473469 node_paths=PackedStringArray("arena_waymark_node") groups=["waymark_controller"] instance=ExtResource("11_acg5y")]
+unique_name_in_owner = true
+arena_waymark_node = NodePath("../Waymarks")
+
+[node name="PartyController" parent="." unique_id=288367411 instance=ExtResource("12_kx122")]
+unique_name_in_owner = true
+
+[node name="LockonController" parent="." unique_id=1395587463 instance=ExtResource("13_dgfcm")]
+unique_name_in_owner = true
+
+[node name="GroundAoEController" parent="." unique_id=1935665735 groups=["ground_aoe_controller"] instance=ExtResource("14_y7wxd")]
+unique_name_in_owner = true
+
+[node name="EncounterController" parent="." unique_id=1512785069 instance=ExtResource("15_66vo4")]
+unique_name_in_owner = true
+
+[node name="DarklitSeq" type="Node" parent="EncounterController" unique_id=1954415445]
+script = ExtResource("16_le0ms")
+
+[node name="DarklitAnim" type="AnimationPlayer" parent="EncounterController/DarklitSeq" unique_id=379804392]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_sn5bc")
+
+[node name="Arena" type="Node3D" parent="." unique_id=2025862308]
+
+[node name="Visual" type="Node3D" parent="Arena" unique_id=68374429]
+transform = Transform3D(2.358, 0, 0, 0, 2.358, 0, 0, 0, 2.358, 0, 0, 0)
+
+[node name="P3GreenDetail" parent="Arena/Visual" unique_id=413269926 instance=ExtResource("17_lsb0h")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Arena" unique_id=572117082]
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arena/FloorMesh" unique_id=1588495649]
+collision_layer = 129
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/FloorMesh/StaticBody3D" unique_id=209798210]
+shape = SubResource("ConcavePolygonShape3D_23fhv")
+
+[node name="DeathWall" parent="Arena" unique_id=163442842 instance=ExtResource("18_jvbqt")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+
+[node name="Waymarks" type="Node3D" parent="." unique_id=54913478]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Characters" type="Node3D" parent="." unique_id=1558717093 groups=["characters_layer"]]
+
+[node name="Enemies" type="Node3D" parent="." unique_id=1515222207 groups=["enemies_layer"]]
+
+[node name="OracleBoss" type="Node3D" parent="Enemies" unique_id=1387078990]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5, 0, 0)
+
+[node name="OracleHitboxRing" parent="Enemies/OracleBoss" unique_id=1110009330 instance=ExtResource("19_xvitq")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Oracle" parent="Enemies/OracleBoss" unique_id=1465776206 instance=ExtResource("19_ppn16")]
+unique_name_in_owner = true
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 0, 0, 0)
+
+[node name="UsurperBoss" type="Node3D" parent="Enemies" unique_id=1294081402]
+unique_name_in_owner = true
+
+[node name="UsurperHitboxRing" parent="Enemies/UsurperBoss" unique_id=2130088237 instance=ExtResource("19_xvitq")]
+unique_name_in_owner = true
+
+[node name="Usurper" parent="Enemies/UsurperBoss" unique_id=1173767200 instance=ExtResource("20_io2jn")]
+unique_name_in_owner = true
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 0, 0, 0)
+
+[node name="WingsWest" parent="Enemies/UsurperBoss" unique_id=1547964380 instance=ExtResource("23_87b76")]
+unique_name_in_owner = true
+visible = false
+
+[node name="WingsEast" parent="Enemies/UsurperBoss" unique_id=183088625 instance=ExtResource("23_87b76")]
+unique_name_in_owner = true
+transform = Transform3D(-3.5, 0, -4.5897e-07, 0, 3.5, 0, 3.0598e-07, 0, -5.25, 0, 11.135, 21.26)
+visible = false
+
+[node name="GroundMarkers" type="Node3D" parent="." unique_id=1025687930 groups=["ground_marker_layer"]]
+unique_name_in_owner = true
+
+[node name="WMGroundMarker" type="MeshInstance3D" parent="GroundMarkers" unique_id=931957267]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60837, 0.14, 0.0603294)
+visible = false
+mesh = SubResource("PlaneMesh_5pk2k")
+
+[node name="SpecialMarkers" type="Node3D" parent="GroundMarkers" unique_id=65456036]
+unique_name_in_owner = true
+
+[node name="Roomates" type="Node3D" parent="GroundMarkers" unique_id=1272945017]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 40, 0, 0)
+
+[node name="CircleFill" type="MeshInstance3D" parent="GroundMarkers/Roomates" unique_id=1301984952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.77, 0)
+mesh = SubResource("CylinderMesh_7k374")
+
+[node name="CircleRim" type="MeshInstance3D" parent="GroundMarkers/Roomates" unique_id=737071654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75994, 0)
+mesh = SubResource("CylinderMesh_kvh8g")
+
+[node name="Ice" type="MeshInstance3D" parent="GroundMarkers/Roomates" unique_id=455184256]
+transform = Transform3D(0.707107, 0.707107, 3.09086e-08, 0, -4.37114e-08, 1, 0.707107, -0.707107, -3.09086e-08, 0, 3, 0)
+mesh = SubResource("BoxMesh_l2byj")
+
+[node name="Area3D" type="Area3D" parent="GroundMarkers/Roomates" unique_id=1288698245]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundMarkers/Roomates/Area3D" unique_id=1202765103]
+shape = SubResource("CylinderShape3D_2gees")
+
+[node name="WindUpGaia" parent="GroundMarkers/Roomates" unique_id=1598982058 instance=ExtResource("26_pew34")]
+transform = Transform3D(4.44326, 0, -1.19057, 0, 4.6, 0, 1.19057, 0, 4.44326, 0.869686, 1.78, -1.17344)
+
+[node name="WindUpRyne" parent="GroundMarkers/Roomates" unique_id=1265969942 instance=ExtResource("27_sdq60")]
+transform = Transform3D(-3.25269, 0, -3.25269, 0, 4.6, 0, 3.25269, 0, -3.25269, 0.718449, 1.78, 1.19081)
+
+[node name="Buttons" type="Node3D" parent="." unique_id=480058048]
+
+[node name="Coords" parent="Buttons" unique_id=1101271818 instance=ExtResource("29_ofjjt")]
+visible = false
+
+[node name="ResetButton" type="Button" parent="Buttons" unique_id=1435982915]
+offset_left = 28.0
+offset_top = 18.0
+offset_right = 128.0
+offset_bottom = 58.0
+text = "Reset"
+
+[node name="RoleSelectButton" type="OptionButton" parent="Buttons" unique_id=1675343986]
+offset_left = 150.0
+offset_top = 21.0
+offset_right = 327.0
+offset_bottom = 52.0
+tooltip_text = "Role Select"
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 6
+fit_to_longest_item = false
+item_count = 8
+popup/item_0/text = "Tank 1"
+popup/item_0/id = 0
+popup/item_1/text = "Tank 2"
+popup/item_1/id = 1
+popup/item_2/text = "Healer 1"
+popup/item_2/id = 2
+popup/item_3/text = "Healer 2"
+popup/item_3/id = 3
+popup/item_4/text = "Melee 1"
+popup/item_4/id = 4
+popup/item_5/text = "Melee 2"
+popup/item_5/id = 5
+popup/item_6/text = "Ranged 1"
+popup/item_6/id = 6
+popup/item_7/text = "Ranged 2"
+popup/item_7/id = 7
+script = ExtResource("30_tsial")
+
+[node name="SequenceSelectButton" parent="Buttons" unique_id=176645976 instance=ExtResource("32_3xvai")]
+tooltip_text = "Select Phase/Sequence."
+
+[node name="EncounterConfigButton" parent="Buttons/SequenceSelectButton" unique_id=2141749853 instance=ExtResource("38_1qd7a")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 8.0
+offset_right = 31.0
+
+[node name="SpectateButton" type="CheckButton" parent="Buttons" unique_id=762295700]
+offset_left = 149.0
+offset_top = 55.0
+offset_right = 315.0
+offset_bottom = 86.0
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Spectate Mode"
+script = ExtResource("33_788op")
+
+[node name="VersionLabel" parent="Buttons" unique_id=1167913671 instance=ExtResource("34_j1suw")]
+
+[node name="WatchHPLabel" type="Label" parent="Buttons" unique_id=414699642]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 29.0
+offset_right = 64.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.575879, 0.270727, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 21
+text = "WATCH BOSS HP"
+
+[node name="MoveUIResetButton" parent="Buttons" unique_id=945321534 instance=ExtResource("38_v4obg")]
+unique_name_in_owner = true
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=221807342]
+environment = SubResource("Environment_2bra8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1000411538]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_energy = 0.891
+
+[connection signal="item_selected" from="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt1Container/LineupButton" to="EncounterMenu" method="_on_lineup_button_item_selected"]
+[connection signal="item_selected" from="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt2Container/AkhMornSplitButton" to="EncounterMenu" method="_on_akh_morn_split_button_item_selected"]
+[connection signal="item_selected" from="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt3Container/TankbusterButton" to="EncounterMenu" method="_on_tankbuster_button_item_selected"]
+[connection signal="pressed" from="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt4Container/ForceTetherButton" to="EncounterMenu" method="_on_force_tether_button_pressed"]
+[connection signal="pressed" from="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/Opt5Container/ForceSpiritButton" to="EncounterMenu" method="_on_force_spirit_button_pressed"]
+[connection signal="pressed" from="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer/MitCheckButton" to="EncounterMenu" method="_on_pt_list_button_pressed"]
+[connection signal="pressed" from="EncounterMenu/EncounterMenuContainer/StratMarginContainer/LeftButtonsVBox/BottomHBoxContainer/CloseButton" to="EncounterMenu" method="_on_close_button_pressed"]
+[connection signal="pressed" from="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer/DefaultButton" to="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" method="_on_default_button_pressed"]
+[connection signal="pressed" from="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer/LeftButtonsVBox/BottomHBoxContainer/BackButton" to="EncounterMenu/EncounterMenuContainer/MitCheckMarginContainer" method="_on_back_button_pressed"]
+[connection signal="area_entered" from="GroundMarkers/Roomates/Area3D" to="EncounterController/DarklitSeq" method="_on_area_3d_area_entered"]
+[connection signal="pressed" from="Buttons/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="item_selected" from="Buttons/RoleSelectButton" to="Buttons/RoleSelectButton" method="_on_item_selected"]
+[connection signal="pressed" from="Buttons/SequenceSelectButton/EncounterConfigButton" to="EncounterMenu" method="_on_encounter_config_button_pressed"]
+[connection signal="pressed" from="Buttons/SpectateButton" to="Buttons/SpectateButton" method="_on_pressed"]

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cdeb8a4rq71jt"]
+
+[ext_resource type="Texture2D" uid="uid://dew28ejjmemqt" path="res://assets/png/debuff_icons/entangled_flames.png" id="1_5ssya"]
+
+[node name="EntangledFlamesIcon" type="TextureRect"]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_5ssya")
+metadata/debuff_name = "Entangled Flames"

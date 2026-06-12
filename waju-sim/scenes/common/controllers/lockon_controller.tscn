@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wdaa7tvsg1oy"]
+
+[ext_resource type="Script" path="res://scenes/common/controllers/lockon_controller.gd" id="1_jjfph"]
+
+[node name="LockonController" type="Node"]
+script = ExtResource("1_jjfph")

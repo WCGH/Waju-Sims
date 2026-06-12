@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://drvk5c211dgk5"]
+
+[ext_resource type="Script" uid="uid://c2ivwt5k0tl02" path="res://scenes/ui/sequence_select_button.gd" id="1_jmyck"]
+
+[node name="DSRSequenceSelectButton" type="OptionButton" unique_id=1936732226]
+custom_minimum_size = Vector2(191, 0)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -197.0
+offset_top = 21.0
+offset_right = -21.0
+offset_bottom = 52.0
+grow_horizontal = 0
+focus_mode = 0
+action_mode = 1
+button_mask = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "P3 - Limit Cut"
+popup/item_0/id = 0
+popup/item_1/text = "P5 - Wrath"
+popup/item_1/id = 1
+popup/item_2/text = "P5 - Death"
+popup/item_2/id = 2
+popup/item_3/text = "P6 - Double Dragon"
+popup/item_3/id = 3
+popup/item_4/text = "P7 - Exaflares"
+popup/item_4/id = 4
+script = ExtResource("1_jmyck")
+
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]

@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://ddu02jcnuf02w"]
+
+[ext_resource type="PackedScene" uid="uid://deigfnsiu68vw" path="res://scenes/dmu/p3/eq/black_hole.tscn" id="1_bcj1e"]
+[ext_resource type="Script" uid="uid://dcyqvua27ktdw" path="res://scenes/dmu/p3/eq/black_hole_set.gd" id="1_kg457"]
+
+[node name="BlackHoleSet" type="Node3D" unique_id=2101946551]
+script = ExtResource("1_kg457")
+
+[node name="Set13" type="Node3D" parent="." unique_id=1040842565]
+unique_name_in_owner = true
+
+[node name="NorthSet" type="Node3D" parent="Set13" unique_id=958832641]
+
+[node name="BackHole1" parent="Set13/NorthSet" unique_id=1568952237 instance=ExtResource("1_bcj1e")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5206237, 0, -42.47668)
+
+[node name="BackHole2" parent="Set13/NorthSet" unique_id=1302184564 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.77816, 0, -32.37567)
+
+[node name="BackHole3" parent="Set13/NorthSet" unique_id=366295190 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.931817, 0, -18.089134)
+
+[node name="EastSet" type="Node3D" parent="Set13" unique_id=38596333]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="BackHole1" parent="Set13/EastSet" unique_id=1753422704 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5206237, 0, -42.47668)
+
+[node name="BackHole2" parent="Set13/EastSet" unique_id=1680417333 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.77816, 0, -32.37567)
+
+[node name="BackHole3" parent="Set13/EastSet" unique_id=2112577433 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.931817, 0, -18.089134)
+
+[node name="SouthSet" type="Node3D" parent="Set13" unique_id=1281228134]
+transform = Transform3D(-0.9999998, 0, 0.0006074587, 0, 1, 0, -0.0006074587, 0, -0.9999998, 0, 0, 0)
+
+[node name="BackHole1" parent="Set13/SouthSet" unique_id=713012874 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5206237, 0, -42.47668)
+
+[node name="BackHole2" parent="Set13/SouthSet" unique_id=571647465 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.77816, 0, -32.37567)
+
+[node name="BackHole3" parent="Set13/SouthSet" unique_id=841562660 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.931817, 0, -18.089134)
+
+[node name="WestSet" type="Node3D" parent="Set13" unique_id=868229131]
+transform = Transform3D(-4.3713953e-08, 0, 1, 0, 1, 0, -1, 0, -4.3713953e-08, 0, 0, 0)
+
+[node name="BackHole2" parent="Set13/WestSet" unique_id=52654121 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.77816, 0, -32.37567)
+
+[node name="BackHole3" parent="Set13/WestSet" unique_id=706279219 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.931817, 0, -18.089134)
+
+[node name="Set24" type="Node3D" parent="." unique_id=571840741]
+unique_name_in_owner = true
+visible = false
+
+[node name="NorthSet" type="Node3D" parent="Set24" unique_id=488524213]
+
+[node name="BackHole1" parent="Set24/NorthSet" unique_id=1403300851 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9251676, 0, -42.47668)
+
+[node name="BackHole2" parent="Set24/NorthSet" unique_id=187147780 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.190397, 0, -32.37567)
+
+[node name="BackHole3" parent="Set24/NorthSet" unique_id=1263643975 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9395514, 0, -18.089134)
+
+[node name="EastSet" type="Node3D" parent="Set24" unique_id=1682535814]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="BackHole1" parent="Set24/EastSet" unique_id=1513339430 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9251676, 0, -42.47668)
+
+[node name="BackHole2" parent="Set24/EastSet" unique_id=990414278 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.190397, 0, -32.37567)
+
+[node name="BackHole3" parent="Set24/EastSet" unique_id=58301502 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9395514, 0, -18.089134)
+
+[node name="SouthSet" type="Node3D" parent="Set24" unique_id=1032104232]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="BackHole1" parent="Set24/SouthSet" unique_id=2064902672 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9251676, 0, -42.47668)
+
+[node name="BackHole2" parent="Set24/SouthSet" unique_id=789301803 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.190397, 0, -32.37567)
+
+[node name="BackHole3" parent="Set24/SouthSet" unique_id=340862836 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9395514, 0, -18.089134)
+
+[node name="WestSet" type="Node3D" parent="Set24" unique_id=892623667]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="BackHole2" parent="Set24/WestSet" unique_id=1192340282 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.190397, 0, -32.37567)
+
+[node name="BackHole3" parent="Set24/WestSet" unique_id=1827349389 instance=ExtResource("1_bcj1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9395514, 0, -18.089134)

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cxd3d2j2r0m32"]
+
+[ext_resource type="Texture2D" uid="uid://b6il8cn4ycns7" path="res://assets/dmu/debuff_icons/tailwind.png" id="1_322g2"]
+
+[node name="TailwindIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Tailwind"
+texture = ExtResource("1_322g2")
+expand_mode = 3
+metadata/debuff_name = "tailwind"

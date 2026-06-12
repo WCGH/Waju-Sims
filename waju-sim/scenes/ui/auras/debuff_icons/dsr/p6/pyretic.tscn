@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dipgko86asjjn"]
+
+[ext_resource type="Texture2D" uid="uid://d2wfguywucqny" path="res://assets/png/debuff_icons/pyretic.png" id="1_dn6sc"]
+
+[node name="PyreticIcon" type="TextureRect"]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_dn6sc")
+metadata/debuff_name = "Pyretic"

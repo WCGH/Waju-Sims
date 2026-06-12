@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dfl1fkdqwyuum"]
+
+[ext_resource type="Texture2D" uid="uid://c7u5xj2yo4q50" path="res://assets/fru/debuff_icons/light_rampant/lightsteeped.png" id="1_ycs0b"]
+
+[node name="LightsteepedIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Lightsteeped"
+texture = ExtResource("1_ycs0b")
+metadata/debuff_name = "lightsteeped"

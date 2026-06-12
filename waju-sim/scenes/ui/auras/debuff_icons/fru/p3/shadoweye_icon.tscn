@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bhgosc57iqmhr"]
+
+[ext_resource type="Texture2D" uid="uid://dgfdnn4s64xor" path="res://assets/fru/debuff_icons/ultimate_relativity/shadoweye.png" id="1_hwkks"]
+
+[node name="ShadoweyeIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Shadoweye"
+texture = ExtResource("1_hwkks")
+metadata/debuff_name = "shadoweye"

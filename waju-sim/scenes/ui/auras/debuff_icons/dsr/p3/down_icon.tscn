@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dtncsyjt1kiyy"]
+
+[ext_resource type="Texture2D" uid="uid://cedfrnocs6pcc" path="res://assets/png/debuff_icons/down_icon.png" id="1_tyoe6"]
+
+[node name="Arrow2Icon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Elusive Jump Target"
+texture = ExtResource("1_tyoe6")
+metadata/debuff_name = "arrow_down"

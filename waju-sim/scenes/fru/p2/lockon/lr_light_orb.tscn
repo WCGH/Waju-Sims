@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://spagx0n2okdd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odpkt"]
+transparency = 1
+albedo_color = Color(1, 1, 0.270588, 0.294118)
+emission_enabled = true
+emission = Color(0.905882, 0.901961, 0.141176, 1)
+emission_energy_multiplier = 4.96
+
+[sub_resource type="SphereMesh" id="SphereMesh_nbcyx"]
+material = SubResource("StandardMaterial3D_odpkt")
+radius = 1.5
+height = 3.0
+
+[node name="LightOrb" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.92311, 0)
+metadata/id = 10
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_nbcyx")

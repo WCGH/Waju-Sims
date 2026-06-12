@@ -1,0 +1,233 @@
+# Blender 4.0.2 MTL File: 'DSR_p5_fixed.blend'
+# www.blender.org
+
+newmtl r1fz_n2_wall4a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_n.png
+
+newmtl r1fz_n4_brkn1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n4_brkn1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n4_brkn1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n4_brkn1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n4_brkn1_n.png
+
+newmtl r1fz_o1_brkn1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn4_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn4_n.png
+
+newmtl r1fz_o1_door1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_door1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_door1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_door1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_door1_n.png
+
+newmtl r1fz_o1_flor1a.mtrl.001
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_n.png
+
+newmtl r1fz_o1_pill1a.mtrl.001
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_n.png
+
+newmtl r1fz_o1_ston1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_ston1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_ston1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_ston1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_ston1_n.png
+
+newmtl r1fz_o1_wall2a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_wall2_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_wall2_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_wall2_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_wall2_n.png
+
+newmtl r1fz_r3_brkn1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn4_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_brkn4_n.png
+
+newmtl r1fz_r3_crst1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_n.png
+
+newmtl r1fz_r3_crst2a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_n.png
+
+newmtl r1fz_r3_flor1a.mtrl.004
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_n.png
+
+newmtl r1fz_r3_flor2a.mtrl.001
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor1_n.png
+
+newmtl r1fz_r3_pill1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_n.png
+
+newmtl r1fz_r3_pill2a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_pill1_n.png
+
+newmtl r1fz_r3_wall4a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_n2_wall4_n.png
+
+newmtl r1fz_t1_crst1g.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst6_n.png
+
+newmtl r1fz_t1_crst1h.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_n.png
+
+newmtl r1fz_t1_flor1b.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor2_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor7_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor2_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_o1_flor7_n.png
+
+newmtl r1fz_t1_grnd0a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_grwl5_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_grwl5_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_grwl5_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_grwl5_n.png
+
+newmtl r1fz_t2_crst1a.mtrl
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 3
+map_Kd C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Ks C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_s.png
+map_d C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_d.png
+map_Bump -bm 1.000000 C:/Users/Will/Documents/ZFBX/r1fz_textures/r1fz_t1_crst5_n.png

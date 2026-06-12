@@ -1,0 +1,665 @@
+[gd_scene format=3 uid="uid://cdhgdujic0fqa"]
+
+[ext_resource type="Texture2D" uid="uid://f7kctrmmkjk" path="res://assets/common/world_markers/A_Marker.png" id="1_6h0up"]
+[ext_resource type="Script" uid="uid://cg4sicvo4stkp" path="res://scenes/common/world_markers/waymarks.gd" id="1_hgd7n"]
+[ext_resource type="Texture2D" uid="uid://dd47vn42b2lyh" path="res://assets/common/world_markers/B_Marker.png" id="2_41bcj"]
+[ext_resource type="Texture2D" uid="uid://cvjl18i0b0f0l" path="res://assets/common/world_markers/C_Marker.png" id="3_16ixe"]
+[ext_resource type="Texture2D" uid="uid://dhhnkkkt4raia" path="res://assets/common/world_markers/D_Marker.png" id="4_0hdtq"]
+[ext_resource type="Texture2D" uid="uid://c03p84d41k3bm" path="res://assets/common/world_markers/1_Marker.png" id="5_noy2b"]
+[ext_resource type="Texture2D" uid="uid://b2dy7mjt5mljo" path="res://assets/common/world_markers/2_Marker.png" id="6_a25rw"]
+[ext_resource type="Texture2D" uid="uid://w6ujpxnj6nsr" path="res://assets/common/world_markers/3_Marker.png" id="7_af53e"]
+[ext_resource type="Texture2D" uid="uid://d0c8cti0ky1xx" path="res://assets/common/world_markers/4_Marker.png" id="8_o6uvu"]
+
+[sub_resource type="Shader" id="Shader_m1217"]
+code = "shader_type spatial;
+
+uniform vec4 color : source_color;
+uniform float intensity : hint_range(-5.0, 5.0);
+
+void fragment() {
+	float uv_y = min(max(UV.y * intensity, 0), 1);
+	ALBEDO = color.rgb;
+	ALPHA = uv_y;
+	EMISSION = color.rgb * uv_y * (intensity * 25.0);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5yucj"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(1, 0, 0, 1)
+shader_parameter/intensity = 0.32
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8deno"]
+material = SubResource("ShaderMaterial_5yucj")
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yl43x"]
+material = SubResource("ShaderMaterial_5yucj")
+flip_faces = true
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd01g"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_6h0up")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gkywl"]
+material = SubResource("StandardMaterial3D_bd01g")
+size = Vector2(2.5, 2.5)
+orientation = 2
+
+[sub_resource type="Animation" id="Animation_jhf02"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.22633, 8.77971, 2.21548)]
+}
+
+[sub_resource type="Animation" id="Animation_qgmkw"]
+resource_name = "bounce"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 8.78, 0), Vector3(0, 9.28, 0), Vector3(0, 8.78, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uqex4"]
+_data = {
+&"RESET": SubResource("Animation_jhf02"),
+&"bounce": SubResource("Animation_qgmkw")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_isaep"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(0.529412, 0.572549, 0, 1)
+shader_parameter/intensity = 0.45
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hg3xf"]
+material = SubResource("ShaderMaterial_isaep")
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8rhpa"]
+material = SubResource("ShaderMaterial_isaep")
+flip_faces = true
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nvdn"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("2_41bcj")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_47m5u"]
+material = SubResource("StandardMaterial3D_2nvdn")
+size = Vector2(2.5, 3.5)
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j2lpn"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(0.12549, 0.54902, 1, 1)
+shader_parameter/intensity = 0.4
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yfdts"]
+material = SubResource("ShaderMaterial_j2lpn")
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_15ly3"]
+material = SubResource("ShaderMaterial_j2lpn")
+flip_faces = true
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bri7u"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("3_16ixe")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0u7wr"]
+material = SubResource("StandardMaterial3D_bri7u")
+size = Vector2(2.3, 3)
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nqulo"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(0.784314, 0.0784314, 1, 1)
+shader_parameter/intensity = 0.35
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wf3tv"]
+material = SubResource("ShaderMaterial_nqulo")
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_k3fke"]
+material = SubResource("ShaderMaterial_nqulo")
+flip_faces = true
+top_radius = 2.5
+bottom_radius = 2.5
+height = 7.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lyex"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("4_0hdtq")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_18el8"]
+material = SubResource("StandardMaterial3D_3lyex")
+size = Vector2(2.5, 3.5)
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g35fn"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(1, 0, 0, 1)
+shader_parameter/intensity = 0.18
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uj6j1"]
+lightmap_size_hint = Vector2i(29, 29)
+material = SubResource("ShaderMaterial_g35fn")
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i1ofv"]
+material = SubResource("ShaderMaterial_g35fn")
+flip_faces = true
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q48nw"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("5_noy2b")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nlg7y"]
+material = SubResource("StandardMaterial3D_q48nw")
+size = Vector2(0.986, 3.305)
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dumnu"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(0.529412, 0.572549, 0, 1)
+shader_parameter/intensity = 0.257
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ktp1r"]
+lightmap_size_hint = Vector2i(29, 29)
+material = SubResource("ShaderMaterial_dumnu")
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1arij"]
+material = SubResource("ShaderMaterial_dumnu")
+flip_faces = true
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dlj1"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("6_a25rw")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oyefj"]
+material = SubResource("StandardMaterial3D_4dlj1")
+size = Vector2(2.5, 3.5)
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6too1"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(0.12549, 0.54902, 1, 1)
+shader_parameter/intensity = 0.25
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_avucq"]
+lightmap_size_hint = Vector2i(29, 29)
+material = SubResource("ShaderMaterial_6too1")
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qs1hb"]
+material = SubResource("ShaderMaterial_6too1")
+flip_faces = true
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uw1ou"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("7_af53e")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fobpu"]
+material = SubResource("StandardMaterial3D_uw1ou")
+size = Vector2(2.453, 3.5)
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qvmh"]
+render_priority = 0
+shader = SubResource("Shader_m1217")
+shader_parameter/color = Color(0.784314, 0.0784314, 1, 1)
+shader_parameter/intensity = 0.22
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e1ux2"]
+lightmap_size_hint = Vector2i(29, 29)
+material = SubResource("ShaderMaterial_6qvmh")
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xn7cl"]
+material = SubResource("ShaderMaterial_6qvmh")
+flip_faces = true
+size = Vector2(5.4, 5.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xtly4"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("8_o6uvu")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_y7det"]
+material = SubResource("StandardMaterial3D_xtly4")
+size = Vector2(2.439, 3.5)
+orientation = 2
+
+[node name="Waymarks" type="Node3D" unique_id=127684261]
+script = ExtResource("1_hgd7n")
+
+[node name="WM_A" type="Node3D" parent="." unique_id=1259441704]
+unique_name_in_owner = true
+
+[node name="OutFace" type="MeshInstance3D" parent="WM_A" unique_id=1410726242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_8deno")
+
+[node name="InFace" type="MeshInstance3D" parent="WM_A" unique_id=1812858342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_yl43x")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_A" unique_id=2048965113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_gkywl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_A" unique_id=996338536]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"
+
+[node name="WM_B" type="Node3D" parent="." unique_id=435585045]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9348, -2.86102e-06, 24.2678)
+
+[node name="OutFace" type="MeshInstance3D" parent="WM_B" unique_id=1803503708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_hg3xf")
+
+[node name="InFace" type="MeshInstance3D" parent="WM_B" unique_id=1075190614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_8rhpa")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_B" unique_id=1909660796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_47m5u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_B" unique_id=645547003]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"
+
+[node name="WM_C" type="Node3D" parent="." unique_id=472965338]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.143, 0, 18.2379)
+
+[node name="OutFace" type="MeshInstance3D" parent="WM_C" unique_id=1068757895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_yfdts")
+
+[node name="InFace" type="MeshInstance3D" parent="WM_C" unique_id=989552063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_15ly3")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_C" unique_id=1387619959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_0u7wr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_C" unique_id=1570707504]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"
+
+[node name="WM_D" type="Node3D" parent="." unique_id=146224481]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.8578, -0.211143, 24.4807)
+
+[node name="OutFace" type="MeshInstance3D" parent="WM_D" unique_id=927668741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_wf3tv")
+
+[node name="InFace" type="MeshInstance3D" parent="WM_D" unique_id=900920002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+layers = 7
+mesh = SubResource("CylinderMesh_k3fke")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_D" unique_id=61422102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_18el8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_D" unique_id=495210377]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"
+
+[node name="WM_1" type="Node3D" parent="." unique_id=894134095]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6638, 0, -2.165)
+
+[node name="OutFaces" type="Node3D" parent="WM_1" unique_id=1030385548]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_1/OutFaces" unique_id=1543665789]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_uj6j1")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_1/OutFaces" unique_id=436772500]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_uj6j1")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_1/OutFaces" unique_id=327568427]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_uj6j1")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_1/OutFaces" unique_id=1521247215]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_uj6j1")
+skeleton = NodePath("")
+
+[node name="InFaces" type="Node3D" parent="WM_1" unique_id=975001386]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_1/InFaces" unique_id=90403001]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_i1ofv")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_1/InFaces" unique_id=1506286396]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_i1ofv")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_1/InFaces" unique_id=402294888]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_i1ofv")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_1/InFaces" unique_id=1749899730]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_i1ofv")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_1" unique_id=1634158932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_nlg7y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_1" unique_id=1327412838]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"
+
+[node name="WM_2" type="Node3D" parent="." unique_id=493961002]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.8001, -3.8147e-06, -28.6744)
+
+[node name="OutFaces" type="Node3D" parent="WM_2" unique_id=1319924980]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_2/OutFaces" unique_id=997023951]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_ktp1r")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_2/OutFaces" unique_id=1380720487]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_ktp1r")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_2/OutFaces" unique_id=372265765]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_ktp1r")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_2/OutFaces" unique_id=1860685179]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_ktp1r")
+skeleton = NodePath("")
+
+[node name="InFaces" type="Node3D" parent="WM_2" unique_id=525312130]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_2/InFaces" unique_id=716561142]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_1arij")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_2/InFaces" unique_id=812305461]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_1arij")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_2/InFaces" unique_id=1772230913]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_1arij")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_2/InFaces" unique_id=2011083516]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_1arij")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_2" unique_id=1876884496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_oyefj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_2" unique_id=150909245]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"
+
+[node name="WM_3" type="Node3D" parent="." unique_id=962933139]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33815, -2.86102e-06, -22.3895)
+
+[node name="OutFaces" type="Node3D" parent="WM_3" unique_id=316059160]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_3/OutFaces" unique_id=2019229230]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_avucq")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_3/OutFaces" unique_id=2076270318]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_avucq")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_3/OutFaces" unique_id=1373600157]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_avucq")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_3/OutFaces" unique_id=1323612038]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_avucq")
+skeleton = NodePath("")
+
+[node name="InFaces" type="Node3D" parent="WM_3" unique_id=162805441]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_3/InFaces" unique_id=1105504389]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_qs1hb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_3/InFaces" unique_id=1159982817]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_qs1hb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_3/InFaces" unique_id=1293469037]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_qs1hb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_3/InFaces" unique_id=1568485465]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_qs1hb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_3" unique_id=473565090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_fobpu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_3" unique_id=973364518]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"
+
+[node name="WM_4" type="Node3D" parent="." unique_id=558828519]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1109, -0.211143, -28.5609)
+
+[node name="OutFaces" type="Node3D" parent="WM_4" unique_id=252368994]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_4/OutFaces" unique_id=138193892]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_e1ux2")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_4/OutFaces" unique_id=651975043]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_e1ux2")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_4/OutFaces" unique_id=1876082742]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_e1ux2")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_4/OutFaces" unique_id=526443634]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_e1ux2")
+skeleton = NodePath("")
+
+[node name="InFaces" type="Node3D" parent="WM_4" unique_id=34524996]
+transform = Transform3D(0.71, 0, 0, 0, 1.3, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WM_4/InFaces" unique_id=1138147834]
+transform = Transform3D(1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 2.7, 2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_xn7cl")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="WM_4/InFaces" unique_id=1783088514]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_xn7cl")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WM_4/InFaces" unique_id=1438881864]
+transform = Transform3D(-1, -8.74228e-08, 9.01611e-15, 1.64203e-15, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 2.7, -2.7)
+layers = 7
+mesh = SubResource("PlaneMesh_xn7cl")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_4/InFaces" unique_id=840100045]
+transform = Transform3D(8.74228e-08, -1, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, 1, 8.74228e-08, 4.37114e-08, -2.7, 2.7, 0)
+layers = 7
+mesh = SubResource("PlaneMesh_xn7cl")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WM_4" unique_id=176363737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22633, 8.77971, 2.21548)
+mesh = SubResource("PlaneMesh_y7det")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WM_4" unique_id=2110798616]
+libraries/ = SubResource("AnimationLibrary_uqex4")
+autoplay = &"bounce"

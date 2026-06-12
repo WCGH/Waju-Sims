@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c8err2ij6qr0y"]
+
+[ext_resource type="Texture2D" uid="uid://enb1cvlyjav0" path="res://assets/png/debuff_icons/thunder.png" id="1_2l7bx"]
+
+[node name="ThunderIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_2l7bx")
+metadata/debuff_name = "thunder"

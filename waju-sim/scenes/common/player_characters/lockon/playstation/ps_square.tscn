@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cw8bjk355jwpi"]
+
+[ext_resource type="Texture2D" uid="uid://yu2pfpnashop" path="res://assets/png/playstation/Square_Marker.png" id="1_v4aak"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kkb6h"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_v4aak")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_2jy4t"]
+material = SubResource("StandardMaterial3D_kkb6h")
+size = Vector2(2, 2)
+
+[node name="PSSquare" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
+metadata/id = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+sorting_offset = 50.0
+mesh = SubResource("QuadMesh_2jy4t")

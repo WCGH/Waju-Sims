@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5a8l81gltuhy"]
+
+[ext_resource type="Script" path="res://scenes/common/ground_markers/death_wall.gd" id="1_3h0us"]
+[ext_resource type="PackedScene" uid="uid://dd6kuxeh6o048" path="res://scenes/common/ground_markers/new_quadrant.tscn" id="2_bu4f5"]
+
+[sub_resource type="Shader" id="Shader_wo7nj"]
+code = "shader_type spatial;
+render_mode unshaded;
+uniform float size: hint_range(0.0, 0.25);
+uniform float alpha: hint_range(0.0, 1.0);
+uniform vec3 color;
+
+void fragment() {
+	vec2 center = vec2(0.25, 0.75);
+	float df = distance(UV, center);
+	float circle = step(size, df);
+	ALBEDO = vec3(circle) * color;
+	ALPHA = alpha;
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_na6a0"]
+render_priority = 0
+shader = SubResource("Shader_wo7nj")
+shader_parameter/size = 0.219
+shader_parameter/alpha = 0.117
+shader_parameter/color = Vector3(0.126, 0.06, 0.631)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3y48n"]
+lightmap_size_hint = Vector2i(2295, 734)
+material = SubResource("ShaderMaterial_na6a0")
+top_radius = 49.173
+bottom_radius = 49.173
+height = 0.05
+cap_bottom = false
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6wyjr"]
+height = 7.0
+radius = 43.0
+
+[node name="DeathWall" type="Node3D"]
+script = ExtResource("1_3h0us")
+
+[node name="NewQuadrant" parent="." instance=ExtResource("2_bu4f5")]
+
+[node name="NewQuadrant2" parent="." instance=ExtResource("2_bu4f5")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="NewQuadrant3" parent="." instance=ExtResource("2_bu4f5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NewQuadrant4" parent="." instance=ExtResource("2_bu4f5")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0, 0, 0)
+
+[node name="NewQuadrant5" parent="." instance=ExtResource("2_bu4f5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NewQuadrant6" parent="." instance=ExtResource("2_bu4f5")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0, 0)
+
+[node name="NewQuadrant7" parent="." instance=ExtResource("2_bu4f5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NewQuadrant8" parent="." instance=ExtResource("2_bu4f5")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.971, 0)
+use_collision = true
+collision_layer = 0
+collision_mask = 4
+inner_radius = 43.0
+outer_radius = 43.07
+sides = 64
+ring_sides = 3
+
+[node name="OutterFog" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_3y48n")
+
+[node name="DeathwallTrigger" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathwallTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_6wyjr")
+
+[connection signal="body_exited" from="DeathwallTrigger" to="." method="_on_deathwall_trigger_body_exited"]

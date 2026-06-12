@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dux4x2djii8wt"]
+
+[ext_resource type="Texture2D" uid="uid://b3p8knqm7o2q1" path="res://assets/png/debuff_icons/hj_icon.png" id="1_bf34x"]
+
+[node name="Arrow1Icon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_bf34x")
+metadata/debuff_name = "arrow_circle"

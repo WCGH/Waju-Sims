@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bjplnycqr84e"]
+
+[ext_resource type="Texture2D" uid="uid://wlmq0j25bt7u" path="res://assets/lockon/target_markers/mark_shape1.png" id="1_62ekq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dy67k"]
+transparency = 1
+albedo_texture = ExtResource("1_62ekq")
+rim_enabled = true
+rim = 0.2
+disable_receive_shadows = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_glxoe"]
+material = SubResource("StandardMaterial3D_dy67k")
+size = Vector2(2, 2)
+
+[node name="MarkCircle" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_glxoe")

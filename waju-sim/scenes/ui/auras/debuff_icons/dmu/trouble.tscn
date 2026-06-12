@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://r88tce2vd75y"]
+
+[ext_resource type="Texture2D" uid="uid://dtcukfeukqws7" path="res://assets/dmu/debuff_icons/spells_trouble.png" id="1_6o765"]
+
+[node name="TroubleIcon" type="TextureRect" unique_id=917551237]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spells Trouble"
+texture = ExtResource("1_6o765")
+metadata/debuff_name = "trouble"

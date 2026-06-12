@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://boc2jv61pnvtp"]
+
+[ext_resource type="Script" uid="uid://bfewqd5bnwrhi" path="res://scenes/common/ground_markers/line_aoe.gd" id="1_v6kb7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbtfx"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 0.317647, 0.168627, 0.741176)
+
+[sub_resource type="QuadMesh" id="QuadMesh_dnnje"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_rbtfx")
+size = Vector2(0, 0)
+center_offset = Vector3(0, 0, 25)
+orientation = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fuwfh"]
+resource_local_to_scene = true
+size = Vector3(0, 1, 0)
+
+[node name="LineAoE" type="Area3D" unique_id=47807938]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_v6kb7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2139414285]
+mesh = SubResource("QuadMesh_dnnje")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=727801385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+shape = SubResource("BoxShape3D_fuwfh")

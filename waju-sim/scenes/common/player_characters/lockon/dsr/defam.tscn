@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://vwrrhcnicpnt"]
+
+[ext_resource type="Texture2D" uid="uid://bmmbpa2ife6ri" path="res://assets/png/misc/defam_marker.png" id="1_yhlpk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghuap"]
+transparency = 1
+albedo_texture = ExtResource("1_yhlpk")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ufxht"]
+material = SubResource("StandardMaterial3D_ghuap")
+size = Vector2(2.5, 2.5)
+
+[node name="Defam" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+metadata/id = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_ufxht")

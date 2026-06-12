@@ -1,0 +1,704 @@
+[gd_scene format=3 uid="uid://b23aj0fsxbgap"]
+
+[ext_resource type="Script" uid="uid://bcqad4naqgdwt" path="res://scenes/menus/control_menu.gd" id="1_euyg0"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2_bo70c"]
+[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="3_nwf0n"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="4_ai3jg"]
+[ext_resource type="Script" uid="uid://c33lypg0ti8qj" path="res://scenes/menus/lineup_menu/lineup_menu_container.gd" id="6_53r3n"]
+[ext_resource type="Script" uid="uid://csccu2fds680x" path="res://scenes/menus/lineup_menu/lineup_role_container.gd" id="7_8nasl"]
+[ext_resource type="Texture2D" uid="uid://n8f2owyvj3cy" path="res://assets/common/icons/ui_icons/white_arrow.png" id="8_vmtnm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m74l"]
+bg_color = Color(0.132, 0.159, 0.306, 0.957)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.90663, 0.673944, 0.399688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_gflx1"]
+font = ExtResource("2_bo70c")
+font_size = 36
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iqfvl"]
+font = ExtResource("3_nwf0n")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_fxa8b"]
+font = ExtResource("2_bo70c")
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_ev42l"]
+font = ExtResource("2_bo70c")
+font_size = 30
+outline_size = 4
+outline_color = Color(1, 0.603922, 0.176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o26b1"]
+font = ExtResource("3_nwf0n")
+font_size = 27
+outline_size = 2
+outline_color = Color(0, 0.421185, 0.859113, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7i0cm"]
+font = ExtResource("3_nwf0n")
+font_size = 27
+outline_size = 2
+outline_color = Color(4.81308e-08, 0.53287, 0.162913, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_br4l6"]
+font = ExtResource("3_nwf0n")
+font_size = 27
+outline_size = 2
+outline_color = Color(4.81308e-08, 0.53287, 0.162913, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfre0"]
+font = ExtResource("3_nwf0n")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.752112, 0.240315, 1.92523e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pab2x"]
+font = ExtResource("3_nwf0n")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.752112, 0.240315, 1.92523e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uwv2e"]
+font = ExtResource("3_nwf0n")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.53117, 0.427829, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n6exr"]
+font = ExtResource("3_nwf0n")
+font_size = 27
+outline_size = 2
+outline_color = Color(0.53117, 0.427829, 0, 1)
+
+[node name="ControlMenu" type="CanvasLayer" unique_id=978259260]
+script = ExtResource("1_euyg0")
+
+[node name="KeybindsMenuContainer" type="MarginContainer" parent="." unique_id=1379694977]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -312.0
+offset_right = 424.0
+offset_bottom = 458.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_constants/margin_left = 115
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 115
+theme_override_constants/margin_bottom = 65
+
+[node name="Panel" type="Panel" parent="KeybindsMenuContainer" unique_id=1951636344]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8m74l")
+
+[node name="ControlMarginContainer" type="MarginContainer" parent="KeybindsMenuContainer" unique_id=823872362]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(540, 685)
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 19
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 24
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer" unique_id=430803671]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="HeaderLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=945629031]
+custom_minimum_size = Vector2(0, 46.865)
+layout_mode = 2
+text = "Controls"
+label_settings = SubResource("LabelSettings_gflx1")
+horizontal_alignment = 1
+
+[node name="MoveUIContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=27502185]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MoveUILabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/MoveUIContainer" unique_id=28489704]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Move UI"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="MoveUIKeyButton" type="Button" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/MoveUIContainer" unique_id=530193754]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+theme_override_font_sizes/font_size = 18
+text = "Alt
+"
+
+[node name="ResetContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=1876527536]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ResetLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/ResetContainer" unique_id=1040323612]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Reset"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="ResetKeyButton" type="Button" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/ResetContainer" unique_id=1457364791]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+theme_override_font_sizes/font_size = 18
+text = "R"
+
+[node name="SprintContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=1893455088]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SprintLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/SprintContainer" unique_id=159860776]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Sprint"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="SprintKeyButton" type="Button" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/SprintContainer" unique_id=351787676]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+theme_override_font_sizes/font_size = 18
+text = "1"
+
+[node name="ArmsContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=633313904]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ArmsLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/ArmsContainer" unique_id=2016690862]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Arm's Length"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="ArmsKeyButton" type="Button" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/ArmsContainer" unique_id=471648244]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+theme_override_font_sizes/font_size = 18
+text = "2"
+
+[node name="DashContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=1292637165]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="DashLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/DashContainer" unique_id=1167092319]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "En Avant (Dash)"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="DashKeyButton" type="Button" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/DashContainer" unique_id=1621466915]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 18
+text = "3"
+
+[node name="MouseSensContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=697718205]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MouseSensLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/MouseSensContainer" unique_id=1937287895]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Mouse Sensitivity"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="MouseSensHSlider" type="HSlider" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/MouseSensContainer" unique_id=1102760247]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(190, 28)
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 0.4
+max_value = 2.5
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=2039706303]
+custom_minimum_size = Vector2(0, 44.135)
+layout_mode = 2
+text = "Controller Options:"
+label_settings = SubResource("LabelSettings_fxa8b")
+vertical_alignment = 2
+
+[node name="XSensContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=1267070605]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="XSensLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/XSensContainer" unique_id=189086231]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "X Sensitivity"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="XSensHSlider" type="HSlider" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/XSensContainer" unique_id=918960106]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(190, 28)
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 0.5
+max_value = 1.5
+step = 0.01
+value = 1.0
+
+[node name="YSensContainer2" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=1366310979]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="YSensLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/YSensContainer2" unique_id=1355132954]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Y Sensitivity"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="YSensHSlider" type="HSlider" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/YSensContainer2" unique_id=1500240558]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(190, 28)
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 0.5
+max_value = 1.5
+step = 0.01
+value = 1.0
+
+[node name="InvertYContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=896583300]
+layout_mode = 2
+theme_override_constants/separation = 57
+
+[node name="InvertYLabel" type="Label" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/InvertYContainer" unique_id=1681772672]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Invert Y"
+label_settings = SubResource("LabelSettings_iqfvl")
+
+[node name="InvertYCheckButton" type="CheckButton" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/InvertYContainer" unique_id=56328732]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox" unique_id=44882729]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 95
+
+[node name="PtListButton" type="Button" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1706639763]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("4_ai3jg")
+theme_override_font_sizes/font_size = 27
+text = "Party List Order
+"
+
+[node name="BackButton" type="Button" parent="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1118445181]
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("4_ai3jg")
+theme_override_font_sizes/font_size = 29
+text = "Close"
+
+[node name="PartyOrderMarginContainer" type="MarginContainer" parent="KeybindsMenuContainer" unique_id=676800149 groups=["party_list_menu"]]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_bottom = 58
+script = ExtResource("6_53r3n")
+
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer" unique_id=125938598]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HeaderLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=2021278925]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Party List Order"
+label_settings = SubResource("LabelSettings_ev42l")
+horizontal_alignment = 1
+
+[node name="PlayerOnTopCheckBox" type="CheckButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=1213377380]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 32
+theme_override_fonts/font = ExtResource("3_nwf0n")
+theme_override_font_sizes/font_size = 25
+button_pressed = true
+text = "Player on Top"
+icon_alignment = 2
+expand_icon = true
+
+[node name="T1Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=447620044]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container" unique_id=176369460]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Tank  1"
+label_settings = SubResource("LabelSettings_o26b1")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container" unique_id=1857760720]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container" unique_id=1787097884]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="T2Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=1739964686]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container" unique_id=724215590]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Tank  2"
+label_settings = SubResource("LabelSettings_o26b1")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container" unique_id=1243654898]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container" unique_id=858675768]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="H1Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=868571946]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container" unique_id=687177862]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Healer 1"
+label_settings = SubResource("LabelSettings_7i0cm")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container" unique_id=603881642]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container" unique_id=1235037212]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="H2Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=776903460]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container" unique_id=1975790539]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Healer 2"
+label_settings = SubResource("LabelSettings_br4l6")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container" unique_id=2028697731]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container" unique_id=2096190662]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="M1Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=1335772586]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container" unique_id=1333614375]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Melee 1"
+label_settings = SubResource("LabelSettings_bfre0")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container" unique_id=783216781]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container" unique_id=838396362]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="M2Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=172459627]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container" unique_id=1064365526]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Melee 2"
+label_settings = SubResource("LabelSettings_pab2x")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container" unique_id=649416473]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container" unique_id=1075181148]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="R1Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=1731281150]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container" unique_id=1945458473]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Ranged 1"
+label_settings = SubResource("LabelSettings_uwv2e")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container" unique_id=397891781]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container" unique_id=1953061468]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="R2Container" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=1979891023]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+script = ExtResource("7_8nasl")
+
+[node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container" unique_id=2067961578]
+custom_minimum_size = Vector2(125.345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Ranged 2"
+label_settings = SubResource("LabelSettings_n6exr")
+
+[node name="UpButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container" unique_id=816491045]
+custom_minimum_size = Vector2(27, 14.8)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="DownButton" type="TextureButton" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container" unique_id=78329424]
+custom_minimum_size = Vector2(27, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+texture_normal = ExtResource("8_vmtnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox" unique_id=1007175791]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 85
+
+[node name="DefaultButton" type="Button" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=987166729]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("4_ai3jg")
+theme_override_font_sizes/font_size = 30
+text = "Default"
+
+[node name="BackButton" type="Button" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=1673383111]
+custom_minimum_size = Vector2(145, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("4_ai3jg")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/MoveUIContainer/MoveUIKeyButton" to="." method="_on_move_ui_key_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/ResetContainer/ResetKeyButton" to="." method="_on_reset_key_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/SprintContainer/SprintKeyButton" to="." method="_on_sprint_key_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/ArmsContainer/ArmsKeyButton" to="." method="_on_arms_key_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/DashContainer/DashKeyButton" to="." method="_on_dash_key_button_pressed"]
+[connection signal="drag_ended" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/MouseSensContainer/MouseSensHSlider" to="." method="_on_mouse_sens_h_slider_drag_ended"]
+[connection signal="drag_ended" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/XSensContainer/XSensHSlider" to="." method="_on_x_sens_h_slider_drag_ended"]
+[connection signal="drag_ended" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/YSensContainer2/YSensHSlider" to="." method="_on_y_sens_h_slider_drag_ended"]
+[connection signal="toggled" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/InvertYContainer/InvertYCheckButton" to="." method="_on_invert_y_check_button_toggled"]
+[connection signal="pressed" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/BottomHBoxContainer/PtListButton" to="." method="_on_pt_list_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/ControlMarginContainer/LeftButtonsVBox/BottomHBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/PlayerOnTopCheckBox" to="KeybindsMenuContainer/PartyOrderMarginContainer" method="_on_player_on_top_check_box_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container/UpButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container" method="_on_up_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container/DownButton" to="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container" method="_on_down_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer/DefaultButton" to="KeybindsMenuContainer/PartyOrderMarginContainer" method="_on_default_button_pressed"]
+[connection signal="pressed" from="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/BottomHBoxContainer/BackButton" to="KeybindsMenuContainer/PartyOrderMarginContainer" method="_on_back_button_pressed"]

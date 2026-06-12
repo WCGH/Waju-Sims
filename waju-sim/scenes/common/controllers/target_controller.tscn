@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctvier3tpchg3"]
+
+[ext_resource type="Script" path="res://scenes/common/controllers/target_controller.gd" id="1_0fwdm"]
+
+[node name="TargetController" type="Node" groups=["target_controller"]]
+script = ExtResource("1_0fwdm")

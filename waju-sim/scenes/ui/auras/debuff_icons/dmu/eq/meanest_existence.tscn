@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b5w70hvk58k0e"]
+
+[ext_resource type="Texture2D" uid="uid://coiaepjxbkb74" path="res://assets/dmu/debuff_icons/meanest_existence.png" id="1_4oo74"]
+
+[node name="MeanestExistenceIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Meanest Existence"
+texture = ExtResource("1_4oo74")
+expand_mode = 3
+metadata/debuff_name = "meanest_existence"

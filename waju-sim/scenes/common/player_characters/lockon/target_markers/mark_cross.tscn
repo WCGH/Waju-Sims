@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b18k5a15uwlqj"]
+
+[ext_resource type="Texture2D" uid="uid://ksh4wd1ys2hg" path="res://assets/lockon/target_markers/mark_shape2.png" id="1_onept"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rstx1"]
+transparency = 1
+albedo_texture = ExtResource("1_onept")
+rim_enabled = true
+rim = 0.2
+disable_receive_shadows = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_glxoe"]
+material = SubResource("StandardMaterial3D_rstx1")
+size = Vector2(2, 2)
+
+[node name="MarkCross" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_glxoe")

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cu7ghooei6mv5"]
+
+[ext_resource type="Script" uid="uid://h4hk8w4irhmb" path="res://scenes/ui/auras/debuff_icons/debuff.gd" id="1_8yhqr"]
+[ext_resource type="FontFile" uid="uid://dd77fk0myvi8q" path="res://assets/common/fonts/MYRIADPRO-REGULAR.OTF" id="3_3kmp5"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="3_55ndo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bmdpu"]
+font = ExtResource("3_3kmp5")
+font_size = 14
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eymd6"]
+font = ExtResource("3_55ndo")
+font_size = 12
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Debuff" type="VBoxContainer" unique_id=2079905466]
+custom_minimum_size = Vector2(0, 30)
+offset_right = 24.0
+offset_bottom = 37.0
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+script = ExtResource("1_8yhqr")
+
+[node name="Stacks" type="Label" parent="." unique_id=58610983]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_55ndo")
+theme_override_font_sizes/font_size = 16
+label_settings = SubResource("LabelSettings_bmdpu")
+horizontal_alignment = 1
+
+[node name="Duration" type="Label" parent="." unique_id=276469547]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_55ndo")
+theme_override_font_sizes/font_size = 16
+label_settings = SubResource("LabelSettings_eymd6")
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1858873625]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,214 @@
+[gd_scene load_steps=11 format=4 uid="uid://dvbq0uw7rv0l8"]
+
+[sub_resource type="Animation" id="Animation_ax55r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 8.1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nrabn"]
+resource_name = "rotate"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 8, 0), Vector3(0, 7.4, 0), Vector3(0, 8, 0), Vector3(0, 7.4, 0), Vector3(0, 8, 0), Vector3(0, 7.4, 0), Vector3(0, 8, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfy0c"]
+_data = {
+"RESET": SubResource("Animation_ax55r"),
+"rotate": SubResource("Animation_nrabn")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5de7c"]
+resource_name = "Material.001"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_color = Color(0.396078, 0.12549, 0.211765, 1)
+roughness = 0.690035
+emission_enabled = true
+emission = Color(0.725476, 0.0754738, 0.546828, 1)
+emission_energy_multiplier = 0.16
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jksuj"]
+_surfaces = [{
+"aabb": AABB(-0.996195, -2.23646, -0.906308, 1.99239, 4.47293, 1.81262),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAADAAQAAAAEAAUAAAAFAAcAAAAHAAEABgAEAAMAAgAGAAMAAQAGAAIABwAGAAEABQAGAAcABAAGAAUA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/38AAP9/AABNNv9/TwwAAEy2/38AAAAA////f7BzAACxyf9/r/MAALJJ/3///wAA/3////9/AAAAAP9/TowAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8fkrn"]
+resource_name = "spread_marker_Plumbob"
+_surfaces = [{
+"aabb": AABB(-0.996195, -2.23646, -0.906308, 1.99239, 4.47293, 1.81262),
+"attribute_data": PackedByteArray("Knu8wPE6JfTzYoffoUo5ZRR/Pp6wbel93AqDqZyR6YAXey/BMOPmpfB+Jp6ltJSZ1Qq3qWeAbGDxbeF9W5GegMcKnKklgC5gxgqVqSicRB+uSjllQvQBVRULPqp1xJ4KChzlWCGEqD139CdVePT9VGH0NFWI9MtU5fMhVQiEmj2XYpvfV5wzH8YK2amXtJiZ"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAoABAAMAA4ABQAQABQAAwASABgAAQAWACAAAgAiAAgAHwAVABEADQAeAA8ABwAaAAsAIwAcAAkAFwAbACEAEwAdABkA"),
+"material": SubResource("StandardMaterial3D_5de7c"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/38AAP9/s6H/fwAA/3/v6P9/AAD/fxnB/38AAP9/9fb/fwAA/3+jzP9/AAD/f2vrTTb/f08Ms6FNNv9/Twy7o002/39PDBnBTTb/f08My69Mtv9/AACzoUy2/38AALujTLb/fwAAo8xMtv9/AADnxP///3+wc6PM////f7Bz58T///9/sHNr6////3+wc7XQscn/f6/z9faxyf9/r/P49LHJ/3+v82vrscn/f6/ztdCySf9////v6LJJ/3///x/nskn/f///9faySf9////49P9/////f7uj/3////9/H+f/f////3/Lr/9/////f/j0/3////9/58T/f////3+10AAA/39OjO/oAAD/f06MH+cAAP9/TowZwQAA/39OjMuv6KlDhqU9niIkP14LBcpVPZNtpqzjVjex6KlDhhAHXNgkP14LbU42KOipQ4YQB1zYk22mrPjM2/GTbaas+Mzb8eNWN7EwVfDPBcpVPcc3k1PjVjexMFXwz6U9niL2EUpMBcpVPcc3k1MQB1zY9hFKTG1ONijHN5NT+Mzb8TBV8M+lPZ4i9hFKTCQ/XgttTjYo")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jksuj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3gku"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 2.82
+
+[sub_resource type="Shader" id="Shader_anqaq"]
+code = "shader_type spatial;
+render_mode unshaded;
+uniform float size: hint_range(0.0, 0.25);
+uniform float alpha: hint_range(0.0, 1.0);
+uniform vec3 color;
+
+void fragment() {
+	vec2 center = vec2(0.25, 0.75);
+	float df = distance(UV, center);
+	float circle = step(size, df);
+	ALBEDO = vec3(circle) * color;
+	ALPHA = alpha;
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kxcap"]
+render_priority = 0
+shader = SubResource("Shader_anqaq")
+shader_parameter/size = 0.21
+shader_parameter/alpha = 0.109
+shader_parameter/color = Vector3(0.237, 0, 0.259)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pe3nn"]
+material = SubResource("ShaderMaterial_kxcap")
+top_radius = 15.0
+bottom_radius = 15.0
+height = 0.001
+
+[node name="SpreadMarker" type="Node3D"]
+metadata/id = 15
+
+[node name="FloatVisual" type="Node3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 8.1, 0)
+metadata/id = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FloatVisual"]
+libraries = {
+"": SubResource("AnimationLibrary_nfy0c")
+}
+autoplay = "rotate"
+
+[node name="Plumbob" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(0.0421541, 2.88726e-07, 0.49822, 1.0487e-08, 0.686825, -2.11827e-07, -0.49822, 3.88858e-08, 0.0421541, 0, -3.24275, 0)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="Plumbob2" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(0.0375718, 1.55091e-07, 0.460892, 9.34703e-09, 0.368932, -1.95956e-07, -0.444062, 2.08878e-08, 0.0389958, 0, -1.70684, 0)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="Plumbob3" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(0.0137537, 7.73555e-08, 0.115027, -0.162555, 2.37478e-09, 0.00973237, 3.78637e-09, -0.184014, 4.93374e-08, 0, -2.23803, -0.551233)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="Plumbob4" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(0.0223542, 1.02075e-07, 0.222463, 5.39466e-09, 0.242816, -9.62416e-08, -0.264204, 1.37475e-08, 0.0188225, 0, -2.23803, -0.728996)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="Plumbob5" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(-0.00699748, 0.158418, -0.0585225, -0.162555, 1.08097e-09, 0.00973237, 0.0118406, 0.0936213, 0.099027, 0.491103, -2.23803, 0.252139)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="Plumbob6" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(0.216081, -6.37678e-08, -0.129387, 5.39466e-09, 0.242816, -9.62416e-08, 0.153664, 8.08819e-08, 0.181943, 0.644139, -2.23803, 0.342579)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="Plumbob7" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(-0.00734282, -0.155595, -0.0614107, -0.162555, 3.83441e-10, 0.00973237, -0.0116296, 0.0982416, -0.0972624, -0.469956, -2.23803, 0.299942)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="Plumbob8" type="MeshInstance3D" parent="FloatVisual"]
+transform = Transform3D(-0.235335, -4.28713e-08, -0.102853, 5.39466e-09, 0.242816, -9.62416e-08, 0.122152, -9.36497e-08, -0.198155, -0.620265, -2.23803, 0.394846)
+mesh = SubResource("ArrayMesh_8fkrn")
+skeleton = NodePath("")
+
+[node name="FloorVisual" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="LowerGlowRing" type="CSGTorus3D" parent="FloorVisual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+inner_radius = 14.875
+outer_radius = 15.0
+sides = 64
+ring_sides = 5
+material = SubResource("StandardMaterial3D_j3gku")
+
+[node name="OutterMesh" type="MeshInstance3D" parent="FloorVisual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112, 0)
+mesh = SubResource("CylinderMesh_pe3nn")

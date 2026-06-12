@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://75oxu6ts7kjp"]
+
+[ext_resource type="Texture2D" uid="uid://d3s72t6ed07jt" path="res://assets/png/debuff_icons/mortal_atonement.png" id="1_4i18a"]
+
+[node name="MortalAtonementIcon" type="TextureRect"]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "High Jump Target"
+texture = ExtResource("1_4i18a")
+metadata/debuff_name = "Mortal Atonement"

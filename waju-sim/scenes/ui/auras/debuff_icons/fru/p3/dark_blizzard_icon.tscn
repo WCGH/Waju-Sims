@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://drlxknw5uh8cg"]
+
+[ext_resource type="Texture2D" uid="uid://jompi03bapm8" path="res://assets/fru/debuff_icons/ultimate_relativity/dark_blizzard.png" id="1_687ja"]
+
+[node name="DarkBlizzardIcon" type="TextureRect"]
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Spell-in-Waiting: Dark Blizzard III"
+texture = ExtResource("1_687ja")
+metadata/debuff_name = "dark_blizzard"
