@@ -28,7 +28,8 @@ func _process(_delta: float) -> void:
 
 
 func add_targetable_npc(new_target: Node3D) -> void:
-	valid_targets.append(new_target)
+	if !valid_targets.has(new_target):
+		valid_targets.append(new_target)
 
 
 func remove_targetable_npc(removed_target: Node3D) -> void:

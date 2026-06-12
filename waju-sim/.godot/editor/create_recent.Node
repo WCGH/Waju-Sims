@@ -1,5 +1,6 @@
-Node3D
 AnimationPlayer
+Node
+Node3D
 CollisionShape3D
 Area3D
 MeshInstance3D
@@ -11,4 +12,3 @@ TextureButton
 Label
 TextEdit
 OptionButton
-MarginContainer

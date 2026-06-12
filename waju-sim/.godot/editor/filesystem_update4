@@ -1,4 +1,4 @@
-res://scenes/common/player_characters/lockon/passable_tether.tscn
+res://scenes/dmu/p3/p3_main.tscn
 res://scenes/common/player_characters/models/anim_tree/miq_fem_anim_node_state.tres
 res://scenes/common/player_characters/models/anim_tree/viera_animation_node_state_machine.tres
 res://assets/common/shaders/sky.gdshader
@@ -6,18 +6,5 @@ res://assets/common/shaders/sky_stary.gdshader
 res://assets/common/shaders/black_hole_rim.gdshader
 res://assets/common/shaders/donut.gdshader
 res://assets/common/shaders/flames_spatial.gdshader
-res://scenes/common/controllers/tether_controller.gd
-res://scenes/common/player_characters/lockon/passable_tether.gd
-res://scenes/dmu/p3/p3_main.tscn
-res://scenes/dmu/p3/eq/black_hole.tscn
-res://scenes/dmu/p3/eq/black_hole_set_13.tscn
-res://scenes/dmu/p3/eq/black_hole.gd
-res://scenes/dmu/p3/eq/black_hole_set.tscn
-res://scenes/dmu/p3/eq/black_hole_set.gd
-res://scenes/dsr/p3/p3_lc_main.tscn
-res://scenes/ui/auras/debuff_icons/dmu/eq/accretion.tscn
-res://scenes/ui/auras/debuff_icons/dmu/eq/meanest_existence.tscn
-res://scenes/ui/auras/debuff_icons/dmu/eq/primordial_crust.tscn
-res://scenes/ui/auras/debuff_icons/dmu/eq/unbecoming.tscn
-res://scenes/common/ground_markers/line_aoe.tscn
-res://scenes/common/ground_markers/line_aoe.gd
+res://scenes/dmu/p3/p3_eq_seq.gd
+res://scenes/common/controllers/target_controller.gd

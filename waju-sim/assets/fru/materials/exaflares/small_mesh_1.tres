@@ -1,8 +1,0 @@
-[gd_resource type="BoxMesh" format=3 uid="uid://cd8s6yg5353sp"]
-
-[ext_resource type="Material" uid="uid://cjjjij1l2xrvo" path="res://assets/fru/materials/exaflares/small1.tres" id="1_bvfha"]
-
-[resource]
-resource_local_to_scene = true
-material = ExtResource("1_bvfha")
-size = Vector3(0.83, 0.012, 4.225)
