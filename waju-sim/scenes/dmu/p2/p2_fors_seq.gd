@@ -365,7 +365,11 @@ func repopulate_groups(group_dict: Dictionary, group_keys: Array):
 		elif spread_keys.size() == 2 and cone_keys.size() == 2:
 			# Ordered left to right adjust prio for next tower.
 			old_left_keys = [group_dict.get("stack_left"), group_dict.get("cone_left")]
-			old_right_keys = [group_dict.get("spread_left"), group_dict.get("stack_right")]
+			if odd_tower_pos == OddTowerPos.EU:
+				# p3Z positions put the stack right player south and spread north so we need to swap the prio in this case
+				old_right_keys = [group_dict.get("stack_right"), group_dict.get("spread_left")]
+			else:
+				old_right_keys = [group_dict.get("spread_left"), group_dict.get("stack_right")]
 			if cone_keys.has(old_left_keys[0]) and cone_keys.has(old_left_keys[1]):
 				# Both Cones left. Keys are already ordered L>R for double swap.
 				cone_keys = old_left_keys
