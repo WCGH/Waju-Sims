@@ -796,9 +796,9 @@ func move_final_pos():
 	move_party_rtd(ForsPositions.PAST_BAIT_POS)
 
 
-## Cast Light of Judgement (for mit check)
+## Cast Light of Judgment (for mit check)
 func cast_light_judgement():
-	cast_bar.cast("Light of Judgement", 4.7)
+	cast_bar.cast("Light of Judgment", 4.7)
 
 
 func ending_cast():
