@@ -8,6 +8,7 @@ script = ExtResource("1_kg457")
 
 [node name="Set13" type="Node3D" parent="." unique_id=1040842565]
 unique_name_in_owner = true
+visible = false
 
 [node name="NorthSet" type="Node3D" parent="Set13" unique_id=958832641]
 

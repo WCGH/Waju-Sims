@@ -15,6 +15,7 @@ signal spectate_mode_changed()
 signal toggle_move_ui(move_ui: bool)
 signal ui_ready
 signal toggle_focus(role_key: String)
+signal bh_body_entered(body: PlayableCharacter)
 
 
 func emit_variable_saved(section: String, key: String, value: Variant) -> void:
@@ -55,3 +56,7 @@ func emit_ui_ready() -> void:
 
 func emit_toggle_focus(role_key: String):
 	toggle_focus.emit(role_key)
+
+
+func emit_bh_body_entered(body: PlayableCharacter):
+	bh_body_entered.emit(body)

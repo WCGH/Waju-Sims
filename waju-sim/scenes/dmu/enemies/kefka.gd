@@ -20,3 +20,7 @@ func play_run():
 func play_lc_dash():
 	state_machine.start("limit_cut_dash")
 	#state_machine.travel("limit_cut_dash")
+
+
+func play_stand_idle():
+	state_machine.travel("stand_idle")

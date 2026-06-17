@@ -1,8 +1,8 @@
+CollisionShape3D
+Area3D
 AnimationPlayer
 Node
 Node3D
-CollisionShape3D
-Area3D
 MeshInstance3D
 AnimationTree
 CharacterBody3D

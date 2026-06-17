@@ -72,3 +72,7 @@ func set_dynamic_color(new_color: Color, new_min_length: float) -> void:
 
 func get_dist_to_target() -> float:
 	return dist_to_target
+
+
+func remove_lockon():
+	pass

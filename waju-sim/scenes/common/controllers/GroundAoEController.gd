@@ -26,7 +26,8 @@ const ASCALON_Y := 0.11
 	"fr_tower": "uid://g2t1el86u1bh",
 	"wide_cone": "uid://cmkco6ga5i6l",
 	"twister": "uid://daa2s8vj2gcjm",
-	"ascalon": "uid://dfd4a0c4x2y8u"
+	"ascalon": "uid://dfd4a0c4x2y8u",
+	"tower_2": "uid://7m7y37eumh68"
 }
 
 var circle_aoe_scene : PackedScene
@@ -119,6 +120,21 @@ func spawn_tower(position: Vector2, radius: float, lifetime: float, color: Color
 		if ResourceLoader.load_threaded_get_status(res_path["tower"]) == 0:
 			ResourceLoader.load_threaded_request(res_path["tower"])
 		tower_aoe_scene = ResourceLoader.load_threaded_get(res_path["tower"])
+	# Spawn new tower
+	var new_tower: TowerAoe = tower_aoe_scene.instantiate()
+	marker_layer.add_child(new_tower)
+	new_tower.set_parameters(Vector3(position.x, 0, position.y), radius, lifetime, color)
+	new_tower.play_start_animation()
+	return new_tower
+
+
+# Returns a reference to tower to be called later for collision check
+func spawn_tower_2(position: Vector2, radius: float, lifetime: float, color: Color) -> TowerAoe:
+	# Load resource
+	if !tower_aoe_scene:
+		if ResourceLoader.load_threaded_get_status(res_path["tower_2"]) == 0:
+			ResourceLoader.load_threaded_request(res_path["tower_2"])
+		tower_aoe_scene = ResourceLoader.load_threaded_get(res_path["tower_2"])
 	# Spawn new tower
 	var new_tower: TowerAoe = tower_aoe_scene.instantiate()
 	marker_layer.add_child(new_tower)

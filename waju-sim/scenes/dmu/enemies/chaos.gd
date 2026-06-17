@@ -36,4 +36,11 @@ func finish_long_lat():
 
 func cast_jump():
 	state_machine.travel("jump")
-	
+
+
+func play_edict_start():
+	state_machine.travel("edict_start")
+
+
+func play_edict_finish():
+	state_machine.travel("edict_finish")

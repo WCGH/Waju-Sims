@@ -15,7 +15,12 @@ class_name P3BoASequence
 #const EXDEATH_UID = "uid://c8p51pmt3xvde"
 
 enum Strat {SG}
-enum StartPoint {DB, BOA, LC}
+enum StartPoint {DB1, BOA, LC, DB2, EQ, STOMP}
+
+const SEQUENCE_DICT := {
+	StartPoint.DB1: 0, StartPoint.BOA: 0, StartPoint.LC: 0,
+	StartPoint.DB2: 1, StartPoint.EQ: 1, StartPoint.STOMP: 1
+}
 
 ## AoE Dimensions
 const HEADWIND_DURATION := 67.0
@@ -113,6 +118,7 @@ const TAILWIND_ICON = preload("uid://cxd3d2j2r0m32")
 @onready var wind_diamond: Node3D = %WindTriangle
 @onready var kefka: Node3D = %Kefka
 @onready var encounter_menu: CanvasLayer = %EncounterMenu
+@onready var p3_eq_seq: Node = %P3EqSeq
 
 var party: Dictionary
 var party_boa: Dictionary = {
@@ -158,7 +164,7 @@ func start_sequence(new_party: Dictionary) -> void:
 	encounter_menu.toggle_bots_visible.connect(on_toggle_bots_visible)
 	## Start animation sequence	
 	match starting_point:
-		StartPoint.DB:
+		StartPoint.DB1:
 			p3_boa_anim.play("p3_boa")
 		StartPoint.BOA:
 			p3_boa_anim.play_section("p3_boa", 16, 110)
@@ -440,6 +446,7 @@ func move_tank_thunder_kb_1():
 ## Move to post wind spots
 # Cast Thunder III (TB)
 func cast_thunder_tb():
+	exdeath.plant()
 	cast("Thunder III", 4.7, exdeath)
 
 # Thunder Hit 1 then 2, move tank in between
@@ -453,7 +460,7 @@ func thunder_kb_hit():
 # Chaos tank will move Chaos to middle.
 func move_tank_thunder_kb_2():
 	# Distance "through" middle we want to move Chaos.
-	var target_pos: Vector2 = v2(chaos.global_position).normalized() * -10.0
+	var target_pos: Vector2 = v2(chaos.global_position).normalized() * -12.5
 	chaos_tank.move_to(target_pos)
 # Thunder 2 hit
 
@@ -507,14 +514,14 @@ func lat_long_finish_anim():
 # Latlong hits
 func lat_long_hit_1():
 	var facing_vector = chaos.get_global_transform().basis
-	# Longitudinal Implosion (sides first)
+	# Latitudinal Implosion (sides first)
 	if lat_long:
 		#var left_vector = facing_vector.x
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH,
 			v2(facing_vector.x + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Latitudinal Implosion"])
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH, 
 			v2(-facing_vector.x + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Latitudinal Implosion"])
-	# Latitudinal Implosion (front/back first)
+	# Longitudinal Implosion (front/back first)
 	else:
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH, 
 			v2(facing_vector.z + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Longitudinal Implosion"])
@@ -539,14 +546,14 @@ func move_latlong_2():
 
 func lat_long_hit_2():
 	var facing_vector = chaos.get_global_transform().basis
-	# Latitudinal Implosion (front/back first)
+	# Longitudinal Implosion (sides second)
 	if !lat_long:
 		#var left_vector = facing_vector.x
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH,
 			v2(facing_vector.x + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Longitudinal Implosion"])
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH, 
 			v2(-facing_vector.x + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Longitudinal Implosion"])
-	# Longitudinal Implosion (sides first)
+	# Latitudinal Implosion (front/back second)
 	else:
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH, 
 			v2(facing_vector.z + chaos.global_position ), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Latitudinal Implosion"])
@@ -759,7 +766,41 @@ func limit_cut_hit(lc_number: int):
 	gac.spawn_line(lc_starting_positions[lc_number], LC_LINE_WIDTH, LC_LINE_LENGTH,
 		v2(party[party_keys_lc[lc_number]].global_position), LC_LINE_LIFETIME, 
 		LC_LINE_COLOR, [1, 1, "Ultima Blaster (Limit Cut)", [party[party_keys_lc[lc_number]]]])
-	
+
+
+func move_tanks_post_lc_1():
+	var exdeath_tank_pos = v2(exdeath.global_position) + (v2(exdeath.global_position).normalized() * 3.0)
+	var chaos_tank_pos = v2(chaos_tank.global_position) + (v2(chaos_tank.global_position).direction_to(v2(exdeath.global_position)) *\
+		(v2(chaos_tank.global_position).distance_to(v2(exdeath.global_position)) - T2_WAIT_DIST))
+	exdeath_tank.move_to(exdeath_tank_pos)
+	chaos_tank.move_to(chaos_tank_pos)
+	# Move rest of party center
+	move_party(BoAPos.CENTER_POS)
+
+
+# T1 goes under, T2 moves away
+func move_tanks_post_lc_2():
+	exdeath_tank.move_to(v2(exdeath.global_position).rotated(deg_to_rad(30.0)))
+	chaos_tank.move_to(v2(exdeath.global_position))
+
+
+# Separate bosses for Decisive Battle
+func move_tanks_post_lc_3():
+	chaos_tank.move_to(v2(exdeath.global_position).rotated(deg_to_rad(-30.0)))
+	# Start moving group toward DB boss
+	for key in CHAOS_HEROS:
+		if party[key] == exdeath_tank or party[key] == chaos_tank:
+			continue
+		party[key].move_to((v2(party[key].global_position).direction_to(v2(chaos.global_position)) * 10.0) + v2(party[key].global_position))
+	for key in EXDEATH_HEROS:
+		if party[key] == exdeath_tank or party[key] == chaos_tank:
+			continue
+		party[key].move_to((v2(party[key].global_position).direction_to(v2(exdeath.global_position)) * 10.0) + v2(party[key].global_position))
+
+
+func play_next_sequence():
+	p3_eq_seq.start_sequence(party)
+
 
 ## END OF TIMELINE
 

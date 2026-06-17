@@ -1,5 +1,7 @@
 extends Node3D
 
+class_name BlackHoleSet
+
 #enum {North, East, South}
 
 @onready var back_hole_node: Node3D = %BackHole1
@@ -24,7 +26,7 @@ func show_bh_set(set_index: int):
 
 func hide_bh_set():
 	back_hole_node.play_fade_out()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.7).timeout
 	active_set.hide()
 
 

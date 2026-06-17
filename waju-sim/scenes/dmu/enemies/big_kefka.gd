@@ -1,5 +1,6 @@
 extends Node3D
 
+class_name BigKefka
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
@@ -35,3 +36,11 @@ func play_float_idle():
 
 func play_stomp():
 	state_machine.travel("stomp")
+
+
+func play_fade_out():
+	state_machine.travel("fade_out")
+
+
+func play_fade_in():
+	state_machine.travel("fade_in")

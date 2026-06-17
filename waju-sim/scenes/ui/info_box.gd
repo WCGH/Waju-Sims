@@ -2,7 +2,7 @@ extends CanvasLayer
 
 const VERSION_LABEL_DSR := "v1.1.1"
 const VERSION_LABEL_FRU := "v1.8.1"
-const VERSION_LABEL_DMU := "v0.2.0"
+const VERSION_LABEL_DMU := "v0.2.1"
 
 @onready var coords_label: Label = %CoordsLabel
 @onready var fps_label: Label = %FPSLabel

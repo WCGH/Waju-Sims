@@ -277,6 +277,5 @@ func set_focus_visible(toggle_visible: bool) -> void:
 		focus_icon.hide()
 
 
-
-#func get_name() -> StringName:
-	#return Global.ROLE_NAMES[role_key]
+func get_role_name() -> StringName:
+	return Global.ROLE_NAMES[role_key]

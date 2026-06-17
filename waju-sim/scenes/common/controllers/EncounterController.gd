@@ -32,6 +32,14 @@ func start_dsr_p6_encounter(party: Dictionary) -> void:
 	print("Starting sequence: ", sequences[selected_sequence + 1])
 	sequences[selected_sequence + 1].start_sequence(party)
 
+func start_dmu_p3_encounter(party: Dictionary) -> void:
+	_party = party
+	var starting_point: int = DmuSavedVariables.get_data_and_check_int("settings", "p3_boa_start_point", 0, P3BoASequence.StartPoint.size()) as P3BoASequence.StartPoint
+	var selected_sequence = P3BoASequence.SEQUENCE_DICT[starting_point]
+	
+	print("Starting sequence: ", sequences[selected_sequence])
+	sequences[selected_sequence].start_sequence(party)
+
 
 func play_sequence_by_index(seq_index: int) -> void:
 	sequences[seq_index].start_sequence(_party)

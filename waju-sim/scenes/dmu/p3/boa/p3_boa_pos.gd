@@ -16,6 +16,11 @@ const RS2 := Vector2(0.15, -0.28)
 const RS3 := Vector2(-0.2, 0.1)
 
 
+const CENTER_POS := {
+	"h1": Vector2(-5, 0), "h2": Vector2(5, 0),
+	"m1": Vector2(-5, 5), "m2": Vector2(5, 5),
+	"r1": Vector2(-5, -5), "r2": Vector2(5, -5)
+}
 
 ## sg3k
 

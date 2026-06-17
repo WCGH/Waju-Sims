@@ -6,5 +6,5 @@ res://assets/common/shaders/sky_stary.gdshader
 res://assets/common/shaders/black_hole_rim.gdshader
 res://assets/common/shaders/donut.gdshader
 res://assets/common/shaders/flames_spatial.gdshader
-res://scenes/dmu/p3/p3_eq_seq.gd
-res://scenes/common/controllers/target_controller.gd
+res://scenes/dmu/p2/p2_fors_main.tscn
+res://scenes/ui/info_box.gd
