@@ -77,6 +77,10 @@ func has_debuff(debuff_name: String) -> bool:
 	return party_list.has_debuff(role_key, debuff_name)
 
 
+func order_debuffs(debuff_order: Array):
+	party_list.order_debuffs(role_key, debuff_order)
+
+
 func get_model_rotation() -> Vector3:
 	return self.model.rotation
 

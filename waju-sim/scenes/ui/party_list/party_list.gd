@@ -69,6 +69,10 @@ func remove_debuff_stacks(role_key, debuff_name, removed_stacks) -> void:
 	member_containers[role_key].remove_debuff_stacks(debuff_name, removed_stacks)
 
 
+func order_debuffs(role_key, debuff_order: Array) -> void:
+	member_containers[role_key].order_auras(debuff_order)
+
+
 func on_refresh_party(new_order: Array):
 	party_order = new_order
 	order_list()

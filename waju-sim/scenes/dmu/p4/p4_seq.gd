@@ -84,7 +84,8 @@ const COMPRESSED_WATER_ICON = preload("uid://i8en5r82xfen")
 const CURSED_SHRIEK_ICON = preload("uid://hfe8vr3b5giy")
 const FORKED_LIGHTNING_ICON = preload("uid://dmhi4sys4ftfr")
 const WHITE_WOUND_ICON = preload("uid://72mnilph48hp")
-
+const DEBUFF_ORDER := ["black_wound", "white_wound", "beyond_death", "allagan_field", "cursed_shriek",
+	"compressed_water", "forked_lightning", "acceleration_bomb", "entropy", "dynamic_fluid"]
 
 @onready var kefka: P4Kefka = %Kefka
 @onready var neo_exdeath: NeoExdeath = %NeoExdeath
@@ -333,7 +334,7 @@ func neo_debuffs(neo_num: int):
 	if neo_num == 1:
 		debuff_duration = SHORT_DEBUFF_1_DURATION if short_water_neo_1 else LONG_DEBUFF_1_DURATION
 	elif neo_num ==2 :
-		debuff_duration = SHORT_DEBUFF_2_DURATION if short_water_neo_1 else LONG_DEBUFF_2_DURATION
+		debuff_duration = SHORT_DEBUFF_2_DURATION if !short_water_neo_1 else LONG_DEBUFF_2_DURATION
 	neo_pc(neo_num, "water_dps").add_debuff(COMPRESSED_WATER_ICON, debuff_duration, false, "compressed_water")
 	neo_pc(neo_num, "water_sup").add_debuff(COMPRESSED_WATER_ICON, debuff_duration, false, "compressed_water")
 	neo_pc(neo_num, "light_dps").add_debuff(FORKED_LIGHTNING_ICON, debuff_duration, false, "forked_lightning")
@@ -342,6 +343,7 @@ func neo_debuffs(neo_num: int):
 	debuff_duration = FIRST_SHRIEK_DURATION if neo_num == 1 else SECOND_SHRIEK_DURATION
 	neo_pc(neo_num, "shriek_dps").add_debuff(CURSED_SHRIEK_ICON, debuff_duration, false, "cursed_shriek")
 	neo_pc(neo_num, "shriek_sup").add_debuff(CURSED_SHRIEK_ICON, debuff_duration, false, "cursed_shriek")
+	order_debuffs()
 
 
 # 18.2 - Cast Mystery Magic (4.7s), Kefka orbs, telegraphs
@@ -359,6 +361,7 @@ func chaos_debuffs(num: int):
 		var duration = TSUNAMI_LONG if num == 1 else TSUNAMI_SHORT
 		for key in party:
 			party[key].add_debuff(DYNAMIC_FLUID_ICON, duration, false, "dynamic_fluid")
+	order_debuffs()
 
 # 18.5 - Cast Grand Cross 2 (8.8s), Neo orbs
 ## cast_gc(2)
@@ -397,6 +400,7 @@ func neo_debuffs_3():
 		party[key].add_debuff(BEYOND_DEATH_ICON, FIELD_DEATH_DURATION, false, "beyond_death")
 	for key in field_keys:
 		party[key].add_debuff(ALLAGAN_FIELD_ICON, FIELD_DEATH_DURATION, false, "allagan_field")
+	order_debuffs()
 
 
 # 46.0 - Neo fade out
@@ -905,6 +909,11 @@ func move_party(position_dict: Dictionary):
 
 
 ## HELPER FUNCTIONS
+
+func order_debuffs():
+	for key in party:
+		party[key].order_debuffs(DEBUFF_ORDER)
+
 
 func cast(spell_name: String, cast_time: float, caster: Node3D):
 	target_cast_bar.cast(spell_name, cast_time, caster)

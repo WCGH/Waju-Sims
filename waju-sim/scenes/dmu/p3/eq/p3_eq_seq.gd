@@ -1016,7 +1016,7 @@ func blizzard_long_hit():
 	# Check if player is moving
 	if party[player_key].velocity.length_squared() < 1.0:
 			fail_list.add_fail("Player failed to move during Blizzard.")
-
+	
 ## END OF TIMELINE
 
 

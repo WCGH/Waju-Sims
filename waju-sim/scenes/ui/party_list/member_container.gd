@@ -129,12 +129,38 @@ func get_aura(debuff_name: String) -> Debuff:
 	return null
 
 
-func get_player_aura(debuff_name : String) -> Debuff:
+func get_player_aura(debuff_name: String) -> Debuff:
 	var player_debuffs : Array = player_debuff_container.get_children()
 	for player_debuff : Node in player_debuffs:
 		if player_debuff is Debuff and player_debuff.debuff_name == debuff_name:
 			return player_debuff
 	return null
+
+
+# Reorder the auras in given order.
+func order_auras(aura_order: Array):
+	var aura_names_to_sort := []
+	for aura: Node in aura_container.get_children():
+		if aura is not Debuff:
+			continue
+		aura_names_to_sort.append(aura.debuff_name)
+	# Sorts auras by debuff_name (left > right)
+	aura_names_to_sort.sort_custom(func(a, b): return aura_order.find(a) < aura_order.find(b))
+	assert(aura_container.get_child_count() >= aura_names_to_sort.size())
+	for i in aura_names_to_sort.size():
+		var aura = get_aura(aura_names_to_sort[i])
+		if !aura:
+			return
+		aura_container.move_child(aura, i)
+	# Repeat for player aura if needed. Verify it matches
+	if is_player:
+		assert(player_debuff_container.get_child_count() >= aura_names_to_sort.size())
+		for i in aura_names_to_sort.size():
+			var aura = get_player_aura(aura_names_to_sort[i])
+			if !aura:
+				return
+			player_debuff_container.move_child(aura, i)
+
 
 
 func _on_h_box_container_gui_input(event: InputEvent) -> void:
