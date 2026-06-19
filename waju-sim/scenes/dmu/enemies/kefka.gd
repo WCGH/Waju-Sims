@@ -24,3 +24,11 @@ func play_lc_dash():
 
 func play_stand_idle():
 	state_machine.travel("stand_idle")
+
+
+func play_float_to_lounge():
+	state_machine.travel("float_to_lounge")
+
+
+func play_lounge_to_float():
+	state_machine.travel("lounge_to_float")

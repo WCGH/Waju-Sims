@@ -12,10 +12,8 @@ const WINDOW_TITLE := "DMU Sim"
 var seq_scene_paths := {
 	0: "uid://cwyllh1xj6q5a", #P2 Forsaken
 	1: "uid://bcoqkgenftan6", #P3
-	2: "uid://", 
-	3: "uid://", 
-	4: "uid://", 
-	5: "uid://" 
+	2: "uid://cxro2gan53o1k", #P4
+	3: "uid://cxro2gan53o1k", #P5
 }
 
 

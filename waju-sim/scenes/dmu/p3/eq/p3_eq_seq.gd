@@ -3,8 +3,7 @@
 # This file is released under "GNU General Public License 3.0".
 # Please see the LICENSE file that should have been included as part of this package.
 
-# TODO: wind check at end, force debuff option, in-line buff first in order
-# idle fade out at end, stomps anim timing, grabbable tethers, edict cone targeting.
+# TODO: wind check at end, force debuff option, in-line buff first in order, scale kefka model
 
 extends Node
 
@@ -165,7 +164,7 @@ var kefka_rotation_factor: float
 var slap_left: bool
 var bh_set: BlackHoleSet
 var bh_set_scene: PackedScene
-var bh_tether_order := [0, 1, 2]   # North, East, South. Will be randomized
+var bh_tether_order := [2, 1, 0]   # First set is S>E>N, last set is N>E>S
 var bh_active := false
 var damning_snapshot_pos: Vector3
 var body_slam_rotated_pos: Vector2
@@ -226,16 +225,17 @@ func instantiate_party(new_party):
 	party_keys_eq["sil_dps"] = dps_keys.pop_back()
 	party_keys_eq["til_dps"] = dps_keys.pop_back()
 	var sup_keys = Global.SUP_ROLE_KEYS.duplicate()
+	var healer_acr = sup_keys.pop_at(randi_range(2, 3))
 	sup_keys.shuffle()
 	party_keys_eq["fil_sup"] = sup_keys.pop_back()
 	party_keys_eq["sil_sup"] = sup_keys.pop_back()
 	party_keys_eq["til_sup"] = sup_keys.pop_back()
 	if randi() % 2 == 0:
 		party_keys_eq["fil_acr"] = dps_keys.pop_back()
-		party_keys_eq["sil_acr"] = sup_keys.pop_back()
+		party_keys_eq["sil_acr"] = healer_acr
 	else:
-		party_keys_eq["sil_acr"] = sup_keys.pop_back()
-		party_keys_eq["fil_acr"] = dps_keys.pop_back()
+		party_keys_eq["sil_acr"] = dps_keys.pop_back()
+		party_keys_eq["fil_acr"] = healer_acr
 	# These will swap after first Thunder III hit if Invuln Thunder is not selected.
 	if t1_chaos:
 		chaos_tank = party["t1"]
@@ -450,7 +450,9 @@ func show_bh_set(set_number: int):
 	bh_active = true
 	bh_set.rotation_degrees.y = -arena_rotation_deg
 	bh_set.show_bh_set(set_number)
-	bh_tether_order.shuffle()
+	#bh_tether_order.shuffle()
+	if set_number == 4:
+		bh_tether_order = [0, 1, 2]
 	# Spawn tethers
 	spawn_tether(1)
 	if set_number > 1:

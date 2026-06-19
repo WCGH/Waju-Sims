@@ -167,9 +167,9 @@ func start_sequence(new_party: Dictionary) -> void:
 		StartPoint.DB1:
 			p3_boa_anim.play("p3_boa")
 		StartPoint.BOA:
-			p3_boa_anim.play_section("p3_boa", 16, 110)
+			p3_boa_anim.play_section("p3_boa", 16)
 		StartPoint.LC:
-			p3_boa_anim.play_section("p3_boa", 75, 110)
+			p3_boa_anim.play_section("p3_boa", 75)
 
 
 func instantiate_party(new_party):
@@ -412,14 +412,11 @@ func knockback_player(player: PlayableCharacter, from: Vector3):
 	if angle_to_gaze_target < KB_MIN_ANGLE:
 		if player_rotation < angle_to_gaze_target + KB_MIN_ANGLE or player_rotation > KB_MAX_ANGLE + angle_to_gaze_target:
 			facing_target = true
-			print("facing aoe")
 	elif angle_to_gaze_target > KB_MAX_ANGLE:
 		if player_rotation > angle_to_gaze_target - KB_MIN_ANGLE or player_rotation < angle_to_gaze_target - KB_MAX_ANGLE:
 			facing_target = true
-			print("facing aoe")
 	elif player_rotation > angle_to_gaze_target - KB_MIN_ANGLE and player_rotation < angle_to_gaze_target + KB_MIN_ANGLE:
 		facing_target = true
-		print("facing aoe")
 	# Big Knockback
 	if player_tailwind != facing_target:
 		player.kb_slide(kb_vector * LARGE_KB_DIST, SLIDE_TIME)

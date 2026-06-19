@@ -240,24 +240,6 @@ func instantiate_party(new_party: Dictionary):
 		else:
 			lockon_keys[SUP_KEYS[i]] = Lockon.CONE
 	
-	# KB group setup (deprecated)
-	#if strat == Strat.KB:
-		#var sup_stack_key = SUP_KEYS[sup_stack_index]
-		#var dps_stack_key = DPS_KEYS[dps_stack_index]
-		#group_a_keys = [sup_stack_key, get_role_partner_key(sup_stack_key), dps_stack_key,  get_role_partner_key(dps_stack_key)]
-		#group_b_keys = KB_LR_PRIO.duplicate().filter(func(key): return !group_a_keys.has(key))
-		## Sorts group key arrays sup1>sup2>dps1>dps2 for bait prio
-		#order_lr_prio(KB_BAIT_SETUP, group_a_keys)
-		#order_lr_prio(KB_BAIT_SETUP, group_b_keys)
-		#party_baits = {
-			#"a_g1_sup": group_a_keys[0], "a_g2_sup": group_a_keys[1],
-			#"a_g1_dps": group_a_keys[2], "a_g2_dps": group_a_keys[3],
-			#"b_g1_sup": group_b_keys[0], "b_g2_sup": group_b_keys[1],
-			#"b_g1_dps": group_b_keys[2], "b_g2_dps": group_b_keys[3]
-		#}
-		#repopulate_groups_rmmr(party_a, group_a_keys, KB_LR_PRIO)
-		#repopulate_groups_rmmr(party_b, group_b_keys, KB_LR_PRIO)
-	
 	# RMMR / South / EU adjust initial group setup.
 	var sup_stack_key = SUP_KEYS[sup_stack_index]
 	var dps_stack_key = DPS_KEYS[dps_stack_index]
@@ -364,8 +346,12 @@ func repopulate_groups(group_dict: Dictionary, group_keys: Array):
 		# Even Tower (2x Cone / 2x Spread)
 		elif spread_keys.size() == 2 and cone_keys.size() == 2:
 			# Ordered left to right adjust prio for next tower.
+			# For EU/P3Z positions, Cone is south on left, stack is south on right.
 			old_left_keys = [group_dict.get("stack_left"), group_dict.get("cone_left")]
-			old_right_keys = [group_dict.get("spread_left"), group_dict.get("stack_right")]
+			if odd_tower_pos == OddTowerPos.EU:
+				old_right_keys = [group_dict.get("stack_right"), group_dict.get("spread_left")]
+			else:
+				old_right_keys = [group_dict.get("spread_left"), group_dict.get("stack_right")]
 			if cone_keys.has(old_left_keys[0]) and cone_keys.has(old_left_keys[1]):
 				# Both Cones left. Keys are already ordered L>R for double swap.
 				cone_keys = old_left_keys

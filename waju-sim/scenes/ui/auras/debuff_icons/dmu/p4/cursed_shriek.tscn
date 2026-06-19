@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://hfe8vr3b5giy"]
+
+[ext_resource type="Texture2D" uid="uid://c7b24gia2bw5l" path="res://assets/dmu/debuff_icons/p4/cursed_shriek.png" id="1_28hhy"]
+
+[node name="CursedShriekIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Cursed Shriek"
+texture = ExtResource("1_28hhy")
+expand_mode = 3
+metadata/debuff_name = "cursed_shriek"

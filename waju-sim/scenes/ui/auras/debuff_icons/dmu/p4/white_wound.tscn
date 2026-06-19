@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://72mnilph48hp"]
+
+[ext_resource type="Texture2D" uid="uid://bakp0rn2st7ad" path="res://assets/dmu/debuff_icons/p4/white_wound.png" id="1_f8bvo"]
+
+[node name="WhiteWoundIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "White Wound"
+texture = ExtResource("1_f8bvo")
+expand_mode = 3
+metadata/debuff_name = "white_wound"
