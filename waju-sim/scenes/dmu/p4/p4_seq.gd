@@ -6,7 +6,6 @@
 
 extends Node
 
-
 enum Strat {KB}
 
 ## AoE Dimensions
@@ -285,6 +284,7 @@ func cast_gc(gc_num: int):
 
 # 08.0 - Mysterious Magic hit
 func mm_hit():
+	kefka.get_model().play_generic_finish()
 	kefka.hide_orbs()
 	# Swap hit areas if fake
 	if mm_thunder_fake:
@@ -353,6 +353,7 @@ func neo_debuffs(neo_num: int):
 func chaos_debuffs(num: int):
 	assert(num == 1 or num == 2)
 	chaos.hide_orbs()
+	chaos.get_model().cast_generic()
 	if (inferno_first and num == 1) or (!inferno_first and num == 2):
 		var duration = INFERNO_LONG if num == 1 else INFERNO_SHORT
 		for key in party:
@@ -477,7 +478,7 @@ func short_debuff_hit():
 	if party_neo_1_keys.find_key(player_key).contains("short_acc"):
 		if neo_1_fake:
 			# Check motion
-			if party[player_key].velocity.length_squared() < 1.0:
+			if party[player_key].velocity.length_squared() < 0.1:
 				fail_list.add_fail("Player failed to move during Acceleration Bomb (Fake).")
 		else:
 			# Check stillness
@@ -485,7 +486,7 @@ func short_debuff_hit():
 				fail_list.add_fail("Player moved during Acceleration Bomb.")
 	elif party_neo_2_keys.find_key(player_key).contains("short_acc"):
 		if neo_2_fake:
-			if party[player_key].velocity.length_squared() < 1.0:
+			if party[player_key].velocity.length_squared() < 0.1:
 				fail_list.add_fail("Player failed to move during Acceleration Bomb (Fake).")
 		else:
 			if party[player_key].velocity.length_squared() > 0.1:
@@ -520,6 +521,7 @@ func cast_tt():
 # 71.4 - TT Hit
 func tt_hit():
 	kefka.hide_orbs()
+	kefka.get_model().play_generic_finish()
 	# Swap hit areas if fake
 	# Assigning new vars here so we can reuse old positions for Mana Release.
 	if mm_thunder_fake:
@@ -563,6 +565,10 @@ func cast_ultima():
 func snapshot_inferno():
 	for key in party:
 		inferno_snapshot_pos.append(v2(party[key].global_position))
+
+
+func kefka_ultima_finish():
+	kefka.get_model().play_big_finish()
 
 
 # 83.5 - Twisters hit (with raidwide)
@@ -615,7 +621,7 @@ func long_debuff_hit():
 	if party_neo_1_keys.find_key(player_key).contains("long_acc"):
 		if neo_1_fake:
 			# Check motion
-			if party[player_key].velocity.length_squared() < 1.0:
+			if party[player_key].velocity.length_squared() < 0.1:
 				fail_list.add_fail("Player failed to move during Acceleration Bomb (Fake).")
 		else:
 			# Check stillness
@@ -623,7 +629,7 @@ func long_debuff_hit():
 				fail_list.add_fail("Player moved during Acceleration Bomb.")
 	elif party_neo_2_keys.find_key(player_key).contains("long_acc"):
 		if neo_2_fake:
-			if party[player_key].velocity.length_squared() < 1.0:
+			if party[player_key].velocity.length_squared() < 0.1:
 				fail_list.add_fail("Player failed to move during Acceleration Bomb (Fake).")
 		else:
 			if party[player_key].velocity.length_squared() > 0.1:
@@ -633,6 +639,7 @@ func long_debuff_hit():
 # 89.4 - BB Hit
 func bb_hit():
 	kefka.hide_orbs()
+	kefka.get_model().play_generic_finish()
 	# Swap hit areas if fake
 	# Assigning new vars here so we can reuse old positions for Mana Release.
 	if mm_ice_fake:
@@ -678,6 +685,7 @@ func snapshot_tsunami():
 # 102.8 - Show MR Tele
 func show_mr_tele():
 	kefka.hide_orbs()
+	kefka.get_model().play_taunt()
 	gac.spawn_line(line_1_pos, MM_LINE_WIDTH, MM_LINE_LENGTH, line_1_tar, MM_TELE_LIFETIME, MM_TELE_COLOR)
 	gac.spawn_line(line_2_pos, MM_LINE_WIDTH, MM_LINE_LENGTH, line_2_tar, MM_TELE_LIFETIME, MM_TELE_COLOR)
 	gac.spawn_cone(Vector2.ZERO, MM_CONE_ANGLE, MM_CONE_LENGTH, cone_1_tar, MM_TELE_LIFETIME, MM_TELE_COLOR)

@@ -13,7 +13,7 @@ var seq_scene_paths := {
 	0: "uid://cwyllh1xj6q5a", #P2 Forsaken
 	1: "uid://bcoqkgenftan6", #P3
 	2: "uid://cxro2gan53o1k", #P4
-	3: "uid://cxro2gan53o1k", #P5
+	3: "uid://bilj5u4ew64sp", #P5
 }
 
 

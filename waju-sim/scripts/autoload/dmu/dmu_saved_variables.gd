@@ -24,7 +24,7 @@ var save_data: Dictionary = {
 		"p2_fors_special_rule": false,
 		"p2_fors_bait": false,
 		"p3_boa_t1_chaos": true,
-		"p3_boa_strat": 0,
+		"p3_boa_strat": 0,    # [SG3K, LB3 Cheese]
 		"p3_boa_start_point": 0,
 		#"p4_ct_aero_plant": false,
 	},

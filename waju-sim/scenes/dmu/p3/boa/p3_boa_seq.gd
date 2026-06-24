@@ -3,7 +3,7 @@
 # This file is released under "GNU General Public License 3.0".
 # Please see the LICENSE file that should have been included as part of this package.
 
-# TODO: P2 only player baits clones. wind check at end, force debuff option
+# TODO: wind check at end, force debuff option
 
 
 extends Node
@@ -14,7 +14,7 @@ class_name P3BoASequence
 #const CHAOS_UID = "uid://c8p51pmt3xvde"
 #const EXDEATH_UID = "uid://c8p51pmt3xvde"
 
-enum Strat {SG}
+enum Strat {SG, LB}
 enum StartPoint {DB1, BOA, LC, DB2, EQ, STOMP}
 
 const SEQUENCE_DICT := {
@@ -36,7 +36,7 @@ const T2_WAIT_DIST := 15.0     # Distance away from Exdeath that offtank will wa
 const LATLONG_POSITION_ROTATION_DEG := 16.0  
 const SLIDE_TIME := 0.6
 # Thunder III AoE
-const THUNDER_AOE_RADIUS := 40.0
+const THUNDER_AOE_RADIUS := 38.5
 const THUNDER_AOE_LIFETIME := 0.6
 const THUNDER_AOE_COLOR := Color(0.112, 0.176, 0.561, 0.9)
 # Entropy
@@ -132,7 +132,7 @@ var lc_direction_factor: float
 var short_debuff_params: Dictionary
 var long_debuff_params: Dictionary
 var fire_short: bool
-var fire_left: bool
+var fire_left: bool    # Left/Right from middle
 var player_tailwind: bool
 var t1_chaos: bool
 var lat_long: bool     # Warn: this is flipped compared to the in game cast name. true = side safe first. 
@@ -144,6 +144,9 @@ var lc_starting_positions: Array
 var party_keys_lc: Array
 var starting_point: StartPoint
 var water_aoe_blacklist: Dictionary
+var fire_aoe_blacklist: Dictionary
+var player_key: String
+
 
 func start_sequence(new_party: Dictionary) -> void:
 	assert(new_party != null, "Error. Where the party at?")
@@ -156,7 +159,7 @@ func start_sequence(new_party: Dictionary) -> void:
 		LockonController.LC_5, LockonController.LC_6, LockonController.LC_7, LockonController.LC_8])
 	
 	## Get Strat and variables.
-	#strat = DmuSavedVariables.save_data["settings"]["p2_fors_strat"]
+	strat = DmuSavedVariables.save_data["settings"]["p3_boa_strat"]
 	starting_point = DmuSavedVariables.get_data_and_check_int("settings", "p3_boa_start_point", 0, StartPoint.size()) as StartPoint
 	t1_chaos = DmuSavedVariables.get_data_and_check_bool("settings", "p3_boa_t1_chaos")
 	instantiate_party(new_party)
@@ -169,11 +172,12 @@ func start_sequence(new_party: Dictionary) -> void:
 		StartPoint.BOA:
 			p3_boa_anim.play_section("p3_boa", 16)
 		StartPoint.LC:
-			p3_boa_anim.play_section("p3_boa", 75)
+			p3_boa_anim.play_section("p3_boa", 71)
 
 
 func instantiate_party(new_party):
 	party = new_party
+	player_key = Global.player_role_key
 	party_keys_lc = party.keys()
 	party_keys_lc.shuffle()
 	# RNG for arena and party setup
@@ -228,7 +232,7 @@ func instantiate_party(new_party):
 
 
 
-## START OF TIMELINE
+## =========================START OF TIMELINE===================================
 
 
 ## 7:25 = 0:02
@@ -238,9 +242,6 @@ func cast_decisive():
 	cast("The Decisive Battle", 2.6, chaos)
 	cast("The Decisive Battle", 2.6, exdeath)
 
-
-func move_pre_pos():
-	move_party(BoAPos.DECISIVE_POS_SG)
 
 # Assign debuffs to 4 nearest to each. Finish anim
 func decisive_finish():
@@ -260,9 +261,14 @@ func set_bosses_follow():
 	chaos.follow_target(chaos_tank)
 	exdeath.follow_target(exdeath_tank)
 
-# TODO: Move to pre boa pos
-func move_pre_boa():
-	move_party(BoAPos.POST_DECISIVE_TANK_POS_SG)
+
+# Move bosses center if starting with BoA
+func cheat_bosses_center():
+	if starting_point == StartPoint.BOA:
+		var tween : Tween = get_tree().create_tween()
+		tween.tween_property(chaos, "global_position", Vector3(0, 0, 0), 0.3)
+		var tween_2 : Tween = get_tree().create_tween()
+		tween_2.tween_property(exdeath, "global_position", Vector3(0, 0, 0), 0.3)
 
 
 # Plant Chaos, cast Bowels of Agony
@@ -305,36 +311,6 @@ func set_chaos_follow():
 	chaos.follow_target(chaos_tank)
 	exdeath.follow_target(exdeath_tank)
 
-# 
-func move_tank_thunder_bait():
-	# Flip arena if either short water or fire right, but not both
-	if fire_left != fire_short:
-		move_party_rtd_mirrored(BoAPos.PRE_FIRE_TANK_POS_1_SG)
-	else:
-		move_party_rtd(BoAPos.PRE_FIRE_TANK_POS_1_SG)
-
-
-func move_tank_thunder_bait_2():
-	if fire_left != fire_short:
-		move_party_rtd_mirrored(BoAPos.PRE_FIRE_TANK_POS_2_SG)
-	else:
-		move_party_rtd(BoAPos.PRE_FIRE_TANK_POS_2_SG)
-
-
-## Move to first pos
-func move_short_debuff_pos():
-	if fire_short:
-		if fire_left:
-			move_strat_party_rtd(BoAPos.SHORT_FIRE_POS_SG, party_boa)
-		else:
-			move_strat_party_rtd_mirrored(BoAPos.SHORT_FIRE_POS_SG, party_boa)
-	else:
-		if fire_left:
-			move_strat_party_rtd(BoAPos.SHORT_WATER_POS_SG, party_boa)
-		else:
-			move_strat_party_rtd_mirrored(BoAPos.SHORT_WATER_POS_SG, party_boa)
-
-
 
 # Plant Exdeath, cast Thunder III (AoE)
 func cast_thunder_aoe():
@@ -354,9 +330,9 @@ func short_debuff_hit():
 	# Short debuffs hit
 	if fire_short:
 		gac.spawn_circle(v2(party[party_boa["short_dps"]].global_position),
-			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 1, "Entropy Spread", [party[party_boa["short_dps"]]]])
+			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 4, "Entropy Spread", [party[party_boa["short_dps"]]]])
 		gac.spawn_circle(v2(party[party_boa["short_sup"]].global_position),
-			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 1, "Entropy Spread", [party[party_boa["short_sup"]]]])
+			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 4, "Entropy Spread", [party[party_boa["short_sup"]]]])
 	else:
 		gac.spawn_donut(v2(party[party_boa["short_dps"]].global_position),
 			DYNAMIC_INNER, DYNAMIC_OUTTER, DYNAMIC_LIFETIME, DYNAMIC_COLOR, [0, 0, "Dynamic Fluid Spread", [party[party_boa["short_dps"]]]])
@@ -372,19 +348,20 @@ func first_shapes_hit():
 		for key in players_hit:
 			var fire_donut = gac.spawn_donut(v2(party[key].global_position), FIRE_DONUT_INNER, FIRE_DONUT_OUTTER,
 				FIRE_DONUT_LIFETIME, FIRE_DONUT_COLOR,[0, 2, "Fire Crystal", [party[party_boa["long_dps"]], party[party_boa["long_sup"]]]])
-			fire_donut.collisions_checked.connect(on_kb_aoe_hit)
+			fire_donut.collisions_checked.connect(on_fire_kb_aoe_hit)
+			fire_aoe_blacklist[fire_donut] = party[key]
 	# Water Crystal
 	else:
 		var players_hit := get_nearest_player_bodies(v2(water_circle.global_position), 2)
 		for key in players_hit:
 			var water_aoe = gac.spawn_circle(v2(party[key].global_position), WATER_AOE_RADIUS,
 				WATER_AOE_LIFETIME, WATER_AOE_COLOR,[1, 3, "Water Crystal", [party[party_boa["long_dps"]], party[party_boa["long_sup"]]]])
-			water_aoe.collisions_checked.connect(on_kb_aoe_hit)
+			water_aoe.collisions_checked.connect(on_water_kb_aoe_hit)
 			water_aoe_blacklist[water_aoe] = party[key]
 
 
-# Handle knockbacks for fire/water crystal AoE's
-func on_kb_aoe_hit(bodies: Array, marker: Node3D):
+# Handle knockbacks for water crystal AoE's
+func on_water_kb_aoe_hit(bodies: Array, marker: Node3D):
 	var pos = marker.global_position
 	for pc: PlayableCharacter in bodies:
 		# Exclude water target from getting knocked back.
@@ -396,9 +373,28 @@ func on_kb_aoe_hit(bodies: Array, marker: Node3D):
 		# Always small kb for bots.
 		else:
 			var kb_vector: Vector2 = (v2(pc.global_position) - v2(pos)).normalized()
-			pc.slide(kb_vector * SMALL_KB_DIST, SLIDE_TIME)
+			pc.kb_slide((kb_vector * SMALL_KB_DIST) + v2(pc.global_position), SLIDE_TIME)
 		pc.remove_debuff("tailwind")
 		pc.remove_debuff("headwind")
+
+
+# Handle knockbacks for fire crystal AoE's. This is needed in cast there's a bug with donut check that includes fire targets in donut.
+func on_fire_kb_aoe_hit(bodies: Array, marker: Node3D):
+	var pos = marker.global_position
+	for pc: PlayableCharacter in bodies:
+		# Exclude fire target from getting knocked back.
+		if fire_aoe_blacklist.has(marker):
+			if fire_aoe_blacklist[marker] == pc:
+				continue
+		if pc.is_player() and !Global.spectate_mode:
+			knockback_player(pc, pos)
+		# Always small kb for bots.
+		else:
+			var kb_vector: Vector2 = (v2(pc.global_position) - v2(pos)).normalized()
+			pc.kb_slide((kb_vector * SMALL_KB_DIST) + v2(pc.global_position), SLIDE_TIME)
+		pc.remove_debuff("tailwind")
+		pc.remove_debuff("headwind")
+
 
 
 func knockback_player(player: PlayableCharacter, from: Vector3):
@@ -424,20 +420,14 @@ func knockback_player(player: PlayableCharacter, from: Vector3):
 	else:
 		player.kb_slide(kb_vector * SMALL_KB_DIST, SLIDE_TIME)
 
-## Move to wind pos
 
 # Handle wind crystal. This will hit 2 nearest first time.
 func wind_hit():
 	var players_hit := get_nearest_player_bodies(v2(wind_diamond.global_position), 2)
 	for key in players_hit:
 		gac.spawn_circle(v2(party[key].global_position), WIND_AOE_RADIUS, WIND_AOE_LIFETIME,
-			WIND_AOE_COLOR, [2, 2, "Cyclone (Wind Crystal)", [party[key]]])
+			WIND_AOE_COLOR, [2, 6, "Cyclone (Wind Crystal)", [party[key]]])
 
-
-# Tank bait thunder
-func move_tank_thunder_kb_1():
-	# TODO: Handle no invuln strat. Have T1 take first hit
-	exdeath_tank.move_to(v2(exdeath.global_position))
 
 
 ## Move to post wind spots
@@ -452,23 +442,18 @@ func thunder_kb_hit():
 	gac.spawn_circle(v2(party[nearest.back()].global_position), THUNDER_TB_RADIUS,
 		THUNDER_TB_LIFETIME, THUNDER_TB_COLOR, [1, 1, "Thunder III (Tank Buster)", [party[nearest.back()]]])
 
-## Move tanks
-# Swap tanks if we're not invulning.
-# Chaos tank will move Chaos to middle.
-func move_tank_thunder_kb_2():
-	# Distance "through" middle we want to move Chaos.
-	var target_pos: Vector2 = v2(chaos.global_position).normalized() * -12.5
-	chaos_tank.move_to(target_pos)
-# Thunder 2 hit
-
-# Point Chaos true north for latlong
-func move_tank_pre_latlong():
-	chaos_tank.move_to(Vector2(0, -10))
-
 
 # Set Exdeath follow
 func set_exdeath_follow():
 	exdeath.follow_target(exdeath_tank)
+
+
+# Cheat Chaos into Center for Latlong
+func cheat_chaos_center():
+	if strat != Strat.SG:
+		return
+	var tween : Tween = get_tree().create_tween()
+	tween.tween_property(chaos, "global_position", Vector3(0, 0, 0), 0.3)
 
 
 # Cast longitudinal/latitude Implosion + Anim. Kefka casts Trance
@@ -481,24 +466,6 @@ func lat_long_cast():
 	else:
 		cast("Longitudinal Implosion", 5.4, chaos)
 	enemy_cast_bar.cast("Trance", 3.4)
-
-
-func move_pre_latlong():
-	var fire_water_rotation = arena_rotation_deg
-	var wind_rotation = arena_rotation_deg
-	if fire_left != fire_short:
-		fire_water_rotation += 180.0
-	
-	# If arena is offset by 90 deg, switch to other spot.
-	if !lat_long != (int(arena_rotation_deg) % 180 == 0):
-		wind_rotation -= LATLONG_POSITION_ROTATION_DEG
-		fire_water_rotation += LATLONG_POSITION_ROTATION_DEG
-	else:
-		wind_rotation += LATLONG_POSITION_ROTATION_DEG
-		fire_water_rotation -= LATLONG_POSITION_ROTATION_DEG
-	move_strat_party_and_rotate(BoAPos.LATLONG_NE_POS_SG, party_boa, wind_rotation)
-	move_strat_party_and_rotate(BoAPos.LATLONG_SE_POS_SG, party_boa, fire_water_rotation)
-
 
 # Prefire latlong anim
 func lat_long_finish_anim():
@@ -526,20 +493,6 @@ func lat_long_hit_1():
 			v2(-facing_vector.z + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Longitudinal Implosion"])
 
 
-func move_latlong_2():
-	var fire_water_rotation = arena_rotation_deg
-	var wind_rotation = arena_rotation_deg
-	if fire_left != fire_short:
-		fire_water_rotation += 180.0
-	if !lat_long != (int(arena_rotation_deg) % 180 == 0):
-		wind_rotation += LATLONG_POSITION_ROTATION_DEG
-		fire_water_rotation -= LATLONG_POSITION_ROTATION_DEG
-	else:
-		wind_rotation -= LATLONG_POSITION_ROTATION_DEG
-		fire_water_rotation += LATLONG_POSITION_ROTATION_DEG
-	move_strat_party_and_rotate(BoAPos.LATLONG_NE_POS_SG, party_boa, wind_rotation)
-	move_strat_party_and_rotate(BoAPos.LATLONG_SE_POS_SG, party_boa, fire_water_rotation)
-
 
 func lat_long_hit_2():
 	var facing_vector = chaos.get_global_transform().basis
@@ -557,20 +510,6 @@ func lat_long_hit_2():
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH, 
 			v2(-facing_vector.z + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Latitudinal Implosion"])
 
-## Move to second debuff spots
-# If Longlat is set up correctly, we should already be close to these spots.
-func move_long_debuff_pos():
-	if fire_short:
-		if fire_left:
-			move_strat_party_rtd(BoAPos.LONG_WATER_POS_SG, party_boa)
-		else:
-			move_strat_party_rtd_mirrored(BoAPos.LONG_WATER_POS_SG, party_boa)
-	else:
-		if fire_left:
-			move_strat_party_rtd(BoAPos.LONG_FIRE_POS_SG, party_boa)
-		else:
-			move_strat_party_rtd_mirrored(BoAPos.LONG_FIRE_POS_SG, party_boa)
-
 
 # Trigger second set of debuffs
 func long_debuff_hit():
@@ -578,9 +517,9 @@ func long_debuff_hit():
 	# Entropy Hit
 	if !fire_short:
 		gac.spawn_circle(v2(party[party_boa["long_dps"]].global_position),
-			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 1, "Entropy Spread", [party[party_boa["long_dps"]]]])
+			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 4, "Entropy Spread", [party[party_boa["long_dps"]]]])
 		gac.spawn_circle(v2(party[party_boa["long_sup"]].global_position),
-			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 1, "Entropy Spread", [party[party_boa["long_sup"]]]])
+			ENTROPY_RADIUS, ENTROPY_LIFETIME, ENTROPY_COLOR, [1, 4, "Entropy Spread", [party[party_boa["long_sup"]]]])
 	# Fluid Hit
 	else:
 		gac.spawn_donut(v2(party[party_boa["long_dps"]].global_position),
@@ -598,24 +537,38 @@ func second_shapes_hit():
 		for key in players_hit:
 			var fire_donut = gac.spawn_donut(v2(party[key].global_position), FIRE_DONUT_INNER, FIRE_DONUT_OUTTER,
 				FIRE_DONUT_LIFETIME, FIRE_DONUT_COLOR,[0, 2, "Fire Crystal", [party[party_boa["short_dps"]], party[party_boa["short_sup"]]]])
-			fire_donut.collisions_checked.connect(on_kb_aoe_hit)
+			fire_donut.collisions_checked.connect(on_fire_kb_aoe_hit)
 	# Water Crystal
 	else:
 		var players_hit := get_nearest_player_bodies(v2(water_circle.global_position), 2)
 		for key in players_hit:
 			var water_aoe = gac.spawn_circle(v2(party[key].global_position), WATER_AOE_RADIUS,
 				WATER_AOE_LIFETIME, WATER_AOE_COLOR,[0, 3, "Water Crystal", [party[party_boa["short_dps"]], party[party_boa["short_sup"]]]])
-			water_aoe.collisions_checked.connect(on_kb_aoe_hit)
+			water_aoe.collisions_checked.connect(on_water_kb_aoe_hit)
+			water_aoe_blacklist[water_aoe] = party[key]
 
 # Set chaos follow
 #func set_chaos_follow():
-## Post debuff movement
+
+# Cheat Exdeath into Vaccum Hit position
+func move_exdeath_pre_vaccum():
+	if strat != Strat.LB:
+		return
+	var tween : Tween = get_tree().create_tween()
+	tween.tween_property(exdeath, "global_position",
+		(Vector3(25, 0, -25).rotated(Vector3.DOWN, deg_to_rad(arena_rotation_deg))), 0.3)
+
 # Trigger wind hit
 #func wind_hit():
-	
-## Move post wind.
-func move_jump_bait_pos():
-	move_party_rtd(BoAPos.UMBRA_BAIT_POS_SG)
+
+# Assign wind debuff to player if we skipped to LC
+func lc_skip_wind():
+	if starting_point == StartPoint.LC:
+		if player_tailwind:
+			party[player_key].add_debuff(TAILWIND_ICON, 17.0, false, "tailwind")
+		else:
+			party[player_key].add_debuff(HEADWIND_ICON, 17.0, false, "headwind")
+
 
 
 # Cast Chaos Umbra Smash, Exdeath cast Vaccum Wave
@@ -627,10 +580,6 @@ func cast_umbra_vaccum():
 	var umbra_target = get_nearest_player_bodies(v2(chaos.global_position), 8).back()
 	umbra_target_pos = party[umbra_target].global_position
 	chaos.look_at_direction(umbra_target_pos)
-
-## Move ranged baiter to group.
-func move_pre_vaccum_pos():
-	move_party_rtd(BoAPos.UMBRA_CAST_POS_SG)
 
 
 # Kefka starts charges
@@ -667,33 +616,33 @@ func lc_charge():
 
 # Chaos jump anim prefire (call 0.75s before jump movement)
 func umbra_jump_anim():
-	if starting_point == StartPoint.LC:
-		return
+	#if starting_point == StartPoint.LC:
+		#return
 	chaos.get_model().cast_jump()
 
 # Chaos start jump movement
 func umbra_jump_movement():
-	if starting_point == StartPoint.LC:
-		return
+	#if starting_point == StartPoint.LC:
+		#return
 	var tween : Tween = get_tree().create_tween()
 	tween.tween_property(chaos, "global_position", umbra_target_pos, 0.6)\
 		.set_trans(Tween.TRANS_LINEAR)
 
 # Call 0.6s after jump movement.
 func unbra_jump_land():
-	if starting_point == StartPoint.LC:
-		return
+	#if starting_point == StartPoint.LC:
+		#return
 	gac.spawn_circle(v2(umbra_target_pos), UMBRA_RADIUS, UMBRA_LIFETIME, UMBRA_COLOR, [0, 0, "Umbra Smash (Proximity AoE)"])
 
 func vaccum_wave_anim():
-	if starting_point == StartPoint.LC:
-		return
+	#if starting_point == StartPoint.LC:
+		#return
 	exdeath.get_model().cast_slash()
 
 # Vaccum Wave hits
 func vaccum_wave_hit():
-	if starting_point == StartPoint.LC:
-		return
+	#if starting_point == StartPoint.LC:
+		#return
 	# Just used for animation.
 	gac.spawn_circle(v2(exdeath.global_position), VACCUM_RADIUS, VACCUM_LIFETIME, VACCUM_COLOR)
 	# Knockback party. Skip fire/water debuff bots (assume they pressed arm's length)
@@ -705,50 +654,42 @@ func vaccum_wave_hit():
 		if pc.is_player() and !Global.spectate_mode:
 			knockback_player(pc, exdeath.global_position)
 		else:
+			var kb_dist := MED_KB_DIST
+			# SG3K strat cheats here to make sure bots get to their spots in time.
+			if strat != Strat.SG and (party[party_boa[key]].has_debuff("tailwind") or party[party_boa[key]].has_debuff("headwind")):
+				kb_dist = SMALL_KB_DIST
 			var kb_vector: Vector2 = (v2(pc.global_position) - v2(exdeath.global_position)).normalized()
-			pc.slide(kb_vector * MED_KB_DIST, SLIDE_TIME)
-		
-			
- #cast_slash()
+			pc.kb_slide(kb_vector * kb_dist, SLIDE_TIME)
 
 
-# Move to Wind 3 Pos
-func move_winds_3_pos():
-	if starting_point == StartPoint.LC:
-		return
-	move_party_rtd(BoAPos.WINDS_3_BAIT_POS)
-
+#cast_slash()
 
 # Limit cut goes out
 func show_lc_icons():
 	for i in party_keys_lc.size():
 		lockon_controller.add_marker(LC_ID_KEYS[i], party[party_keys_lc[i]])
 
+
 func wind_3_hit():
-	if starting_point == StartPoint.LC:
+	#if starting_point == StartPoint.LC:
+		#return
+	# If LB Cheesing, all 8 players take wind in pairs.
+	if strat == Strat.LB:
+		for key in party:
+			gac.spawn_circle(v2(party[key].global_position), WIND_AOE_RADIUS, WIND_AOE_LIFETIME,
+				WIND_AOE_COLOR, [2, 2, "Cyclone (Wind Crystal)", [party[key]]])
 		return
+	# Normal strat (4 cleanses)
 	var players_hit := get_nearest_player_bodies(v2(wind_diamond.global_position), 4)
 	for key in players_hit:
 		gac.spawn_circle(v2(party[key].global_position), WIND_AOE_RADIUS, WIND_AOE_LIFETIME,
 			WIND_AOE_COLOR, [2, 2, "Cyclone (Wind Crystal)", [party[key]]])
 
 
-## Move to limit cut pos
-
 # After 8s, hide LC Icons
 func hide_lc_icons():
 	for i in party_keys_lc.size():
 		lockon_controller.remove_marker(LC_ID_KEYS[i], party[party_keys_lc[i]])
-
-
-func move_lc_pos():
-	# Starting position. First dash is relative N to S, so we'll start CW or CCW of S.
-	var pos = Vector2(0.0, 45.0).rotated(deg_to_rad(lc_rotation_deg * lc_direction_factor))
-	pos = pos.rotated(deg_to_rad(22.5 * -lc_direction_factor))
-	for i in party.size():
-		party[party_keys_lc[i]].move_to(pos)
-		pos = pos.rotated(deg_to_rad(45.0 * -lc_direction_factor))
-
 
 
 # There is a very small (~0.1s) delay between each hit.
@@ -763,6 +704,229 @@ func limit_cut_hit(lc_number: int):
 	gac.spawn_line(lc_starting_positions[lc_number], LC_LINE_WIDTH, LC_LINE_LENGTH,
 		v2(party[party_keys_lc[lc_number]].global_position), LC_LINE_LIFETIME, 
 		LC_LINE_COLOR, [1, 1, "Ultima Blaster (Limit Cut)", [party[party_keys_lc[lc_number]]]])
+
+
+func play_next_sequence():
+	p3_eq_seq.start_sequence(party)
+
+
+## =========================END OF TIMELINE=====================================
+
+
+
+
+## =========================BOT MOVEMENT========================================
+
+
+func move_pre_pos():
+	move_party(BoAPos.DECISIVE_POS_SG)
+
+
+# TODO: Move to pre boa pos
+func move_pre_boa():
+	move_party(BoAPos.POST_DECISIVE_TANK_POS_SG)
+
+
+# 
+func move_tank_thunder_bait():
+	if strat == Strat.SG:
+		# Flip arena if either short water or fire right, but not both
+		if fire_left != fire_short:
+			move_party_rtd_mirrored(BoAPos.PRE_FIRE_TANK_POS_1_SG)
+		else:
+			move_party_rtd(BoAPos.PRE_FIRE_TANK_POS_1_SG)
+	elif strat == Strat.LB:
+		move_party_rtd(BoAPos.PRE_FIRE_TANK_POS_1_LB)
+
+
+func move_tank_thunder_bait_2():
+	if strat == Strat.SG:
+		if fire_left != fire_short:
+			move_party_rtd_mirrored(BoAPos.PRE_FIRE_TANK_POS_2_SG)
+		else:
+			move_party_rtd(BoAPos.PRE_FIRE_TANK_POS_2_SG)
+	
+
+# Earlier move for LB strat.
+func move_tank_thunder_bait_2_lb():
+	if strat == Strat.LB:
+		move_party_rtd(BoAPos.PRE_FIRE_TANK_POS_2_LB)
+
+
+## Move to first pos
+func move_short_debuff_pos():
+	if strat == Strat.SG:
+		if fire_short:
+			if fire_left:
+				move_strat_party_rtd(BoAPos.SHORT_FIRE_POS_SG, party_boa)
+			else:
+				move_strat_party_rtd_mirrored(BoAPos.SHORT_FIRE_POS_SG, party_boa)
+		else:
+			if fire_left:
+				move_strat_party_rtd(BoAPos.SHORT_WATER_POS_SG, party_boa)
+			else:
+				move_strat_party_rtd_mirrored(BoAPos.SHORT_WATER_POS_SG, party_boa)
+	elif strat == Strat.LB:
+		if fire_short:
+			if fire_left:
+				move_party_rtd(BoAPos.SHORT_FIRE_LEFT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.SHORT_FIRE_RIGHT_POS_LB)
+		else:
+			if fire_left:
+				move_party_rtd(BoAPos.SHORT_WATER_RIGHT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.SHORT_WATER_LEFT_POS_LB)
+
+
+# Tank bait thunder
+func move_tank_thunder_kb_1():
+	if strat == Strat.SG:
+		# TODO: Handle no invuln strat. Have T1 take first hit
+		exdeath_tank.move_to(v2(exdeath.global_position))
+	elif strat == Strat.LB:
+		move_party_rtd(BoAPos.POST_SHORT_TANK_POS_1_LB)
+	
+
+## Move tanks
+# Swap tanks if we're not invulning.
+# Chaos tank will move Chaos to middle.
+func move_tank_thunder_kb_2():
+	if strat == Strat.SG:
+		# Distance "through" middle we want to move Chaos.
+		var target_pos: Vector2 = v2(chaos.global_position).normalized() * -12.5
+		chaos_tank.move_to(target_pos)
+	elif strat == Strat.LB:
+		move_party_rtd(BoAPos.POST_SHORT_TANK_POS_2_LB)
+
+
+# Point Chaos true north for latlong
+func move_tank_pre_latlong():
+	if strat == Strat.SG:
+		chaos_tank.move_to(Vector2(0, -10))
+	elif strat == Strat.LB:
+		move_party_rtd(BoAPos.PRE_LATLONG_TANK_POS_LB)
+		# Start moving ranged dps across room (send middle for now)
+		party["r1"].move_to(Vector2.ZERO)
+		party["r2"].move_to(Vector2.ZERO)
+
+
+func move_pre_latlong():
+	if strat == Strat.SG:
+		var fire_water_rotation = arena_rotation_deg
+		var wind_rotation = arena_rotation_deg
+		if fire_left != fire_short:
+			fire_water_rotation += 180.0
+		# If arena is offset by 90 deg, switch to other spot.
+		if !lat_long != (int(arena_rotation_deg) % 180 == 0):
+			wind_rotation -= LATLONG_POSITION_ROTATION_DEG
+			fire_water_rotation += LATLONG_POSITION_ROTATION_DEG
+		else:
+			wind_rotation += LATLONG_POSITION_ROTATION_DEG
+			fire_water_rotation -= LATLONG_POSITION_ROTATION_DEG
+		move_strat_party_and_rotate(BoAPos.LATLONG_NE_POS_SG, party_boa, wind_rotation)
+		move_strat_party_and_rotate(BoAPos.LATLONG_SE_POS_SG, party_boa, fire_water_rotation)
+	elif strat == Strat.LB:
+		# Short left
+		if fire_left == fire_short:
+			if lat_long:
+				move_party_rtd(BoAPos.LAT_SHORT_LEFT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.LONG_SHORT_LEFT_POS_LB)
+		else:
+			if lat_long:
+				move_party_rtd(BoAPos.LAT_SHORT_RIGHT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.LONG_SHORT_RIGHT_POS_LB)
+
+
+func move_latlong_2():
+	if strat == Strat.SG:
+		var fire_water_rotation = arena_rotation_deg
+		var wind_rotation = arena_rotation_deg
+		if fire_left != fire_short:
+			fire_water_rotation += 180.0
+		if !lat_long != (int(arena_rotation_deg) % 180 == 0):
+			wind_rotation += LATLONG_POSITION_ROTATION_DEG
+			fire_water_rotation -= LATLONG_POSITION_ROTATION_DEG
+		else:
+			wind_rotation -= LATLONG_POSITION_ROTATION_DEG
+			fire_water_rotation += LATLONG_POSITION_ROTATION_DEG
+		move_strat_party_and_rotate(BoAPos.LATLONG_NE_POS_SG, party_boa, wind_rotation)
+		move_strat_party_and_rotate(BoAPos.LATLONG_SE_POS_SG, party_boa, fire_water_rotation)
+	elif strat == Strat.LB:
+		# Short left
+		if fire_left == fire_short:
+			if !lat_long:
+				move_party_rtd(BoAPos.LAT_SHORT_LEFT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.LONG_SHORT_LEFT_POS_LB)
+		else:
+			if !lat_long:
+				move_party_rtd(BoAPos.LAT_SHORT_RIGHT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.LONG_SHORT_RIGHT_POS_LB)
+
+
+## Move to second debuff spots
+# If Longlat is set up correctly, we should already be close to these spots.
+func move_long_debuff_pos():
+	if strat == Strat.SG:
+		if fire_short:
+			if fire_left:
+				move_strat_party_rtd(BoAPos.LONG_WATER_POS_SG, party_boa)
+			else:
+				move_strat_party_rtd_mirrored(BoAPos.LONG_WATER_POS_SG, party_boa)
+		else:
+			if fire_left:
+				move_strat_party_rtd(BoAPos.LONG_FIRE_POS_SG, party_boa)
+			else:
+				move_strat_party_rtd_mirrored(BoAPos.LONG_FIRE_POS_SG, party_boa)
+	elif strat == Strat.LB:
+		if fire_short:
+			if fire_left:
+				move_party_rtd(BoAPos.LONG_WATER_RIGHT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.LONG_WATER_LEFT_POS_LB)
+		else:
+			if fire_left:
+				move_party_rtd(BoAPos.LONG_FIRE_LEFT_POS_LB)
+			else:
+				move_party_rtd(BoAPos.LONG_FIRE_RIGHT_POS_LB)
+
+
+## Move post wind.
+func move_jump_bait_pos():
+	if strat == Strat.SG:
+		move_party_rtd(BoAPos.UMBRA_BAIT_POS_SG)
+	elif strat == Strat.LB:
+		move_party_rtd(BoAPos.UMBRA_BAIT_POS_LB)
+
+## Move ranged baiter to group.
+func move_pre_vaccum_pos():
+	if strat == Strat.SG:
+		move_party_rtd(BoAPos.UMBRA_CAST_POS_SG)
+	elif strat == Strat.LB:
+		move_party_rtd(BoAPos.UMBRA_CAST_POS_LB)
+
+
+# Move to Wind 3 Pos
+func move_winds_3_pos():
+	#if starting_point == StartPoint.LC:
+		#return
+	if strat == Strat.SG:
+		move_party_rtd(BoAPos.WINDS_3_BAIT_POS)
+	elif strat == Strat.LB:
+		move_party_rtd(BoAPos.WINDS_3_BAIT_POS_LB)
+
+
+func move_lc_pos():
+	# Starting position. First dash is relative N to S, so we'll start CW or CCW of S.
+	var pos = Vector2(0.0, 45.0).rotated(deg_to_rad(lc_rotation_deg * lc_direction_factor))
+	pos = pos.rotated(deg_to_rad(22.5 * -lc_direction_factor))
+	for i in party.size():
+		party[party_keys_lc[i]].move_to(pos)
+		pos = pos.rotated(deg_to_rad(45.0 * -lc_direction_factor))
 
 
 func move_tanks_post_lc_1():
@@ -795,12 +959,7 @@ func move_tanks_post_lc_3():
 		party[key].move_to((v2(party[key].global_position).direction_to(v2(exdeath.global_position)) * 10.0) + v2(party[key].global_position))
 
 
-func play_next_sequence():
-	p3_eq_seq.start_sequence(party)
-
-
-## END OF TIMELINE
-
+## Movement Helper
 
 # Make sure the keys in both Dictionaries match.
 func move_strat_party_rtd(position_dict: Dictionary, role_keys_dict: Dictionary):
@@ -853,12 +1012,17 @@ func move_party_and_rotate(position_dict: Dictionary, rotation_deg: float):
 			party[key].move_to(position_dict[key]).rotated(deg_to_rad(rotation_deg))
 
 
+## =========================END OF BOT MOVEMENT=================================
+
+
+
+## =========================HELPER FUNCTIONS====================================
+
+
 func cast(spell_name: String, cast_time: float, caster: Node3D):
 	target_cast_bar.cast(spell_name, cast_time, caster)
 	enemy_cast_bar.cast(spell_name, cast_time)
 
-
-## HELPER FUNCTIONS
 
 # Used for mirror along Wind crystal axis
 func flip_neg_xy(pos: Vector2) -> Vector2:
@@ -904,6 +1068,7 @@ func on_toggle_bots_visible() -> void:
 # Orders the keys by given prio
 func order_lr_prio(ordered_keys: Array, keys_to_be_sorted: Array):
 	keys_to_be_sorted.sort_custom(func(a, b): return ordered_keys.find(a) < ordered_keys.find(b))
+
 
 func v2(vec3: Vector3) -> Vector2:
 	return Vector2(vec3.x, vec3.z)

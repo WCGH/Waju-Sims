@@ -110,7 +110,7 @@ const LINEUP_POS_EU := {
 # EU Variant 1 (Odd Towers)
 # V1 In Towers (2 stacks, 1 cone, 1 spread) Group A: 1/3, Group B: 5/7
 const V1_IN_POS_EU := {
-	"stack_left": Vector2(18.3, 1.3), "stack_right": Vector2(7.9, -19.0),
+	"stack_left": Vector2(16, 0), "stack_right": Vector2(7.9, -19.0),
 	"cone_left": Vector2(18, -8.2), "spread_left": Vector2(-7.7, -18.6)
 }
 # V1 Stacks (2 cones, 2 spreads) Group A: 5/7, Group B: 1/3

@@ -32,3 +32,15 @@ func play_float_to_lounge():
 
 func play_lounge_to_float():
 	state_machine.travel("lounge_to_float")
+
+
+func play_generic_finish():
+	state_machine.travel("generic_finish")
+
+
+func play_taunt():
+	state_machine.travel("taunt")
+
+
+func play_big_finish():
+	state_machine.travel("big_finish")

@@ -698,7 +698,7 @@ func cast_look():
 func move_edict_slam_dodge():
 	# Get chaos rotation relative to Kefka North
 	#var chaos_rota = ((int(chaos.rotation_degrees.y) % 360) - (int(kefka_rotation_factor) * 45)) % 360
-	var temp = chaos.rotation_degrees.y
+	# var temp = chaos.rotation_degrees.y
 	var chaos_rota = fposmod(fposmod(chaos.rotation_degrees.y, 360.0) - (kefka_rotation_factor * 45.0), 360.0)
 	var safe_pos: Vector2
 	if chaos_rota >= 0 and chaos_rota <= 45:
@@ -1020,8 +1020,8 @@ func blizzard_long_hit():
 ## END OF TIMELINE
 
 
-# To be fixed later, need to handle hidden/inactive set still having active area trigger.
-func _on_bh_entered(body: PlayableCharacter):
+# TODO: need to handle hidden/inactive set still having active area trigger.
+func _on_bh_entered(_body: PlayableCharacter):
 	#if !bh_active:
 		#return
 	#var role_name = StringName("Player") if body.is_player() else body.get_role_name()
