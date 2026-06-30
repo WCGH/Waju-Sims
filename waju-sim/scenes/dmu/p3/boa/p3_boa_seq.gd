@@ -422,12 +422,14 @@ func knockback_player(player: PlayableCharacter, from: Vector3):
 
 
 # Handle wind crystal. This will hit 2 nearest first time.
+# Assumes correct number of winds are cleansed for each debuff. Skip for LB3 Cheese.
 func wind_hit():
+	if strat == Strat.LB:
+		return
 	var players_hit := get_nearest_player_bodies(v2(wind_diamond.global_position), 2)
 	for key in players_hit:
 		gac.spawn_circle(v2(party[key].global_position), WIND_AOE_RADIUS, WIND_AOE_LIFETIME,
-			WIND_AOE_COLOR, [2, 6, "Cyclone (Wind Crystal)", [party[key]]])
-
+			WIND_AOE_COLOR, [2, 2, "Cyclone (Wind Crystal)", [party[key]]])
 
 
 ## Move to post wind spots
@@ -435,6 +437,7 @@ func wind_hit():
 func cast_thunder_tb():
 	exdeath.plant()
 	cast("Thunder III", 4.7, exdeath)
+
 
 # Thunder Hit 1 then 2, move tank in between
 func thunder_kb_hit():
@@ -467,6 +470,7 @@ func lat_long_cast():
 		cast("Longitudinal Implosion", 5.4, chaos)
 	enemy_cast_bar.cast("Trance", 3.4)
 
+
 # Prefire latlong anim
 func lat_long_finish_anim():
 	if lat_long:
@@ -491,7 +495,6 @@ func lat_long_hit_1():
 			v2(facing_vector.z + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Longitudinal Implosion"])
 		gac.spawn_cone(v2(chaos.global_position), LATLONG_CONE_ANGLE, LATLONG_CONE_LENGTH, 
 			v2(-facing_vector.z + chaos.global_position), LATLONG_CONE_LIFETIME, LATLONG_CONE_COLOR, [0, 0, "Longitudinal Implosion"])
-
 
 
 func lat_long_hit_2():

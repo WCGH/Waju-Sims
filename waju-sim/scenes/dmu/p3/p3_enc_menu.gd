@@ -15,6 +15,7 @@ signal toggle_bots_visible()
 @onready var strat_button: OptionButton = %StratButton
 @onready var starting_button: OptionButton = %StartingButton
 @onready var hide_bots_check_button: CheckButton = %HideBotsCheckButton
+@onready var bh_prio_button: OptionButton = %BHPrioButton
 
 
 #@onready var flex_button: CheckButton = %FlexButton
@@ -23,6 +24,7 @@ signal toggle_bots_visible()
 func _ready() -> void:
 	strat_button.selected = DmuSavedVariables.save_data["settings"]["p3_boa_strat"]
 	starting_button.selected = DmuSavedVariables.save_data["settings"]["p3_boa_start_point"]
+	bh_prio_button.selected = DmuSavedVariables.save_data["settings"]["p3_eq_bh_prio"]
 	hide_bots_check_button.button_pressed = Global.hide_bots
 
 
@@ -64,3 +66,7 @@ func _on_invuln_button_pressed() -> void:
 func _on_hide_bots_check_button_pressed() -> void:
 	Global.hide_bots = hide_bots_check_button.button_pressed
 	toggle_bots_visible.emit()
+
+
+func _on_bh_prio_button_item_selected(index: int) -> void:
+	GameEvents.emit_encounter_variable_saved("settings", "p3_eq_bh_prio", index)

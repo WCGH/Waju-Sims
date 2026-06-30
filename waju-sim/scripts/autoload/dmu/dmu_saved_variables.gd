@@ -23,9 +23,13 @@ var save_data: Dictionary = {
 		"p2_fors_even_tower_pos": 0,
 		"p2_fors_special_rule": false,
 		"p2_fors_bait": false,
+		"p2_fors_final_bait": 0,
 		"p3_boa_t1_chaos": true,
 		"p3_boa_strat": 0,    # [SG3K, LB3 Cheese]
 		"p3_boa_start_point": 0,
+		"p3_eq_bh_prio": 0,   # [D>S>A, S>D>A, Double]
+		"p5_strat": 0,
+		"p5_start_point" : 0,
 		#"p4_ct_aero_plant": false,
 	},
 	## FRU Waymarks

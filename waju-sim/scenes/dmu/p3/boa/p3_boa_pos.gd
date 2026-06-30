@@ -93,7 +93,7 @@ const WINDS_3_BAIT_POS := {
 }
 
 
-## LB3 Cheese
+## =======================================LB3 Cheese================================================
 
 
 const PRE_FIRE_TANK_POS_1_LB := {
@@ -127,14 +127,14 @@ const SHORT_FIRE_RIGHT_POS_LB := {
 	"t1": _LB_SHORT_SUP_FIRE + _RS1, "t2": _LB_SHORT_SUP_FIRE + _RS2,
 	"h1": _LB_SHORT_SUP_FIRE + _RS3, "h2": _LB_SHORT_SUP_FIRE,
 	"m1": _LB_SHORT_MELEE_FIRE + _RS1, "m2": _LB_SHORT_MELEE_FIRE,
-	"r1": Vector2(41, 18), "r2": Vector2(18, 41),
+	"r1": Vector2(18, 41), "r2": Vector2(41, 18),
 }
 
 const SHORT_WATER_RIGHT_POS_LB := {
 	"t1": _LB_SHORT_WATER + _RS1, "t2": _LB_SHORT_WATER + _RS2,
 	"h1": _LB_SHORT_WATER + _RS3, "h2": _LB_SHORT_WATER,
 	"m1": _LB_SHORT_WATER - _RS1, "m2": _LB_SHORT_WATER - _RS2,
-	"r1": Vector2(41, 18), "r2": Vector2(18, 41),
+	"r1": Vector2(18, 41), "r2": Vector2(41, 18),
 }
 
 const POST_SHORT_TANK_POS_1_LB := {

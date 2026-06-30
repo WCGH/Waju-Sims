@@ -195,7 +195,8 @@ const V2_BAIT_POS_ABBA := {
 
 
 ## Common Positioning
-
+const _TRUE_NORTH_BAIT := Vector2(0, -13)
+const _TRUE_SOUTH_BAIT := Vector2(0, 13)
 const FUTURE_BAIT_POS := {
 	"h1": Vector2(-_BAIT_FAR_XY, _BAIT_FAR_XY) + RS1, "h2": Vector2(-_BAIT_FAR_XY, _BAIT_FAR_XY) - RS1,
 	"t1": Vector2(-_BAIT_FAR_XY, _BAIT_FAR_XY) + RS2, "t2": Vector2(-_BAIT_FAR_XY, _BAIT_FAR_XY) - RS2,
@@ -214,8 +215,18 @@ const BAIT_MIDDLE_POS := {
 	"m1": Vector2.ZERO, "m2": Vector2.ZERO,
 	"r1": Vector2.ZERO, "r2": Vector2.ZERO,
 }
-
-
+const BAIT_TRUE_NORTH_POS := {
+	"h1": _TRUE_NORTH_BAIT + RS1, "h2": _TRUE_NORTH_BAIT - RS1,
+	"t1": _TRUE_NORTH_BAIT + RS2, "t2": _TRUE_NORTH_BAIT - RS2,
+	"m1": _TRUE_NORTH_BAIT + RS3, "m2": _TRUE_NORTH_BAIT - RS3,
+	"r1": _TRUE_NORTH_BAIT, "r2": _TRUE_NORTH_BAIT + RS1 - RS3,
+}
+const BAIT_TRUE_SOUTH_POS := {
+	"h1": _TRUE_SOUTH_BAIT + RS1, "h2": _TRUE_SOUTH_BAIT - RS1,
+	"t1": _TRUE_SOUTH_BAIT + RS2, "t2": _TRUE_SOUTH_BAIT - RS2,
+	"m1": _TRUE_SOUTH_BAIT + RS3, "m2": _TRUE_SOUTH_BAIT - RS3,
+	"r1": _TRUE_SOUTH_BAIT, "r2": _TRUE_SOUTH_BAIT + RS1 - RS3,
+}
 
 
 

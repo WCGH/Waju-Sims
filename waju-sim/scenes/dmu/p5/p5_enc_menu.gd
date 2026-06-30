@@ -21,8 +21,8 @@ signal toggle_bots_visible()
 
 
 func _ready() -> void:
-	strat_button.selected = DmuSavedVariables.save_data["settings"]["p3_boa_strat"]
-	starting_button.selected = DmuSavedVariables.save_data["settings"]["p3_boa_start_point"]
+	strat_button.selected = DmuSavedVariables.save_data["settings"]["p5_strat"]
+	starting_button.selected = DmuSavedVariables.save_data["settings"]["p5_start_point"]
 	hide_bots_check_button.button_pressed = Global.hide_bots
 
 
@@ -50,15 +50,11 @@ func hide_menu():
 
 
 func _on_strat_button_item_selected(index: int) -> void:
-	GameEvents.emit_encounter_variable_saved("settings", "p3_boa_strat", index)
+	GameEvents.emit_encounter_variable_saved("settings", "p5_strat", index)
 	
 
 func _on_starting_button_item_selected(index: int) -> void:
-	GameEvents.emit_encounter_variable_saved("settings", "p3_boa_start_point", index)
-
-
-func _on_invuln_button_pressed() -> void:
-	pass
+	GameEvents.emit_encounter_variable_saved("settings", "p5_start_point", index)
 
 
 func _on_hide_bots_check_button_pressed() -> void:

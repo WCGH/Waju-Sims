@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bmmswdj8pgu6f"]
+
+[ext_resource type="Texture2D" uid="uid://caabk0r5ldanv" path="res://assets/dmu/debuff_icons/p5/ice_res.png" id="1_v0wxi"]
+
+[node name="IceResIcon" type="TextureRect" unique_id=917551237]
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Ice Resistance Down"
+texture = ExtResource("1_v0wxi")
+expand_mode = 3
+metadata/debuff_name = "ice_res"

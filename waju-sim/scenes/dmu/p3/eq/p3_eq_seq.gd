@@ -13,6 +13,7 @@ const BIG_KEFKA_UID := "uid://ddmbbusmjpmqg"
 const BLACK_HOLE_SET_UID := "uid://ddu02jcnuf02w"
 
 enum Strat {KB}
+enum BHPrio {DSA, SDA, DOUBLE}
 enum StartPoint {DB1, BOA, LC, DB2, EQ, STOMP}
 
 ## AoE Dimensions
@@ -131,7 +132,7 @@ var tether_prio_kb := {
 	[4, 5]: [2, 0, 1],
 	[6, 7]: [1, 2, 0]
 }
-var tether_targets_kb := {
+var tether_targets_dsa := {
 	1: {
 		1: {1: "fil_dps"},
 		2: {1: "fil_dps", 2: "fil_sup"}
@@ -149,6 +150,46 @@ var tether_targets_kb := {
 	4: {
 		1: {1: "til_dps", 2: "til_sup"},
 		2: {1: "til_sup"}
+	}
+}
+var tether_targets_sda := {
+	1: {
+		1: {1: "fil_sup"},
+		2: {1: "fil_sup", 2: "fil_dps"}
+	},
+	2: {
+		1: {1: "fil_sup", 2: "fil_dps", 3: "fil_acr"},
+		2: {1: "sil_sup", 2: "fil_dps", 3: "fil_acr"},
+		3: {1: "sil_sup", 2: "sil_dps", 3: "fil_acr"}
+	},
+	3: {
+		1: {1: "sil_sup", 2: "sil_dps", 3: "sil_acr"},
+		2: {1: "til_sup", 2: "sil_dps", 3: "sil_acr"},
+		3: {1: "til_sup", 2: "til_dps", 3: "sil_acr"}
+	},
+	4: {
+		1: {1: "til_sup", 2: "til_dps"},
+		2: {1: "til_dps"}
+	}
+}
+var tether_targets_double := {
+	1: {
+		1: {1: "fil_sup"},
+		2: {1: "fil_dps", 2: "fil_dps"}
+	},
+	2: {
+		1: {1: "fil_dps", 2: "fil_sup", 3: "fil_acr"},
+		2: {1: "sil_dps", 2: "fil_sup", 3: "fil_acr"},
+		3: {1: "sil_dps", 2: "sil_sup", 3: "fil_acr"}
+	},
+	3: {
+		1: {1: "sil_dps", 2: "sil_sup", 3: "sil_acr"},
+		2: {1: "til_dps", 2: "sil_sup", 3: "sil_acr"},
+		3: {1: "til_dps", 2: "til_sup", 3: "sil_acr"}
+	},
+	4: {
+		1: {1: "til_sup", 2: "til_sup"},
+		2: {1: "til_dps"}
 	}
 }
 var strat: Strat
@@ -174,6 +215,8 @@ var dps_fire: bool
 var fire_key: String
 var bh_set_number
 var knockdown_hit_pos: Array
+var bh_prio: BHPrio
+var tether_targets_kb: Dictionary
 
 
 func start_sequence(new_party: Dictionary) -> void:
@@ -189,11 +232,20 @@ func start_sequence(new_party: Dictionary) -> void:
 	player_key = Global.player_role_key
 	## Get Strat and variables.
 	#strat = DmuSavedVariables.save_data["settings"]["p3_eq_strat"]
+	bh_prio = DmuSavedVariables.save_data["settings"]["p3_eq_bh_prio"]
 	starting_point = DmuSavedVariables.get_data_and_check_int("settings", "p3_boa_start_point", 0, StartPoint.size()) as StartPoint
 	t1_chaos = DmuSavedVariables.get_data_and_check_bool("settings", "p3_boa_t1_chaos")
 	instantiate_party(new_party)
 	on_toggle_bots_visible()
 	encounter_menu.toggle_bots_visible.connect(on_toggle_bots_visible)
+	# Setup bh prio dictionary
+	match bh_prio:
+		BHPrio.DSA:
+			tether_targets_kb = tether_targets_dsa
+		BHPrio.SDA:
+			tether_targets_kb = tether_targets_sda
+		BHPrio.DOUBLE:
+			tether_targets_kb = tether_targets_double
 	# Move bosses if we're starting here.
 	if starting_point >= StartPoint.DB2:
 		exdeath.global_position = EXDEATH_START_POS
@@ -510,6 +562,20 @@ func move_bh_bait_pos(tether_set_num: int):
 			active_tethers = active_tethers.slice(2, 3)
 	# Order tether by Kefka relative prio
 	order_tether_prio_kb(active_tethers)
+	# Special movement for double tether
+	if bh_prio == BHPrio.DOUBLE and (bh_set_number == 1 and tether_set_num ==  2) or\
+		(bh_set_number == 4 and tether_set_num ==  1):
+		var pc: PlayableCharacter = party[party_keys_eq[tether_targets_kb[bh_set_number][tether_set_num][1]]]
+		# Move between both BH
+		var bh_1_pos := v2(bh_set.get_bh_node(bh_tether_order[1]).global_position)
+		var bh_2_pos: Vector2
+		if bh_set_number == 4:
+			bh_2_pos = v2(bh_set.get_bh_node(bh_tether_order[0]).global_position)
+		else:
+			bh_2_pos = v2(bh_set.get_bh_node(bh_tether_order[2]).global_position)
+		var mid_pos = (bh_1_pos + bh_2_pos) / 2.0
+		pc.move_to(mid_pos)
+		return
 	for tether_num in tether_targets_kb[bh_set_number][tether_set_num]:
 		var pc: PlayableCharacter = party[party_keys_eq[tether_targets_kb[bh_set_number][tether_set_num][tether_num]]]
 		pc.move_to(EqPos.BH_BAIT_POS[active_tethers[tether_num - 1]].rotated(deg_to_rad(arena_rotation_deg)))
@@ -561,7 +627,7 @@ func tether_hit(tether_num: int):
 	var bh_source = bh_set.get_bh_node(bh_tether_order[tether_num - 1])
 	var target = tether_controller.get_tether_target(bh_source)
 	gac.spawn_line(v2(bh_source.global_position), BH_LASER_WIDTH, BH_LASER_LENGTH, v2(target.global_position),
-		BH_LASER_LIFETIME, BH_LASER_COLOR, [1, 1, "Nothingness (Black Hole Laser)", [target]])
+		BH_LASER_LIFETIME, BH_LASER_COLOR, [1, 2, "Nothingness (Black Hole Laser)", [target, party["t1"], party["t2"]]])
 	# For simplicity, we'll just assume 1 person gets hit for debuff checks
 	if target.has_debuff("meanest_existence"):
 		if target.has_debuff("primordial_crust"):
@@ -863,13 +929,14 @@ func lat_long_hit_2():
 ## cast_look()
 
 func move_final_slam_pos():
+	var bh_bait_key: String = tether_targets_kb[4][2][1]
 	for key in party:
-		if key == party_keys_eq["til_sup"]:
+		if key == party_keys_eq[bh_bait_key]:
 			continue
 		party[key].move_to(Vector2(22, 0).rotated(deg_to_rad(kefka_rotation_factor * -45.0)))
 	var bh_source = bh_set.get_bh_node(bh_tether_order[2])
 	var pos = v2(bh_source.global_position).rotated(deg_to_rad(7.0))
-	party[party_keys_eq["til_sup"]].move_to(pos)
+	party[party_keys_eq[bh_bait_key]].move_to(pos)
 
 # 2:28.5 start body slam anim
 ## body_slam_anim()
@@ -1123,6 +1190,7 @@ func on_toggle_bots_visible() -> void:
 # Orders the keys by given prio
 func order_lr_prio(ordered_keys: Array, keys_to_be_sorted: Array):
 	keys_to_be_sorted.sort_custom(func(a, b): return ordered_keys.find(a) < ordered_keys.find(b))
+
 
 func v2(vec3: Vector3) -> Vector2:
 	return Vector2(vec3.x, vec3.z)

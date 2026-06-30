@@ -24,8 +24,9 @@ color: Color, fail_conditions: Array = [], check_end: bool = false) -> void:
 
 func set_radius(radius : float) -> void:
 	_radius = radius
-	mesh_instance_3d.mesh.top_radius = radius
-	mesh_instance_3d.mesh.bottom_radius = radius
+	#mesh_instance_3d.mesh.top_radius = radius
+	#mesh_instance_3d.mesh.bottom_radius = radius
+	mesh_instance_3d.mesh.size = Vector2(radius * 2.06, radius * 2.06)
 	collision_shape_3d.shape.radius = radius
 	#set_grow_animation(radius)
 
@@ -39,11 +40,13 @@ func set_radius(radius : float) -> void:
 
 
 func play_start_animation() -> void:
-	mesh_instance_3d.mesh.top_radius = _radius / 2
-	mesh_instance_3d.mesh.bottom_radius = _radius / 2
+	mesh_instance_3d.mesh.size = Vector2(_radius, _radius)
+	#mesh_instance_3d.mesh.top_radius = _radius / 2
+	#mesh_instance_3d.mesh.bottom_radius = _radius / 2
 	var tween := get_tree().create_tween().set_parallel(true)
-	tween.tween_property(self, "mesh_instance_3d:mesh:top_radius",_radius, 0.2)
-	tween.tween_property(self, "mesh_instance_3d:mesh:bottom_radius",_radius, 0.2)
+	#tween.tween_property(self, "mesh_instance_3d:mesh:top_radius",_radius, 0.2)
+	#tween.tween_property(self, "mesh_instance_3d:mesh:bottom_radius",_radius, 0.2)
+	tween.tween_property(self, "mesh_instance_3d:mesh:size",Vector2(_radius * 2.06, _radius * 2.06), 0.2)
 
 
 func _on_body_entered(body: CharacterBody3D) -> void:

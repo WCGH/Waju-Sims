@@ -37,7 +37,8 @@ var encounter: Encounter
 var main_uid := ""
 var debug := false
 var deathwall_active := true
-var player_role_key : String
+var player_role_key: String
+var bot_role_keys: Array
 var selected_role_index := 4
 var selected_sequence_index := 0
 var spectate_mode := false

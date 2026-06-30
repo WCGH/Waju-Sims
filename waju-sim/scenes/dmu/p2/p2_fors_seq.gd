@@ -15,6 +15,7 @@ enum AdjustPrio {RMMR, FLEX, SOUTH}
 enum OddTowerPos {RIN, EU, BOSS, NS}   
 enum EvenTowerPos {RIN, EU, OUTTER, BOSS}     # BOSS = old rin boss align 90 deg
 enum Lockon {CONE, SPREAD, STACK}
+enum FinalBait {DEFAULT, REL_SOUTH, TRUE_NORTH}
 
 ## Strat Specs
 const STRAT_PRESET := {
@@ -24,6 +25,7 @@ const STRAT_PRESET := {
 		"odd_position": OddTowerPos.RIN,
 		"even_position" : EvenTowerPos.RIN,
 		"special_rule": false,
+		"final_bait": FinalBait.REL_SOUTH
 	},
 	Strat.SOUTH: {
 		"soak_order": SoakOrder.AAAB,
@@ -31,6 +33,7 @@ const STRAT_PRESET := {
 		"odd_position": OddTowerPos.BOSS,
 		"even_position" : EvenTowerPos.RIN,
 		"special_rule": false,
+		"final_bait": FinalBait.REL_SOUTH
 	},
 	Strat.EU: {
 		"soak_order": SoakOrder.AAAB,
@@ -38,6 +41,7 @@ const STRAT_PRESET := {
 		"odd_position": OddTowerPos.EU,
 		"even_position" : EvenTowerPos.EU,
 		"special_rule": true,
+		"final_bait": FinalBait.TRUE_NORTH
 	},
 	Strat.ABBA: {
 		"soak_order": SoakOrder.ABBA,
@@ -45,6 +49,7 @@ const STRAT_PRESET := {
 		"odd_position": OddTowerPos.RIN,
 		"even_position" : EvenTowerPos.RIN,
 		"special_rule": false,
+		"final_bait": FinalBait.DEFAULT
 	},
 }
 
@@ -189,6 +194,7 @@ var group_a_keys : Array
 var group_b_keys : Array
 var player_bait: bool
 var player_key: String
+var final_bait: FinalBait
 
 
 func start_sequence(new_party: Dictionary) -> void:
@@ -207,6 +213,7 @@ func start_sequence(new_party: Dictionary) -> void:
 	even_tower_pos = DmuSavedVariables.get_data_and_check_int("settings", "p2_fors_even_tower_pos", 0, EvenTowerPos.size()) as EvenTowerPos
 	eu_setup = DmuSavedVariables.get_data_and_check_bool("settings", "p2_fors_special_rule")
 	player_bait = DmuSavedVariables.get_data_and_check_bool("settings", "p2_fors_bait")
+	final_bait = DmuSavedVariables.get_data_and_check_int("settings", "p2_fors_final_bait", 0, FinalBait.size()) as FinalBait
 	player_key = Global.player_role_key
 	
 	instantiate_party(new_party)
@@ -772,14 +779,38 @@ func tower_8_hit():
 	#if strat == Strat.KB:
 		#repopulate_groups(party_a, group_a_keys)
 
-# Move to bait positions
+# Move to bait positions. Option to always bait between towers or true N.
+func move_final_bait_pos():
+	if player_bait:
+		move_party_rtd(ForsPositions.BAIT_MIDDLE_POS)
+		return
+	match final_bait:
+		FinalBait.DEFAULT:
+			if is_future:
+				move_party_rtd(ForsPositions.FUTURE_BAIT_POS)
+			else:
+				move_party_rtd(ForsPositions.PAST_BAIT_POS)
+		FinalBait.REL_SOUTH:
+			move_party_rtd(ForsPositions.PAST_BAIT_POS)
+		FinalBait.TRUE_NORTH:
+			move_party(ForsPositions.BAIT_TRUE_NORTH_POS)
+
 
 ## Cast All Things Ending 4
 #ending_cast() 
 
 # Move to final position, safe from baits.
 func move_final_pos():
-	move_party_rtd(ForsPositions.PAST_BAIT_POS)
+	#move_party_rtd(ForsPositions.PAST_BAIT_POS)
+	match final_bait:
+		FinalBait.DEFAULT:
+			move_party_rtd(ForsPositions.PAST_BAIT_POS)
+		FinalBait.REL_SOUTH:
+			if is_future:
+				move_party_rtd(ForsPositions.FUTURE_BAIT_POS)
+		FinalBait.TRUE_NORTH:
+			if is_future:
+				move_party(ForsPositions.BAIT_TRUE_SOUTH_POS)
 
 
 ## Cast Light of Judgement (for mit check)

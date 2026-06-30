@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://c62i12l6aug0r"]
+
+[ext_resource type="Script" uid="uid://dft3x8mt875yp" path="res://scenes/dmu/p5/forsaken_bh.gd" id="1_fh3p6"]
+[ext_resource type="Shader" uid="uid://c0afsa7kc6cvs" path="res://assets/common/shaders/sky_stary.gdshader" id="2_2mg6h"]
+[ext_resource type="Shader" uid="uid://cgjqp0v2cpj8b" path="res://assets/common/shaders/black_hole_rim.gdshader" id="3_2ww7q"]
+[ext_resource type="Texture2D" uid="uid://dqsyflfnoulou" path="res://assets/common/shaders/smoke_noise.jpeg" id="4_6vthb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sto6j"]
+render_priority = 0
+shader = ExtResource("2_2mg6h")
+shader_parameter/background_color = Color(0, 0, 0.012920001, 1)
+shader_parameter/aspect_ratio = 1.0
+shader_parameter/density = 0.7629999806961
+shader_parameter/layer_parascale = 4
+shader_parameter/star_speed = Vector2(0, 0)
+shader_parameter/star_wave = Vector2(0, 0)
+shader_parameter/star_size = 0.6999999843536
+shader_parameter/star_rotate_speed = 0.5
+shader_parameter/twinkle_effect = 0.6
+shader_parameter/twinkle_speed = 0.3
+shader_parameter/pixelate_enabled = false
+shader_parameter/pixelate_count = 1000.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hsd6q"]
+material = SubResource("ShaderMaterial_sto6j")
+top_radius = 14.0
+bottom_radius = 14.0
+height = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_45mti"]
+render_priority = 0
+shader = ExtResource("3_2ww7q")
+shader_parameter/smoke_texture = ExtResource("4_6vthb")
+shader_parameter/color = Color(0.8766528, 0.22091639, 1, 1)
+shader_parameter/fade_size = -0.235
+shader_parameter/fade_blend = 1.016
+shader_parameter/smoke_sharpness = 1.072
+shader_parameter/time_scale = 0.063
+shader_parameter/height_fade = 3.4
+shader_parameter/scissor = 0.457
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1qocc"]
+material = SubResource("ShaderMaterial_45mti")
+top_radius = 20.0
+bottom_radius = 20.0
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sto6j"]
+transparency = 1
+albedo_color = Color(2.5454042, 0.47588435, 2.5949697, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_hsd6q"]
+material = SubResource("StandardMaterial3D_sto6j")
+inner_radius = 19.915
+outer_radius = 20.0
+
+[sub_resource type="Animation" id="Animation_j67va"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackHoleMesh:mesh:material:shader_parameter/background_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0.012920001, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OutterRingMesh:mesh:material:shader_parameter/color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.8766528, 0.22091639, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RingHighlight:mesh:material:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(2.5454042, 0.47588435, 2.5949697, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OutterRingMesh:mesh:material:shader_parameter/fade_blend")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.016]
+}
+
+[sub_resource type="Animation" id="Animation_30161"]
+resource_name = "fade_in"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackHoleMesh:mesh:material:shader_parameter/background_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0.012920001, 0), Color(0, 0, 0.012920001, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OutterRingMesh:mesh:material:shader_parameter/color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0.8766528, 0.22091639, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RingHighlight:mesh:material:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(2.5446455, 0.47487175, 2.5950012, 0), Color(2.5454042, 0.47588435, 2.5949697, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OutterRingMesh:mesh:material:shader_parameter/fade_blend")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1.2311447),
+"update": 0,
+"values": [7.346, 1.016]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_10mp1"]
+_data = {
+&"RESET": SubResource("Animation_j67va"),
+&"fade_in": SubResource("Animation_30161")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hsd6q"]
+height = 15.0
+radius = 20.0
+
+[node name="ForsakenBH" type="Node3D" unique_id=129721018]
+script = ExtResource("1_fh3p6")
+
+[node name="BlackHoleMesh" type="MeshInstance3D" parent="." unique_id=1253027680]
+mesh = SubResource("CylinderMesh_hsd6q")
+
+[node name="OutterRingMesh" type="MeshInstance3D" parent="." unique_id=1011592917]
+mesh = SubResource("CylinderMesh_1qocc")
+
+[node name="RingHighlight" type="MeshInstance3D" parent="." unique_id=1850141498]
+mesh = SubResource("TorusMesh_hsd6q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1115221774]
+libraries/ = SubResource("AnimationLibrary_10mp1")
+autoplay = &"fade_in"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1948698664]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1655063940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+shape = SubResource("CylinderShape3D_hsd6q")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

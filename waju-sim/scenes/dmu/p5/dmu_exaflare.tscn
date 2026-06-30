@@ -1,0 +1,640 @@
+[gd_scene format=3 uid="uid://c8svu54bng0tk"]
+
+[ext_resource type="Script" uid="uid://50gxekr5p2so" path="res://scenes/dmu/p5/dmu_exaflare.gd" id="1_bn76o"]
+[ext_resource type="Texture2D" uid="uid://chwe61hncsv0x" path="res://assets/common/circle_aoe.png" id="2_4yq4l"]
+[ext_resource type="Material" uid="uid://cjjjij1l2xrvo" path="res://assets/fru/materials/exaflares/small1.tres" id="3_g11kw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sto6j"]
+transparency = 1
+albedo_color = Color(0.8232569, 0.24269372, 0.07846785, 0.33100003)
+albedo_texture = ExtResource("2_4yq4l")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hsd6q"]
+material = SubResource("StandardMaterial3D_sto6j")
+size = Vector2(28, 28)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qocc"]
+transparency = 1
+albedo_color = Color(2.5375462, 0.3977809, 0, 0.735)
+
+[sub_resource type="TorusMesh" id="TorusMesh_hsd6q"]
+material = SubResource("StandardMaterial3D_1qocc")
+inner_radius = 13.567
+outer_radius = 13.747
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6peom"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 0.486275, 0.541176, 0)
+emission_enabled = true
+emission = Color(0.776471, 0.776471, 0.776471, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gmsvt"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_6peom")
+size = Vector3(0.83, 0.105, 6.45)
+
+[sub_resource type="BoxMesh" id="BoxMesh_srgpl"]
+resource_local_to_scene = true
+material = ExtResource("3_g11kw")
+size = Vector3(0.83, 0.012, 4.225)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hlylc"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 0.486275, 0.439216, 0.643137)
+emission = Color(0.776471, 0.776471, 0.776471, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_okrbo"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_hlylc")
+size = Vector3(0.83, 0.012, 4.225)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6h6w"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 0.486275, 0.439216, 0.643137)
+emission = Color(0.776471, 0.776471, 0.776471, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_glsxt"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_w6h6w")
+size = Vector3(0.83, 0.012, 4.225)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdp30"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 0.486275, 0.439216, 0.643137)
+emission = Color(0.776471, 0.776471, 0.776471, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fm6te"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_bdp30")
+size = Vector3(0.83, 0.012, 4.225)
+
+[sub_resource type="Animation" id="Animation_wxqv5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LargeArrow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SmallArrow1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SmallArrow1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SmallArrow2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SmallArrow2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SmallArrow3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SmallArrow3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SmallArrow4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SmallArrow4:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SmallArrow1/ArmR:mesh:material:albedo_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0.643137)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("SmallArrow2/ArmR:mesh:material:albedo_color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0.643137)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("SmallArrow3/ArmR:mesh:material:albedo_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0.643137)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SmallArrow4/ArmR:mesh:material:albedo_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0.643137)]
+}
+
+[sub_resource type="Animation" id="Animation_j67va"]
+resource_local_to_scene = true
+resource_name = "arrow_pulse"
+length = 1.2
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LargeArrow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LargeArrow:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.2),
+"transitions": PackedFloat32Array(0.420448, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -5.166), Vector3(0, 0, -12.86), Vector3(0, 0, -12.86)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LargeArrow/ArmR:mesh:material:albedo_color")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 1, 1.2),
+"transitions": PackedFloat32Array(2.63902, 1.03526, 1, 1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.541176, 0), Color(1, 0.486275, 0.541176, 1), Color(1, 0.486275, 0.541176, 1), Color(1, 0.486275, 0.541176, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SmallArrow1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SmallArrow1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(0.420448, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994), Vector3(0, 0, -12.86)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SmallArrow2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SmallArrow2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 1.1),
+"transitions": PackedFloat32Array(0.420448, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994), Vector3(0, 0, -12.86)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SmallArrow3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SmallArrow3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.3, 1.2),
+"transitions": PackedFloat32Array(0.420448, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994), Vector3(0, 0, -12.86)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SmallArrow4:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("SmallArrow4:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.4, 1.2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.60994), Vector3(0, 0, -12.86)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("SmallArrow1/ArmR:mesh:material:albedo_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0), Color(1, 0.486275, 0.439216, 0.639216), Color(1, 0.486275, 0.439216, 0.643137), Color(1, 0.486275, 0.439216, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SmallArrow2/ArmR:mesh:material:albedo_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.2, 0.5, 0.9, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0), Color(1, 0.486275, 0.439216, 0.639216), Color(1, 0.486275, 0.439216, 0.635294), Color(1, 0.486275, 0.439216, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("SmallArrow3/ArmR:mesh:material:albedo_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.3, 0.6, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0), Color(1, 0.486275, 0.439216, 0.643137), Color(1, 0.486275, 0.439216, 0.643137), Color(1, 0.486275, 0.439216, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("SmallArrow4/ArmR:mesh:material:albedo_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.4, 0.7, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.486275, 0.439216, 0), Color(1, 0.486275, 0.439216, 0.643137), Color(1, 0.486275, 0.439216, 0.643137), Color(1, 0.486275, 0.439216, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30161"]
+_data = {
+&"RESET": SubResource("Animation_wxqv5"),
+&"arrow_pulse": SubResource("Animation_j67va")
+}
+
+[sub_resource type="Animation" id="Animation_bn76o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.8232569, 0.24269372, 0.07846785, 0.33100003)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RingOutline:mesh:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(2.5375462, 0.3977809, 0, 0.735)]
+}
+
+[sub_resource type="Animation" id="Animation_5x7hv"]
+resource_local_to_scene = true
+resource_name = "exaflare_timeline"
+length = 8.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.3, 4.8333, 5.3667, 5.9, 6.4333, 6.9667, 7.5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0],
+"method": &"exa_hit"
+}, {
+"args": [1],
+"method": &"exa_hit"
+}, {
+"args": [2],
+"method": &"exa_hit"
+}, {
+"args": [3],
+"method": &"exa_hit"
+}, {
+"args": [4],
+"method": &"exa_hit"
+}, {
+"args": [5],
+"method": &"exa_hit"
+}, {
+"args": [6],
+"method": &"exa_hit"
+}, {
+"args": ["exaflare_timeline"],
+"method": &"on_animation_finished"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_30161"]
+resource_local_to_scene = true
+resource_name = "fade_in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.8232569, 0.24269372, 0.07846785, 0), Color(0.8232569, 0.24269372, 0.07846785, 0.33100003)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RingOutline:mesh:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(2.537468, 0.3955588, 0, 0), Color(2.5375462, 0.3977809, 0, 0.735)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["fade_in"],
+"method": &"on_animation_finished"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_10mp1"]
+_data = {
+&"RESET": SubResource("Animation_bn76o"),
+&"exaflare_timeline": SubResource("Animation_5x7hv"),
+&"fade_in": SubResource("Animation_30161")
+}
+
+[node name="DMUExaflare" type="Node3D" unique_id=2145590279]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 0, 0, 0)
+script = ExtResource("1_bn76o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=347938385]
+mesh = SubResource("PlaneMesh_hsd6q")
+
+[node name="RingOutline" type="MeshInstance3D" parent="." unique_id=1831580343]
+mesh = SubResource("TorusMesh_hsd6q")
+
+[node name="Arrow" type="Node3D" parent="." unique_id=263102252]
+transform = Transform3D(-1.7, 0, -2.5669289e-07, 0, 1.7, 0, 2.5669289e-07, 0, -1.7, 0, 0, -10.382263)
+visible = false
+
+[node name="LargeArrow" type="Node3D" parent="Arrow" unique_id=1239478104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.166)
+
+[node name="ArmR" type="MeshInstance3D" parent="Arrow/LargeArrow" unique_id=1546432604]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.987, 0.01, 2.574)
+mesh = SubResource("BoxMesh_gmsvt")
+skeleton = NodePath("../../..")
+
+[node name="ArmL" type="MeshInstance3D" parent="Arrow/LargeArrow" unique_id=1510528579]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.987, 0.01, 2.574)
+mesh = SubResource("BoxMesh_gmsvt")
+skeleton = NodePath("../../..")
+
+[node name="SmallArrow1" type="Node3D" parent="Arrow" unique_id=490149833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
+
+[node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow1" unique_id=1653309383]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_srgpl")
+skeleton = NodePath("../../..")
+
+[node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow1" unique_id=1082759659]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_srgpl")
+skeleton = NodePath("../../..")
+
+[node name="SmallArrow2" type="Node3D" parent="Arrow" unique_id=710352572]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
+
+[node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow2" unique_id=1942569105]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_okrbo")
+skeleton = NodePath("../../..")
+
+[node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow2" unique_id=606575397]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_okrbo")
+skeleton = NodePath("../../..")
+
+[node name="SmallArrow3" type="Node3D" parent="Arrow" unique_id=847928715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
+
+[node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow3" unique_id=968140384]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_glsxt")
+skeleton = NodePath("../../..")
+
+[node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow3" unique_id=1170879924]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_glsxt")
+skeleton = NodePath("../../..")
+
+[node name="SmallArrow4" type="Node3D" parent="Arrow" unique_id=496649768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
+
+[node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow4" unique_id=1412235288]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_fm6te")
+skeleton = NodePath("../../..")
+
+[node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow4" unique_id=136091670]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
+mesh = SubResource("BoxMesh_fm6te")
+skeleton = NodePath("../../..")
+
+[node name="ArrowAnimationPlayer" type="AnimationPlayer" parent="Arrow" unique_id=1491212001]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_30161")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1069448438]
+libraries/ = SubResource("AnimationLibrary_10mp1")

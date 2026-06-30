@@ -26,7 +26,7 @@ const SPAWN_POSITIONS = {"t1": Vector3(0, 1, -5), "t2": Vector3(0, 1, 5),
 @export var ranged_model: PackedScene
 @export var caster_model: PackedScene
 
-var party : Dictionary
+var party : Dictionary[String, PlayableCharacter]
 var role_keys := Global.ROLE_KEYS
 var existing_party := false
 
@@ -47,6 +47,7 @@ func instantiate_party(player_role : String) -> Dictionary:
 			Global.player_role_key = key
 		else:
 			instantiate_bot(key)
+			Global.bot_role_keys.append(key)
 	party_list.create_party_list(player_role)
 	# TODO: find signal usages and clean up/consolidate
 	party_ready.emit()
@@ -67,7 +68,7 @@ func clear_party() -> void:
 
 func instantiate_player(role_key : String) -> Dictionary:
 	#print("Spawning player with role: ", Global.ROLE_NAMES[role_key])
-	var player : Node3D = player_scene.instantiate()
+	var player : PlayableCharacter = player_scene.instantiate()
 	player.set_parameters(role_key, models[role_key], SPAWN_POSITIONS[role_key])
 	characters_spawn_node.add_child(player)
 	player.set_role_icon()
@@ -77,7 +78,7 @@ func instantiate_player(role_key : String) -> Dictionary:
 
 func instantiate_bot(role_key : String) -> void:
 	#print("Spawning bot with role: ", Global.ROLE_NAMES[role_key])
-	var bot : Node3D = bot_scene.instantiate()
+	var bot : PlayableCharacter = bot_scene.instantiate()
 	bot.set_parameters(role_key, models[role_key], SPAWN_POSITIONS[role_key])
 	characters_spawn_node.add_child(bot)
 	bot.set_role_icon()
@@ -85,5 +86,5 @@ func instantiate_bot(role_key : String) -> void:
 
 
 func on_toggle_focus(role_key: String):
-	for key in party:
+	for key: String in party:
 		party[key].set_focus_visible(key == role_key)

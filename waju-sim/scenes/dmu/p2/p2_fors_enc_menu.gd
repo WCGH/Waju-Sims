@@ -17,6 +17,7 @@ extends CanvasLayer
 @onready var even_position_button: OptionButton = %EvenPositionButton
 @onready var spec_button: CheckButton = %SpecButton
 @onready var player_bait_button: CheckButton = %PlayerBaitButton
+@onready var final_bait_button: OptionButton = %FinalBaitButton
 
 
 #@onready var flex_button: CheckButton = %FlexButton
@@ -34,6 +35,8 @@ func update_buttons():
 	odd_position_button.selected = DmuSavedVariables.save_data["settings"]["p2_fors_odd_tower_pos"]
 	even_position_button.selected = DmuSavedVariables.save_data["settings"]["p2_fors_even_tower_pos"]
 	spec_button.button_pressed = DmuSavedVariables.save_data["settings"]["p2_fors_special_rule"]
+	final_bait_button.selected = DmuSavedVariables.save_data["settings"]["p2_fors_final_bait"]
+
 
 func _on_encounter_config_button_pressed() -> void:
 	toggle_encounter_menu()
@@ -68,6 +71,7 @@ func _on_strat_button_item_selected(index: int) -> void:
 	GameEvents.emit_encounter_variable_saved("settings", "p2_fors_odd_tower_pos", strat_preset_dict["odd_position"])
 	GameEvents.emit_encounter_variable_saved("settings", "p2_fors_even_tower_pos", strat_preset_dict["even_position"])
 	GameEvents.emit_encounter_variable_saved("settings", "p2_fors_special_rule", strat_preset_dict["special_rule"])
+	GameEvents.emit_encounter_variable_saved("settings", "p2_fors_final_bait", strat_preset_dict["final_bait"])
 	update_buttons()
 
 
@@ -93,3 +97,7 @@ func _on_spec_button_pressed() -> void:
 
 func _on_player_bait_button_pressed() -> void:
 	GameEvents.emit_encounter_variable_saved("settings", "p2_fors_bait", player_bait_button.button_pressed)
+
+
+func _on_final_bait_button_item_selected(index: int) -> void:
+	GameEvents.emit_encounter_variable_saved("settings", "p2_fors_final_bait", index)
