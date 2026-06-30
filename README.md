@@ -2,7 +2,7 @@
 
 Download links:
 
-DMU: https://github.com/WCGH/Waju-Sims/releases/tag/dmu-0.2.x
+DMU: https://github.com/WCGH/Waju-Sims/releases/tag/dmu-0.3.x
 
 FRU: https://github.com/WCGH/FRU-Sim/releases/tag/v1.8
 
