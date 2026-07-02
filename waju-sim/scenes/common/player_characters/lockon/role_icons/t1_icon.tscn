@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwt0tgk120vpy"]
 
-[ext_resource type="Texture2D" uid="uid://d08jlse22swvx" path="res://assets/common/icons/job_icons/pld_icon.png" id="1_lsl5q"]
+[ext_resource type="Texture2D" uid="uid://r3tm7ser2hi6" path="res://assets/common/icons/job_icons/war_icon.png" id="1_lsl5q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65dy5"]
 transparency = 1
