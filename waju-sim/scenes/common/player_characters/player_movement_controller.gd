@@ -211,7 +211,10 @@ func _unhandled_input(event : InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			twist_input = - event.relative.x * mouse_sensitivity
-			pitch_input = - event.relative.y * mouse_sensitivity
+			if invert_y:
+				pitch_input = event.relative.y * mouse_sensitivity
+			else:
+				pitch_input = - event.relative.y * mouse_sensitivity
 			# Get left click movement to exclude click/drags
 			mouse_travel += event.relative
 	# Mouse button pressed.
@@ -293,7 +296,7 @@ func on_spectate_mode_changed() -> void:
 func on_variable_saved(_section: String, key: String, _value: Variant) -> void:
 	if key.contains("sens") or key == "invert_y":
 		mouse_sensitivity = BASE_MOUSE_SENS * SavedVariables.save_data["settings"]["mouse_sens"]
-		x_sensitivity = BASE_Y_SENS * SavedVariables.save_data["settings"]["x_sens"]
+		x_sensitivity = BASE_X_SENS * SavedVariables.save_data["settings"]["x_sens"]
 		y_sensitivity = BASE_Y_SENS * SavedVariables.save_data["settings"]["y_sens"]
 		invert_y = SavedVariables.save_data["settings"]["invert_y"]
 
