@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cjmyec6sin7kw"]
+[gd_scene load_steps=5 format=3 uid="uid://cjmyec6sin7kw"]
 
-[ext_resource type="Script" path="res://scenes/ui/cast_bars/enmity_cast_bar.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2"]
+[ext_resource type="Script" path="res://scenes/ui/cast_bars/enmity_cast_bar.gd" id="1_iy7ye"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2_vs4ae"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxgxx"]
 bg_color = Color(0.267, 0.267, 0.267, 0.741)
@@ -12,13 +12,13 @@ border_width_bottom = 2
 border_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_mop7f"]
-font = ExtResource("2")
+font = ExtResource("2_vs4ae")
 font_size = 15
 outline_size = 3
 outline_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [node name="EnmityCastBar" type="CanvasLayer" groups=["clone_cast_bar"]]
-script = ExtResource("1")
+script = ExtResource("1_iy7ye")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = -1

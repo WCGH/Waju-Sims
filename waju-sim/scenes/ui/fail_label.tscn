@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c3pv5d4jy0ae1"]
+[gd_scene load_steps=2 format=3 uid="uid://c3pv5d4jy0ae1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0rbnw"]
 font_color = Color(1, 0.27451, 0.309804, 1)

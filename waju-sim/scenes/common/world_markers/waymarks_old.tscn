@@ -1,14 +1,14 @@
-[gd_scene format=3 uid="uid://d1sb4478fx1ht"]
+[gd_scene load_steps=45 format=3 uid="uid://d1sb4478fx1ht"]
 
-[ext_resource type="Script" path="res://scenes/common/world_markers/waymarks.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://f7kctrmmkjk" path="res://assets/common/world_markers/A_Marker.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://dd47vn42b2lyh" path="res://assets/common/world_markers/B_Marker.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://cvjl18i0b0f0l" path="res://assets/common/world_markers/C_Marker.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://dhhnkkkt4raia" path="res://assets/common/world_markers/D_Marker.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://c03p84d41k3bm" path="res://assets/common/world_markers/1_Marker.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://b2dy7mjt5mljo" path="res://assets/common/world_markers/2_Marker.png" id="7"]
-[ext_resource type="Texture2D" uid="uid://w6ujpxnj6nsr" path="res://assets/common/world_markers/3_Marker.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://d0c8cti0ky1xx" path="res://assets/common/world_markers/4_Marker.png" id="9"]
+[ext_resource type="Script" path="res://scenes/common/world_markers/waymarks.gd" id="1_pc6tp"]
+[ext_resource type="Texture2D" uid="uid://f7kctrmmkjk" path="res://assets/common/world_markers/A_Marker.png" id="2_ysngh"]
+[ext_resource type="Texture2D" uid="uid://dd47vn42b2lyh" path="res://assets/common/world_markers/B_Marker.png" id="3_dyerv"]
+[ext_resource type="Texture2D" uid="uid://cvjl18i0b0f0l" path="res://assets/common/world_markers/C_Marker.png" id="4_1p6jm"]
+[ext_resource type="Texture2D" uid="uid://dhhnkkkt4raia" path="res://assets/common/world_markers/D_Marker.png" id="5_0tjcw"]
+[ext_resource type="Texture2D" uid="uid://c03p84d41k3bm" path="res://assets/common/world_markers/1_Marker.png" id="6_0rssg"]
+[ext_resource type="Texture2D" uid="uid://b2dy7mjt5mljo" path="res://assets/common/world_markers/2_Marker.png" id="7_05sbj"]
+[ext_resource type="Texture2D" uid="uid://w6ujpxnj6nsr" path="res://assets/common/world_markers/3_Marker.png" id="8_kapyv"]
+[ext_resource type="Texture2D" uid="uid://d0c8cti0ky1xx" path="res://assets/common/world_markers/4_Marker.png" id="9_rd4hj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_noq1t"]
 transparency = 1
@@ -43,7 +43,7 @@ cap_bottom = false
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2y44"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("2")
+albedo_texture = ExtResource("2_ysngh")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_gkywl"]
@@ -122,7 +122,7 @@ cap_bottom = false
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nvdn"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("3")
+albedo_texture = ExtResource("3_dyerv")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_47m5u"]
@@ -163,7 +163,7 @@ cap_bottom = false
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bri7u"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("4")
+albedo_texture = ExtResource("4_1p6jm")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0u7wr"]
@@ -204,7 +204,7 @@ cap_bottom = false
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lyex"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("5")
+albedo_texture = ExtResource("5_0tjcw")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_18el8"]
@@ -215,7 +215,7 @@ orientation = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q48nw"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("6")
+albedo_texture = ExtResource("6_0rssg")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nlg7y"]
@@ -226,7 +226,7 @@ orientation = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dlj1"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("7")
+albedo_texture = ExtResource("7_05sbj")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oyefj"]
@@ -237,7 +237,7 @@ orientation = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uw1ou"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("8")
+albedo_texture = ExtResource("8_kapyv")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fobpu"]
@@ -248,7 +248,7 @@ orientation = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xtly4"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("9")
+albedo_texture = ExtResource("9_rd4hj")
 billboard_mode = 1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_y7det"]
@@ -257,7 +257,7 @@ size = Vector2(2.439, 3.5)
 orientation = 2
 
 [node name="Waymarks" type="Node3D"]
-script = ExtResource("1")
+script = ExtResource("1_pc6tp")
 
 [node name="WM_A" type="Node3D" parent="."]
 unique_name_in_owner = true

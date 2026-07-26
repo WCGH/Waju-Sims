@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cri3gvnrtsbrf"]
 
-[ext_resource type="Script" uid="uid://j8p2e72iquxg" path="res://scenes/ui/cast_bars/enemy_cast_bar.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="2"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="3"]
+[ext_resource type="Script" uid="uid://j8p2e72iquxg" path="res://scenes/ui/cast_bars/enemy_cast_bar.gd" id="1_tfdro"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="2_xbowl"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="3_co3kv"]
 
 [sub_resource type="Theme" id="Theme_vadjc"]
-default_font = ExtResource("2")
+default_font = ExtResource("2_xbowl")
 default_font_size = 16
 
 [sub_resource type="LabelSettings" id="LabelSettings_lc2st"]
@@ -32,13 +32,13 @@ border_width_bottom = 2
 border_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_5gsfb"]
-font = ExtResource("3")
+font = ExtResource("3_co3kv")
 font_size = 15
 outline_size = 3
 outline_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [node name="EnemyCastBar" type="CanvasLayer" unique_id=1073225576 groups=["enemy_cast_bar"]]
-script = ExtResource("1")
+script = ExtResource("1_tfdro")
 
 [node name="Timer1" type="Timer" parent="." unique_id=167882473]
 one_shot = true

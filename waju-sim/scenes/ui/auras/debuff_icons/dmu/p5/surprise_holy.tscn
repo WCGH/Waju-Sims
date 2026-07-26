@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5kkoprtmt4kw"]
 
-[ext_resource type="Texture2D" uid="uid://cunxxmsk03mes" path="res://assets/dmu/debuff_icons/p5/surprise_holy.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cunxxmsk03mes" path="res://assets/dmu/debuff_icons/p5/surprise_holy.png" id="1_1dxru"]
 
 [node name="SurpriseHolyIcon" type="TextureRect" unique_id=917551237]
 offset_right = 24.0
@@ -8,6 +8,6 @@ offset_bottom = 32.0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 tooltip_text = "Surprise Holy"
-texture = ExtResource("1")
+texture = ExtResource("1_1dxru")
 expand_mode = 3
 metadata/debuff_name = "surprise_holy"

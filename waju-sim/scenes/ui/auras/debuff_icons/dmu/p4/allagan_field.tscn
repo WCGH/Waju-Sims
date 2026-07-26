@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b64h6ifneco6t"]
 
-[ext_resource type="Texture2D" uid="uid://muuo8jyepyxi" path="res://assets/dmu/debuff_icons/p4/allagan_field.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://muuo8jyepyxi" path="res://assets/dmu/debuff_icons/p4/allagan_field.png" id="1_teaft"]
 
 [node name="AllaganFieldIcon" type="TextureRect" unique_id=917551237]
 offset_right = 24.0
@@ -8,6 +8,6 @@ offset_bottom = 32.0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 tooltip_text = "Allagan Field"
-texture = ExtResource("1")
+texture = ExtResource("1_teaft")
 expand_mode = 3
 metadata/debuff_name = "allagan_field"

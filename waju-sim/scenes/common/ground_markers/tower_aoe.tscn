@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gnvuhphqkvtm"]
 
-[ext_resource type="Script" uid="uid://cl4btwl3mr58e" path="res://scenes/common/ground_markers/tower_aoe.gd" id="1"]
+[ext_resource type="Script" uid="uid://cl4btwl3mr58e" path="res://scenes/common/ground_markers/tower_aoe.gd" id="1_y1nkx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5vmc"]
 transparency = 1
@@ -252,7 +252,7 @@ _data = {
 [node name="TowerAoE" type="Area3D" unique_id=755364934]
 collision_layer = 0
 collision_mask = 4
-script = ExtResource("1")
+script = ExtResource("1_y1nkx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1576293896]
 mesh = SubResource("CylinderMesh_lli8a")

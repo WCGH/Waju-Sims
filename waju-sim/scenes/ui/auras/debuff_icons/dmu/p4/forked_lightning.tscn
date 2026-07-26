@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmhi4sys4ftfr"]
 
-[ext_resource type="Texture2D" uid="uid://bov2h7l4clxen" path="res://assets/dmu/debuff_icons/p4/forked_lightning.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bov2h7l4clxen" path="res://assets/dmu/debuff_icons/p4/forked_lightning.png" id="1_ltnug"]
 
 [node name="ForkedLightningIcon" type="TextureRect" unique_id=917551237]
 offset_right = 24.0
@@ -8,6 +8,6 @@ offset_bottom = 32.0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 tooltip_text = "Forked Lightning"
-texture = ExtResource("1")
+texture = ExtResource("1_ltnug")
 expand_mode = 3
 metadata/debuff_name = "forked_lightning"

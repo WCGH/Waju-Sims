@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b317aqshya88u"]
 
-[ext_resource type="Texture2D" uid="uid://yl5x3vlv0pfy" path="res://assets/dmu/lockon/defam_detail.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://yl5x3vlv0pfy" path="res://assets/dmu/lockon/defam_detail.png" id="1_4hqpf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wba5"]
 transparency = 1
 shading_mode = 0
 albedo_color = Color(1.353256, 1.353256, 1.353256, 0.749)
-albedo_texture = ExtResource("1")
+albedo_texture = ExtResource("1_4hqpf")
 uv1_offset = Vector3(0, -0.01, 0)
 billboard_mode = 1
 

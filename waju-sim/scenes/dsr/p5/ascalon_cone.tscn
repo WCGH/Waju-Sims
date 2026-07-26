@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfd4a0c4x2y8u"]
 
-[ext_resource type="Script" uid="uid://u5k6t2hr3a4a" path="res://scenes/dsr/p5/ascalon_cone.gd" id="1"]
+[ext_resource type="Script" uid="uid://u5k6t2hr3a4a" path="res://scenes/dsr/p5/ascalon_cone.gd" id="1_gcock"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhqjv"]
 transparency = 1
@@ -91,7 +91,7 @@ _data = {
 [node name="AscalonCone" type="Area3D" unique_id=1081254473]
 collision_layer = 0
 collision_mask = 4
-script = ExtResource("1")
+script = ExtResource("1_gcock")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=893377254]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 21.5)

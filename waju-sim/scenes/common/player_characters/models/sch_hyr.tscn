@@ -1,50 +1,50 @@
 [gd_scene format=4 uid="uid://cly2ymb2jubij"]
 
-[ext_resource type="Texture2D" uid="uid://bf7nogx6jwe0x" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201b0001_a_d.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://ok3ej33ogtrf" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201b0001_a_e.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://dkbmkuk7qytco" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201b0001_a_n.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://cdy3xc8ux6m5j" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0777_glv_a_d.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://vt4d11mevgjb" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0777_glv_a_e.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://d1gsyrwre5lx2" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0777_glv_a_n.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://2bjoxanwkfy7" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0890_top_a_d.png" id="7"]
-[ext_resource type="Texture2D" uid="uid://dds7uiyfw2fl" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0890_top_a_e.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://bxyida4sf0nxl" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0890_top_a_n.png" id="9"]
-[ext_resource type="Texture2D" uid="uid://dogo5xqvwsmil" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6183_sho_a_d.png" id="10"]
-[ext_resource type="Texture2D" uid="uid://cqwopoioagdp2" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6183_sho_a_e.png" id="11"]
-[ext_resource type="Texture2D" uid="uid://1seg3w0dfniy" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6183_sho_a_n.png" id="12"]
-[ext_resource type="Texture2D" uid="uid://c0nhl8m646r7d" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_dwn_a_d.png" id="13"]
-[ext_resource type="Texture2D" uid="uid://bhwm4nj2dxtmq" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_dwn_a_e.png" id="14"]
-[ext_resource type="Texture2D" uid="uid://bc5855mp3l70s" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_dwn_a_n.png" id="15"]
-[ext_resource type="Texture2D" uid="uid://d0wclxvpu14tg" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_met_a_d.png" id="16"]
-[ext_resource type="Texture2D" uid="uid://c08qrpfcx3xpy" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_met_a_e.png" id="17"]
-[ext_resource type="Texture2D" uid="uid://bys5thx4qgp3f" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_met_a_n.png" id="18"]
-[ext_resource type="Texture2D" uid="uid://0wfc4e6ussfp" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_fac_a_d.png" id="19"]
-[ext_resource type="Texture2D" uid="uid://du87keixvgcmk" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_fac_a_e.png" id="20"]
-[ext_resource type="Texture2D" uid="uid://crkeaepqcuyhu" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_fac_a_n.png" id="21"]
-[ext_resource type="Texture2D" uid="uid://dnte4d3vlbpn5" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_a_d.png" id="22"]
-[ext_resource type="Texture2D" uid="uid://p73c7kxehu7r" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_a_e.png" id="23"]
-[ext_resource type="Texture2D" uid="uid://cpux5hjp1dvnv" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_a_n.png" id="24"]
-[ext_resource type="Texture2D" uid="uid://qcpalafu2jnq" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_b_d.png" id="25"]
-[ext_resource type="Texture2D" uid="uid://cpv6n7qqc2c40" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_b_e.png" id="26"]
-[ext_resource type="Texture2D" uid="uid://srnev57uekfn" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_b_n.png" id="27"]
-[ext_resource type="Texture2D" uid="uid://bs3oaisg12edm" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_iri_a_d.png" id="28"]
-[ext_resource type="Texture2D" uid="uid://dkq2hdgceblle" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_iri_a_e.png" id="29"]
-[ext_resource type="Texture2D" uid="uid://8ep6p0ke1n8p" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_iri_a_n.png" id="30"]
-[ext_resource type="AnimationNodeStateMachine" uid="uid://d2j17lpdcekow" path="res://scenes/common/player_characters/models/anim_tree/miq_fem_anim_node_state.tres" id="31"]
+[ext_resource type="Texture2D" uid="uid://bf7nogx6jwe0x" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201b0001_a_d.png" id="1_eanue"]
+[ext_resource type="Texture2D" uid="uid://ok3ej33ogtrf" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201b0001_a_e.png" id="2_sn3j4"]
+[ext_resource type="Texture2D" uid="uid://dkbmkuk7qytco" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201b0001_a_n.png" id="3_rxuar"]
+[ext_resource type="Texture2D" uid="uid://cdy3xc8ux6m5j" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0777_glv_a_d.png" id="4_ruja8"]
+[ext_resource type="Texture2D" uid="uid://vt4d11mevgjb" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0777_glv_a_e.png" id="5_6scse"]
+[ext_resource type="Texture2D" uid="uid://d1gsyrwre5lx2" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0777_glv_a_n.png" id="6_4w0g6"]
+[ext_resource type="Texture2D" uid="uid://2bjoxanwkfy7" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0890_top_a_d.png" id="7_uh4wm"]
+[ext_resource type="Texture2D" uid="uid://dds7uiyfw2fl" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0890_top_a_e.png" id="8_femtl"]
+[ext_resource type="Texture2D" uid="uid://bxyida4sf0nxl" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e0890_top_a_n.png" id="9_fu2ur"]
+[ext_resource type="Texture2D" uid="uid://dogo5xqvwsmil" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6183_sho_a_d.png" id="10_y0gnj"]
+[ext_resource type="Texture2D" uid="uid://cqwopoioagdp2" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6183_sho_a_e.png" id="11_ystnl"]
+[ext_resource type="Texture2D" uid="uid://1seg3w0dfniy" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6183_sho_a_n.png" id="12_fkyvo"]
+[ext_resource type="Texture2D" uid="uid://c0nhl8m646r7d" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_dwn_a_d.png" id="13_iiwq8"]
+[ext_resource type="Texture2D" uid="uid://bhwm4nj2dxtmq" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_dwn_a_e.png" id="14_3ppne"]
+[ext_resource type="Texture2D" uid="uid://bc5855mp3l70s" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_dwn_a_n.png" id="15_uqrxs"]
+[ext_resource type="Texture2D" uid="uid://d0wclxvpu14tg" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_met_a_d.png" id="16_qghvu"]
+[ext_resource type="Texture2D" uid="uid://c08qrpfcx3xpy" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_met_a_e.png" id="17_cfcyq"]
+[ext_resource type="Texture2D" uid="uid://bys5thx4qgp3f" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0101e6185_met_a_n.png" id="18_mb27a"]
+[ext_resource type="Texture2D" uid="uid://0wfc4e6ussfp" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_fac_a_d.png" id="19_tx4pt"]
+[ext_resource type="Texture2D" uid="uid://du87keixvgcmk" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_fac_a_e.png" id="20_idu1o"]
+[ext_resource type="Texture2D" uid="uid://crkeaepqcuyhu" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_fac_a_n.png" id="21_h65p5"]
+[ext_resource type="Texture2D" uid="uid://dnte4d3vlbpn5" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_a_d.png" id="22_g71io"]
+[ext_resource type="Texture2D" uid="uid://p73c7kxehu7r" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_a_e.png" id="23_uupsd"]
+[ext_resource type="Texture2D" uid="uid://cpux5hjp1dvnv" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_a_n.png" id="24_il1it"]
+[ext_resource type="Texture2D" uid="uid://qcpalafu2jnq" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_b_d.png" id="25_klvkj"]
+[ext_resource type="Texture2D" uid="uid://cpv6n7qqc2c40" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_b_e.png" id="26_sxcke"]
+[ext_resource type="Texture2D" uid="uid://srnev57uekfn" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_etc_b_n.png" id="27_hf0a7"]
+[ext_resource type="Texture2D" uid="uid://bs3oaisg12edm" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_iri_a_d.png" id="28_trdqj"]
+[ext_resource type="Texture2D" uid="uid://dkq2hdgceblle" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_iri_a_e.png" id="29_qefra"]
+[ext_resource type="Texture2D" uid="uid://8ep6p0ke1n8p" path="res://assets/common/player_characters/models/sch/sch_hyr_mt_c0201f0202_iri_a_n.png" id="30_w4pn0"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://d2j17lpdcekow" path="res://scenes/common/player_characters/models/anim_tree/miq_fem_anim_node_state.tres" id="31_sn3j4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_di4cn"]
 resource_name = "mt_c0201b0001_a.001"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("1")
+albedo_texture = ExtResource("1_eanue")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("2")
+emission_texture = ExtResource("2_sn3j4")
 normal_enabled = true
-normal_texture = ExtResource("3")
+normal_texture = ExtResource("3_rxuar")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5qtoa"]
@@ -611,15 +611,15 @@ bind/176/pose = Transform3D(1, 0, 0, 0, 1, -7.54979e-08, 0, 7.54979e-08, 1, 0, 0
 resource_name = "mt_c0101e0777_glv_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("4")
+albedo_texture = ExtResource("4_ruja8")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("5")
+emission_texture = ExtResource("5_6scse")
 normal_enabled = true
-normal_texture = ExtResource("6")
+normal_texture = ExtResource("6_4w0g6")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nxqnm"]
@@ -651,15 +651,15 @@ metadata/extras = {
 resource_name = "mt_c0201b0001_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("1")
+albedo_texture = ExtResource("1_eanue")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("2")
+emission_texture = ExtResource("2_sn3j4")
 normal_enabled = true
-normal_texture = ExtResource("3")
+normal_texture = ExtResource("3_rxuar")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rm2t2"]
@@ -684,15 +684,15 @@ blend_shape_mode = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5a13"]
 resource_name = "mt_c0101e0890_top_a"
 transparency = 4
-albedo_texture = ExtResource("7")
+albedo_texture = ExtResource("7_uh4wm")
 metallic = 1.0
 roughness = 0.93
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("8")
+emission_texture = ExtResource("8_femtl")
 normal_enabled = true
-normal_texture = ExtResource("9")
+normal_texture = ExtResource("9_fu2ur")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5wdcb"]
@@ -794,15 +794,15 @@ metadata/extras = {
 resource_name = "mt_c0101e6183_sho_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("10")
+albedo_texture = ExtResource("10_y0gnj")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("11")
+emission_texture = ExtResource("11_ystnl")
 normal_enabled = true
-normal_texture = ExtResource("12")
+normal_texture = ExtResource("12_fkyvo")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_j8p6r"]
@@ -859,15 +859,15 @@ metadata/extras = {
 resource_name = "mt_c0101e6185_dwn_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("13")
+albedo_texture = ExtResource("13_iiwq8")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("14")
+emission_texture = ExtResource("14_3ppne")
 normal_enabled = true
-normal_texture = ExtResource("15")
+normal_texture = ExtResource("15_uqrxs")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fkkrt"]
@@ -973,15 +973,15 @@ metadata/extras = {
 resource_name = "mt_c0101e6185_met_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("16")
+albedo_texture = ExtResource("16_qghvu")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("17")
+emission_texture = ExtResource("17_cfcyq")
 normal_enabled = true
-normal_texture = ExtResource("18")
+normal_texture = ExtResource("18_mb27a")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_id245"]
@@ -1028,15 +1028,15 @@ blend_shape_mode = 0
 resource_name = "mt_c0201f0202_fac_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("19")
+albedo_texture = ExtResource("19_tx4pt")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("20")
+emission_texture = ExtResource("20_idu1o")
 normal_enabled = true
-normal_texture = ExtResource("21")
+normal_texture = ExtResource("21_h65p5")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ft147"]
@@ -1083,15 +1083,15 @@ blend_shape_mode = 0
 resource_name = "mt_c0201f0202_etc_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("22")
+albedo_texture = ExtResource("22_g71io")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("23")
+emission_texture = ExtResource("23_uupsd")
 normal_enabled = true
-normal_texture = ExtResource("24")
+normal_texture = ExtResource("24_il1it")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_juu5s"]
@@ -1156,15 +1156,15 @@ blend_shape_mode = 0
 resource_name = "mt_c0201f0202_etc_b"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("25")
+albedo_texture = ExtResource("25_klvkj")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("26")
+emission_texture = ExtResource("26_sxcke")
 normal_enabled = true
-normal_texture = ExtResource("27")
+normal_texture = ExtResource("27_hf0a7")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c1meu"]
@@ -1191,15 +1191,15 @@ blend_shape_mode = 0
 resource_name = "mt_c0201f0202_iri_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("28")
+albedo_texture = ExtResource("28_trdqj")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("29")
+emission_texture = ExtResource("29_qefra")
 normal_enabled = true
-normal_texture = ExtResource("30")
+normal_texture = ExtResource("30_w4pn0")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_re5ng"]
@@ -18232,7 +18232,7 @@ skin = SubResource("Skin_21i2w")
 libraries/ = SubResource("AnimationLibrary_0l7kh")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=954762035]
-tree_root = ExtResource("31")
+tree_root = ExtResource("31_sn3j4")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/grounded = false
 parameters/conditions/grounded_run = false

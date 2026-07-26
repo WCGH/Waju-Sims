@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://douybqysqel5p"]
 
-[ext_resource type="Texture2D" uid="uid://bonuw26q576nj" path="res://assets/common/player_characters/lockon/limit_cut/lc_8.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bonuw26q576nj" path="res://assets/common/player_characters/lockon/limit_cut/lc_8.png" id="1_233rs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eeg7e"]
 transparency = 1
 albedo_color = Color(0.92156863, 0.92156863, 0.92156863, 1)
-albedo_texture = ExtResource("1")
+albedo_texture = ExtResource("1_233rs")
 rim_enabled = true
 rim = 0.1
 billboard_mode = 1

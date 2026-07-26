@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dd6kuxeh6o048"]
+[gd_scene load_steps=6 format=4 uid="uid://dd6kuxeh6o048"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfrwv"]
 resource_name = "metal"
