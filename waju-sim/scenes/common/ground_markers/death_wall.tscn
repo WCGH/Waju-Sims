@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://b5a8l81gltuhy"]
+[gd_scene load_steps=7 format=3 uid="uid://b5a8l81gltuhy"]
 
-[ext_resource type="Script" path="res://scenes/common/ground_markers/death_wall.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://dd6kuxeh6o048" path="res://scenes/common/ground_markers/new_quadrant.tscn" id="2"]
+[ext_resource type="Script" path="res://scenes/common/ground_markers/death_wall.gd" id="1_3h0us"]
+[ext_resource type="PackedScene" uid="uid://dd6kuxeh6o048" path="res://scenes/common/ground_markers/new_quadrant.tscn" id="2_bu4f5"]
 
 [sub_resource type="Shader" id="Shader_wo7nj"]
 code = "shader_type spatial;
@@ -26,7 +26,6 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_na6a0"]
 render_priority = 0
-next_pass = null
 shader = SubResource("Shader_wo7nj")
 shader_parameter/size = 0.219
 shader_parameter/alpha = 0.117
@@ -45,29 +44,29 @@ height = 7.0
 radius = 43.0
 
 [node name="DeathWall" type="Node3D"]
-script = ExtResource("1")
+script = ExtResource("1_3h0us")
 
-[node name="NewQuadrant" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant" parent="." instance=ExtResource("2_bu4f5")]
 
-[node name="NewQuadrant2" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant2" parent="." instance=ExtResource("2_bu4f5")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 
-[node name="NewQuadrant3" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant3" parent="." instance=ExtResource("2_bu4f5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="NewQuadrant4" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant4" parent="." instance=ExtResource("2_bu4f5")]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0, 0, 0)
 
-[node name="NewQuadrant5" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant5" parent="." instance=ExtResource("2_bu4f5")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="NewQuadrant6" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant6" parent="." instance=ExtResource("2_bu4f5")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0, 0)
 
-[node name="NewQuadrant7" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant7" parent="." instance=ExtResource("2_bu4f5")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="NewQuadrant8" parent="." instance=ExtResource("2")]
+[node name="NewQuadrant8" parent="." instance=ExtResource("2_bu4f5")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="."]

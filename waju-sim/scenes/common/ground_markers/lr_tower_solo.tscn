@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dwwhbxcm8rfsu"]
+[gd_scene load_steps=18 format=3 uid="uid://dwwhbxcm8rfsu"]
 
-[ext_resource type="Script" path="res://scenes/common/ground_markers/lr_tower_solo.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/common/ground_markers/lr_tower_solo.gd" id="1_1u3ao"]
 
 [sub_resource type="Shader" id="Shader_wo7nj"]
 code = "shader_type spatial;
@@ -25,7 +25,6 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rb0oq"]
 render_priority = 0
-next_pass = null
 shader = SubResource("Shader_wo7nj")
 shader_parameter/size = 0.21
 shader_parameter/alpha = 0.235
@@ -39,7 +38,6 @@ height = 0.001
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hpvlw"]
 render_priority = 0
-next_pass = null
 shader = SubResource("Shader_wo7nj")
 shader_parameter/size = 0.224
 shader_parameter/alpha = 0.235
@@ -53,7 +51,6 @@ height = 0.001
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hbiea"]
 render_priority = 0
-next_pass = null
 shader = SubResource("Shader_wo7nj")
 shader_parameter/size = 0.163
 shader_parameter/alpha = 0.236
@@ -185,7 +182,7 @@ _data = {
 
 [node name="LRTowerSolo" type="Node3D"]
 transform = Transform3D(0.96, 0, 0, 0, 0.96, 0, 0, 0, 0.96, 0, 0, 0)
-script = ExtResource("1")
+script = ExtResource("1_1u3ao")
 
 [node name="OutterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112, 0)

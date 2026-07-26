@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dx487dq1ad7a0"]
 
-[ext_resource type="Texture2D" uid="uid://cjxlheve43ayr" path="res://assets/dmu/arenas/p5/DMU_P5_Arena.png" id="1"]
-[ext_resource type="Texture2D" path="res://assets/dmu/arenas/dmu_arena_z3oa_a0_flo00_n.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cjxlheve43ayr" path="res://assets/dmu/arenas/p5/DMU_P5_Arena.png" id="1_7757b"]
+[ext_resource type="Texture2D" uid="uid://o56b5nm6xqpl" path="res://assets/fru/p3/arena_fixed/P3Green_bg_ex3_01_nvt_n4_goe_n4gw_texture_n4gw_a1_flo04_n.png" id="2_egqh1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnedg"]
 cull_mode = 2
-albedo_texture = ExtResource("1")
+albedo_texture = ExtResource("1_7757b")
 normal_scale = 0.0
-normal_texture = ExtResource("2")
+normal_texture = ExtResource("2_egqh1")
 uv1_scale = Vector3(2, 2, 2)
 uv1_offset = Vector3(-3, -1, 0)
 point_size = 73.5

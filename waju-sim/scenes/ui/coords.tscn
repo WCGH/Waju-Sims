@@ -1,12 +1,13 @@
-[gd_scene format=3 uid="uid://jcbpndkhehjl"]
+[gd_scene load_steps=3 format=3 uid="uid://jcbpndkhehjl"]
 
-[ext_resource type="Script" path="res://scenes/ui/coords.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/coords.gd" id="1_0hb85"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n540m"]
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Coords" type="Label"]
+anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -20,7 +21,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 22
 text = "0,12"
 label_settings = SubResource("LabelSettings_n540m")
-script = ExtResource("1")
+script = ExtResource("1_0hb85")
 
 [node name="FPSLabel" type="Label" parent="."]
 unique_name_in_owner = true
