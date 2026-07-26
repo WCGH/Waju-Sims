@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://fiqgmde1atj1"]
 
-[ext_resource type="Texture2D" uid="uid://b3b6b4fwcxcxv" path="res://assets/dmu/lockon/cone_detail.png" id="1_4yls8"]
+[ext_resource type="Texture2D" uid="uid://b3b6b4fwcxcxv" path="res://assets/dmu/lockon/cone_detail.png" id="1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qsws"]
 transparency = 1
 shading_mode = 0
 albedo_color = Color(1.353256, 1.353256, 1.353256, 0.75000006)
-albedo_texture = ExtResource("1_4yls8")
+albedo_texture = ExtResource("1")
 uv1_offset = Vector3(0, -0.01, 0)
 billboard_mode = 1
 

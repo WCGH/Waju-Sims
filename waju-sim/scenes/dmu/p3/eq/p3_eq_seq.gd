@@ -9,7 +9,7 @@ extends Node
 
 
 # Preloaded scenes
-const BIG_KEFKA_UID := "uid://ddmbbusmjpmqg"
+const BIG_KEFKA_SCENE_PATH := "res://scenes/dmu/enemies/big_kefka.tscn"
 const BLACK_HOLE_SET_UID := "uid://ddu02jcnuf02w"
 
 enum Strat {KB}
@@ -222,7 +222,6 @@ var tether_targets_kb: Dictionary
 func start_sequence(new_party: Dictionary) -> void:
 	assert(new_party != null, "Error. Where the party at?")
 	gac.preload_aoe(["line", "circle", "cone"])
-	ResourceLoader.load_threaded_request(BIG_KEFKA_UID)
 	ResourceLoader.load_threaded_request(BLACK_HOLE_SET_UID)
 	target_controller.add_targetable_npc(chaos)
 	target_controller.add_targetable_npc(exdeath)
@@ -417,7 +416,7 @@ func move_eq_conga():
 
 # 0:27.0 show big kefka
 func spawn_big_kefka():
-	var scene: PackedScene = ResourceLoader.load_threaded_get(BIG_KEFKA_UID)
+	var scene: PackedScene = load(BIG_KEFKA_SCENE_PATH)
 	big_kefka = scene.instantiate()
 	get_tree().get_first_node_in_group("enemies_layer").add_child(big_kefka)
 	big_kefka.rotation_degrees.y = kefka_rotation_factor * 45.0

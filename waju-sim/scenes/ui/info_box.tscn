@@ -1,27 +1,27 @@
 [gd_scene format=3 uid="uid://cmakti71sjg46"]
 
-[ext_resource type="Script" uid="uid://bgckhx2xqxuvr" path="res://scenes/ui/info_box.gd" id="1_jdn8w"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2_hfmnb"]
-[ext_resource type="Texture2D" uid="uid://i4i3xnrggu0f" path="res://assets/common/icons/ui_icons/info.png" id="3_gqibj"]
+[ext_resource type="Script" uid="uid://bgckhx2xqxuvr" path="res://scenes/ui/info_box.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2"]
+[ext_resource type="Texture2D" uid="uid://i4i3xnrggu0f" path="res://assets/common/icons/ui_icons/info.png" id="3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o4brj"]
-font = ExtResource("2_hfmnb")
+font = ExtResource("2")
 font_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_wy18i"]
-font = ExtResource("2_hfmnb")
+font = ExtResource("2")
 font_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_7q6ll"]
-font = ExtResource("2_hfmnb")
+font = ExtResource("2")
 font_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_t0686"]
-font = ExtResource("2_hfmnb")
+font = ExtResource("2")
 font_size = 12
 
 [node name="InfoBox" type="CanvasLayer" unique_id=1758728692]
-script = ExtResource("1_jdn8w")
+script = ExtResource("1")
 
 [node name="BottomRightContainer" type="VBoxContainer" parent="." unique_id=460315515]
 anchors_preset = 3
@@ -81,7 +81,7 @@ visible = false
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 8
-texture_normal = ExtResource("3_gqibj")
+texture_normal = ExtResource("3")
 ignore_texture_size = true
 stretch_mode = 0
 

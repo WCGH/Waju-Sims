@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://csrqd4fou4reh"]
 
-[ext_resource type="Texture2D" uid="uid://dw1v48hmekvjl" path="res://assets/common/icons/debuff_icons/magic_vuln.png" id="1_s2hpy"]
+[ext_resource type="Texture2D" uid="uid://dw1v48hmekvjl" path="res://assets/common/icons/debuff_icons/magic_vuln.png" id="1"]
 
-[node name="PlayerDebuff" type="VBoxContainer"]
+[node name="PlayerDebuff" type="VBoxContainer" unique_id=1662759699]
 
-[node name="DebuffIcon" type="TextureRect" parent="."]
+[node name="DebuffIcon" type="TextureRect" parent="." unique_id=1388072353]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 tooltip_text = "High Jump Target"
-texture = ExtResource("1_s2hpy")
+texture = ExtResource("1")
 
-[node name="TimeLabel" type="Label" parent="."]
+[node name="TimeLabel" type="Label" parent="." unique_id=648458729]
 layout_mode = 2
 text = "11.0"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=2119545216]

@@ -14,16 +14,18 @@ class_name Sequence
 func _ready() -> void:
 	# Connect to window resize signal.
 	#get_tree().get_root().size_changed.connect(on_window_size_changed)
-	# Set screen size.
-	print(get_tree().get_root().initial_position)
-	var screen_res := SavedVariables.get_screen_res()  # If misbehaving, check on_ready order.
-	var screen_pos = SavedVariables.get_screen_pos()
-	if screen_pos != null:
-		get_tree().get_root().set_position(screen_pos)
-	get_tree().get_root().borderless = false
-	get_tree().get_root().set_size(screen_res)
-	if SavedVariables.save_data["settings"]["maximized"]:
-		get_tree().get_root().set_mode(Window.MODE_MAXIMIZED)
+	var session := get_node("/root/DmuSession")
+	if !session.is_multiplayer_session():
+		# Set screen size.
+		print(get_tree().get_root().initial_position)
+		var screen_res := SavedVariables.get_screen_res()  # If misbehaving, check on_ready order.
+		var screen_pos = SavedVariables.get_screen_pos()
+		if screen_pos != null:
+			get_tree().get_root().set_position(screen_pos)
+		get_tree().get_root().borderless = false
+		get_tree().get_root().set_size(screen_res)
+		if SavedVariables.save_data["settings"]["maximized"]:
+			get_tree().get_root().set_mode(Window.MODE_MAXIMIZED)
 	# Set UI
 	GameEvents.emit_ui_ready()
 	# Start sequence.
@@ -33,6 +35,9 @@ func _ready() -> void:
 func start_new_sequence() -> void:
 	var player_role_index : int = SavedVariables.save_data["settings"]["player_role"]
 	var selected_role : String = Global.ROLE_KEYS[player_role_index]
+	var session := get_node("/root/DmuSession")
+	if session.is_multiplayer_session():
+		selected_role = session.local_role_key
 	var party : Dictionary = party_controller.instantiate_party(selected_role)
 	encounter_controller.start_encounter(party)
 
@@ -58,7 +63,7 @@ func on_window_size_changed() -> void:
 
 func _on_reset_button_pressed() -> void:
 	save_variables()
-	get_tree().reload_current_scene()
+	get_node("/root/DmuSession").request_restart()
 
 
 #func _on_main_menu_button_pressed() -> void:

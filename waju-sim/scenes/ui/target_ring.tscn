@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://erhloa2kx3on"]
+[gd_scene format=3 uid="uid://erhloa2kx3on"]
 
-[ext_resource type="PackedScene" uid="uid://trb0x4j3s3fl" path="res://assets/common/target_rings/target_semi.glb" id="1_16cq8"]
-[ext_resource type="Script" path="res://scenes/ui/target_ring.gd" id="2_dq4i3"]
+[ext_resource type="PackedScene" uid="uid://trb0x4j3s3fl" path="res://assets/common/target_rings/target_semi.glb" id="1"]
+[ext_resource type="Script" path="res://scenes/ui/target_ring.gd" id="2"]
 
 [sub_resource type="Animation" id="Animation_h2l5k"]
 length = 0.001
@@ -65,9 +65,9 @@ _data = {
 "grow_in": SubResource("Animation_mggay")
 }
 
-[node name="TargetRing" instance=ExtResource("1_16cq8")]
+[node name="TargetRing" instance=ExtResource("1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0189204, 0)
-script = ExtResource("2_dq4i3")
+script = ExtResource("2")
 
 [node name="Trace" parent="." index="0"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -1.43104, 0.026, 0)

@@ -1,29 +1,29 @@
 [gd_scene format=4 uid="uid://cw8xefixsj3rp"]
 
-[ext_resource type="Script" uid="uid://cg65htixcko1x" path="res://scenes/dmu/enemies/exdeath.gd" id="1_tj7af"]
-[ext_resource type="Texture2D" uid="uid://bwrhfnllbw74g" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_b_d.png" id="1_vdniy"]
-[ext_resource type="Texture2D" uid="uid://bsc2cbcr4yrmw" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_b_e.png" id="2_tj7af"]
-[ext_resource type="Texture2D" uid="uid://4kfmdjmtaeax" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_b_n.png" id="3_m4f0g"]
-[ext_resource type="Texture2D" uid="uid://cau2bep7dhnc2" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_a_d.png" id="4_casv0"]
-[ext_resource type="Texture2D" uid="uid://ckgqkgrmo8t4o" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_a_e.png" id="5_8wmd1"]
-[ext_resource type="Texture2D" uid="uid://cvoj1fu7b5yo3" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_a_n.png" id="6_ac8ws"]
-[ext_resource type="Texture2D" uid="uid://jwiuqt21fk0" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_c_d.png" id="7_eds4n"]
-[ext_resource type="Texture2D" uid="uid://d1ums7hbr5gy" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_c_e.png" id="8_yiyhc"]
-[ext_resource type="Texture2D" uid="uid://dmolplbja52u3" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_c_n.png" id="9_4t262"]
+[ext_resource type="Script" uid="uid://cg65htixcko1x" path="res://scenes/dmu/enemies/exdeath.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bwrhfnllbw74g" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_b_d.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bsc2cbcr4yrmw" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_b_e.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://4kfmdjmtaeax" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_b_n.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cau2bep7dhnc2" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_a_d.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ckgqkgrmo8t4o" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_a_e.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cvoj1fu7b5yo3" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_a_n.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://jwiuqt21fk0" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_c_d.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://d1ums7hbr5gy" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_c_e.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dmolplbja52u3" path="res://assets/dmu/enemies/exdeath/exdeath_mt_m0109b0001_c_n.png" id="10"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2bae"]
 resource_name = "mt_m0109b0001_b"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("1_vdniy")
+albedo_texture = ExtResource("2")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("2_tj7af")
+emission_texture = ExtResource("3")
 normal_enabled = true
-normal_texture = ExtResource("3_m4f0g")
+normal_texture = ExtResource("4")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_m1dun"]
@@ -380,15 +380,15 @@ blend_shape_mode = 0
 resource_name = "mt_m0109b0001_a"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("4_casv0")
+albedo_texture = ExtResource("5")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("5_8wmd1")
+emission_texture = ExtResource("6")
 normal_enabled = true
-normal_texture = ExtResource("6_ac8ws")
+normal_texture = ExtResource("7")
 disable_receive_shadows = true
 metadata/_gltf_primary_texture_coord = 0
 
@@ -436,15 +436,15 @@ blend_shape_mode = 0
 resource_name = "mt_m0109b0001_c"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("7_eds4n")
+albedo_texture = ExtResource("8")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("8_yiyhc")
+emission_texture = ExtResource("9")
 normal_enabled = true
-normal_texture = ExtResource("9_4t262")
+normal_texture = ExtResource("10")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1eohw"]
@@ -20784,6 +20784,8 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hsd6q"]
+states/End/node = null
+states/Start/node = null
 states/Start/position = Vector2(406, 51)
 states/attack/node = SubResource("AnimationNodeAnimation_tj7af")
 states/attack/position = Vector2(552, 236)
@@ -20800,7 +20802,7 @@ states/walk/position = Vector2(552, 127)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_ac8ws"), "attack_idle", "attack", SubResource("AnimationNodeStateMachineTransition_eds4n"), "attack", "walk", SubResource("AnimationNodeStateMachineTransition_yiyhc"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_4t262"), "attack_idle", "idle", SubResource("AnimationNodeStateMachineTransition_s8aq4"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_83vxn"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_7y3f5"), "attack", "attack_idle", SubResource("AnimationNodeStateMachineTransition_ueew0"), "idle", "attack_idle", SubResource("AnimationNodeStateMachineTransition_cxcqf"), "idle", "generic_cast", SubResource("AnimationNodeStateMachineTransition_mpkxm"), "generic_cast", "idle", SubResource("AnimationNodeStateMachineTransition_ub7io"), "idle", "slash", SubResource("AnimationNodeStateMachineTransition_wk0qf"), "slash", "idle", SubResource("AnimationNodeStateMachineTransition_asc7c")]
 
 [node name="Exdeath" type="Node3D" unique_id=366027112]
-script = ExtResource("1_tj7af")
+script = ExtResource("1")
 
 [node name="m0109b0001" type="Node3D" parent="." unique_id=1175516445]
 transform = Transform3D(-5, -4.371139e-07, 1.9106854e-14, 0, -2.1855695e-07, -5, 4.371139e-07, -5, 2.1855695e-07, 0, 0, 0)

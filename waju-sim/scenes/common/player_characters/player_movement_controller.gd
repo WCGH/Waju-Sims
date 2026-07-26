@@ -65,6 +65,9 @@ func _ready() -> void:
 	# Apply saved options
 	camera_distance = SavedVariables.save_data["settings"]["camera_distance"]
 	camera_spring_arm.spring_length = camera_distance
+	camera.position.z = camera_distance
+	camera_spring_arm.force_raycast_update()
+	camera.make_current()
 	mouse_sensitivity *= SavedVariables.save_data["settings"]["mouse_sens"]
 	x_sensitivity *= SavedVariables.save_data["settings"]["x_sens"]
 	y_sensitivity *= SavedVariables.save_data["settings"]["y_sens"]

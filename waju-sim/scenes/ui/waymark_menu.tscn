@@ -1,34 +1,34 @@
 [gd_scene format=3 uid="uid://cbimodxf0fbhu"]
 
-[ext_resource type="Script" uid="uid://btvbqdbpr0lq5" path="res://scenes/ui/waymark_menu.gd" id="1_sqrhw"]
-[ext_resource type="Texture2D" uid="uid://glmlxtvb0wx7" path="res://assets/common/world_markers/wm_menu_trans.png" id="2_qx7ww"]
-[ext_resource type="Texture2D" uid="uid://bdlrvfp5ys0c4" path="res://assets/common/world_markers/wm_menu_collapsed.png" id="3_ri3rt"]
-[ext_resource type="Texture2D" uid="uid://d0lmgkhpr4k37" path="res://assets/common/world_markers/wm_a_button.png" id="4_bfals"]
-[ext_resource type="Texture2D" uid="uid://b0tv83kyk8p4c" path="res://assets/common/world_markers/wm_a_highlight.png" id="5_h3bkw"]
-[ext_resource type="Texture2D" uid="uid://weemca1o6r47" path="res://assets/common/world_markers/wm_b_button.png" id="6_rsnit"]
-[ext_resource type="Texture2D" uid="uid://dpqvyhwjdsf4l" path="res://assets/common/world_markers/wm_b_highlight.png" id="7_mydwa"]
-[ext_resource type="Texture2D" uid="uid://qe8f37v1hdg2" path="res://assets/common/world_markers/wm_c_button.png" id="8_rhaq8"]
-[ext_resource type="Texture2D" uid="uid://djmc8k2o4d1b2" path="res://assets/common/world_markers/wm_c_highlight.png" id="9_wdq4n"]
-[ext_resource type="Texture2D" uid="uid://cfbpwa1xxikyt" path="res://assets/common/world_markers/wm_d_button.png" id="10_vnkay"]
-[ext_resource type="Texture2D" uid="uid://fruuyvplgtaw" path="res://assets/common/world_markers/wm_d_highlight.png" id="11_5fjuf"]
-[ext_resource type="Texture2D" uid="uid://bdug87asdylnd" path="res://assets/common/world_markers/wm_1_button.png" id="12_hqhtb"]
-[ext_resource type="Texture2D" uid="uid://beguuy7jx4n1q" path="res://assets/common/world_markers/wm_1_highlight.png" id="13_p6yby"]
-[ext_resource type="Texture2D" uid="uid://y6x7pb68q6e8" path="res://assets/common/world_markers/wm_2_button.png" id="14_fch7e"]
-[ext_resource type="Texture2D" uid="uid://b1pfy5inyr1fg" path="res://assets/common/world_markers/wm_2_highlight.png" id="15_oky2m"]
-[ext_resource type="Texture2D" uid="uid://c4a75ec2chcpd" path="res://assets/common/world_markers/wm_3_button.png" id="16_7v283"]
-[ext_resource type="Texture2D" uid="uid://b47vvca2b3cg2" path="res://assets/common/world_markers/wm_3_highlight.png" id="17_1wbn6"]
-[ext_resource type="Texture2D" uid="uid://bbsbgcxopcpvy" path="res://assets/common/world_markers/wm_4_button.png" id="18_7frhi"]
-[ext_resource type="Texture2D" uid="uid://b42ldh6mtl1kp" path="res://assets/common/world_markers/wm_4_highlight.png" id="19_5rj0m"]
-[ext_resource type="Texture2D" uid="uid://6poin71gcpn2" path="res://assets/common/world_markers/wm_clear_button.png" id="20_8ya5f"]
-[ext_resource type="Texture2D" uid="uid://b7lw1r5ylyx77" path="res://assets/common/world_markers/wm_clear_highlight.png" id="21_ih8ox"]
-[ext_resource type="Texture2D" uid="uid://bwls2bpv656q2" path="res://assets/common/world_markers/wm_slot_button.png" id="22_li18a"]
-[ext_resource type="Texture2D" uid="uid://bh0hp8kolkjld" path="res://assets/common/icons/ui_icons/refresh_icon.png" id="23_epstp"]
-[ext_resource type="Texture2D" uid="uid://drxeeilmxbm4b" path="res://assets/common/world_markers/wm_slot_highlight.png" id="23_k3qeu"]
-[ext_resource type="Texture2D" uid="uid://s36a2fvt0jyd" path="res://assets/common/icons/ui_icons/refresh_icon_highlight.png" id="24_o1hbi"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="26_q5s1b"]
-[ext_resource type="Script" uid="uid://danwggrhn34ea" path="res://scenes/ui/waymark_import.gd" id="26_wuheo"]
-[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="27_wuheo"]
-[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="28_hq5st"]
+[ext_resource type="Script" uid="uid://btvbqdbpr0lq5" path="res://scenes/ui/waymark_menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://glmlxtvb0wx7" path="res://assets/common/world_markers/wm_menu_trans.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d0lmgkhpr4k37" path="res://assets/common/world_markers/wm_a_button.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b0tv83kyk8p4c" path="res://assets/common/world_markers/wm_a_highlight.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://weemca1o6r47" path="res://assets/common/world_markers/wm_b_button.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dpqvyhwjdsf4l" path="res://assets/common/world_markers/wm_b_highlight.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://qe8f37v1hdg2" path="res://assets/common/world_markers/wm_c_button.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://djmc8k2o4d1b2" path="res://assets/common/world_markers/wm_c_highlight.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cfbpwa1xxikyt" path="res://assets/common/world_markers/wm_d_button.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://fruuyvplgtaw" path="res://assets/common/world_markers/wm_d_highlight.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bdug87asdylnd" path="res://assets/common/world_markers/wm_1_button.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://beguuy7jx4n1q" path="res://assets/common/world_markers/wm_1_highlight.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://y6x7pb68q6e8" path="res://assets/common/world_markers/wm_2_button.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://b1pfy5inyr1fg" path="res://assets/common/world_markers/wm_2_highlight.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://c4a75ec2chcpd" path="res://assets/common/world_markers/wm_3_button.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://b47vvca2b3cg2" path="res://assets/common/world_markers/wm_3_highlight.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://bbsbgcxopcpvy" path="res://assets/common/world_markers/wm_4_button.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://b42ldh6mtl1kp" path="res://assets/common/world_markers/wm_4_highlight.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://6poin71gcpn2" path="res://assets/common/world_markers/wm_clear_button.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://b7lw1r5ylyx77" path="res://assets/common/world_markers/wm_clear_highlight.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://bwls2bpv656q2" path="res://assets/common/world_markers/wm_slot_button.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://drxeeilmxbm4b" path="res://assets/common/world_markers/wm_slot_highlight.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://bh0hp8kolkjld" path="res://assets/common/icons/ui_icons/refresh_icon.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://s36a2fvt0jyd" path="res://assets/common/icons/ui_icons/refresh_icon_highlight.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://bdlrvfp5ys0c4" path="res://assets/common/world_markers/wm_menu_collapsed.png" id="25"]
+[ext_resource type="Script" uid="uid://danwggrhn34ea" path="res://scenes/ui/waymark_import.gd" id="26"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="27"]
+[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="28"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="29"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5esef"]
 bg_color = Color(0.132, 0.159, 0.306, 0.957)
@@ -43,13 +43,13 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_5pqkn"]
-font = ExtResource("26_q5s1b")
+font = ExtResource("27")
 font_size = 36
 outline_size = 4
 outline_color = Color(1, 0.603922, 0.176471, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_coxlx"]
-font = ExtResource("27_wuheo")
+font = ExtResource("28")
 font_size = 25
 
 [sub_resource type="FontFile" id="FontFile_lgrgk"]
@@ -76,7 +76,7 @@ font = SubResource("FontFile_lgrgk")
 font_color = Color(1, 1, 0, 1)
 
 [node name="WaymarkMenu" type="CanvasLayer" unique_id=292005661]
-script = ExtResource("1_sqrhw")
+script = ExtResource("1")
 
 [node name="MenuContainer" type="MarginContainer" parent="." unique_id=1184154581]
 unique_name_in_owner = true
@@ -90,7 +90,7 @@ grow_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="MenuContainer" unique_id=262450489]
 layout_mode = 2
-texture = ExtResource("2_qx7ww")
+texture = ExtResource("2")
 expand_mode = 4
 stretch_mode = 4
 
@@ -115,8 +115,8 @@ columns = 5
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("4_bfals")
-texture_hover = ExtResource("5_h3bkw")
+texture_normal = ExtResource("3")
+texture_hover = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -124,8 +124,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("6_rsnit")
-texture_hover = ExtResource("7_mydwa")
+texture_normal = ExtResource("5")
+texture_hover = ExtResource("6")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -133,8 +133,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("8_rhaq8")
-texture_hover = ExtResource("9_wdq4n")
+texture_normal = ExtResource("7")
+texture_hover = ExtResource("8")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -142,8 +142,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("10_vnkay")
-texture_hover = ExtResource("11_5fjuf")
+texture_normal = ExtResource("9")
+texture_hover = ExtResource("10")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -151,8 +151,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("12_hqhtb")
-texture_hover = ExtResource("13_p6yby")
+texture_normal = ExtResource("11")
+texture_hover = ExtResource("12")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -160,8 +160,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("14_fch7e")
-texture_hover = ExtResource("15_oky2m")
+texture_normal = ExtResource("13")
+texture_hover = ExtResource("14")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -169,8 +169,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("16_7v283")
-texture_hover = ExtResource("17_1wbn6")
+texture_normal = ExtResource("15")
+texture_hover = ExtResource("16")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -178,8 +178,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("18_7frhi")
-texture_hover = ExtResource("19_5rj0m")
+texture_normal = ExtResource("17")
+texture_hover = ExtResource("18")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -187,8 +187,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(40.359, 42.033)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("20_8ya5f")
-texture_hover = ExtResource("21_ih8ox")
+texture_normal = ExtResource("19")
+texture_hover = ExtResource("20")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -200,8 +200,8 @@ theme_override_constants/separation = 5
 custom_minimum_size = Vector2(0, 22)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("22_li18a")
-texture_hover = ExtResource("23_k3qeu")
+texture_normal = ExtResource("21")
+texture_hover = ExtResource("22")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -230,8 +230,8 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(0, 23.4)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("22_li18a")
-texture_hover = ExtResource("23_k3qeu")
+texture_normal = ExtResource("21")
+texture_hover = ExtResource("22")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -260,8 +260,8 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(0, 23.4)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("22_li18a")
-texture_hover = ExtResource("23_k3qeu")
+texture_normal = ExtResource("21")
+texture_hover = ExtResource("22")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -295,8 +295,8 @@ theme_override_constants/separation = 1
 custom_minimum_size = Vector2(188.07, 23.445)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("22_li18a")
-texture_hover = ExtResource("23_k3qeu")
+texture_normal = ExtResource("21")
+texture_hover = ExtResource("22")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -328,8 +328,8 @@ text_overrun_behavior = 1
 [node name="SaveButton4" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1878914214]
 custom_minimum_size = Vector2(16.39, 0)
 layout_mode = 2
-texture_normal = ExtResource("23_epstp")
-texture_hover = ExtResource("24_o1hbi")
+texture_normal = ExtResource("23")
+texture_hover = ExtResource("24")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -342,8 +342,8 @@ theme_override_constants/separation = 1
 custom_minimum_size = Vector2(188.215, 23.4)
 layout_mode = 2
 focus_mode = 0
-texture_normal = ExtResource("22_li18a")
-texture_hover = ExtResource("23_k3qeu")
+texture_normal = ExtResource("21")
+texture_hover = ExtResource("22")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -375,8 +375,8 @@ text_overrun_behavior = 1
 [node name="SaveButton5" type="TextureButton" parent="MenuContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=181666933]
 custom_minimum_size = Vector2(16.39, 0)
 layout_mode = 2
-texture_normal = ExtResource("23_epstp")
-texture_hover = ExtResource("24_o1hbi")
+texture_normal = ExtResource("23")
+texture_hover = ExtResource("24")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -389,8 +389,8 @@ custom_minimum_size = Vector2(204.465, 23.4)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
-texture_normal = ExtResource("22_li18a")
-texture_hover = ExtResource("23_k3qeu")
+texture_normal = ExtResource("21")
+texture_hover = ExtResource("22")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -428,7 +428,7 @@ custom_minimum_size = Vector2(223, 34.255)
 layout_mode = 2
 size_flags_vertical = 8
 focus_mode = 0
-texture_normal = ExtResource("3_ri3rt")
+texture_normal = ExtResource("25")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -453,7 +453,7 @@ theme_override_constants/margin_left = 115
 theme_override_constants/margin_top = 35
 theme_override_constants/margin_right = 115
 theme_override_constants/margin_bottom = 65
-script = ExtResource("26_wuheo")
+script = ExtResource("26")
 
 [node name="Panel" type="Panel" parent="ImportContainer" unique_id=1984546092]
 layout_mode = 2
@@ -529,7 +529,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("28_hq5st")
+theme_override_fonts/font = ExtResource("29")
 theme_override_font_sizes/font_size = 27
 disabled = true
 text = "Import
@@ -541,7 +541,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("28_hq5st")
+theme_override_fonts/font = ExtResource("29")
 theme_override_font_sizes/font_size = 29
 text = "Cancel"
 

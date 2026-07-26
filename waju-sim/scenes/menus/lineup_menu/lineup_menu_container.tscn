@@ -1,21 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://b44dhl02dv6rg"]
+[gd_scene format=3 uid="uid://b44dhl02dv6rg"]
 
-[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="2_43jje"]
-[ext_resource type="FontFile" uid="uid://b87hanxewtnrb" path="res://assets/common/fonts/MYRIADPRO-BOLDCOND.OTF" id="3_174y3"]
-[ext_resource type="Script" path="res://scenes/menus/lineup_menu/lineup_role_container.gd" id="4_thqgq"]
-[ext_resource type="Texture2D" uid="uid://n8f2owyvj3cy" path="res://assets/common/icons/ui_icons/white_arrow.png" id="5_unc8j"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="1"]
+[ext_resource type="FontFile" uid="uid://b87hanxewtnrb" path="res://assets/common/fonts/MYRIADPRO-BOLDCOND.OTF" id="2"]
+[ext_resource type="Script" uid="uid://csccu2fds680x" path="res://scenes/menus/lineup_menu/lineup_role_container.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://n8f2owyvj3cy" path="res://assets/common/icons/ui_icons/white_arrow.png" id="4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vkj6m"]
-font = ExtResource("2_43jje")
+font = ExtResource("1")
 font_size = 37
 outline_size = 4
 outline_color = Color(1, 0.603922, 0.176471, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8x8sj"]
-font = ExtResource("2_43jje")
+font = ExtResource("1")
 font_size = 25
 
-[node name="LineupMenuContainer" type="MarginContainer"]
+[node name="LineupMenuContainer" type="MarginContainer" unique_id=1211842077]
 size_flags_horizontal = 0
 size_flags_vertical = 2
 theme_override_constants/margin_left = 115
@@ -23,45 +23,45 @@ theme_override_constants/margin_top = 35
 theme_override_constants/margin_right = 115
 theme_override_constants/margin_bottom = 35
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1879520592]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1289889340]
 layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 38
 
-[node name="LeftButtonsVBox" type="VBoxContainer" parent="MarginContainer"]
+[node name="LeftButtonsVBox" type="VBoxContainer" parent="MarginContainer" unique_id=1750531857]
 custom_minimum_size = Vector2(500, 550)
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="HeaderLabel" type="Label" parent="MarginContainer/LeftButtonsVBox"]
+[node name="HeaderLabel" type="Label" parent="MarginContainer/LeftButtonsVBox" unique_id=141869152]
 custom_minimum_size = Vector2(0, 44.61)
 layout_mode = 2
 text = "DotH Lineup (Left to Right)"
 label_settings = SubResource("LabelSettings_vkj6m")
 horizontal_alignment = 1
 
-[node name="DefaultButton" type="Button" parent="MarginContainer/LeftButtonsVBox"]
+[node name="DefaultButton" type="Button" parent="MarginContainer/LeftButtonsVBox" unique_id=1980640158]
 custom_minimum_size = Vector2(125.22, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("3_174y3")
+theme_override_fonts/font = ExtResource("2")
 theme_override_font_sizes/font_size = 35
 text = "Default"
 
-[node name="T1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="T1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=60429444]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/T1Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/T1Container" unique_id=2050060494]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -69,32 +69,32 @@ mouse_filter = 1
 text = "Tank  1"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T1Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T1Container" unique_id=1024362975]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T1Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T1Container" unique_id=88606226]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="T2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="T2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=1858258699]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/T2Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/T2Container" unique_id=387074420]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -102,32 +102,32 @@ mouse_filter = 1
 text = "Tank  2"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T2Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T2Container" unique_id=1598724855]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T2Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/T2Container" unique_id=349305681]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="H1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="H1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=1681110374]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/H1Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/H1Container" unique_id=661464110]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -135,32 +135,32 @@ mouse_filter = 1
 text = "Healer 1"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H1Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H1Container" unique_id=594520942]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H1Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H1Container" unique_id=1815429274]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="H2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="H2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=362405674]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/H2Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/H2Container" unique_id=2093354029]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -168,32 +168,32 @@ mouse_filter = 1
 text = "Healer 2"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H2Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H2Container" unique_id=1594901732]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H2Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/H2Container" unique_id=1755940417]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="M1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="M1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=1364800606]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/M1Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/M1Container" unique_id=420072046]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -201,32 +201,32 @@ mouse_filter = 1
 text = "Melee 1"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M1Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M1Container" unique_id=402816575]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M1Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M1Container" unique_id=935698569]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="M2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="M2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=1799387581]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/M2Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/M2Container" unique_id=1085253602]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -234,32 +234,32 @@ mouse_filter = 1
 text = "Melee 2"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M2Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M2Container" unique_id=1728773072]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M2Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/M2Container" unique_id=2058375683]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="R1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="R1Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=417385738]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/R1Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/R1Container" unique_id=748474158]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -267,32 +267,32 @@ mouse_filter = 1
 text = "Ranged 1"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R1Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R1Container" unique_id=1903037587]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R1Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R1Container" unique_id=171899626]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="R2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="R2Container" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=1390174995]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
-script = ExtResource("4_thqgq")
+script = ExtResource("3")
 
-[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/R2Container"]
+[node name="RoleLabel" type="Label" parent="MarginContainer/LeftButtonsVBox/R2Container" unique_id=484795995]
 custom_minimum_size = Vector2(125.345, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -300,37 +300,37 @@ mouse_filter = 1
 text = "Ranged 2"
 label_settings = SubResource("LabelSettings_8x8sj")
 
-[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R2Container"]
+[node name="UpButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R2Container" unique_id=407872567]
 custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
 
-[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R2Container"]
+[node name="DownButton" type="TextureButton" parent="MarginContainer/LeftButtonsVBox/R2Container" unique_id=1699063391]
 custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("5_unc8j")
+texture_normal = ExtResource("4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="BottomHBoxContainer" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox"]
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="MarginContainer/LeftButtonsVBox" unique_id=450685241]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_constants/separation = 60
 
-[node name="BackButton" type="Button" parent="MarginContainer/LeftButtonsVBox/BottomHBoxContainer"]
+[node name="BackButton" type="Button" parent="MarginContainer/LeftButtonsVBox/BottomHBoxContainer" unique_id=578363764]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("3_174y3")
+theme_override_fonts/font = ExtResource("2")
 theme_override_font_sizes/font_size = 42
 text = "Back"
 

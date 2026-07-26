@@ -21,4 +21,7 @@ func _on_item_selected(index : int) -> void:
 	GameEvents.emit_encounter_variable_saved("settings", "selected_seq", index)
 	if index != current_scene:
 		main_sequence.save_variables()
+		if Global.encounter == Global.Encounter.DMU:
+			get_node("/root/DmuSession").request_phase_change(index)
+			return
 		get_tree().change_scene_to_file(Global.main_uid)

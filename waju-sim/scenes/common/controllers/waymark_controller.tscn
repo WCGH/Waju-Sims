@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwd1v6kvgas8d"]
+[gd_scene format=3 uid="uid://bwd1v6kvgas8d"]
 
-[ext_resource type="Script" path="res://scenes/common/controllers/waymark_controller.gd" id="1_624a2"]
-[ext_resource type="PackedScene" uid="uid://cdhgdujic0fqa" path="res://scenes/common/world_markers/waymarks.tscn" id="2_p1ho8"]
+[ext_resource type="Script" path="res://scenes/common/controllers/waymark_controller.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cdhgdujic0fqa" path="res://scenes/common/world_markers/waymarks.tscn" id="2"]
 
 [node name="WaymarkController" type="Node"]
-script = ExtResource("1_624a2")
-waymark_scene = ExtResource("2_p1ho8")
+script = ExtResource("1")
+waymark_scene = ExtResource("2")

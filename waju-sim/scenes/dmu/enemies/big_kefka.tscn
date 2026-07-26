@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://ddmbbusmjpmqg"]
 
-[ext_resource type="Script" uid="uid://it1qofm4acn7" path="res://scenes/dmu/enemies/big_kefka.gd" id="1_gnlpd"]
-[ext_resource type="Texture2D" uid="uid://btf8v8t7blih6" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_a_d.png" id="2_b23oa"]
-[ext_resource type="Texture2D" uid="uid://c38o2uib610rj" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_a_e.png" id="3_e26cr"]
-[ext_resource type="Texture2D" uid="uid://d0nvlms2yu55n" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_a_n.png" id="4_dhxo8"]
-[ext_resource type="Texture2D" uid="uid://cle6qgulbk2lt" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_b_d.png" id="5_40q5o"]
-[ext_resource type="Texture2D" uid="uid://s3pvckaquxal" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_b_e.png" id="6_acjns"]
-[ext_resource type="Texture2D" uid="uid://dy4remu3yqjdl" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_b_n.png" id="7_rcmsf"]
+[ext_resource type="Script" uid="uid://it1qofm4acn7" path="res://scenes/dmu/enemies/big_kefka.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://btf8v8t7blih6" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_a_d.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c38o2uib610rj" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_a_e.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d0nvlms2yu55n" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_a_n.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cle6qgulbk2lt" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_b_d.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://s3pvckaquxal" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_b_e.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dy4remu3yqjdl" path="res://assets/dmu/enemies/kefka/kefka_mt_m0462b0001_b_n.png" id="7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d2e4"]
 resource_name = "mt_m0462b0001_a"
@@ -14,15 +14,15 @@ transparency = 3
 alpha_hash_scale = 1.0
 alpha_antialiasing_mode = 0
 albedo_color = Color(1.353256, 1.353256, 1.353256, 1)
-albedo_texture = ExtResource("2_b23oa")
+albedo_texture = ExtResource("2")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("3_e26cr")
+emission_texture = ExtResource("3")
 normal_enabled = true
-normal_texture = ExtResource("4_dhxo8")
+normal_texture = ExtResource("4")
 disable_receive_shadows = true
 metadata/_gltf_primary_texture_coord = 0
 
@@ -504,15 +504,15 @@ blend_shape_mode = 0
 resource_name = "mt_m0462b0001_b"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("5_40q5o")
+albedo_texture = ExtResource("5")
 metallic = 1.0
 roughness = 0.92928934
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("6_acjns")
+emission_texture = ExtResource("6")
 normal_enabled = true
-normal_texture = ExtResource("7_rcmsf")
+normal_texture = ExtResource("7")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bmqw6"]
@@ -21904,6 +21904,8 @@ advance_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3s5su"]
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u3t22"]
+states/End/node = null
+states/Start/node = null
 states/Start/position = Vector2(374, -36)
 states/body_slam/node = SubResource("AnimationNodeAnimation_cjehj")
 states/body_slam/position = Vector2(431, 218)
@@ -21941,7 +21943,7 @@ graph_offset = Vector2(0, 33.372223)
 [node name="BigKefka" type="Node3D" unique_id=1176771576]
 transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 0, 0, 0)
 visible = false
-script = ExtResource("1_gnlpd")
+script = ExtResource("1")
 
 [node name="m0462b0001" type="Node3D" parent="." unique_id=198673951]
 transform = Transform3D(4.5, 0, 0, 0, -1.9670125e-07, -4.5, 0, 4.5, -1.9670125e-07, 0, 0, 0)

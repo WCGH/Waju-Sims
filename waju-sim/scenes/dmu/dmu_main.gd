@@ -19,8 +19,16 @@ var seq_scene_paths := {
 
 func _ready() -> void:
 	Global.set_encounter(Global.Encounter.DMU)
+	if get_node("/root/DmuSession").is_server_mode():
+		call_deferred("_open_server_scene")
+		return
 	get_window().set_title(WINDOW_TITLE)
-	var selected_seq: int = DmuSavedVariables.get_data("settings", "selected_seq")
-	var loaded_scene = load(seq_scene_paths[selected_seq])
-	await get_tree().process_frame
-	get_tree().change_scene_to_packed(loaded_scene)
+	call_deferred("_open_session_menu")
+
+
+func _open_server_scene() -> void:
+	get_tree().change_scene_to_file("res://scenes/dmu/multiplayer/dmu_server.tscn")
+
+
+func _open_session_menu() -> void:
+	get_tree().change_scene_to_file("res://scenes/dmu/multiplayer/dmu_session_menu.tscn")

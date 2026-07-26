@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ct2htn8kif2p6"]
 
-[ext_resource type="Texture2D" uid="uid://tuakj44kt1ow" path="res://assets/common/icons/debuff_icons/stun.png" id="1_fjdd2"]
+[ext_resource type="Texture2D" uid="uid://tuakj44kt1ow" path="res://assets/common/icons/debuff_icons/stun.png" id="1"]
 
-[node name="StunIcon" type="TextureRect"]
+[node name="StunIcon" type="TextureRect" unique_id=2589787]
 size_flags_horizontal = 8
 size_flags_vertical = 8
 tooltip_text = "Stunned."
-texture = ExtResource("1_fjdd2")
+texture = ExtResource("1")
 metadata/debuff_name = "stun"

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://02ckwb1trdp4"]
 
-[ext_resource type="Script" uid="uid://okaq4augsjdq" path="res://scenes/ui/party_list/party_list.gd" id="1_nit7q"]
-[ext_resource type="PackedScene" uid="uid://dgw10dfk4o2d6" path="res://scenes/ui/party_list/role_icons/whm_icon.tscn" id="6_ipj6x"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="12_g1bna"]
-[ext_resource type="Script" uid="uid://b1dsbp8c7qn58" path="res://scenes/ui/party_list/member_container.gd" id="13_xtixg"]
-[ext_resource type="Texture2D" uid="uid://daghgymd8abek" path="res://assets/common/icons/ui_icons/1_icon.png" id="14_2f2wp"]
-[ext_resource type="Texture2D" uid="uid://d08jlse22swvx" path="res://assets/common/icons/job_icons/pld_icon.png" id="14_6musf"]
-[ext_resource type="Texture2D" uid="uid://r3tm7ser2hi6" path="res://assets/common/icons/job_icons/war_icon.png" id="16_hxi8r"]
-[ext_resource type="Texture2D" uid="uid://ci4i6c0pbxw5b" path="res://assets/common/icons/job_icons/sch_icon.png" id="17_xwuni"]
-[ext_resource type="Texture2D" uid="uid://pdr8y0w61wj1" path="res://assets/common/icons/job_icons/sam_icon.png" id="18_lcryu"]
-[ext_resource type="Texture2D" uid="uid://bpba6igwi63m7" path="res://assets/common/icons/job_icons/rpr_icon.png" id="19_e6lyf"]
-[ext_resource type="Texture2D" uid="uid://gqnorx77js0w" path="res://assets/common/icons/job_icons/dnc_icon.png" id="20_yqk1g"]
-[ext_resource type="Texture2D" uid="uid://cisaxqu1b03sl" path="res://assets/common/icons/job_icons/smn_icon.png" id="21_a7vtm"]
+[ext_resource type="Script" uid="uid://okaq4augsjdq" path="res://scenes/ui/party_list/party_list.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2"]
+[ext_resource type="Script" uid="uid://b1dsbp8c7qn58" path="res://scenes/ui/party_list/member_container.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://dgw10dfk4o2d6" path="res://scenes/ui/party_list/role_icons/whm_icon.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://d08jlse22swvx" path="res://assets/common/icons/job_icons/pld_icon.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://daghgymd8abek" path="res://assets/common/icons/ui_icons/1_icon.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://r3tm7ser2hi6" path="res://assets/common/icons/job_icons/war_icon.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://ci4i6c0pbxw5b" path="res://assets/common/icons/job_icons/sch_icon.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://pdr8y0w61wj1" path="res://assets/common/icons/job_icons/sam_icon.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bpba6igwi63m7" path="res://assets/common/icons/job_icons/rpr_icon.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://gqnorx77js0w" path="res://assets/common/icons/job_icons/dnc_icon.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://cisaxqu1b03sl" path="res://assets/common/icons/job_icons/smn_icon.png" id="12"]
 
 [sub_resource type="Gradient" id="Gradient_a8mjx"]
 offsets = PackedFloat32Array(0, 0.0672269, 0.802521, 1)
@@ -22,7 +22,7 @@ gradient = SubResource("Gradient_a8mjx")
 width = 202
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1ng4"]
-font = ExtResource("12_g1bna")
+font = ExtResource("2")
 font_size = 11
 outline_size = 1
 outline_color = Color(1, 0.649632, 0.113842, 1)
@@ -30,14 +30,14 @@ shadow_size = 3
 shadow_color = Color(0, 0, 0, 0.254)
 
 [sub_resource type="LabelSettings" id="LabelSettings_5lojc"]
-font = ExtResource("12_g1bna")
+font = ExtResource("2")
 font_size = 18
 outline_size = 2
 outline_color = Color(0.252825, 0.503394, 0.934092, 1)
 shadow_color = Color(0, 0, 0, 0.535)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7u378"]
-font = ExtResource("12_g1bna")
+font = ExtResource("2")
 font_size = 20
 outline_size = 1
 outline_color = Color(0.164706, 0.396078, 1, 1)
@@ -68,7 +68,7 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_60331"]
-font = ExtResource("12_g1bna")
+font = ExtResource("2")
 outline_size = 2
 outline_color = Color(0.25098, 0.501961, 0.933333, 1)
 shadow_color = Color(0, 0, 0, 0.259)
@@ -82,13 +82,13 @@ border_width_bottom = 2
 border_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wswh0"]
-font = ExtResource("12_g1bna")
+font = ExtResource("2")
 font_size = 15
 outline_size = 3
 outline_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [node name="PartyList" type="CanvasLayer" unique_id=2142834778 groups=["party_list"]]
-script = ExtResource("1_nit7q")
+script = ExtResource("1")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1708089899]
 anchors_preset = -1
@@ -135,7 +135,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T1MemberContainer" unique_id=126852339]
 layout_mode = 2
@@ -144,10 +144,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T1MemberContainer/HBoxContainer/RoleIcon" unique_id=1038873005 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T1MemberContainer/HBoxContainer/RoleIcon" unique_id=1038873005 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-texture = ExtResource("14_6musf")
+texture = ExtResource("5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T1MemberContainer/HBoxContainer" unique_id=112332365]
 layout_mode = 2
@@ -162,7 +162,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -215,7 +215,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -246,7 +246,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -283,7 +283,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T2MemberContainer" unique_id=1650069008]
 layout_mode = 2
@@ -292,10 +292,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T2MemberContainer/HBoxContainer/RoleIcon" unique_id=2052534894 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T2MemberContainer/HBoxContainer/RoleIcon" unique_id=2052534894 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-texture = ExtResource("16_hxi8r")
+texture = ExtResource("7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/T2MemberContainer/HBoxContainer" unique_id=512043730]
 layout_mode = 2
@@ -310,7 +310,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -363,7 +363,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -394,7 +394,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -431,7 +431,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/H1MemberContainer" unique_id=1492419580]
 layout_mode = 2
@@ -440,7 +440,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/H1MemberContainer/HBoxContainer/RoleIcon" unique_id=2073305342 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/H1MemberContainer/HBoxContainer/RoleIcon" unique_id=2073305342 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 
@@ -457,7 +457,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -510,7 +510,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -541,7 +541,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -578,7 +578,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/H2MemberContainer" unique_id=46752737]
 layout_mode = 2
@@ -587,10 +587,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/H2MemberContainer/HBoxContainer/RoleIcon" unique_id=393972071 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/H2MemberContainer/HBoxContainer/RoleIcon" unique_id=393972071 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-texture = ExtResource("17_xwuni")
+texture = ExtResource("8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/H2MemberContainer/HBoxContainer" unique_id=509664276]
 layout_mode = 2
@@ -605,7 +605,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -658,7 +658,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -689,7 +689,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -726,7 +726,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M1MemberContainer" unique_id=1035140944]
 layout_mode = 2
@@ -735,10 +735,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M1MemberContainer/HBoxContainer/RoleIcon" unique_id=1014637586 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M1MemberContainer/HBoxContainer/RoleIcon" unique_id=1014637586 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-texture = ExtResource("18_lcryu")
+texture = ExtResource("9")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M1MemberContainer/HBoxContainer" unique_id=1868312334]
 layout_mode = 2
@@ -753,7 +753,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -806,7 +806,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -837,7 +837,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -874,7 +874,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M2MemberContainer" unique_id=1787194241]
 layout_mode = 2
@@ -883,10 +883,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M2MemberContainer/HBoxContainer/RoleIcon" unique_id=511403828 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M2MemberContainer/HBoxContainer/RoleIcon" unique_id=511403828 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-texture = ExtResource("19_e6lyf")
+texture = ExtResource("10")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/M2MemberContainer/HBoxContainer" unique_id=827038886]
 layout_mode = 2
@@ -901,7 +901,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -954,7 +954,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -985,7 +985,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -1022,7 +1022,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R1MemberContainer" unique_id=1797963551]
 layout_mode = 2
@@ -1031,10 +1031,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R1MemberContainer/HBoxContainer/RoleIcon" unique_id=1351834990 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R1MemberContainer/HBoxContainer/RoleIcon" unique_id=1351834990 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-texture = ExtResource("20_yqk1g")
+texture = ExtResource("11")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R1MemberContainer/HBoxContainer" unique_id=88955113]
 layout_mode = 2
@@ -1049,7 +1049,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -1102,7 +1102,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -1133,7 +1133,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -1170,7 +1170,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme_override_constants/separation = 5
-script = ExtResource("13_xtixg")
+script = ExtResource("3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R2MemberContainer" unique_id=729476781]
 layout_mode = 2
@@ -1179,10 +1179,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R2MemberContainer/HBoxContainer/RoleIcon" unique_id=533580032 instance=ExtResource("6_ipj6x")]
+[node name="RoleIconTexture" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R2MemberContainer/HBoxContainer/RoleIcon" unique_id=533580032 instance=ExtResource("4")]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-texture = ExtResource("21_a7vtm")
+texture = ExtResource("12")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TextureRect/VBoxContainer/MemberVBoxContainer/R2MemberContainer/HBoxContainer" unique_id=2092886801]
 layout_mode = 2
@@ -1197,7 +1197,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("14_2f2wp")
+texture = ExtResource("6")
 expand_mode = 5
 stretch_mode = 5
 
@@ -1250,7 +1250,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0
@@ -1281,7 +1281,7 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(75, 4.5)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("12_g1bna")
+theme_override_fonts/font = ExtResource("2")
 theme_override_styles/background = SubResource("StyleBoxFlat_fiyvu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vit53")
 step = 1.0

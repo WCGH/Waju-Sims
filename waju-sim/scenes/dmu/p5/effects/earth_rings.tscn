@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3708t6m2ky1h"]
 
-[ext_resource type="Script" uid="uid://cwpwojxqmavu2" path="res://scenes/dmu/p5/effects/wind_rings.gd" id="1_nmmwr"]
+[ext_resource type="Script" uid="uid://cwpwojxqmavu2" path="res://scenes/dmu/p5/effects/wind_rings.gd" id="1"]
 
 [sub_resource type="Shader" id="Shader_m1217"]
 code = "shader_type spatial;
@@ -18,6 +18,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jkq0i"]
 render_priority = 0
+next_pass = null
 shader = SubResource("Shader_m1217")
 shader_parameter/color = Color(0.7773028, 0.6806483, 0.29323503, 1)
 shader_parameter/intensity = 0.3030002518924997
@@ -34,6 +35,7 @@ cap_bottom = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_32h1f"]
 render_priority = 0
+next_pass = null
 shader = SubResource("Shader_m1217")
 shader_parameter/color = Color(0.777, 0.681, 0.293, 1)
 shader_parameter/intensity = 0.45
@@ -305,7 +307,7 @@ _data = {
 
 [node name="EarthRings" type="Node3D" unique_id=400236308]
 visible = false
-script = ExtResource("1_nmmwr")
+script = ExtResource("1")
 
 [node name="WindRing1" type="Node3D" parent="." unique_id=101079208]
 visible = false

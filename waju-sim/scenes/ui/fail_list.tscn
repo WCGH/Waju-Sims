@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cidk1e7u3l0ya"]
+[gd_scene format=3 uid="uid://cidk1e7u3l0ya"]
 
-[ext_resource type="Script" path="res://scenes/ui/fail_list.gd" id="1_2wya2"]
-[ext_resource type="PackedScene" uid="uid://c3pv5d4jy0ae1" path="res://scenes/ui/fail_label.tscn" id="2_mll7f"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="3_fw0mu"]
+[ext_resource type="Script" path="res://scenes/ui/fail_list.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c3pv5d4jy0ae1" path="res://scenes/ui/fail_label.tscn" id="2"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4akwt"]
 bg_color = Color(0.267, 0.267, 0.267, 0.741)
@@ -13,14 +13,14 @@ border_width_bottom = 2
 border_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_h8iti"]
-font = ExtResource("3_fw0mu")
+font = ExtResource("3")
 font_size = 15
 outline_size = 3
 outline_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [node name="FailList" type="CanvasLayer" groups=["fail_list"]]
-script = ExtResource("1_2wya2")
-label_scene = ExtResource("2_mll7f")
+script = ExtResource("1")
+label_scene = ExtResource("2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = -1

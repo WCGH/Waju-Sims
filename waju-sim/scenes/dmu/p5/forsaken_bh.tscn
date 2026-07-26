@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://c62i12l6aug0r"]
 
-[ext_resource type="Script" uid="uid://dft3x8mt875yp" path="res://scenes/dmu/p5/forsaken_bh.gd" id="1_fh3p6"]
-[ext_resource type="Shader" uid="uid://c0afsa7kc6cvs" path="res://assets/common/shaders/sky_stary.gdshader" id="2_2mg6h"]
-[ext_resource type="Shader" uid="uid://cgjqp0v2cpj8b" path="res://assets/common/shaders/black_hole_rim.gdshader" id="3_2ww7q"]
-[ext_resource type="Texture2D" uid="uid://dqsyflfnoulou" path="res://assets/common/shaders/smoke_noise.jpeg" id="4_6vthb"]
+[ext_resource type="Script" uid="uid://dft3x8mt875yp" path="res://scenes/dmu/p5/forsaken_bh.gd" id="1"]
+[ext_resource type="Shader" uid="uid://c0afsa7kc6cvs" path="res://assets/common/shaders/sky_stary.gdshader" id="2"]
+[ext_resource type="Shader" uid="uid://cgjqp0v2cpj8b" path="res://assets/common/shaders/black_hole_rim.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://dqsyflfnoulou" path="res://assets/common/shaders/smoke_noise.jpeg" id="4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sto6j"]
 render_priority = 0
-shader = ExtResource("2_2mg6h")
+next_pass = null
+shader = ExtResource("2")
 shader_parameter/background_color = Color(0, 0, 0.012920001, 1)
 shader_parameter/aspect_ratio = 1.0
 shader_parameter/density = 0.7629999806961
@@ -29,8 +30,9 @@ height = 0.01
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_45mti"]
 render_priority = 0
-shader = ExtResource("3_2ww7q")
-shader_parameter/smoke_texture = ExtResource("4_6vthb")
+next_pass = null
+shader = ExtResource("3")
+shader_parameter/smoke_texture = ExtResource("4")
 shader_parameter/color = Color(0.8766528, 0.22091639, 1, 1)
 shader_parameter/fade_size = -0.235
 shader_parameter/fade_blend = 1.016
@@ -169,7 +171,7 @@ height = 15.0
 radius = 20.0
 
 [node name="ForsakenBH" type="Node3D" unique_id=129721018]
-script = ExtResource("1_fh3p6")
+script = ExtResource("1")
 
 [node name="BlackHoleMesh" type="MeshInstance3D" parent="." unique_id=1253027680]
 mesh = SubResource("CylinderMesh_hsd6q")

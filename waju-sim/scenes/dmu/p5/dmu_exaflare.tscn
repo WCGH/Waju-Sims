@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c8svu54bng0tk"]
 
-[ext_resource type="Script" uid="uid://50gxekr5p2so" path="res://scenes/dmu/p5/dmu_exaflare.gd" id="1_bn76o"]
-[ext_resource type="Texture2D" uid="uid://chwe61hncsv0x" path="res://assets/common/circle_aoe.png" id="2_4yq4l"]
-[ext_resource type="Material" uid="uid://cjjjij1l2xrvo" path="res://assets/fru/materials/exaflares/small1.tres" id="3_g11kw"]
+[ext_resource type="Script" uid="uid://50gxekr5p2so" path="res://scenes/dmu/p5/dmu_exaflare.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://chwe61hncsv0x" path="res://assets/common/circle_aoe.png" id="2"]
+[ext_resource type="Material" uid="uid://cjjjij1l2xrvo" path="res://assets/fru/materials/exaflares/small1.tres" id="3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sto6j"]
 transparency = 1
 albedo_color = Color(0.8232569, 0.24269372, 0.07846785, 0.33100003)
-albedo_texture = ExtResource("2_4yq4l")
+albedo_texture = ExtResource("2")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hsd6q"]
 material = SubResource("StandardMaterial3D_sto6j")
@@ -22,54 +22,54 @@ material = SubResource("StandardMaterial3D_1qocc")
 inner_radius = 13.567
 outer_radius = 13.747
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6peom"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0ulp"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(1, 0.486275, 0.541176, 0)
 emission_enabled = true
 emission = Color(0.776471, 0.776471, 0.776471, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_gmsvt"]
+[sub_resource type="BoxMesh" id="BoxMesh_5ffie"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_6peom")
+material = SubResource("StandardMaterial3D_y0ulp")
 size = Vector3(0.83, 0.105, 6.45)
 
-[sub_resource type="BoxMesh" id="BoxMesh_srgpl"]
+[sub_resource type="BoxMesh" id="BoxMesh_on75c"]
 resource_local_to_scene = true
-material = ExtResource("3_g11kw")
+material = ExtResource("3")
 size = Vector3(0.83, 0.012, 4.225)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hlylc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kac65"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(1, 0.486275, 0.439216, 0.643137)
 emission = Color(0.776471, 0.776471, 0.776471, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_okrbo"]
+[sub_resource type="BoxMesh" id="BoxMesh_su7fb"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_hlylc")
+material = SubResource("StandardMaterial3D_kac65")
 size = Vector3(0.83, 0.012, 4.225)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6h6w"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ed4f"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(1, 0.486275, 0.439216, 0.643137)
 emission = Color(0.776471, 0.776471, 0.776471, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_glsxt"]
+[sub_resource type="BoxMesh" id="BoxMesh_wqrry"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_w6h6w")
+material = SubResource("StandardMaterial3D_6ed4f")
 size = Vector3(0.83, 0.012, 4.225)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdp30"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwx0h"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(1, 0.486275, 0.439216, 0.643137)
 emission = Color(0.776471, 0.776471, 0.776471, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_fm6te"]
+[sub_resource type="BoxMesh" id="BoxMesh_41230"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_bdp30")
+material = SubResource("StandardMaterial3D_qwx0h")
 size = Vector3(0.83, 0.012, 4.225)
 
 [sub_resource type="Animation" id="Animation_wxqv5"]
@@ -555,7 +555,7 @@ _data = {
 
 [node name="DMUExaflare" type="Node3D" unique_id=2145590279]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 0, 0, 0)
-script = ExtResource("1_bn76o")
+script = ExtResource("1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=347938385]
 mesh = SubResource("PlaneMesh_hsd6q")
@@ -572,12 +572,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.166)
 
 [node name="ArmR" type="MeshInstance3D" parent="Arrow/LargeArrow" unique_id=1546432604]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_gmsvt")
+mesh = SubResource("BoxMesh_5ffie")
 skeleton = NodePath("../../..")
 
 [node name="ArmL" type="MeshInstance3D" parent="Arrow/LargeArrow" unique_id=1510528579]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_gmsvt")
+mesh = SubResource("BoxMesh_5ffie")
 skeleton = NodePath("../../..")
 
 [node name="SmallArrow1" type="Node3D" parent="Arrow" unique_id=490149833]
@@ -585,12 +585,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
 
 [node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow1" unique_id=1653309383]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_srgpl")
+mesh = SubResource("BoxMesh_on75c")
 skeleton = NodePath("../../..")
 
 [node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow1" unique_id=1082759659]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_srgpl")
+mesh = SubResource("BoxMesh_on75c")
 skeleton = NodePath("../../..")
 
 [node name="SmallArrow2" type="Node3D" parent="Arrow" unique_id=710352572]
@@ -598,12 +598,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
 
 [node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow2" unique_id=1942569105]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_okrbo")
+mesh = SubResource("BoxMesh_su7fb")
 skeleton = NodePath("../../..")
 
 [node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow2" unique_id=606575397]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_okrbo")
+mesh = SubResource("BoxMesh_su7fb")
 skeleton = NodePath("../../..")
 
 [node name="SmallArrow3" type="Node3D" parent="Arrow" unique_id=847928715]
@@ -611,12 +611,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
 
 [node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow3" unique_id=968140384]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_glsxt")
+mesh = SubResource("BoxMesh_wqrry")
 skeleton = NodePath("../../..")
 
 [node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow3" unique_id=1170879924]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_glsxt")
+mesh = SubResource("BoxMesh_wqrry")
 skeleton = NodePath("../../..")
 
 [node name="SmallArrow4" type="Node3D" parent="Arrow" unique_id=496649768]
@@ -624,12 +624,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
 
 [node name="ArmR" type="MeshInstance3D" parent="Arrow/SmallArrow4" unique_id=1412235288]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_fm6te")
+mesh = SubResource("BoxMesh_41230")
 skeleton = NodePath("../../..")
 
 [node name="ArmL" type="MeshInstance3D" parent="Arrow/SmallArrow4" unique_id=136091670]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.2, 0, 1.8)
-mesh = SubResource("BoxMesh_fm6te")
+mesh = SubResource("BoxMesh_41230")
 skeleton = NodePath("../../..")
 
 [node name="ArrowAnimationPlayer" type="AnimationPlayer" parent="Arrow" unique_id=1491212001]

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d10jgdh6krdej"]
 
-[ext_resource type="Texture2D" uid="uid://cxj3i6la3mcgh" path="res://assets/common/player_characters/lockon/limit_cut/lc_1.png" id="1_ojgaw"]
+[ext_resource type="Texture2D" uid="uid://cxj3i6la3mcgh" path="res://assets/common/player_characters/lockon/limit_cut/lc_1.png" id="1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqjav"]
 transparency = 1
-albedo_texture = ExtResource("1_ojgaw")
+albedo_texture = ExtResource("1")
 rim_enabled = true
 rim = 0.1
 billboard_mode = 1

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cwt0tgk120vpy"]
 
-[ext_resource type="Texture2D" uid="uid://d08jlse22swvx" path="res://assets/common/icons/job_icons/pld_icon.png" id="1_lsl5q"]
+[ext_resource type="Texture2D" uid="uid://d08jlse22swvx" path="res://assets/common/icons/job_icons/pld_icon.png" id="1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65dy5"]
 transparency = 1
-albedo_texture = ExtResource("1_lsl5q")
+albedo_texture = ExtResource("1")
 rim_enabled = true
 rim = 0.2
 disable_receive_shadows = true

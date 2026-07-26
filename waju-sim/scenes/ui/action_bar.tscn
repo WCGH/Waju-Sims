@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cg0h4uysscvtc"]
 
-[ext_resource type="PackedScene" uid="uid://bw67wbi2y10qu" path="res://scenes/ui/action_button.tscn" id="1_oxg47"]
-[ext_resource type="Script" uid="uid://bngqfca6hre1w" path="res://scenes/ui/action_bar.gd" id="1_pgg3b"]
-[ext_resource type="Texture2D" uid="uid://dnjpcq0oi3k21" path="res://assets/common/icons/action_icons/arms_icon.png" id="2_163b4"]
-[ext_resource type="Texture2D" uid="uid://cxqgvoxf8p8nc" path="res://assets/common/icons/action_icons/arms_hl_icon.png" id="3_6ea2t"]
-[ext_resource type="Texture2D" uid="uid://5i4mreo11eq3" path="res://assets/common/icons/action_icons/avant_icon.png" id="4_ln20o"]
-[ext_resource type="Texture2D" uid="uid://7wp50uql53uc" path="res://assets/common/icons/action_icons/avant_hl_icon.png" id="5_vknay"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="7_pjfqq"]
+[ext_resource type="Script" uid="uid://bngqfca6hre1w" path="res://scenes/ui/action_bar.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bw67wbi2y10qu" path="res://scenes/ui/action_button.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://dnjpcq0oi3k21" path="res://assets/common/icons/action_icons/arms_icon.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cxqgvoxf8p8nc" path="res://assets/common/icons/action_icons/arms_hl_icon.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://5i4mreo11eq3" path="res://assets/common/icons/action_icons/avant_icon.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://7wp50uql53uc" path="res://assets/common/icons/action_icons/avant_hl_icon.png" id="6"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2v8av"]
 bg_color = Color(0.267, 0.267, 0.267, 0.741)
@@ -17,13 +17,13 @@ border_width_bottom = 2
 border_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_q26as"]
-font = ExtResource("7_pjfqq")
+font = ExtResource("7")
 font_size = 20
 outline_size = 3
 outline_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [node name="ActionBar" type="CanvasLayer" unique_id=253955891]
-script = ExtResource("1_pgg3b")
+script = ExtResource("1")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=561858509]
 anchors_preset = -1
@@ -44,7 +44,7 @@ size_flags_vertical = 8
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="SprintActionButton" parent="MarginContainer/ButtonsContainer" unique_id=1167959636 instance=ExtResource("1_oxg47")]
+[node name="SprintActionButton" parent="MarginContainer/ButtonsContainer" unique_id=1167959636 instance=ExtResource("2")]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -52,24 +52,24 @@ size_flags_vertical = 0
 mouse_filter = 1
 cooldown = 60.0
 
-[node name="ArmsActionButton" parent="MarginContainer/ButtonsContainer" unique_id=1813588318 instance=ExtResource("1_oxg47")]
+[node name="ArmsActionButton" parent="MarginContainer/ButtonsContainer" unique_id=1813588318 instance=ExtResource("2")]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 mouse_filter = 1
-texture_normal = ExtResource("2_163b4")
-texture_hover = ExtResource("3_6ea2t")
+texture_normal = ExtResource("3")
+texture_hover = ExtResource("4")
 cooldown = 120.0
 
-[node name="DashActionButton" parent="MarginContainer/ButtonsContainer" unique_id=1470176648 instance=ExtResource("1_oxg47")]
+[node name="DashActionButton" parent="MarginContainer/ButtonsContainer" unique_id=1470176648 instance=ExtResource("2")]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 mouse_filter = 1
-texture_normal = ExtResource("4_ln20o")
-texture_hover = ExtResource("5_vknay")
+texture_normal = ExtResource("5")
+texture_hover = ExtResource("6")
 cooldown = 1.0
 
 [node name="MoveUIBG" type="Panel" parent="MarginContainer" unique_id=1869405542]

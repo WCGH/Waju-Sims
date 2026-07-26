@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdnvuxjtbpidx"]
 
-[ext_resource type="Script" uid="uid://c0wsuielbiunl" path="res://scenes/common/ground_markers/pr_tower.gd" id="1_mu02d"]
+[ext_resource type="Script" uid="uid://c0wsuielbiunl" path="res://scenes/common/ground_markers/pr_tower.gd" id="1"]
 
 [sub_resource type="Shader" id="Shader_wo7nj"]
 code = "shader_type spatial;
@@ -25,6 +25,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iage4"]
 render_priority = 0
+next_pass = null
 shader = SubResource("Shader_wo7nj")
 shader_parameter/size = 0.21
 shader_parameter/alpha = 0.235
@@ -38,6 +39,7 @@ height = 0.001
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hpvlw"]
 render_priority = 0
+next_pass = null
 shader = SubResource("Shader_wo7nj")
 shader_parameter/size = 0.224
 shader_parameter/alpha = 0.235
@@ -51,6 +53,7 @@ height = 0.001
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hbiea"]
 render_priority = 0
+next_pass = null
 shader = SubResource("Shader_wo7nj")
 shader_parameter/size = 0.163
 shader_parameter/alpha = 0.236
@@ -259,7 +262,7 @@ _data = {
 
 [node name="PRTower" type="Node3D" unique_id=1413950399]
 transform = Transform3D(0.96, 0, 0, 0, 0.96, 0, 0, 0, 0.96, 0, 0, 0)
-script = ExtResource("1_mu02d")
+script = ExtResource("1")
 
 [node name="OutterMesh" type="MeshInstance3D" parent="." unique_id=1115525077]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112, 0)

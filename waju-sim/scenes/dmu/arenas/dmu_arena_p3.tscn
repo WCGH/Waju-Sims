@@ -1,29 +1,29 @@
 [gd_scene format=4 uid="uid://c5lttv1awxbes"]
 
-[ext_resource type="Texture2D" uid="uid://b613j8d5p38c0" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry01b_20.png" id="1_2m8vs"]
-[ext_resource type="Texture2D" uid="uid://c3tps403sppdq" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry01b.png" id="2_3i16j"]
-[ext_resource type="Texture2D" uid="uid://d351khtkevrs0" path="res://assets/dmu/arenas/dmu_arena_w_aet_001_cry_n.png" id="3_7hg1c"]
-[ext_resource type="Texture2D" uid="uid://bj7hb214ujugi" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry00b_22.png" id="4_pjctm"]
-[ext_resource type="Texture2D" uid="uid://cv2nd6rvtrxhp" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry00b.png" id="5_k4eea"]
-[ext_resource type="Texture2D" uid="uid://dq6vwkpcq0dy" path="res://assets/dmu/arenas/dmu_arena__z3oa_a0_flo00_d.png" id="6_8mqgq"]
-[ext_resource type="Texture2D" uid="uid://ciuv516oxaoq1" path="res://assets/dmu/arenas/dmu_arena_z3oa_a0_flo00a.png" id="7_3jv5j"]
-[ext_resource type="Texture2D" uid="uid://bt0tyteymasmf" path="res://assets/dmu/arenas/dmu_arena_z3oa_a0_flo00_n.png" id="8_lqijm"]
+[ext_resource type="Texture2D" uid="uid://b613j8d5p38c0" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry01b_20.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c3tps403sppdq" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry01b.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d351khtkevrs0" path="res://assets/dmu/arenas/dmu_arena_w_aet_001_cry_n.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bj7hb214ujugi" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry00b_22.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cv2nd6rvtrxhp" path="res://assets/dmu/arenas/dmu_arena_z3oa_t1_cry00b.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dq6vwkpcq0dy" path="res://assets/dmu/arenas/dmu_arena__z3oa_a0_flo00_d.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://ciuv516oxaoq1" path="res://assets/dmu/arenas/dmu_arena_z3oa_a0_flo00a.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bt0tyteymasmf" path="res://assets/dmu/arenas/dmu_arena_z3oa_a0_flo00_n.png" id="8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y2p8s"]
 resource_name = "z3oa_t1_cry01b"
 transparency = 3
 alpha_hash_scale = 1.0
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("1_2m8vs")
+albedo_texture = ExtResource("1")
 metallic = 1.0
 roughness = 0.5527864
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("2_3i16j")
+emission_texture = ExtResource("2")
 normal_enabled = true
 normal_scale = 0.2
-normal_texture = ExtResource("3_7hg1c")
+normal_texture = ExtResource("3")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qwp3r"]
@@ -65,14 +65,14 @@ resource_name = "z3oa_t1_cry00b"
 transparency = 4
 cull_mode = 2
 albedo_color = Color(0.48105848, 0.53870887, 0.71010965, 1)
-albedo_texture = ExtResource("4_pjctm")
+albedo_texture = ExtResource("4")
 metallic = 0.8
 metallic_specular = 0.46
 roughness = 0.43
-emission_texture = ExtResource("5_k4eea")
+emission_texture = ExtResource("5")
 normal_enabled = true
 normal_scale = 0.2
-normal_texture = ExtResource("3_7hg1c")
+normal_texture = ExtResource("3")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_a1owm"]
@@ -149,16 +149,16 @@ transparency = 3
 alpha_hash_scale = 1.0
 alpha_antialiasing_mode = 0
 albedo_color = Color(0.39688924, 0.39688927, 0.3968891, 1)
-albedo_texture = ExtResource("6_8mqgq")
+albedo_texture = ExtResource("6")
 metallic = 1.0
 roughness = 0.5527864
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_operator = 1
-emission_texture = ExtResource("7_3jv5j")
+emission_texture = ExtResource("7")
 normal_enabled = true
 normal_scale = 0.2
-normal_texture = ExtResource("8_lqijm")
+normal_texture = ExtResource("8")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_y154u"]

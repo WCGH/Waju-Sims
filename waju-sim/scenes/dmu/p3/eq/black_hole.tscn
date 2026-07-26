@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://deigfnsiu68vw"]
 
-[ext_resource type="Shader" uid="uid://c0afsa7kc6cvs" path="res://assets/common/shaders/sky_stary.gdshader" id="1_3ljip"]
-[ext_resource type="Script" uid="uid://dfflxoi8p211c" path="res://scenes/dmu/p3/eq/black_hole.gd" id="1_nuw0r"]
-[ext_resource type="Shader" uid="uid://cgjqp0v2cpj8b" path="res://assets/common/shaders/black_hole_rim.gdshader" id="2_d51yg"]
-[ext_resource type="Texture2D" uid="uid://dqsyflfnoulou" path="res://assets/common/shaders/smoke_noise.jpeg" id="3_d51yg"]
+[ext_resource type="Script" uid="uid://dfflxoi8p211c" path="res://scenes/dmu/p3/eq/black_hole.gd" id="1"]
+[ext_resource type="Shader" uid="uid://c0afsa7kc6cvs" path="res://assets/common/shaders/sky_stary.gdshader" id="2"]
+[ext_resource type="Shader" uid="uid://cgjqp0v2cpj8b" path="res://assets/common/shaders/black_hole_rim.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://dqsyflfnoulou" path="res://assets/common/shaders/smoke_noise.jpeg" id="4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xqw0s"]
 render_priority = 0
-shader = ExtResource("1_3ljip")
+next_pass = null
+shader = ExtResource("2")
 shader_parameter/background_color = Color(0, 0, 0.025840001, 1)
 shader_parameter/aspect_ratio = 1.0
 shader_parameter/density = 0.429999989121
@@ -28,8 +29,9 @@ height = 6.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hsd6q"]
 render_priority = 0
-shader = ExtResource("2_d51yg")
-shader_parameter/smoke_texture = ExtResource("3_d51yg")
+next_pass = null
+shader = ExtResource("3")
+shader_parameter/smoke_texture = ExtResource("4")
 shader_parameter/color = Color(0.03876, 0.012920001, 0.16007765, 1)
 shader_parameter/fade_size = 0.071
 shader_parameter/fade_blend = 0.364
@@ -258,7 +260,7 @@ height = 5.0
 radius = 2.6
 
 [node name="BackHole" type="Node3D" unique_id=1568952237]
-script = ExtResource("1_nuw0r")
+script = ExtResource("1")
 
 [node name="InnerSphere" type="MeshInstance3D" parent="." unique_id=381529150]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

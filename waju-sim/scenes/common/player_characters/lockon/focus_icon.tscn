@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d02uuq8ofq5mq"]
 
-[ext_resource type="Texture2D" uid="uid://be6exkhbou7t6" path="res://assets/common/icons/focus_icon.png" id="1_o1gka"]
+[ext_resource type="Texture2D" uid="uid://be6exkhbou7t6" path="res://assets/common/icons/focus_icon.png" id="1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65dy5"]
 transparency = 1
-albedo_texture = ExtResource("1_o1gka")
+albedo_texture = ExtResource("1")
 rim_enabled = true
 rim = 0.2
 disable_receive_shadows = true

@@ -30984,7 +30984,9 @@ advance_mode = 2
 xfade_time = 0.1
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hsd6q"]
+states/End/node = null
 states/End/position = Vector2(926, 20)
+states/Start/node = null
 states/Start/position = Vector2(467, -133)
 states/attack/node = SubResource("AnimationNodeAnimation_v2ddt")
 states/attack/position = Vector2(636, 216)

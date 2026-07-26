@@ -39,12 +39,15 @@ var existing_party := false
 
 
 func instantiate_party(player_role : String) -> Dictionary:
+	var session := get_node("/root/DmuSession")
 	if existing_party:
 		clear_party()
 	for key : String in role_keys:
 		if key == player_role:
 			instantiate_player(key)
 			Global.player_role_key = key
+		elif session.is_multiplayer_session() and session.role_owners.has(key):
+			instantiate_remote_player(key)
 		else:
 			instantiate_bot(key)
 			Global.bot_role_keys.append(key)
@@ -73,6 +76,7 @@ func instantiate_player(role_key : String) -> Dictionary:
 	characters_spawn_node.add_child(player)
 	player.set_role_icon()
 	party[role_key] = player
+	get_node("/root/DmuSession").register_character(player)
 	return {role_key: player}
 
 
@@ -83,6 +87,18 @@ func instantiate_bot(role_key : String) -> void:
 	characters_spawn_node.add_child(bot)
 	bot.set_role_icon()
 	party[role_key] = bot
+	get_node("/root/DmuSession").register_character(bot)
+
+
+func instantiate_remote_player(role_key: String) -> void:
+	var remote_player: PlayableCharacter = bot_scene.instantiate()
+	remote_player.set_parameters(role_key, models[role_key], SPAWN_POSITIONS[role_key])
+	remote_player.set_remote_controlled()
+	remote_player.name = Global.ROLE_NAMES[role_key]
+	characters_spawn_node.add_child(remote_player)
+	remote_player.set_role_icon()
+	party[role_key] = remote_player
+	get_node("/root/DmuSession").register_character(remote_player)
 
 
 func on_toggle_focus(role_key: String):
