@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://bw67wbi2y10qu"]
+[gd_scene load_steps=8 format=3 uid="uid://bw67wbi2y10qu"]
 
-[ext_resource type="Texture2D" uid="uid://ctuki01j7jnqa" path="res://assets/common/icons/action_icons/sprint_icon.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://dar53oo5nlmlm" path="res://assets/common/icons/action_icons/sprint_hl_icon.png" id="2"]
-[ext_resource type="Script" path="res://scenes/ui/action_button.gd" id="3"]
-[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="4"]
-[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="5"]
+[ext_resource type="Texture2D" uid="uid://ctuki01j7jnqa" path="res://assets/common/icons/action_icons/sprint_icon.png" id="1_ojunn"]
+[ext_resource type="Texture2D" uid="uid://dar53oo5nlmlm" path="res://assets/common/icons/action_icons/sprint_hl_icon.png" id="2_qqx8f"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="3_eo8x5"]
+[ext_resource type="Script" path="res://scenes/ui/action_button.gd" id="3_v5yub"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="4_4hoio"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_w2ujh"]
-font = ExtResource("4")
+font = ExtResource("3_eo8x5")
 font_size = 12
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_58cpc"]
-font = ExtResource("5")
+font = ExtResource("4_4hoio")
 font_size = 12
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
@@ -21,11 +21,11 @@ outline_color = Color(0, 0, 0, 1)
 [node name="ActionButton" type="TextureButton"]
 custom_minimum_size = Vector2(40, 40)
 focus_mode = 0
-texture_normal = ExtResource("1")
-texture_hover = ExtResource("2")
+texture_normal = ExtResource("1_ojunn")
+texture_hover = ExtResource("2_qqx8f")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("3")
+script = ExtResource("3_v5yub")
 
 [node name="CooldownTimer" type="Timer" parent="."]
 unique_name_in_owner = true

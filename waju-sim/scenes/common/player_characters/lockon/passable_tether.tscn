@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://c1qot0oeax7o6"]
 
-[ext_resource type="Script" uid="uid://dyrujve7bsbta" path="res://scenes/common/player_characters/lockon/passable_tether.gd" id="1"]
+[ext_resource type="Script" uid="uid://dyrujve7bsbta" path="res://scenes/common/player_characters/lockon/passable_tether.gd" id="1_iceft"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gub64"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hb3ik"]
 resource_local_to_scene = true
 shading_mode = 0
 albedo_color = Color(1, 0.433333, 0, 1)
 
-[sub_resource type="PrismMesh" id="PrismMesh_f3anh"]
+[sub_resource type="PrismMesh" id="PrismMesh_0avsi"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_gub64")
+material = SubResource("StandardMaterial3D_hb3ik")
 size = Vector3(0.07, 0.07, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hsd6q"]
@@ -17,11 +17,11 @@ size = Vector3(0.1, 0.1, 1)
 
 [node name="PassableTether" type="Node3D" unique_id=943423653]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("1")
+script = ExtResource("1_iceft")
 
 [node name="TetherMesh" type="MeshInstance3D" parent="." unique_id=595308398]
 unique_name_in_owner = true
-mesh = SubResource("PrismMesh_f3anh")
+mesh = SubResource("PrismMesh_0avsi")
 skeleton = NodePath("../../../GroundMarkers")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1472726420]

@@ -1,8 +1,8 @@
-[gd_scene format=4 uid="uid://cmkco6ga5i6l"]
+[gd_scene load_steps=6 format=4 uid="uid://cmkco6ga5i6l"]
 
-[ext_resource type="Script" path="res://scenes/common/ground_markers/wide_cone.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/common/ground_markers/wide_cone.gd" id="1_i3qd3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h6q6t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hh7hn"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0.979, 0.375, 0.934, 0.459)
@@ -21,7 +21,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cagpa"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ekycb"]
 resource_local_to_scene = true
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 1.70711, 0.00414298, 2),
@@ -30,7 +30,7 @@ _surfaces = [{
 "index_count": 252,
 "index_data": PackedByteArray("QQA1AAEAPgA1AEEANQAGAAMAOwA1AD4ANQAJAAYAOAA1ADsAHgAbADUANQAxAC0AEgAPADUAFQASADUAGAAVADUAGwAYADUANQADAAEANQAMAAkAHgA1ACEAIQA1ACQAJAA1ACcAJwA1ACoAKgA1AC0ANQAPAAwAgwBDAHcAgACDAHcAdwBFAEgAfQCAAHcAdwBIAEsAegB9AHcAYAB3AF0AdwBvAHMAVAB3AFEAVwB3AFQAWgB3AFcAXQB3AFoAdwBDAEUAdwBLAE4AYABjAHcAYwBmAHcAZgBpAHcAaQBsAHcAbABvAHcAdwBOAFEAPwB/AD0APwCBAH8AKQBnACUAKQBrAGcAEwBTABEAEwBVAFMAAACCAEAAAABCAIIALABqACgALABuAGoAFgBWABQAFgBYAFYAMwByADAAMwB1AHIALwBtACsALwBxAG0AGgBZABcAGgBcAFkABABEAAIABABGAEQAMgBwAC4AMgB0AHAAHQBbABkAHQBfAFsABwBHAAUABwBJAEcANgB2ADQANgB4AHYAIABeABwAIABiAF4ACgBKAAgACgBMAEoAOQB5ADcAOQB7AHkAIwBhAB8AIwBlAGEADQBNAAsADQBPAE0APAB8ADoAPAB+AHwAJgBkACIAJgBoAGQAEABQAA4AEABSAFAA"),
 "lods": [0.0488726, PackedByteArray("NQAJAAMANQAPAAkANQADAEEAOAA1AEEAGAAPADUAGwAYADUAGwA1ACEAIQA1ACoANQAxACoAfQBDAHcAegB9AHcAdwBDAEgAdwBIAE4AdwBOAFQAWgB3AFQAYAB3AFoAYABpAHcAaQBvAHcAdwBvAHMAkwCVAKYAhQCXAJUAhwCZAJcAiQCcAJkAjwCgAI0AjQCfAIwAkQCjAI8AkACiAKEAjgChAJ4AiwCeAJ0AkgByADAAkgCkAHIANgCkAJIANgB4AKQAigCbAIgAiACaAIYAhgCYAIQAhACWAJQAlACnAKUAGgBcAFUAMgB0AHAAHABbABkAPwB5ADcA")],
-"material": SubResource("StandardMaterial3D_h6q6t"),
+"material": SubResource("StandardMaterial3D_hh7hn"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 168,
@@ -47,10 +47,10 @@ backface_collision = true
 transform = Transform3D(47.2, 0, 0, 0, 47.2, 0, 0, 0, 47.2, 0, 0, 0)
 collision_layer = 0
 collision_mask = 4
-script = ExtResource("1")
+script = ExtResource("1_i3qd3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_cagpa")
+mesh = SubResource("ArrayMesh_ekycb")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

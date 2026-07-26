@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b23aj0fsxbgap"]
 
-[ext_resource type="Script" uid="uid://bcqad4naqgdwt" path="res://scenes/menus/control_menu.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2"]
-[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="3"]
-[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="4"]
-[ext_resource type="Script" uid="uid://c33lypg0ti8qj" path="res://scenes/menus/lineup_menu/lineup_menu_container.gd" id="5"]
-[ext_resource type="Script" uid="uid://csccu2fds680x" path="res://scenes/menus/lineup_menu/lineup_role_container.gd" id="6"]
-[ext_resource type="Texture2D" uid="uid://n8f2owyvj3cy" path="res://assets/common/icons/ui_icons/white_arrow.png" id="7"]
+[ext_resource type="Script" uid="uid://bcqad4naqgdwt" path="res://scenes/menus/control_menu.gd" id="1_euyg0"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="2_bo70c"]
+[ext_resource type="FontFile" uid="uid://dr3lay11jrn4s" path="res://assets/common/fonts/MyriadPro-Light.otf" id="3_nwf0n"]
+[ext_resource type="FontFile" uid="uid://dearxsr0o01k5" path="res://assets/common/fonts/MYRIADPRO-SEMIBOLD.OTF" id="4_ai3jg"]
+[ext_resource type="Script" uid="uid://c33lypg0ti8qj" path="res://scenes/menus/lineup_menu/lineup_menu_container.gd" id="6_53r3n"]
+[ext_resource type="Script" uid="uid://csccu2fds680x" path="res://scenes/menus/lineup_menu/lineup_role_container.gd" id="7_8nasl"]
+[ext_resource type="Texture2D" uid="uid://n8f2owyvj3cy" path="res://assets/common/icons/ui_icons/white_arrow.png" id="8_vmtnm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m74l"]
 bg_color = Color(0.132, 0.159, 0.306, 0.957)
@@ -21,69 +21,69 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_gflx1"]
-font = ExtResource("2")
+font = ExtResource("2_bo70c")
 font_size = 36
 outline_size = 4
 outline_color = Color(1, 0.603922, 0.176471, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_iqfvl"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_fxa8b"]
-font = ExtResource("2")
+font = ExtResource("2_bo70c")
 font_size = 26
 
 [sub_resource type="LabelSettings" id="LabelSettings_ev42l"]
-font = ExtResource("2")
+font = ExtResource("2_bo70c")
 font_size = 30
 outline_size = 4
 outline_color = Color(1, 0.603922, 0.176471, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_o26b1"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 27
 outline_size = 2
 outline_color = Color(0, 0.421185, 0.859113, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7i0cm"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 27
 outline_size = 2
 outline_color = Color(4.81308e-08, 0.53287, 0.162913, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_br4l6"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 27
 outline_size = 2
 outline_color = Color(4.81308e-08, 0.53287, 0.162913, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bfre0"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 27
 outline_size = 2
 outline_color = Color(0.752112, 0.240315, 1.92523e-07, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_pab2x"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 27
 outline_size = 2
 outline_color = Color(0.752112, 0.240315, 1.92523e-07, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uwv2e"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 27
 outline_size = 2
 outline_color = Color(0.53117, 0.427829, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n6exr"]
-font = ExtResource("3")
+font = ExtResource("3_nwf0n")
 font_size = 27
 outline_size = 2
 outline_color = Color(0.53117, 0.427829, 0, 1)
 
 [node name="ControlMenu" type="CanvasLayer" unique_id=978259260]
-script = ExtResource("1")
+script = ExtResource("1_euyg0")
 
 [node name="KeybindsMenuContainer" type="MarginContainer" parent="." unique_id=1379694977]
 unique_name_in_owner = true
@@ -327,7 +327,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("4")
+theme_override_fonts/font = ExtResource("4_ai3jg")
 theme_override_font_sizes/font_size = 27
 text = "Party List Order
 "
@@ -338,7 +338,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("4")
+theme_override_fonts/font = ExtResource("4_ai3jg")
 theme_override_font_sizes/font_size = 29
 text = "Close"
 
@@ -348,7 +348,7 @@ visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 35
 theme_override_constants/margin_bottom = 58
-script = ExtResource("5")
+script = ExtResource("6_53r3n")
 
 [node name="LeftButtonsVBox" type="VBoxContainer" parent="KeybindsMenuContainer/PartyOrderMarginContainer" unique_id=125938598]
 unique_name_in_owner = true
@@ -367,7 +367,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/h_separation = 32
-theme_override_fonts/font = ExtResource("3")
+theme_override_fonts/font = ExtResource("3_nwf0n")
 theme_override_font_sizes/font_size = 25
 button_pressed = true
 text = "Player on Top"
@@ -379,7 +379,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T1Container" unique_id=176369460]
 custom_minimum_size = Vector2(125.345, 0)
@@ -394,7 +394,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -404,7 +404,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -413,7 +413,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/T2Container" unique_id=724215590]
 custom_minimum_size = Vector2(125.345, 0)
@@ -428,7 +428,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -438,7 +438,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -447,7 +447,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H1Container" unique_id=687177862]
 custom_minimum_size = Vector2(125.345, 0)
@@ -462,7 +462,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -472,7 +472,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -481,7 +481,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/H2Container" unique_id=1975790539]
 custom_minimum_size = Vector2(125.345, 0)
@@ -496,7 +496,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -506,7 +506,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -515,7 +515,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M1Container" unique_id=1333614375]
 custom_minimum_size = Vector2(125.345, 0)
@@ -530,7 +530,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -540,7 +540,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -549,7 +549,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/M2Container" unique_id=1064365526]
 custom_minimum_size = Vector2(125.345, 0)
@@ -564,7 +564,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -574,7 +574,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -583,7 +583,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R1Container" unique_id=1945458473]
 custom_minimum_size = Vector2(125.345, 0)
@@ -598,7 +598,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -608,7 +608,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -617,7 +617,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
-script = ExtResource("6")
+script = ExtResource("7_8nasl")
 
 [node name="RoleLabel" type="Label" parent="KeybindsMenuContainer/PartyOrderMarginContainer/LeftButtonsVBox/R2Container" unique_id=2067961578]
 custom_minimum_size = Vector2(125.345, 0)
@@ -632,7 +632,7 @@ custom_minimum_size = Vector2(27, 14.8)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
@@ -642,7 +642,7 @@ custom_minimum_size = Vector2(27, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 0
-texture_normal = ExtResource("7")
+texture_normal = ExtResource("8_vmtnm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -658,7 +658,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("4")
+theme_override_fonts/font = ExtResource("4_ai3jg")
 theme_override_font_sizes/font_size = 30
 text = "Default"
 
@@ -668,7 +668,7 @@ layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
 focus_mode = 0
-theme_override_fonts/font = ExtResource("4")
+theme_override_fonts/font = ExtResource("4_ai3jg")
 theme_override_font_sizes/font_size = 30
 text = "Back"
 

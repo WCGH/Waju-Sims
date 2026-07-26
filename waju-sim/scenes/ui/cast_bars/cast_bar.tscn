@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://chasoddjwqblg"]
 
-[ext_resource type="Script" uid="uid://krsvrhw334ei" path="res://scenes/ui/cast_bars/cast_bar.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="2"]
-[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="3"]
+[ext_resource type="Script" uid="uid://krsvrhw334ei" path="res://scenes/ui/cast_bars/cast_bar.gd" id="1_nkki0"]
+[ext_resource type="FontFile" uid="uid://dflgosesmjvf" path="res://assets/common/fonts/MYRIADPRO-BOLD.OTF" id="1_uiasi"]
+[ext_resource type="FontFile" uid="uid://46wxmrxlq74f" path="res://assets/common/fonts/eurostarregularextended.ttf" id="3_gv24i"]
 
 [sub_resource type="Theme" id="Theme_vadjc"]
-default_font = ExtResource("2")
+default_font = ExtResource("1_uiasi")
 default_font_size = 16
 
 [sub_resource type="LabelSettings" id="LabelSettings_lc2st"]
@@ -32,14 +32,14 @@ border_width_bottom = 2
 border_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_gth00"]
-font = ExtResource("3")
+font = ExtResource("3_gv24i")
 font_size = 15
 outline_size = 3
 outline_color = Color(0.780392, 0.501961, 0.360784, 1)
 
 [node name="CastBar" type="CanvasLayer" unique_id=270944366 groups=["cast_bar"]]
 visible = false
-script = ExtResource("1")
+script = ExtResource("1_nkki0")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=631891570]
 anchors_preset = -1

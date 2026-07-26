@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://7m7y37eumh68"]
 
-[ext_resource type="Script" uid="uid://cl4btwl3mr58e" path="res://scenes/common/ground_markers/tower_aoe.gd" id="1"]
+[ext_resource type="Script" uid="uid://cl4btwl3mr58e" path="res://scenes/common/ground_markers/tower_aoe.gd" id="1_j21hb"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23110"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5vmc"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0.78939015, 0.35584977, 0.03876, 0.62100005)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_pd7ek"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_lli8a"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_23110")
+material = SubResource("StandardMaterial3D_h5vmc")
 top_radius = 12.0
 bottom_radius = 12.0
 height = 0.01
@@ -19,13 +19,13 @@ cap_bottom = false
 height = 10.0
 radius = 12.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1f2k"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m044x"]
 resource_local_to_scene = true
 albedo_color = Color(0.564706, 0.564706, 0.564706, 1)
 
-[sub_resource type="PrismMesh" id="PrismMesh_ew0ru"]
+[sub_resource type="PrismMesh" id="PrismMesh_o1cx3"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_g1f2k")
+material = SubResource("StandardMaterial3D_m044x")
 size = Vector3(3, 3, 25)
 
 [sub_resource type="Animation" id="Animation_tmq7b"]
@@ -280,10 +280,10 @@ _data = {
 [node name="TowerAoE2" type="Area3D" unique_id=755364934]
 collision_layer = 0
 collision_mask = 4
-script = ExtResource("1")
+script = ExtResource("1_j21hb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1576293896]
-mesh = SubResource("CylinderMesh_pd7ek")
+mesh = SubResource("CylinderMesh_lli8a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=813980429]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
@@ -291,11 +291,11 @@ shape = SubResource("CylinderShape3D_42fqt")
 
 [node name="PillarMesh" type="MeshInstance3D" parent="." unique_id=1899569436]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.75, 0, 0)
-mesh = SubResource("PrismMesh_ew0ru")
+mesh = SubResource("PrismMesh_o1cx3")
 
 [node name="PillarMesh2" type="MeshInstance3D" parent="." unique_id=632414165]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.75, 0, 0)
-mesh = SubResource("PrismMesh_ew0ru")
+mesh = SubResource("PrismMesh_o1cx3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=448165637]
 libraries/ = SubResource("AnimationLibrary_bk3tn")
