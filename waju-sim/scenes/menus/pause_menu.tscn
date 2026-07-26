@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vftsma2c80sa"]
 
-[ext_resource type="Script" path="res://scenes/menus/pause_menu.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/menus/pause_menu.gd" id="1_t84m1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pb4f"]
 bg_color = Color(0.132, 0.159, 0.306, 0.227)
@@ -8,7 +8,7 @@ bg_color = Color(0.132, 0.159, 0.306, 0.227)
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
 visible = false
-script = ExtResource("1")
+script = ExtResource("1_t84m1")
 
 [node name="PauseMenuContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true

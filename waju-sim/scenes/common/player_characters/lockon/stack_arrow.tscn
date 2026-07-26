@@ -1,66 +1,66 @@
-[gd_scene format=3 uid="uid://cyirsftdmerix"]
+[gd_scene load_steps=15 format=3 uid="uid://cyirsftdmerix"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj6dg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcrpd"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(1, 0.486275, 0.541176, 0)
 emission_enabled = true
 emission = Color(0.776471, 0.776471, 0.776471, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0f8qe"]
+[sub_resource type="BoxMesh" id="BoxMesh_iiwd6"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_hj6dg")
+material = SubResource("StandardMaterial3D_jcrpd")
 size = Vector3(0.83, 0.105, 6.45)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ueuun"]
+[sub_resource type="BoxMesh" id="BoxMesh_qbh5f"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_hj6dg")
+material = SubResource("StandardMaterial3D_jcrpd")
 size = Vector3(0.83, 0.105, 6.45)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ahi0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihgm7"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0.988235, 0.490196, 0.27451, 1)
 emission_enabled = true
 emission = Color(0.915294, 0.588235, 0.329412, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_7attm"]
+[sub_resource type="BoxMesh" id="BoxMesh_m75d8"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_1ahi0")
+material = SubResource("StandardMaterial3D_ihgm7")
 size = Vector3(0.83, 0.105, 6.45)
 
-[sub_resource type="BoxMesh" id="BoxMesh_r4s38"]
+[sub_resource type="BoxMesh" id="BoxMesh_ubrhl"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_1ahi0")
+material = SubResource("StandardMaterial3D_ihgm7")
 size = Vector3(0.83, 0.105, 6.45)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hw12"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88sws"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0.988235, 0.490196, 0.27451, 1)
 emission_enabled = true
 emission = Color(0.894118, 0.547059, 0.327451, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ybiiv"]
+[sub_resource type="BoxMesh" id="BoxMesh_82skk"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_3hw12")
+material = SubResource("StandardMaterial3D_88sws")
 size = Vector3(0.83, 0.105, 6.45)
 
-[sub_resource type="BoxMesh" id="BoxMesh_8y3cu"]
+[sub_resource type="BoxMesh" id="BoxMesh_r7g5q"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_3hw12")
+material = SubResource("StandardMaterial3D_88sws")
 size = Vector3(0.83, 0.105, 6.45)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0o5t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfmy2"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0.988235, 0.490196, 0.27451, 1)
 emission_enabled = true
 emission = Color(0.858824, 0.478431, 0.324183, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_xj0tq"]
+[sub_resource type="BoxMesh" id="BoxMesh_jnrf2"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_a0o5t")
+material = SubResource("StandardMaterial3D_gfmy2")
 size = Vector3(0.83, 0.105, 6.45)
 
 [sub_resource type="Animation" id="Animation_3vcrr"]
@@ -374,66 +374,68 @@ tracks/15/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3r4le"]
 _data = {
-&"RESET": SubResource("Animation_3vcrr"),
-&"arrow_pulse": SubResource("Animation_kpg1w")
+"RESET": SubResource("Animation_3vcrr"),
+"arrow_pulse": SubResource("Animation_kpg1w")
 }
 
-[node name="Arrow" type="Node3D" unique_id=745265622]
+[node name="Arrow" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 14, 0)
 
-[node name="LargeArrow" type="Node3D" parent="." unique_id=512386760]
+[node name="LargeArrow" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.9956)
 
-[node name="ArmR" type="MeshInstance3D" parent="LargeArrow" unique_id=1063245045]
+[node name="ArmR" type="MeshInstance3D" parent="LargeArrow"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_0f8qe")
+mesh = SubResource("BoxMesh_iiwd6")
 skeleton = NodePath("../../..")
 
-[node name="ArmL" type="MeshInstance3D" parent="LargeArrow" unique_id=1986162715]
+[node name="ArmL" type="MeshInstance3D" parent="LargeArrow"]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_ueuun")
+mesh = SubResource("BoxMesh_qbh5f")
 skeleton = NodePath("../../..")
 
-[node name="LargeArrow2" type="Node3D" parent="." unique_id=1352892692]
+[node name="LargeArrow2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
 
-[node name="Arm2R" type="MeshInstance3D" parent="LargeArrow2" unique_id=1632615691]
+[node name="Arm2R" type="MeshInstance3D" parent="LargeArrow2"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_7attm")
+mesh = SubResource("BoxMesh_m75d8")
 skeleton = NodePath("../../..")
 
-[node name="Arm2L" type="MeshInstance3D" parent="LargeArrow2" unique_id=240413884]
+[node name="Arm2L" type="MeshInstance3D" parent="LargeArrow2"]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_r4s38")
+mesh = SubResource("BoxMesh_ubrhl")
 skeleton = NodePath("../../..")
 
-[node name="LargeArrow3" type="Node3D" parent="." unique_id=1251342202]
+[node name="LargeArrow3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
 
-[node name="Arm3R" type="MeshInstance3D" parent="LargeArrow3" unique_id=2035752169]
+[node name="Arm3R" type="MeshInstance3D" parent="LargeArrow3"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_ybiiv")
+mesh = SubResource("BoxMesh_82skk")
 skeleton = NodePath("../../..")
 
-[node name="Arm3L" type="MeshInstance3D" parent="LargeArrow3" unique_id=318068710]
+[node name="Arm3L" type="MeshInstance3D" parent="LargeArrow3"]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_8y3cu")
+mesh = SubResource("BoxMesh_r7g5q")
 skeleton = NodePath("../../..")
 
-[node name="LargeArrow4" type="Node3D" parent="." unique_id=316610399]
+[node name="LargeArrow4" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.60994)
 
-[node name="Arm4R" type="MeshInstance3D" parent="LargeArrow4" unique_id=84090068]
+[node name="Arm4R" type="MeshInstance3D" parent="LargeArrow4"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_xj0tq")
+mesh = SubResource("BoxMesh_jnrf2")
 skeleton = NodePath("../../..")
 
-[node name="Arm4L" type="MeshInstance3D" parent="LargeArrow4" unique_id=1777772802]
+[node name="Arm4L" type="MeshInstance3D" parent="LargeArrow4"]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.987, 0.01, 2.574)
-mesh = SubResource("BoxMesh_xj0tq")
+mesh = SubResource("BoxMesh_jnrf2")
 skeleton = NodePath("../../..")
 
-[node name="ArrowAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1011484566]
+[node name="ArrowAnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_3r4le")
-autoplay = &"arrow_pulse"
+libraries = {
+"": SubResource("AnimationLibrary_3r4le")
+}
+autoplay = "arrow_pulse"
