@@ -4,7 +4,6 @@ signal session_ready
 signal roster_changed
 signal leader_changed(peer_id: int)
 signal join_rejected(reason: String)
-signal role_change_rejected(reason: String)
 
 enum Mode { SOLO, MULTIPLAYER }
 
@@ -28,6 +27,11 @@ var _reported_failures: Dictionary = {}
 var _server_password := ""
 var _allowed_ips: Array[String] = []
 var _restart_in_progress := false
+var last_server_address := ""
+var last_server_port := DEFAULT_PORT
+var last_server_password := ""
+var _pending_server_address := ""
+var _pending_server_port := DEFAULT_PORT
 
 
 func _ready() -> void:
@@ -76,14 +80,41 @@ func connect_to_server(address: String, port: int, requested_role: String, confi
 	multiplayer.connection_failed.connect(_on_connection_failed, CONNECT_ONE_SHOT)
 	phase_config = config.duplicate(true)
 	_server_password = password
+	_pending_server_address = address
+	_pending_server_port = port
 	return OK
 
 
 func start_solo() -> void:
+	if multiplayer.multiplayer_peer != null:
+		multiplayer.multiplayer_peer.close()
+	multiplayer.multiplayer_peer = OfflineMultiplayerPeer.new()
 	mode = Mode.SOLO
 	local_role_key = Global.ROLE_KEYS[SavedVariables.save_data["settings"]["player_role"]]
 	role_owners.clear()
+	leader_peer_id = 0
 	phase_config.clear()
+	_local_character = null
+	phase_seed = 0
+	session_paused = false
+
+
+func disconnect_from_server() -> void:
+	if multiplayer.multiplayer_peer != null:
+		multiplayer.multiplayer_peer.close()
+	multiplayer.multiplayer_peer = OfflineMultiplayerPeer.new()
+	mode = Mode.SOLO
+	local_role_key = ""
+	role_owners.clear()
+	leader_peer_id = 0
+	phase_config.clear()
+	_local_character = null
+	_server_password = ""
+	phase_seed = 0
+	session_paused = false
+	_restart_in_progress = false
+	get_tree().paused = false
+	get_tree().change_scene_to_file.call_deferred("res://scenes/dmu/dmu_main.tscn")
 
 
 func change_to_phase(selected_seq: int) -> void:
@@ -102,12 +133,6 @@ func request_phase_change(selected_seq: int) -> void:
 	if multiplayer.get_unique_id() != leader_peer_id:
 		return
 	request_phase_change_on_server.rpc_id(1, selected_seq)
-
-
-func request_role_change(requested_role: String) -> void:
-	if !is_multiplayer_session() or requested_role == local_role_key:
-		return
-	request_role_change_on_server.rpc_id(1, requested_role)
 
 
 func register_character(character: Node) -> void:
@@ -223,6 +248,9 @@ func receive_session_snapshot(assigned_role: String, owners: Dictionary, leader:
 	session_paused = paused
 	phase_seed = new_phase_seed
 	DmuSavedVariables.save_data["settings"] = phase_config.duplicate(true)
+	last_server_address = _pending_server_address
+	last_server_port = _pending_server_port
+	last_server_password = _server_password
 	session_ready.emit()
 	_load_selected_phase.call_deferred()
 
@@ -272,36 +300,6 @@ func request_restart_change() -> void:
 	phase_seed = _new_phase_seed()
 	_reported_failures.clear()
 	apply_restart.rpc(phase_seed, session_paused)
-
-
-@rpc("any_peer", "reliable")
-func request_role_change_on_server(requested_role: String) -> void:
-	if !_server_mode or requested_role not in Global.ROLE_KEYS:
-		return
-	var peer_id := multiplayer.get_remote_sender_id()
-	var current_role := _get_role_for_peer(peer_id)
-	if current_role.is_empty():
-		return
-	if role_owners.has(requested_role):
-		receive_role_change_rejected.rpc_id(peer_id, "Role %s is already taken" % requested_role)
-		return
-	role_owners.erase(current_role)
-	role_owners[requested_role] = peer_id
-	apply_role_change.rpc(peer_id, requested_role)
-	broadcast_roster()
-
-
-@rpc("authority", "reliable")
-func receive_role_change_rejected(reason: String) -> void:
-	role_change_rejected.emit(reason)
-
-
-@rpc("authority", "reliable")
-func apply_role_change(peer_id: int, assigned_role: String) -> void:
-	if multiplayer.get_unique_id() == peer_id:
-		local_role_key = assigned_role
-		GameEvents.emit_variable_saved("settings", "player_role", Global.ROLE_KEYS.find(assigned_role))
-	get_tree().reload_current_scene()
 
 
 @rpc("any_peer", "reliable")

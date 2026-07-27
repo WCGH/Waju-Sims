@@ -11,7 +11,12 @@ func _ready() -> void:
 	for role: String in Global.ROLE_KEYS:
 		role_select.add_item(Global.ROLE_NAMES[role])
 	role_select.select(SavedVariables.save_data["settings"]["player_role"])
-	get_node("/root/DmuSession").join_rejected.connect(_on_join_rejected)
+	var session := get_node("/root/DmuSession")
+	if !session.last_server_address.is_empty():
+		address_input.text = session.last_server_address
+		port_input.value = session.last_server_port
+		password_input.text = session.last_server_password
+	session.join_rejected.connect(_on_join_rejected)
 
 
 func _on_solo_pressed() -> void:
