@@ -36,6 +36,11 @@ DsrSavedVariables="*uid://hpih2j0ktcxh"
 DmuSavedVariables="*uid://o0y18adxd0ft"
 GameEvents="*res://scripts/autoload/game_events.gd"
 GlobalRes="*res://scripts/autoload/global_res.gd"
+DmuSession="*res://scripts/autoload/dmu_session.gd"
+
+[debug]
+
+gdscript/warnings/integer_division=0
 
 [global_group]
 

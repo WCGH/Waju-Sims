@@ -1,0 +1,8 @@
+# Local editor settings.
+/.vscode/
+
+# Godot-generated editor and import cache.
+/waju-sim/.godot/
+
+# Assets intentionally omitted from the upstream source repository.
+/waju-sim/assets/

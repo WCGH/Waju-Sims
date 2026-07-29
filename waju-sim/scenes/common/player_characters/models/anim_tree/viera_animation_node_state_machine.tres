@@ -243,6 +243,7 @@ advance_mode = 2
 advance_condition = &"jumping"
 
 [resource]
+states/End/node = null
 states/Jump_Idle/node = SubResource("AnimationNodeBlendTree_cacm7")
 states/Jump_Idle/position = Vector2(555.913, 242)
 states/Jump_Land/node = SubResource("AnimationNodeBlendTree_q1muk")
@@ -255,6 +256,7 @@ states/Land_Strafe_Right_Blend/node = SubResource("AnimationNodeBlendTree_nid1o"
 states/Land_Strafe_Right_Blend/position = Vector2(718.913, 401.921)
 states/Running/node = SubResource("AnimationNodeAnimation_dwefg")
 states/Running/position = Vector2(718.913, 72)
+states/Start/node = null
 states/Start/position = Vector2(169, 72)
 states/Start_Run/node = SubResource("AnimationNodeAnimation_g82u3")
 states/Start_Run/position = Vector2(555.913, -13)

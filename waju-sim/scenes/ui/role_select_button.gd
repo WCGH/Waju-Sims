@@ -5,10 +5,12 @@
 
 extends OptionButton
 
-
 func _ready() -> void:
 	selected = SavedVariables.save_data["settings"]["player_role"]
 
 
 func _on_item_selected(index : int) -> void:
+	var session := get_node("/root/DmuSession")
+	if Global.encounter == Global.Encounter.DMU and session.is_multiplayer_session():
+		return
 	GameEvents.emit_variable_saved("settings", "player_role", index)

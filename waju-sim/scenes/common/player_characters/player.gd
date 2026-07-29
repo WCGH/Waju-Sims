@@ -35,6 +35,7 @@ func set_parameters(new_role_key : String, new_model_scene : PackedScene,
 	role_key = new_role_key
 	position = spawn_position
 	is_player_character = true
+	set_control_mode(ControlMode.LOCAL_PLAYER)
 
 
 func set_model_meta(meta_data) -> void:

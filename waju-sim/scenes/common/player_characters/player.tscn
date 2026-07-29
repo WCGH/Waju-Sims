@@ -31,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 0.866026, 0.5, 0, -0.5, 0.866026, 0, 0, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="TwistPivot/PitchPivot" unique_id=2083636294]
 unique_name_in_owner = true
-spring_length = 5.0
+spring_length = 22.0
 
 [node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot/SpringArm3D" unique_id=407441022]
 unique_name_in_owner = true

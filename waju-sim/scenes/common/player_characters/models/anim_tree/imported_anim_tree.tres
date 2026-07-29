@@ -125,6 +125,7 @@ advance_mode = 2
 [resource]
 states/Death_A/node = SubResource("AnimationNodeAnimation_rp1xg")
 states/Death_A/position = Vector2(566, 49)
+states/End/node = null
 states/IWR/node = SubResource("AnimationNodeBlendSpace2D_bl0ht")
 states/IWR/position = Vector2(396, 100)
 states/Jump_Idle/node = SubResource("AnimationNodeAnimation_qqn6h")
@@ -137,5 +138,6 @@ states/Jump_Start/node = SubResource("AnimationNodeAnimation_bmytp")
 states/Jump_Start/position = Vector2(51, 154)
 states/Jump_Start_Fast/node = SubResource("AnimationNodeBlendTree_cacm7")
 states/Jump_Start_Fast/position = Vector2(217.913, 217)
+states/Start/node = null
 transitions = ["Start", "IWR", SubResource("AnimationNodeStateMachineTransition_k0ffq"), "IWR", "Death_A", SubResource("AnimationNodeStateMachineTransition_dda03"), "IWR", "Jump_Idle", SubResource("AnimationNodeStateMachineTransition_twp8d"), "IWR", "Jump_Start_Fast", SubResource("AnimationNodeStateMachineTransition_fpydn"), "Jump_Start_Fast", "Jump_Idle", SubResource("AnimationNodeStateMachineTransition_5fyb3"), "Jump_Idle", "Jump_Land_Fast", SubResource("AnimationNodeStateMachineTransition_argek"), "Jump_Land_Fast", "IWR", SubResource("AnimationNodeStateMachineTransition_bxor3")]
 graph_offset = Vector2(-69.0872, -12)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3umk4oihslqw"]
 
-[ext_resource type="Texture2D" uid="uid://gqnorx77js0w" path="res://assets/png/job_icons/dnc_icon.png" id="1_gdsy4"]
+[ext_resource type="Texture2D" uid="uid://gqnorx77js0w" path="res://assets/common/icons/job_icons/dnc_icon.png" id="1_gdsy4"]
 
 [node name="TextureRect" type="TextureRect"]
 custom_minimum_size = Vector2(21, 0)

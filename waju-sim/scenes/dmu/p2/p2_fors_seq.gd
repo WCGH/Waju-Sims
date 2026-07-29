@@ -92,7 +92,7 @@ const POSITION_DICT := {
 }
 
 ## Resource Preload
-const GOD_KEFKA_UID = "uid://c8p51pmt3xvde"
+const GOD_KEFKA_SCENE_PATH := "res://scenes/dmu/enemies/god_kefka.tscn"
 
 ## Debuff Icon Scenes
 const TROUBLE_ICON = preload("uid://r88tce2vd75y")
@@ -201,7 +201,6 @@ func start_sequence(new_party: Dictionary) -> void:
 	assert(new_party != null, "Error. Where the party at?")
 	ground_aoe_controller.preload_aoe(["cone", "circle", "fr_tower"])
 	lockon_controller.pre_load([LockonController.CONE, LockonController.STACK, LockonController.TARGET])
-	ResourceLoader.load_threaded_request(GOD_KEFKA_UID)
 	clones.append(boss)
 	
 	## Get Strat and variables.
@@ -998,7 +997,7 @@ func lockon_trigger(player_body: PlayableCharacter, lockon: Lockon):
 # with a minimum distance under which they won't move. AoE's will spawn under each player.
 func spawn_clones():
 	if clones.size() < 4:
-		clone_scene = ResourceLoader.load_threaded_get(GOD_KEFKA_UID)
+		clone_scene = load(GOD_KEFKA_SCENE_PATH)
 		while clones.size() < 4:
 			var new_clone: Node3D = clone_scene.instantiate()
 			enemies.add_child(new_clone)

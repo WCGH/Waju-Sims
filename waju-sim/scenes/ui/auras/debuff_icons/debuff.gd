@@ -28,6 +28,8 @@ var vertical_sizing := TextureRect.SIZE_SHRINK_BEGIN
 
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+	timer.process_mode = Node.PROCESS_MODE_PAUSABLE
 	if remaining_duration > 0.0:
 		timer.start()
 

@@ -16,11 +16,19 @@ const MOVE_UI_BG_SIZE = Vector2(226, 234)
 
 func _ready():
 	section_key = "fail_list"
+	add_to_group("fail_list")
 	GameEvents.ui_ready.connect(on_ui_ready)
 
 
 func add_fail(text: String) -> void:
-	# Add player first
+	var session := get_node_or_null("/root/DmuSession")
+	if Global.encounter == Global.Encounter.DMU and session != null and session.is_multiplayer_session():
+		session.request_fail(text)
+		return
+	add_synced_fail(text)
+
+
+func add_synced_fail(text: String) -> void:
 	var fail_label : Label = label_scene.instantiate()
 	fail_label.text = text
 	v_box_container.add_child(fail_label)

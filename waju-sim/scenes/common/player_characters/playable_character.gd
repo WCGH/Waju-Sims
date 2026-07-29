@@ -6,6 +6,8 @@
 extends CharacterBody3D
 class_name PlayableCharacter
 
+enum ControlMode { BOT, LOCAL_PLAYER, REMOTE_PLAYER }
+
 
 @export var move_speed : = 14.3
 @export var acceleration : = 20.0
@@ -48,6 +50,9 @@ var xiv_model : bool
 
 var is_player_character: bool
 var spectate_mode: bool
+var control_mode := ControlMode.BOT
+var remote_position := Vector3.ZERO
+var remote_rotation_y := 0.0
 
 
 # Party list handles addition/removal of player debuffs.
@@ -165,6 +170,12 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if control_mode == ControlMode.REMOTE_PLAYER:
+		var position_delta := remote_position - global_position
+		global_position = global_position.lerp(remote_position, minf(delta * 12.0, 1.0))
+		rotation.y = lerp_angle(rotation.y, remote_rotation_y, minf(delta * 12.0, 1.0))
+		_update_remote_animation(position_delta, delta)
+		return
 	if is_player_character and !spectate_mode:
 		return
 	
@@ -217,8 +228,35 @@ func _check_if_falling() -> void:
 
 
 func move_to(other_target : Vector2) -> void:
+	if control_mode == ControlMode.REMOTE_PLAYER:
+		return
 	at_target = false
 	target = Vector3(other_target.x, 0, other_target.y)
+
+
+func set_control_mode(new_control_mode: ControlMode) -> void:
+	control_mode = new_control_mode
+
+
+func set_remote_controlled() -> void:
+	control_mode = ControlMode.REMOTE_PLAYER
+	remote_position = global_position
+	remote_rotation_y = rotation.y
+
+
+func apply_remote_state(new_position: Vector3, new_rotation_y: float) -> void:
+	remote_position = new_position
+	remote_rotation_y = new_rotation_y
+
+
+func _update_remote_animation(position_delta: Vector3, delta: float) -> void:
+	var speed := position_delta.length() / maxf(delta, 0.001)
+	if xiv_model:
+		anim_tree.set("parameters/conditions/running", speed > 0.1)
+		anim_tree.set("parameters/conditions/idle", speed <= 0.1)
+		return
+	var local_velocity := global_transform.basis.inverse() * (position_delta / maxf(delta, 0.001))
+	anim_tree.set("parameters/IWR/blend_position", Vector2(local_velocity.x, -local_velocity.z) / move_speed)
 
 
 # Spectate changes may have broken this for DSR.
